@@ -1,0 +1,235 @@
+{
+  "report_metadata": {
+    "report_title": "SparkyGames — source, screenshot, and game analysis",
+    "reviewed_date": "2026-09-17",
+    "method": "Public GitHub API, raw files, and tracked reference screenshots; no repository checkout.",
+    "repository_url": "https://github.com/phirogue/SparkyGames"
+  },
+  "publication_and_modification": {
+    "public_game_release_date": null,
+    "public_game_release_status": "No standalone App Store, Google Play, or GitHub release date found.",
+    "repository_created_date": "2026-07-29",
+    "latest_push_date": "2026-09-01",
+    "latest_metadata_update_date": "2026-09-01",
+    "source_url": "https://api.github.com/repos/phirogue/SparkyGames"
+  },
+  "identity": {
+    "repository_name": "SparkyGames",
+    "game_title": "The Nine Lives of Ash",
+    "engine": "Godot 4.4",
+    "platform_target": [
+      "iOS",
+      "Android",
+      "Windows development build"
+    ],
+    "genre": [
+      "story-driven roguelite deckbuilder",
+      "turn-based card combat",
+      "investigation adventure"
+    ],
+    "setting": "Fog-bound fantasy city of Hollowmere",
+    "premise": "Ash, a murdered witch's cat familiar, investigates his witch Elspeth's murder.",
+    "current_status": "Playable prologue build; Chapter 1 is in design."
+  },
+  "source_analysis": {
+    "architecture": [
+      "pure RefCounted rule state",
+      "Godot UI scenes",
+      "JSON-driven content",
+      "service layer for I/O"
+    ],
+    "verification": [
+      "unit tests",
+      "balance simulations",
+      "fuzz and chaos tests",
+      "layout and typography tests",
+      "automated screenshot tours"
+    ],
+    "key_links": {
+      "readme": "https://github.com/phirogue/SparkyGames/blob/main/README.md",
+      "architecture": "https://github.com/phirogue/SparkyGames/blob/main/docs/architecture/README.md",
+      "combat_state": "https://github.com/phirogue/SparkyGames/blob/main/game/core/combat_state.gd",
+      "rules": "https://github.com/phirogue/SparkyGames/blob/main/game/data/rules.json",
+      "skills": "https://github.com/phirogue/SparkyGames/blob/main/game/data/skills.json",
+      "encounters": "https://github.com/phirogue/SparkyGames/blob/main/game/data/encounters.json",
+      "prologue": "https://github.com/phirogue/SparkyGames/tree/main/game/story/prologue"
+    }
+  },
+  "screenshot_analysis": {
+    "reference_folder": "https://github.com/phirogue/SparkyGames/tree/main/screenshots/reference",
+    "screenshots": [
+      {
+        "name": "title",
+        "url": "https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/02_title.png",
+        "observations": [
+          "portrait-first",
+          "dark storybook palette",
+          "ornate title typography",
+          "black cat silhouette",
+          "orange thread/wool motif",
+          "understated tap-to-begin CTA"
+        ],
+        "strengths": [
+          "distinctive identity",
+          "strong gothic-fairytale tone"
+        ],
+        "risks": [
+          "display type and low-contrast small text need real-device accessibility testing"
+        ]
+      },
+      {
+        "name": "battle",
+        "url": "https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/battle.png",
+        "observations": [
+          "parchment and stitched border",
+          "location and enemy panel",
+          "telegraphed next intent",
+          "energy card",
+          "five-skill-style lower tray",
+          "End Turn, Concentrate, and Slip Away controls",
+          "encounter-result modal"
+        ],
+        "strengths": [
+          "clear top-to-bottom combat hierarchy",
+          "strong thematic UI framing"
+        ],
+        "risks": [
+          "information density",
+          "modal dimming and overlapping cards need device-width validation"
+        ]
+      }
+    ]
+  },
+  "reverse_engineered_prompt": "Create a polished mobile-portrait, offline-first, story-driven roguelite card game called The Nine Lives of Ash. The player is Ash, a murdered witch's cat familiar investigating his witch Elspeth's murder in a fog-bound fantasy city. Use a dark parchment, stitched-cloth, candlelit visual language with ornate storybook typography, expressive animal characters, and restrained wry humor. Make 3–5 minute prowl runs. Equip five skills before leaving home; make the deck contain Ferocity, Guile, Shadow, and Moonlight energy rather than action cards. Draw a small hand, spend energy to charge skills, limit placements with three paw points, and permanently exhaust spent energy during the prowl. Telegraph enemy intents against health, skills, or hand, with defensive and stealth counterplay. Add push-your-luck extraction, authored nine-life death, a short teaching prologue, and reusable investigation minigames. Implement the game as a data-driven Godot project with deterministic pure rule state, JSON content, save/load, tests, simulations, fuzzing, and screenshot-tour verification.",
+  "how_to_play": [
+    "Start a prowl from the quest board.",
+    "Choose an approach: Stalk, Ambush, Case It, Ward, or walk in free.",
+    "Draw energy and spend it to power equipped skills; each energy placement costs a paw.",
+    "Read enemy intents and counter health damage, hand theft, skill jams, guard, and healing.",
+    "Use Concentrate to recover one spent energy by sacrificing the turn; use Purr only while remaining still.",
+    "Use Scratch as the always-available weak instinct; skills have limited charges.",
+    "After encounters, Press On for richer rewards or Slip Away to extract with a reduced share.",
+    "At home, tune the deck and loadout and spend Gleam/Favors."
+  ],
+  "mechanics": {
+    "combat": [
+      "energy-only deckbuilder",
+      "four energy humours",
+      "Moonlight wild energy with true-Moonlight exceptions",
+      "opening hand 3",
+      "hand limit 5",
+      "three paw placements per turn",
+      "charge-to-power skills",
+      "limited skill charges",
+      "permanently spent energy",
+      "Concentrate recovery",
+      "telegraphed enemy intents",
+      "health/hand/skill/block/heal enemy targets",
+      "masked intents learned through familiarity",
+      "scripted HP floors, forced exits, mortal beats, and no-retreat encounters"
+    ],
+    "meta_and_narrative": [
+      "push-your-luck prowl loop",
+      "nine authored lives",
+      "ordinary defeat without life loss",
+      "Gleam and Favors",
+      "deck tuning and loadouts",
+      "quests, journal, evidence, standing, flags, and grudges",
+      "cat behaviors as mechanics",
+      "investigation minigames"
+    ],
+    "planned_or_specified_minigames": [
+      "Seam & Stitch",
+      "Testimony",
+      "Patch the Ward",
+      "The Unpicking",
+      "The Long Way Home"
+    ]
+  },
+  "tags": [
+    "card game",
+    "roguelike",
+    "roguelite",
+    "deckbuilder",
+    "story-rich",
+    "single-player",
+    "offline",
+    "mobile",
+    "portrait",
+    "fantasy",
+    "mystery",
+    "cats",
+    "resource management",
+    "push-your-luck",
+    "turn-based combat",
+    "investigation",
+    "cozy-dark",
+    "gothic fairytale"
+  ],
+  "rating": {
+    "scale": "A to AAA",
+    "overall": "AA",
+    "reason": "Strong playable vertical slice with coherent art direction, ambitious systems, and unusually disciplined engineering; not AAA because the complete first case, later content, broad device QA, and public release are not demonstrated.",
+    "subscores": {
+      "concept": "AAA-",
+      "core_design": "AA+",
+      "engineering": "AA+",
+      "visual_direction": "AA",
+      "content_completeness": "A/AA",
+      "release_readiness": "A"
+    }
+  },
+  "generated_user_reviews": [
+    {
+      "rating": 4.5,
+      "review": "Finally, a deckbuilder where the cards are fuel instead of a pile of actions. I love planning a five-skill cat build and watching the energy spool run thin. The prologue ends just as the mystery gets sharp, but the tone is superb."
+    },
+    {
+      "rating": 4.0,
+      "review": "The art and writing have a wonderfully strange storybook mood. The vole tutorial is funny, and the bureaucracy around losing a life is memorable. The battle screen is attractive but busy on a phone."
+    },
+    {
+      "rating": 3.5,
+      "review": "Great ideas, especially the push-your-luck extraction and the fact that Ash's deck is his stamina. It currently feels more like a polished prototype than a finished game, but I would follow development."
+    }
+  ],
+  "collected_links": [
+    "https://github.com/phirogue/SparkyGames",
+    "https://github.com/phirogue/SparkyGames/blob/main/README.md",
+    "https://github.com/phirogue/SparkyGames/blob/main/docs/design/core-gameplay.md",
+    "https://github.com/phirogue/SparkyGames/blob/main/docs/design/minigames.md",
+    "https://github.com/phirogue/SparkyGames/blob/main/docs/design/death-and-lives.md",
+    "https://github.com/phirogue/SparkyGames/blob/main/docs/publishing/store-listing.md",
+    "https://github.com/phirogue/SparkyGames/tree/main/screenshots/reference",
+    "https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/02_title.png",
+    "https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/battle.png"
+  ],
+  "bottom_line": "A promising, highly intentional cat-mystery roguelite deckbuilder with a strong mechanical thesis and above-average prototype foundation. The next proof point is shipping a complete first case with the promised investigation modules, device-tested UI, and a playable build outside the developer environment.",
+  "external_services_and_runtime": {
+    "operating_model": "offline-first local application",
+    "requires_external_services": false,
+    "requires_api": false,
+    "requires_server": false,
+    "requires_network_connection": false,
+    "static_assets_and_local_logic": true,
+    "local_dependencies": [
+      "Packaged Godot game/runtime",
+      "Local filesystem for saves and bundled content"
+    ],
+    "observed_network_integrations": [],
+    "observed_backend_integrations": [],
+    "development_only_dependency": "The README describes a Windows development launcher that expects a local Godot binary; this is not a runtime server dependency.",
+    "offline_features": [
+      "Gameplay",
+      "Story content",
+      "Combat and minigames",
+      "Save/load"
+    ],
+    "caveat": "This assessment is based on the public source and documentation reviewed; future monetization, analytics, cloud saves, or store integrations could change the dependency model.",
+    "evidence_links": [
+      "https://github.com/phirogue/SparkyGames/blob/main/README.md",
+      "https://github.com/phirogue/SparkyGames/tree/main/game/services",
+      "https://github.com/phirogue/SparkyGames/blob/main/docs/design/monetization.md"
+    ]
+  }
+}

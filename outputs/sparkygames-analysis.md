@@ -156,3 +156,19 @@ This is an **inferred recreation prompt**, not a claim about the author's origin
 ## Bottom line
 
 This is a promising, highly intentional **cat-mystery roguelite deckbuilder** with a strong mechanical thesis and an above-average prototype foundation. The next proof point is not more design documentation; it is shipping a complete first case with the promised investigation modules, device-tested UI, and a playable build outside the developer environment.
+
+## Machine-readable files
+
+- [JSON analysis report](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/outputs/game-analysis.json)
+- [Reusable JSON Schema template](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/outputs/game-analysis.schema.json)
+
+## External services, APIs, and server requirements
+
+The reviewed game appears to run as a **static/local-first client**:
+
+- **Required to play:** no external API, server, authentication, network connection, analytics backend, ads, or IAP service is evidenced.
+- **Local requirements:** the packaged Godot runtime/assets and local save storage.
+- **Development tooling:** `requirements.txt` lists Pillow and NumPy for local tooling. These are not player runtime requirements.
+- **Confidence:** high for the reviewed source snapshot. A future store build could add platform services, payments, crash reporting, or analytics.
+
+The structured version is in the `external_services_and_runtime` object of the [JSON report](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/outputs/game-analysis.json#L1), and the same field is required by the [JSON Schema template](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/outputs/game-analysis.schema.json#L1).
