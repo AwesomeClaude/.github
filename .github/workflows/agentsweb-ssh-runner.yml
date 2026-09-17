@@ -1,0 +1,85 @@
+name: AgentsWeb SSH Runner
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  runner:
+    name: Five-hour SSH runner
+    runs-on: ubuntu-latest
+    timeout-minutes: 310
+    env:
+      SSH_DIR: ${{ runner.temp }}/agentsweb-ssh
+      SSH_NAME: astra-top-games-${{ github.run_id }}-ssh
+    steps:
+      - name: Install SSH server and tunnel client
+        shell: bash
+        run: |
+          set -euo pipefail
+          /usr/bin/time -p sudo apt-get update
+          /usr/bin/time -p sudo apt-get install -y openssh-server
+          /usr/bin/time -p git clone --depth 1 --filter=blob:none --sparse https://github.com/agents-dev/agent-workspace.git .agentsweb
+          /usr/bin/time -p git -C .agentsweb sparse-checkout set lolgames_tunnel
+
+      - name: Start SSH server and AgentsWeb tunnel
+        id: tunnel
+        shell: bash
+        env:
+          AGENTSWEB_SSH_PUBLIC_KEY: ${{ secrets.AGENTSWEB_SSH_PUBLIC_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$AGENTSWEB_SSH_PUBLIC_KEY"
+          install -d -m 700 "$SSH_DIR" "$HOME/.ssh"
+          printf '%s\n' "$AGENTSWEB_SSH_PUBLIC_KEY" > "$HOME/.ssh/authorized_keys"
+          chmod 600 "$HOME/.ssh/authorized_keys"
+          sudo mkdir -p /run/sshd
+          /usr/bin/time -p sudo /usr/sbin/sshd -D -e -p 2222 \
+            -o PasswordAuthentication=no -o PermitRootLogin=no \
+            -o PubkeyAuthentication=yes > "$SSH_DIR/sshd.log" 2>&1 &
+          echo $! > "$SSH_DIR/sshd.pid"
+          for _ in {1..60}; do
+            ss -ltn | grep -q ':2222 ' && break
+            sleep 1
+          done
+          ss -ltn | grep -q ':2222 '
+          requested_port=$((32000 + GITHUB_RUN_ID % 1000))
+          nohup env PYTHONPATH="$GITHUB_WORKSPACE/.agentsweb" \
+            python3 -m lolgames_tunnel client 127.0.0.1:2222 \
+            --server agentsweb.space --name "$SSH_NAME" --public-port "$requested_port" \
+            > "$SSH_DIR/tunnel.log" 2>&1 &
+          echo $! > "$SSH_DIR/tunnel.pid"
+          for _ in {1..60}; do
+            grep -q '^ssh://' "$SSH_DIR/tunnel.log" && break
+            kill -0 "$(cat "$SSH_DIR/tunnel.pid")" 2>/dev/null || break
+            sleep 1
+          done
+          ssh_url="$(sed -n 's#^\(ssh://[^[:space:]]*\).*#\1#p' "$SSH_DIR/tunnel.log" | head -n 1)"
+          test -n "$ssh_url"
+          endpoint="$(sed -nE 's#^ssh://([^:[:space:]]+):([0-9]+).*$#\1 \2#p' "$SSH_DIR/tunnel.log" | head -n 1)"
+          read -r ssh_host ssh_port <<<"$endpoint"
+          test -n "$ssh_host"
+          test -n "$ssh_port"
+          command="ssh -tt -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/aiplay-agentsweb -p ${ssh_port} runner@${ssh_host}"
+          {
+            echo "## AgentsWeb SSH runner ready"
+            echo
+            echo "Active for five hours."
+            echo
+            echo '```sh'
+            echo "$command"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          printf 'ssh_url=%s\nhost=%s\nport=%s\n' "$ssh_url" "$ssh_host" "$ssh_port" >> "$GITHUB_OUTPUT"
+
+      - name: Hold runner for five hours
+        shell: bash
+        run: |
+          set -euo pipefail
+          tunnel_pid="$(cat "$SSH_DIR/tunnel.pid")"
+          for _ in {1..18000}; do
+            kill -0 "$tunnel_pid" 2>/dev/null
+            sleep 1
+          done
