@@ -159,7 +159,7 @@ This is a promising, highly intentional **cat-mystery roguelite deckbuilder** wi
 
 ## Machine-readable files
 
-- [JSON analysis report](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/outputs/game-analysis.json)
+- [JSON analysis report](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/the-nine-lives-of-ash/game-analysis.json)
 - [Reusable JSON Schema template](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/outputs/game-analysis.schema.json)
 
 ## External services, APIs, and server requirements
@@ -171,4 +171,4 @@ The reviewed game appears to run as a **static/local-first client**:
 - **Development tooling:** `requirements.txt` lists Pillow and NumPy for local tooling. These are not player runtime requirements.
 - **Assessment scope:** public source snapshot reviewed on 2026-09-17.
 
-The structured version is in the `external_services_and_runtime` object of the [JSON report](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/outputs/game-analysis.json#L1), and the same field is required by the [JSON Schema template](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/outputs/game-analysis.schema.json#L1).
+The structured version is in the `external_services_and_runtime` object of the [JSON report](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/the-nine-lives-of-ash/game-analysis.json#L1), and the same field is required by the [JSON Schema template](/Users/igor/Documents/Codex/2026-09-17/https-github-com-phirogue-sparkygames-https/outputs/game-analysis.schema.json#L1).
