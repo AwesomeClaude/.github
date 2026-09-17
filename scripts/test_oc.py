@@ -201,7 +201,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--runs', type=int, default=3)
     parser.add_argument('--timeout', type=float, default=900, help='Seconds per run')
-    parser.add_argument('--prompt', type=Path, default=Path(__file__).with_name('oc-analysis-prompt.txt'))
+    parser.add_argument('--prompt', type=Path, default=ROOT / 'prompt.md')
     parser.add_argument('--model', default=MODEL)
     parser.add_argument('--executable', default='opencode')
     parser.add_argument('--server', help='Existing local OpenCode server URL')
