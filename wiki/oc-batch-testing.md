@@ -1,6 +1,6 @@
 # Run OpenCode batch tests
 
-Run `./scripts/test-oc.sh --runs 10 --parallel 3` from the project. Use the default exact analysis prompt or supply `--prompt /absolute/path/to/prompt.txt`. Keep the default Muse Spark model or supply `--model provider/model`. Set the per-run deadline with `--timeout 900`.
+Run `./scripts/test-oc.sh` from the project to launch three runs concurrently. Use `--runs 10` to launch all ten runs concurrently. Use the default exact analysis prompt or supply `--prompt /absolute/path/to/prompt.txt`. Keep the default Muse Spark model or supply `--model provider/model`. Set the per-run deadline with `--timeout 900`.
 
 Use `--server http://127.0.0.1:4096` to attach to an existing local server. Otherwise let the runner start or reuse a loopback server on `--port 4096`. Keep that server running after completion to inspect sessions. Inspect `work/oc-server/server.json` and `server.log` for a server started by this script. Supply `--web-base https://your-protected-tunnel.example` only for an existing tunnel; create and protect that tunnel separately. Set `OPENCODE_SERVER_PASSWORD` and optionally `OPENCODE_SERVER_USERNAME` when using server authentication.
 
@@ -29,7 +29,7 @@ work/
   oc-server/
 ```
 
-Initialize each run as its own Git repository before creating the session. Schedule at most three active runs by default. Preserve the prompt unchanged and record its SHA-256. Keep the runner's logs outside agent workspaces. Treat Git boundaries as repository-discovery isolation, not a filesystem sandbox; use an OS/container sandbox for untrusted workloads. Expect `--auto` permission behavior; do not assume it prevents access to neighboring files or baseline reports.
+Initialize each run as its own Git repository before creating the session. Launch all requested runs concurrently; default to three runs. Preserve the prompt unchanged and record its SHA-256. Keep the runner's logs outside agent workspaces. Treat Git boundaries as repository-discovery isolation, not a filesystem sandbox; use an OS/container sandbox for untrusted workloads. Expect `--auto` permission behavior; do not assume it prevents access to neighboring files or baseline reports.
 
 ## Inspect live progress
 

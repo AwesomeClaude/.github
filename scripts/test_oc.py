@@ -199,8 +199,7 @@ def run_one(index, args, batch, base, prompt, publish):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--runs', type=int, default=10)
-    parser.add_argument('--parallel', type=int, default=3)
+    parser.add_argument('--runs', type=int, default=3)
     parser.add_argument('--timeout', type=float, default=900, help='Seconds per run')
     parser.add_argument('--prompt', type=Path, default=Path(__file__).with_name('oc-analysis-prompt.txt'))
     parser.add_argument('--model', default=MODEL)
@@ -209,8 +208,8 @@ def main():
     parser.add_argument('--web-base', help='Existing protected web/tunnel URL for live links; does not create a tunnel')
     parser.add_argument('--port', type=int, default=4096)
     args = parser.parse_args()
-    if min(args.runs, args.parallel, args.timeout) <= 0:
-        parser.error('runs, parallel, and timeout must be positive')
+    if min(args.runs, args.timeout) <= 0:
+        parser.error('runs and timeout must be positive')
     if not shutil.which(args.executable) or not shutil.which('git'):
         parser.error('Require opencode and git on PATH')
     prompt = args.prompt.read_text()
@@ -232,7 +231,7 @@ def main():
             with summary_lock:
                 results[result['run']] = dict(result)
                 ordered = [results[k] for k in sorted(results)]
-                save(batch / 'summary.json', {'runs_requested': args.runs, 'parallel': args.parallel,
+                save(batch / 'summary.json', {'runs_requested': args.runs, 'concurrency': args.runs,
                      'server': base, 'results': ordered})
                 lines = ['# OpenCode batch', '', 'Inspect live sessions and require human review before accepting quality.', '',
                          '| Run | State | Report | Structure | Session |', '|---|---|---|---|---|']
@@ -241,11 +240,11 @@ def main():
                     link = f'[Live]({item["live_url"]})' if item.get('live_url') else '—'
                     lines.append(f'| {item["run"]} | {item["status"]} | {v.get("report_generated", "—")} | {v.get("structural_pass", "—")} | {link} |')
                 (batch / 'summary.md').write_text('\n'.join(lines) + '\n')
-        with concurrent.futures.ThreadPoolExecutor(max_workers=args.parallel) as pool:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=args.runs) as pool:
             futures = set()
             next_index = 1
             while (next_index <= args.runs and not STOP.is_set()) or futures:
-                while not STOP.is_set() and next_index <= args.runs and len(futures) < args.parallel:
+                while not STOP.is_set() and next_index <= args.runs:
                     futures.add(pool.submit(run_one, next_index, args, batch, base, prompt, publish))
                     next_index += 1
                 if futures:

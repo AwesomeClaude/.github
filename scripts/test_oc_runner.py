@@ -65,6 +65,25 @@ print(json.dumps({'type': 'step_finish'}))
             self.assertTrue(result['validation']['structural_pass'])
             self.assertIsNone(result['validation']['quality_pass'])
 
+    def test_cli_defaults_and_all_requested_workers(self):
+        for count, flags in [(3, []), (5, ['--runs', '5'])]:
+            with self.subTest(count=count):
+                args = self.fake()
+                prompt = self.root / 'prompt.txt'
+                prompt.write_text('exact prompt')
+                real_pool = concurrent.futures.ThreadPoolExecutor
+                with patch.object(runner, 'ROOT', self.root), \
+                     patch.object(runner, 'ensure_server', return_value='http://localhost:4096'), \
+                     patch.object(runner, 'api', return_value={'id': 'ses_fake'}), \
+                     patch('sys.argv', ['test_oc.py', '--executable', args.executable,
+                                        '--prompt', str(prompt)] + flags), \
+                     patch.object(runner.concurrent.futures, 'ThreadPoolExecutor', wraps=real_pool) as pool:
+                    self.assertEqual(runner.main(), 0)
+                    pool.assert_called_once_with(max_workers=count)
+                summary = json.loads((self.root / 'work/oc-batch-test/summary.json').read_text())
+                self.assertEqual(len(summary['results']), count)
+                self.assertEqual(summary['concurrency'], count)
+
     def test_timeout_aborts_server_session(self):
         with patch.object(runner, 'api', return_value={'id': 'ses_fake'}) as api:
             result = runner.run_one(1, self.fake(True), self.root, 'http://localhost:4096',
