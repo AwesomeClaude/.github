@@ -230,5 +230,11 @@
       "https://github.com/phirogue/SparkyGames/tree/main/game/services",
       "https://github.com/phirogue/SparkyGames/blob/main/docs/design/monetization.md"
     ]
+  },
+  "confidence_score": {
+    "score": 90,
+    "scale": "0-100",
+    "level": "high",
+    "basis": "Public repository metadata, source files, design documents, and tracked reference screenshots were directly reviewed."
   }
 }

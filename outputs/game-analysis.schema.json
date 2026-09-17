@@ -18,7 +18,8 @@
     "rating",
     "generated_user_reviews",
     "collected_links",
-    "bottom_line"
+    "bottom_line",
+    "confidence_score"
   ],
   "additionalProperties": false,
   "properties": {
@@ -170,6 +171,37 @@
             "type": "string",
             "format": "uri"
           }
+        }
+      }
+    },
+    "confidence_score": {
+      "type": "object",
+      "required": [
+        "score",
+        "scale",
+        "level",
+        "basis"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "scale": {
+          "const": "0-100"
+        },
+        "level": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
         }
       }
     }
