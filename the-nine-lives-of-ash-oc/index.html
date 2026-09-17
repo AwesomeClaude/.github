@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>The Nine Lives of Ash — Prototype</title>
+<meta name="description" content="Standalone browser-playable portrait prototype: turn-based battle vs The Vole. Original fan-style recreation, no copyrighted assets." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="page">
+  <main class="frame" id="frame" aria-label="The Nine Lives of Ash prototype">
+    <div class="stitch" aria-hidden="true"></div>
+
+    <!-- TITLE SCREEN -->
+    <section id="screen-title" class="screen active" aria-labelledby="game-title">
+      <div class="moon" aria-hidden="true">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Crescent moon">
+          <circle cx="60" cy="60" r="44" fill="#f4e8c8"/>
+          <circle cx="76" cy="52" r="38" fill="#1a1410"/>
+          <circle cx="48" cy="44" r="4" fill="#d9c48f" opacity="0.7"/>
+          <circle cx="40" cy="66" r="2.6" fill="#d9c48f" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="cat-mark" aria-hidden="true">
+        <svg viewBox="0 0 200 120">
+          <path d="M30 108 Q60 40 100 62 Q140 40 170 108 Q140 92 100 92 Q60 92 30 108 Z" fill="#0e0b08"/>
+          <path d="M52 58 L44 26 L70 46 Z" fill="#0e0b08"/>
+          <path d="M148 58 L156 26 L130 46 Z" fill="#0e0b08"/>
+          <path d="M52 54 L48 34 L64 46 Z" fill="#e8801a"/>
+          <path d="M148 54 L152 34 L136 46 Z" fill="#e8801a"/>
+          <circle cx="82" cy="76" r="3.4" fill="#e8801a"/>
+          <circle cx="118" cy="76" r="3.4" fill="#e8801a"/>
+        </svg>
+      </div>
+      <p class="kicker">A storybook battle prototype</p>
+      <h1 id="game-title">The Nine<br/>Lives of Ash</h1>
+      <p class="subtitle">Nine lives. One hungry Vole.<br/>Three paws per turn.</p>
+      <div class="lives-row" id="title-lives" aria-label="Lives remaining"></div>
+      <div class="title-buttons">
+        <button id="btn-start" class="btn primary">Begin the Hunt</button>
+        <button id="btn-how" class="btn ghost" aria-expanded="false">How to Play</button>
+      </div>
+      <div id="howto" class="howto" hidden>
+        <h2>How to play</h2>
+        <ol>
+          <li>You are <strong>Ash</strong> (10 HP). Face <strong>The Vole</strong> (5 HP).</li>
+          <li>Each turn you get <strong>3 paw placements</strong>. You open with <strong>3 Ferocity</strong>.</li>
+          <li><strong>Scratch</strong>: free, once per turn, 1 damage. <strong>Pounce</strong>: 2 Ferocity cost, 3 charges, 4 damage.</li>
+          <li><strong>Slink</strong>: 1 Shadow, 3 charges, Block 3. <strong>Purr</strong>: 1 Guile, 2 charges, heals 2 HP per turn over 2 turns, skills and Concentrate refused while channeling, Slip Away stays open, broken by damage. <strong>Loaf</strong>: 1 Guile, 2 charges, Block 5, guards the hand, ends the turn.</li>
+          <li><strong>Concentrate</strong> (2 per fight): give up the whole turn to will 1 spent energy back. <strong>Slip Away</strong>: free, but the Vole gets its telegraphed move as a parting shot.</li>
+          <li>The Vole telegraphs <strong>Hold Very Still</strong> (nothing) and <strong>Dart for Cover</strong> (takes 1 energy — Loaf guards). You draw 1 Ferocity per turn. Press <strong>End Turn</strong> to let The Vole act. Reduce it to 0 HP to win. Lose all HP to lose a life.</li>
+        </ol>
+        <p>Note: this browser prototype simplifies charge-to-power and is not exact card parity.</p>
+      </div>
+      <p class="foot">Unofficial browser prototype. No external assets or network. Best at 506×899 portrait.</p>
+    </section>
+
+    <!-- BATTLE SCREEN -->
+    <section id="screen-battle" class="screen" aria-labelledby="battle-heading">
+      <header class="topbar">
+        <div class="brand"><span class="paw-dot" aria-hidden="true">🐾</span> <span id="battle-heading">Ash vs The Vole</span></div>
+        <div class="lives-mini" id="lives-mini" title="Lives remaining"></div>
+      </header>
+
+      <div class="combatants">
+        <div class="fighter player">
+          <div class="portrait ash" aria-hidden="true">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="46" fill="#241a12" stroke="#e8801a" stroke-width="2"/>
+              <path d="M28 42 L24 20 L42 32 Z" fill="#2e2318" stroke="#e8801a" stroke-width="1.5"/>
+              <path d="M72 42 L76 20 L58 32 Z" fill="#2e2318" stroke="#e8801a" stroke-width="1.5"/>
+              <ellipse cx="50" cy="58" rx="24" ry="20" fill="#3a2d1e"/>
+              <circle cx="41" cy="54" r="4" fill="#f4a63a"/><circle cx="41" cy="54" r="1.6" fill="#111"/>
+              <circle cx="59" cy="54" r="4" fill="#f4a63a"/><circle cx="59" cy="54" r="1.6" fill="#111"/>
+              <path d="M45 66 Q50 70 55 66" stroke="#f4e8c8" stroke-width="1.6" fill="none"/>
+            </svg>
+          </div>
+          <div class="stats">
+            <div class="name">Ash <span class="tag">you</span></div>
+            <div class="hpbar"><div class="hpfill" id="player-hp-fill"></div><span id="player-hp-text">10 / 10</span></div>
+            <div class="block" id="player-block">🛡 0</div>
+          </div>
+        </div>
+
+        <div class="vs" aria-hidden="true">⚔</div>
+
+        <div class="fighter enemy" id="enemy-card">
+          <div class="portrait vole" aria-hidden="true">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="46" fill="#241a12" stroke="#b9b2a4" stroke-width="2"/>
+              <ellipse cx="50" cy="62" rx="22" ry="17" fill="#4a4238"/>
+              <circle cx="34" cy="44" r="7" fill="#4a4238"/><circle cx="66" cy="44" r="7" fill="#4a4238"/>
+              <circle cx="34" cy="44" r="3" fill="#8a7f70"/><circle cx="66" cy="44" r="3" fill="#8a7f70"/>
+              <circle cx="43" cy="58" r="2.6" fill="#111"/><circle cx="57" cy="58" r="2.6" fill="#111"/>
+              <path d="M46 68 L50 72 L54 68" stroke="#e8dcc0" stroke-width="1.6" fill="none"/>
+              <path d="M50 72 L50 76" stroke="#e8dcc0" stroke-width="1.6"/>
+            </svg>
+          </div>
+          <div class="stats">
+            <div class="name">The Vole</div>
+            <div class="hpbar enemy-hp"><div class="hpfill" id="enemy-hp-fill"></div><span id="enemy-hp-text">5 / 5</span></div>
+            <div class="block" id="enemy-block">🛡 0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intent" id="intent" role="status" aria-live="polite">
+        <span class="intent-icon" id="intent-icon">❓</span>
+        <span id="intent-text">The Vole sniffs the air…</span>
+      </div>
+
+      <div class="resources">
+        <div class="paws" id="paws" aria-label="Paws remaining"></div>
+        <div class="energies">
+          <div class="energy fer" title="Ferocity"><span>Fer</span><b id="en-fer">3</b></div>
+          <div class="energy gui" title="Guile"><span>Gui</span><b id="en-gui">0</b></div>
+          <div class="energy sha" title="Shadow"><span>Sha</span><b id="en-sha">0</b></div>
+        </div>
+      </div>
+      <div class="turn-label" id="turn-label">Turn 1 — your prowl</div>
+
+      <div class="cards" id="cards" role="group" aria-label="Actions"></div>
+
+      <div class="actions">
+        <button id="btn-concentrate" class="btn small">Concentrate<span class="cost">whole turn → 1 spent energy back · 2/fight</span></button>
+        <button id="btn-end" class="btn primary small">End Turn</button>
+        <button id="btn-slip" class="btn ghost small">Slip Away<span class="cost">free · Vole gets a parting shot</span></button>
+      </div>
+
+      <div class="log" id="log" aria-live="polite" aria-label="Battle log"></div>
+      <div class="sysrow">
+        <button id="btn-quit" class="linkbtn">Abandon run</button>
+        <button id="btn-restart" class="linkbtn">Restart battle</button>
+      </div>
+    </section>
+
+    <!-- END SCREEN -->
+    <section id="screen-end" class="screen" aria-labelledby="end-title">
+      <p class="kicker" id="end-kicker">The tale pauses</p>
+      <h1 id="end-title">Victory</h1>
+      <div class="end-art" id="end-art" aria-hidden="true">🌙</div>
+      <p class="subtitle" id="end-text"></p>
+      <div class="lives-row" id="end-lives"></div>
+      <div class="title-buttons">
+        <button id="btn-again" class="btn primary">Hunt Again</button>
+        <button id="btn-title" class="btn ghost">Title Screen</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
