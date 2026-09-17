@@ -225,7 +225,6 @@
       "Combat and minigames",
       "Save/load"
     ],
-    "caveat": "This assessment is based on the public source and documentation reviewed; future monetization, analytics, cloud saves, or store integrations could change the dependency model.",
     "evidence_links": [
       "https://github.com/phirogue/SparkyGames/blob/main/README.md",
       "https://github.com/phirogue/SparkyGames/tree/main/game/services",
