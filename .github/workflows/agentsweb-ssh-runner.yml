@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 310
     env:
-      SSH_DIR: ${{ runner.temp }}/agentsweb-ssh
+      SSH_DIR: ${{ github.workspace }}/.agentsweb-ssh
       SSH_NAME: astra-top-games-${{ github.run_id }}-ssh
     steps:
       - name: Install SSH server and tunnel client
