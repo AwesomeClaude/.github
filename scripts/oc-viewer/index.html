@@ -4,25 +4,55 @@
 :root{color-scheme:dark;font:14px system-ui;background:#101319;color:#e3e8ef}*{box-sizing:border-box}body{margin:0}header{padding:24px 28px;border-bottom:1px solid #2b3340}h1{font-size:23px;margin:0 0 8px}small,.muted{color:#97a5b9}#connection{float:right;color:#80ddba}#root{overflow-wrap:anywhere}#stats{display:flex;gap:12px;padding:18px 28px;flex-wrap:wrap}.stat{background:#1a202a;padding:12px 20px;border-radius:10px;min-width:120px}.stat b{display:block;font-size:24px}main{display:grid;grid-template-columns:360px 1fr;height:calc(100vh - 210px);min-height:400px}aside{border-right:1px solid #303846;overflow:auto;padding:12px}input{width:100%;padding:12px;background:#1a202a;color:inherit;border:1px solid #364151;border-radius:8px}button{cursor:pointer;color:inherit;background:#202936;border:1px solid #394659;border-radius:7px;padding:8px 12px}.run{display:block;text-align:left;width:100%;margin-top:10px;padding:14px;overflow-wrap:anywhere}.run.selected{border-color:#82dec0;background:#193630}.run strong{display:block;margin-bottom:8px}.run small{display:block;line-height:1.7}#detail{overflow:auto;padding:20px 32px}#toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px}#title{flex:1;overflow-wrap:anywhere;font-size:16px}.card{background:#1a212c;border:1px solid #303b4a;border-radius:10px;padding:16px;margin:12px 0}.card.user{border-left:3px solid #91adff}.card.text{border-left:3px solid #80ddba}.card.error{border-color:#f99494}.body,pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6}pre{font-size:12px;max-height:450px;overflow:auto}.meta{color:#95a6bb;font-size:12px;margin-bottom:10px}summary{cursor:pointer;color:#b9c9dd}details{margin-top:12px}.empty{text-align:center;color:#9cacc0;padding:70px 20px}label{white-space:nowrap}label input{width:auto}#notice{color:#ffc68a}@media(max-width:760px){main{grid-template-columns:1fr;height:auto}aside{max-height:300px}#detail{padding:16px}.stat{min-width:90px;padding:10px}}
 </style>
 <header><span id="connection">Connecting…</span><h1>◈ OpenCode <span class="muted">/ Run Observatory</span></h1><small id="root"></small></header><section id="stats"></section>
-<main><aside><input id="search" placeholder="Filter runs by path…" aria-label="Filter runs"><div id="runs"></div></aside><section id="detail"><div id="toolbar"><strong id="title">Select a run</strong><label><input type="checkbox" id="raw"> Raw events</label><label><input type="checkbox" id="follow" checked> Follow</label></div><div id="notice"></div><div id="chat" class="empty">Select an events.jsonl file to read its conversation.</div></section></main>
+<main><aside><input id="search" placeholder="Filter runs by path…" aria-label="Filter runs"><div id="runs"></div></aside><section id="detail"><div id="toolbar"><strong id="title">Select a run</strong><label><input type="checkbox" id="follow" checked> Follow</label></div><div id="notice"></div><div id="chat" class="empty">Select an events.jsonl file to read its conversation.</div></section></main>
 <script>
 const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let selected='',runs=[],last='',current=null;
 const number=n=>new Intl.NumberFormat().format(n),json=v=>JSON.stringify(v,null,2),recent=r=>Date.now()/1000-r.modified<30;
 function list(){ const html=runs.filter(r=>r.path.toLowerCase().includes($('search').value.toLowerCase())).map(r=>`<button class="run ${selected===r.path?'selected':''}" data-path="${esc(r.path)}"><strong>${esc(r.path)}</strong><small>${recent(r)?'● Recent activity':'○ Idle'} · ${new Date(r.modified*1000).toLocaleString()}</small><small>${number(r.count)} events · ${number(r.tools)} tools · ${number(r.tokens)} tokens${r.errors?' · '+r.errors+' errors':''}</small></button>`).join('')||'<p class="empty">No matching events.jsonl files.</p>'; if($('runs').innerHTML!==html)$('runs').innerHTML=html; }
 $('runs').onclick=e=>{const b=e.target.closest('[data-path]');if(b){selected=b.dataset.path;last='';$('title').textContent=selected;list();loadRun().catch(showError);}};
-$('search').oninput=list;$('raw').onchange=()=>{last='';if(current)render(current);};
-function render(run){const key=json([run.signature,$('raw').checked]);if(key===last)return;last=key;const panel=$('detail'),atBottom=panel.scrollHeight-panel.scrollTop-panel.clientHeight<100,scroll=panel.scrollTop;const open=new Set([...$('chat').querySelectorAll('details[open]')].map(x=>x.dataset.key));
-$('notice').textContent=[run.invalid?`${run.invalid} malformed lines skipped`:'',run.pending?'Waiting for an incomplete final line…':'','OpenCode CLI logs may omit the user prompt.'].filter(Boolean).join(' · ');
-let events=run.events;if(!$('raw').checked){const seen=new Map();events.forEach((e,i)=>seen.set(e.part?.id?`${e.sessionID}:${e.part.id}`:i,e));events=[...seen.values()];}
-$('chat').className='';$('chat').innerHTML=events.map((e,i)=>{const p=e.part||{},t=e.type||'unknown',time=e.timestamp?new Date(e.timestamp).toLocaleTimeString():'';let body='';
-if($('raw').checked)body=`<pre>${esc(json(e))}</pre>`;
-else if(t==='text'||t==='reasoning')body=`<div class="body">${esc(p.text||e.text||'')}</div>`;
-else if(t==='tool_use'){const s=p.state||{};body=`<strong>${esc(p.tool)} <small>· ${esc(s.status||'unknown')}</small></strong><details data-key="tool-${i}"><summary>${esc(s.title||'Input and output')}</summary><pre>${esc(json(s.input))}</pre><pre>${esc(typeof s.output==='string'?s.output:json(s.output))}</pre>${s.error?`<pre>${esc(s.error)}</pre>`:''}</details>`;}
-else if(t==='step_finish')body=`<small>${esc(p.reason)} · ${number(p.tokens?.total??0)} tokens · $${Number(p.cost||0).toFixed(4)}</small>`;
-else if(t==='step_start')body='<small>Step started</small>';
-else body=`<pre>${esc(json(e))}</pre>`;
-return `<article class="card ${esc(t)}"><div class="meta">${esc(t==='text'?'Assistant':t)} · ${esc(time)} · ${esc(e.sessionID||'')}</div>${body}${!$('raw').checked?`<details data-key="raw-${i}"><summary>Source event</summary><pre>${esc(json(e))}</pre></details>`:''}</article>`;}).join('')||'<p class="empty">Waiting for events…</p>';
+$('search').oninput=list;
+function readable(value){
+ if(value==null)return '';
+ if(typeof value==='string'){try{return readable(JSON.parse(value));}catch{return value;}}
+ if(Array.isArray(value))return value.map(readable).filter(Boolean).join('\n');
+ if(typeof value==='object')return Object.entries(value).map(([k,v])=>`${k.replace(/([a-z])([A-Z])/g,'$1 $2').replace(/_/g,' ')}: ${readable(v)}`).join('\n');
+ return String(value);
+}
+function markdown(value){
+ const text=readable(value),chunks=text.split(/```[^\n]*\n([\s\S]*?)```/g);
+ return chunks.map((chunk,i)=>i%2?`<pre><code>${esc(chunk)}</code></pre>`:esc(chunk)
+ .replace(/^### (.+)$/gm,'<h4>$1</h4>').replace(/^## (.+)$/gm,'<h3>$1</h3>').replace(/^# (.+)$/gm,'<h2>$1</h2>')
+ .replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</strong>').replace(/`([^`\n]+)`/g,'<code>$1</code>')
+ .replace(/^[-*] /gm,'• ')).join('');
+}
+function contentCard(e,i){
+ const p=e.part||{},t=e.type||'',time=e.timestamp?new Date(e.timestamp).toLocaleTimeString():'';
+ let label='',body='',kind='text';
+ if(t==='text'||t==='reasoning'||t==='user'){
+  const text=p.text||e.text;if(!text)return '';
+  label=t==='reasoning'?'Thinking':(t==='user'||e.role==='user'||p.role==='user'?'You':'Assistant');
+  kind=label==='You'?'user':'text';body=`<div class="body">${markdown(text)}</div>`;
+ }else if(t==='tool_use'){
+  const state=p.state||{},input=state.input||{};
+  const names={read:'Read file',write:'Write file',edit:'Edit file',bash:'Run command',webfetch:'Fetch page',websearch:'Search the web',glob:'Find files',grep:'Search files',task:'Run task',todowrite:'Update checklist'};
+  label=names[p.tool]||'Tool activity';kind='tool';
+  const target=input.filePath||input.path||input.url||input.pattern||input.command||input.description||state.title||p.tool||'';
+  const status={completed:'Completed',running:'In progress',pending:'Waiting',error:'Failed'}[state.status]||'';
+  const output=readable(state.output),error=readable(state.error);
+  body=`<div class="body">${esc(target)}</div><small>${esc(status)}</small>`;
+  if(output)body+=`<details data-key="tool-${i}"><summary>View result</summary><div class="body">${markdown(output)}</div></details>`;
+  if(error){kind='error';body+=`<div class="body">${markdown(error)}</div>`;}
+ }else if(t==='error'){
+  label='Error';kind='error';const error=e.error;
+  body=`<div class="body">${markdown(typeof error==='string'?error:error?.data?.message||error?.message||e.message||'The run encountered an error.')}</div>`;
+ }else return '';
+ return `<article class="card ${kind}"><div class="meta">${esc(label)}${time?' · '+esc(time):''}</div>${body}</article>`;
+}
+function render(run){const key=json(run.signature);if(key===last)return;last=key;const panel=$('detail'),atBottom=panel.scrollHeight-panel.scrollTop-panel.clientHeight<100,scroll=panel.scrollTop;const open=new Set([...$('chat').querySelectorAll('details[open]')].map(x=>x.dataset.key));
+$('notice').textContent=[run.invalid?`${run.invalid} unreadable entries skipped`:'',run.pending?'Waiting for the next message…':''].filter(Boolean).join(' · ');
+const seen=new Map();run.events.forEach((e,i)=>seen.set(e.part?.id?`${e.sessionID}:${e.part.id}`:i,e));
+$('chat').className='';$('chat').innerHTML=[...seen.values()].map(contentCard).join('')||'<p class="empty">No conversation content yet.</p>';
 $('chat').querySelectorAll('details').forEach(x=>{x.open=open.has(x.dataset.key);});panel.scrollTop=$('follow').checked&&atBottom?panel.scrollHeight:scroll;
 }
 async function loadRun(){if(!selected)return;const path=selected;const response=await fetch('/api/run?path='+encodeURIComponent(path));if(path!==selected)return;if(response.status===404){$('chat').textContent='This file was removed.';return;}if(!response.ok)throw Error('Cannot read run');const data=await response.json();if(path!==selected)return;current=data;render(data);}
