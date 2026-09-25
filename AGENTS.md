@@ -8,6 +8,10 @@ Connect over SSH to an existing AgentsWeb runner and verify it before writing or
 
 Run `opencode run -m opencode/muse-spark-1.3-contributor-free hi` to verify the Muse Spark 1.3 model.
 
+## OpenCode source
+
+Use the local OpenCode source checkout at `../ChatGPT/opencode`. Refer to [the upstream repository](https://github.com/anomalyco/opencode) for its GitHub page.
+
 ## OpenCode test links
 
 Copy every live OpenCode session URL printed by `scripts/test-oc.sh` immediately into a visible chat response as a clickable Markdown link. Return after launch; inspect per-run `result.json` only when asked for outcomes.
