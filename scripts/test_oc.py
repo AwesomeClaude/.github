@@ -18,8 +18,6 @@ import threading
 import time
 import urllib.request
 
-from validate_readme import SCHEMA, load_schema, validate
-
 ROOT = Path(__file__).resolve().parent.parent
 MODEL = 'opencode/muse-spark-1.3-contributor-free'
 STOP = threading.Event()
@@ -114,12 +112,11 @@ def abort(base, result):
         result['abort_error'] = str(exc)
 
 
-def prepare(index, args, batch, base, prompt, schema):
+def prepare(index, args, batch, base, prompt):
     name = f'run-{index:03d}'
     directory = batch / name
     directory.mkdir()
     subprocess.run(['git', 'init', '-q', str(directory)], check=True)
-    save(directory / 'readme.schema.json', schema)
     meta = batch / 'records' / name
     meta.mkdir(parents=True)
     (meta / 'prompt.txt').write_text(prompt, encoding='utf-8')
@@ -134,7 +131,7 @@ def prepare(index, args, batch, base, prompt, schema):
     return meta
 
 
-def run_one(meta, base, timeout, schema):
+def run_one(meta, base, timeout):
     result = json.loads((meta / 'result.json').read_text())
     directory = Path(result['directory'])
     started = time.monotonic()
@@ -165,11 +162,7 @@ def run_one(meta, base, timeout, schema):
         abort(base, result)
         if process:
             stop_group(process)
-    errors = validate(directory / 'readme.json', schema)
-    result.update(elapsed_seconds=round(time.monotonic() - started, 2),
-                  validation={'valid': not errors, 'errors': errors})
-    if result['status'] == 'finished':
-        result['status'] = 'passed' if not errors else 'failed'
+    result['elapsed_seconds'] = round(time.monotonic() - started, 2)
     save(meta / 'result.json', result)
     return result
 
@@ -177,20 +170,19 @@ def run_one(meta, base, timeout, schema):
 def worker(args):
     # Inherit the launcher's open-file description: keep its flock after it exits.
     with os.fdopen(args.lock_fd, 'w'):
-        schema = load_schema(args.worker / 'records' / 'readme.schema.json')
         runs = sorted((args.worker / 'records').glob('run-*'))
         for sig in (signal.SIGINT, signal.SIGTERM):
             signal.signal(sig, lambda *_: STOP.set())
         (args.worker / 'worker.pid').write_text(str(os.getpid()) + '\n')
         with concurrent.futures.ThreadPoolExecutor(max_workers=len(runs)) as pool:
-            futures = [pool.submit(run_one, meta, args.server, args.timeout, schema) for meta in runs]
+            futures = [pool.submit(run_one, meta, args.server, args.timeout) for meta in runs]
             with os.fdopen(args.ready_fd, 'w') as ready:
                 ready.write('ready\n')
             results = [future.result() for future in futures]
-    return 0 if all(r['status'] == 'passed' for r in results) else 1
+    return 0 if all(r['status'] == 'finished' for r in results) else 1
 
 
-def launch(args, prompt, schema):
+def launch(args, prompt):
     work = ROOT / 'work'
     work.mkdir(exist_ok=True)
     with (work / 'oc-batch.lock').open('w') as lock:
@@ -201,11 +193,10 @@ def launch(args, prompt, schema):
         base = ensure_server(args, work)
         batch = archive(work)
         (batch / 'records').mkdir()
-        save(batch / 'records' / 'readme.schema.json', schema)
         process = None
         try:
             for index in range(1, args.runs + 1):
-                prepare(index, args, batch, base, prompt, schema)
+                prepare(index, args, batch, base, prompt)
             read_fd, write_fd = os.pipe()
             try:
                 with (batch / 'worker.log').open('ab') as log:
@@ -264,7 +255,7 @@ def main():
         prompt = args.prompt.read_text(encoding='utf-8')
         if not prompt.strip():
             parser.error('Prompt must not be empty')
-        return launch(args, prompt, load_schema())
+        return launch(args, prompt)
     except KeyboardInterrupt:
         return 130
     except (OSError, ValueError, RuntimeError) as exc:

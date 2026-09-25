@@ -13,80 +13,6 @@ import time
 import unittest
 
 import test_oc as runner
-from validate_readme import load_schema, validate
-
-
-def report():
-    source = 'https://github.com/phirogue/SparkyGames'
-    claim = {'description': 'A deterministic combat engine.', 'basis': 'observed', 'sources': [source]}
-    return dict(schema_version=1, repository_url=source, title='Example game',
-                source_analysis=[claim], screenshots=[], reconstructed_prompt='Build a game.',
-                how_to_play=['Choose an action.'], mechanics=[claim], tags=['strategy'],
-                rating={'grade': 'AA', 'rationale': 'A playable vertical slice.'},
-                reviews=[{'fictional': True, 'rating': n, 'text': 'Illustrative review.'} for n in [3, 4, 5]],
-                links=[source], limitations=['No screenshots inspected.'])
-
-
-class SchemaTests(unittest.TestCase):
-    def setUp(self):
-        self.temp = tempfile.TemporaryDirectory()
-        self.path = Path(self.temp.name) / 'readme.json'
-        self.schema = load_schema()
-
-    def tearDown(self):
-        self.temp.cleanup()
-
-    def check(self, value):
-        self.path.write_text(json.dumps(value))
-        return validate(self.path, self.schema)
-
-    def test_valid(self):
-        self.assertEqual(self.check(report()), [])
-
-    def test_invalid_fields(self):
-        for key, value in [('title', '  '), ('tags', []), ('schema_version', 2),
-                           ('repository_url', 'javascript:alert(1)'), ('mechanics', []),
-                           ('screenshots', [{'url': 'https://example.com/x.png', 'findings': 'Unseen'}])]:
-            with self.subTest(key=key):
-                data = report()
-                data[key] = value
-                self.assertTrue(self.check(data))
-        data = report()
-        del data['source_analysis']
-        self.assertTrue(self.check(data))
-        data = report()
-        data['extra'] = True
-        self.assertTrue(self.check(data))
-
-    def test_reviews_and_grades(self):
-        for count in [0, 2, 4]:
-            data = report()
-            data['reviews'] = [data['reviews'][0]] * count
-            self.assertTrue(self.check(data))
-        for rating in [-1, 6, True, '5']:
-            data = report()
-            data['reviews'][0]['rating'] = rating
-            self.assertTrue(self.check(data))
-        data = report()
-        data['reviews'][0]['fictional'] = False
-        self.assertTrue(self.check(data))
-        data = report()
-        data['rating']['grade'] = 'AA+'
-        self.assertTrue(self.check(data))
-
-    def test_bad_json_missing_file_symlink_and_cli(self):
-        self.assertTrue(validate(self.path, self.schema))
-        for content in ['not json', '{"title":"a","title":"b"}', '{"rating":NaN}', '```json\n{}\n```']:
-            self.path.write_text(content)
-            self.assertTrue(validate(self.path, self.schema))
-        self.check(report())
-        command = [sys.executable, str(runner.ROOT / 'scripts/validate_readme.py'), str(self.path)]
-        self.assertEqual(subprocess.run(command, capture_output=True).returncode, 0)
-        self.path.write_text('{}')
-        self.assertEqual(subprocess.run(command, capture_output=True).returncode, 1)
-        self.path.unlink()
-        self.path.symlink_to(runner.SCHEMA)
-        self.assertTrue(validate(self.path, self.schema))
 
 
 class RunnerTests(unittest.TestCase):
@@ -94,21 +20,18 @@ class RunnerTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(prefix='oc tests ')
         self.root = Path(self.temp.name)
         (self.root / 'scripts').mkdir()
-        for name in ['test-oc.sh', 'test_oc.py', 'validate_readme.py']:
+        for name in ['test-oc.sh', 'test_oc.py']:
             shutil.copy2(runner.ROOT / 'scripts' / name, self.root / 'scripts' / name)
-        shutil.copytree(runner.ROOT / 'schemas', self.root / 'schemas')
         (self.root / 'prompt.md').write_text('exact default prompt')
         self.release = self.root / 'release'
         self.fake = self.root / 'fake-oc'
         self.fake.write_text(f'''#!{sys.executable}
-import json, pathlib, time, sys
+import pathlib, time, sys
 assert pathlib.Path('.git').is_dir()
-assert pathlib.Path('readme.schema.json').is_file()
 deadline = time.monotonic() + 15
 while not pathlib.Path({str(self.release)!r}).exists() and time.monotonic() < deadline:
     time.sleep(.05)
-pathlib.Path('readme.json').write_text(json.dumps({report()!r}))
-print(json.dumps({{"type":"step_finish"}}))
+pathlib.Path('readme.json').write_text('not JSON')
 ''')
         self.fake.chmod(0o755)
         self.requests = []
@@ -181,23 +104,21 @@ print(json.dumps({{"type":"step_finish"}}))
     def results(self):
         return [json.loads(p.read_text()) for p in sorted((self.batch / 'records').glob('run-*/result.json'))]
 
-    def test_detached_default_three_urls_lock_validation_and_archive(self):
+    def test_detached_default_three_urls_lock_and_archive(self):
         completed = self.launch()
         self.assertEqual(completed.returncode, 0, completed.stderr)
         self.assertEqual(completed.stdout.count(' live]('), 3)
         self.assertFalse(self.unlocked())
-        self.assertFalse(list(self.batch.glob('run-*/readme.json')))
         for path in (self.batch / 'records').glob('run-*/prompt.txt'):
             self.assertEqual(path.read_text(), 'exact default prompt')
         self.assertNotEqual(self.launch().returncode, 0)
         self.release.touch()
         self.wait_for(self.unlocked)
-        self.assertTrue(all(r['status'] == 'passed' and r['validation']['valid'] for r in self.results()))
+        self.assertTrue(all(r['status'] == 'finished' for r in self.results()))
         self.assertFalse(list(self.batch.glob('summary.*')))
-        original = (self.batch / 'run-001/readme.json').read_bytes()
         self.assertEqual(self.launch('--runs', '1').returncode, 0)
         self.wait_for(self.unlocked)
-        self.assertEqual((self.root / 'work/oc-previous-batches/batch-001/run-001/readme.json').read_bytes(), original)
+        self.assertTrue((self.root / 'work/oc-previous-batches/batch-001/run-001/readme.json').exists())
 
     def test_prompt_overrides_both_forms(self):
         prompt = self.root / 'custom prompt.md'
@@ -214,7 +135,6 @@ print(json.dumps({{"type":"step_finish"}}))
         self.wait_for(self.unlocked)
         self.assertEqual(self.results()[0]['status'], 'timeout')
         self.assertTrue(any(p.endswith('/abort') for p in self.requests))
-        self.assertFalse(self.results()[0]['validation']['valid'])
 
     def test_worker_signal_aborts_and_unlocks(self):
         self.assertEqual(self.launch('--runs', '1').returncode, 0)
@@ -224,23 +144,23 @@ print(json.dumps({{"type":"step_finish"}}))
         self.assertEqual(self.results()[0]['status'], 'interrupted')
         self.assertTrue(any(p.endswith('/abort') for p in self.requests))
 
-    def test_missing_and_invalid_reports_fail(self):
-        for content in ['', "import pathlib; pathlib.Path('readme.json').write_text('{}')"]:
-            self.fake.write_text(f'#!{sys.executable}\n{content}\n')
-            self.assertEqual(self.launch('--runs', '1').returncode, 0)
-            self.wait_for(self.unlocked)
-            self.assertEqual(self.results()[0]['status'], 'failed')
-            self.assertFalse(self.results()[0]['validation']['valid'])
-
-    def test_nonzero_exit_with_valid_report_still_fails(self):
-        with self.fake.open('a') as script:
-            script.write('sys.exit(7)\n')
+    def test_report_content_and_presence_do_not_affect_status(self):
         self.release.touch()
+        self.assertEqual(self.launch('--runs', '1').returncode, 0)
+        self.wait_for(self.unlocked)
+        self.assertEqual(self.results()[0]['status'], 'finished')
+        self.fake.write_text(f'#!{sys.executable}\npass\n')
+        self.assertEqual(self.launch('--runs', '1').returncode, 0)
+        self.wait_for(self.unlocked)
+        self.assertEqual(self.results()[0]['status'], 'finished')
+        self.assertFalse((self.batch / 'run-001/readme.json').exists())
+
+    def test_nonzero_exit_fails(self):
+        self.fake.write_text(f'#!{sys.executable}\nimport sys; sys.exit(7)\n')
         self.assertEqual(self.launch('--runs', '1').returncode, 0)
         self.wait_for(self.unlocked)
         self.assertEqual(self.results()[0]['status'], 'failed')
         self.assertEqual(self.results()[0]['exit_code'], 7)
-        self.assertTrue(self.results()[0]['validation']['valid'])
 
     def test_session_startup_failure(self):
         self.fail_session = True
@@ -265,14 +185,6 @@ print(json.dumps({{"type":"step_finish"}}))
         self.assertTrue(self.unlocked())
         self.assertTrue(any(p.endswith('/abort') for p in self.requests))
 
-    def test_agent_schema_change_cannot_weaken_validation(self):
-        self.fake.write_text(f'#!{sys.executable}\nimport pathlib\n'
-                            "pathlib.Path('readme.schema.json').write_text('{}')\n"
-                            "pathlib.Path('readme.json').write_text('{}')\n")
-        self.assertEqual(self.launch('--runs', '1').returncode, 0)
-        self.wait_for(self.unlocked)
-        self.assertEqual(self.results()[0]['status'], 'failed')
-
     def test_five_concurrent_runs(self):
         completed = self.launch('--runs', '5')
         self.assertEqual(completed.returncode, 0, completed.stderr)
@@ -280,7 +192,7 @@ print(json.dumps({{"type":"step_finish"}}))
         self.wait_for(lambda: all(r['status'] == 'running' for r in self.results()))
         self.release.touch()
         self.wait_for(self.unlocked)
-        self.assertTrue(all(r['status'] == 'passed' for r in self.results()))
+        self.assertTrue(all(r['status'] == 'finished' for r in self.results()))
 
     def test_archive_numbering_and_symlinks(self):
         work = self.root / 'archive-test'
