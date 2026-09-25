@@ -1,44 +1,48 @@
-# Run OpenCode batch tests
+# Launch OpenCode batches
 
-Run `./scripts/test-oc.sh` from the project to launch three runs concurrently using the canonical `prompt.md`. Use `--runs 10` to launch all ten runs concurrently. Supply `--prompt /absolute/path/to/prompt.md` only when intentionally using a different prompt. Keep the default Muse Spark model or supply `--model provider/model`. Set the per-run deadline with `--timeout 900`.
+Install dependencies with `python3 -m pip install -r scripts/requirements-test-oc.txt`.
+Run `./scripts/test-oc.sh` from any directory. Use the repository's `prompt.md` by default; pass `--prompt /absolute/path/to/prompt.md` to override it. Set concurrency with `--runs 3`, the per-run deadline with `--timeout 900`, and the model with `--model provider/model`. Keep Muse Spark as the default model.
 
-Use `--server http://127.0.0.1:4096` to attach to an existing local server. Otherwise let the runner start or reuse a loopback server on `--port 4096`. Keep that server running after completion to inspect sessions. Inspect `work/oc-server/server.json` and `server.log` for a server started by this script. Supply `--web-base https://your-protected-tunnel.example` only for an existing tunnel; create and protect that tunnel separately. Set `OPENCODE_SERVER_PASSWORD` and optionally `OPENCODE_SERVER_USERNAME` when using server authentication.
+Wait only for session creation and the detached worker's startup acknowledgement. Read each printed session link immediately. Treat launcher exit 0 as successful launch, not successful analysis. Inspect per-run results after launch. Keep the worker alive after closing the terminal; refuse another batch while its lock is held.
 
-## Preserve batches
+Use `--server http://127.0.0.1:4096` to attach to a server, or start/reuse the loopback server on `--port 4096`. Keep the server available for session inspection. Inspect `work/oc-server/server.json` and `server.log` for a managed server. Supply `--web-base https://your-protected-tunnel.example` only for an existing protected tunnel. Set `OPENCODE_SERVER_PASSWORD` and optionally `OPENCODE_SERVER_USERNAME` for server authentication.
 
-Expect the next invocation to move `work/oc-batch-test` into `work/oc-previous-batches/batch-NNN`, using the highest existing number plus one. Preserve every archived file. Keep existing legacy `work/oc-generations` untouched. Refuse simultaneous batch invocations and symlink archive paths. Leave original analyses and published reports untouched.
+## Inspect outputs
 
-Inspect this layout:
+Use this layout:
 
 ```text
 work/
   oc-batch-test/
-    run-001/.git/
-    run-002/.git/
-    run-003/.git/
-    records/run-001/
-      prompt.txt
-      command.json
-      events.jsonl
-      stderr.log
-      result.json
-    summary.json
-    summary.md
+    run-001/
+      .git/
+      readme.schema.json
+      readme.json
+    records/
+      readme.schema.json
+      run-001/
+        prompt.txt
+        command.json
+        events.jsonl
+        stderr.log
+        result.json
+    worker.pid
+    worker.log
   oc-previous-batches/
-    batch-001/
+    batch-NNN/
   oc-server/
 ```
 
-Initialize each run as its own Git repository before creating the session. Launch all requested runs concurrently; default to three runs. Preserve the prompt unchanged and record its SHA-256. Keep the runner's logs outside agent workspaces. Treat Git boundaries as repository-discovery isolation, not a filesystem sandbox; use an OS/container sandbox for untrusted workloads. Expect `--auto` permission behavior; do not assume it prevents access to neighboring files or baseline reports.
+Read `result.json` for the session link, state, exit code, and validation errors. Accept `passed` only after a successful run produces schema-valid `readme.json`. Inspect `failed`, `timeout`, or `interrupted` results and their logs. Validate manually with `python3 scripts/validate_readme.py /absolute/path/to/readme.json`; expect exit 0 for valid data and exit 1 for errors. Treat schema validity as structural correctness; review factual claims separately.
 
-## Inspect live progress
+Copy the schema into each run for the agent to read. Validate against the separate batch schema snapshot in `records/`. Preserve the exact prompt and its SHA-256. Keep diagnostic logs outside agent workspaces. Treat per-run Git repositories as discovery boundaries, not filesystem sandboxes.
 
-Open each printed session URL immediately after session creation. Inspect session IDs, original directories, and URLs in per-run metadata and both rolling summaries. Use the same base64url-directory/session-ID URL format as OhMyGithub. Treat archived links as historical references: moving a directory does not migrate the session's recorded workspace. Inspect archived reports/logs directly; do not resume an archived session against a reused current-batch directory.
+## Preserve history and stop runs
 
-Press Ctrl-C to stop scheduling, abort this batch's active server sessions, and terminate their CLI process groups. Apply the same cleanup on per-run timeout. Leave the web server available for inspection.
+Move the completed current batch into `work/oc-previous-batches/batch-NNN` before launching another. Increment the highest existing number; preserve every archived file. Refuse symlink batch/archive paths. Treat archived session links as historical: inspect archived files directly instead of resuming against reused directories.
 
-## Validate results
+Inspect the PID in `worker.pid` and confirm it still belongs to this batch before sending SIGTERM. Abort attached server sessions and stop CLI process groups on worker termination or per-run timeout. Leave the server running. Inspect `worker.log` if startup acknowledgement fails.
 
-Separate `report_generated`, `structural_pass`, and `quality_pass`. Require human review for factual accuracy, implemented-versus-planned distinctions, screenshot inspection, and comparison quality. Read image-related tool calls as evidence candidates, not proof of visual understanding. Inspect tool errors even when OpenCode exits zero. Expect exit 1 for failed runs or reports that fail structural checks, and exit 130 for interruption.
+## Test changes
 
-Run `python3 -m unittest discover -s scripts -p test_oc_runner.py -v` to test numbering, archive preservation, symlink refusal, live URL encoding, three parallel Git workspaces, timeout abort, and missing-report validation.
+Run `python3 -m unittest discover -s scripts -p test_oc_runner.py -v`. Exercise schema errors, prompt overrides, detached execution, live URLs, lock ownership, archive preservation, startup failure, timeout, and termination against fake local sessions.

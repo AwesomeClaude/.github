@@ -1,9 +1,9 @@
-# SparkyGames Analysis
+# Launch game analyses
 
-Review the public source for *The Nine Lives of Ash* without cloning its repository.
+Install dependencies with `python3 -m pip install -r scripts/requirements-test-oc.txt`.
+Run `./scripts/test-oc.sh` to print three OpenCode session links and return while analysis continues in the background.
 
-Find the human-readable report in [the-nine-lives-of-ash/README.md](the-nine-lives-of-ash/README.md).
+Edit `prompt.md` to change the request. Require each run to write `readme.json` matching `schemas/readme.schema.json`.
+Validate a report with `python3 scripts/validate_readme.py /absolute/path/to/readme.json`.
 
-Find the machine-readable report in [the-nine-lives-of-ash/game-analysis.json](the-nine-lives-of-ash/game-analysis.json).
-
-Reuse the analysis structure in [outputs/game-analysis.schema.json](outputs/game-analysis.schema.json).
+Read [batch instructions](wiki/oc-batch-testing.md) for lifecycle and result paths. Open the [event viewer](wiki/oc-event-viewer.md) to inspect logs.

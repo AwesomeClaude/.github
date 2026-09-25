@@ -10,7 +10,7 @@ Run `opencode run -m opencode/muse-spark-1.3-contributor-free hi` to verify the 
 
 ## OpenCode test links
 
-When running `scripts/test-oc.sh`, immediately copy every live OpenCode session URL printed by the runner into a visible chat response as a clickable Markdown link. Do not wait for the batch to finish. Continue reporting later URLs as they appear, and include the final batch summary link after completion.
+Copy every live OpenCode session URL printed by `scripts/test-oc.sh` immediately into a visible chat response as a clickable Markdown link. Return after launch; inspect per-run `result.json` only when asked for outcomes.
 
 ## Wiki index
 
