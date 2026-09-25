@@ -16,13 +16,15 @@ import test_oc as runner
 
 
 class RunnerTests(unittest.TestCase):
+    REPO = 'https://github.com/bridge-mind/turbo-kart-rally/tree/main'
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix='oc tests ')
         self.root = Path(self.temp.name)
         (self.root / 'scripts').mkdir()
         for name in ['test-oc.sh', 'test_oc.py']:
             shutil.copy2(runner.ROOT / 'scripts' / name, self.root / 'scripts' / name)
-        (self.root / 'prompt.md').write_text('exact default prompt')
+        (self.root / 'prompt.md').write_text('Analyze {{repository_url}}; cite {{repository_url}}')
         self.release = self.root / 'release'
         self.fake = self.root / 'fake-oc'
         self.fake.write_text(f'''#!{sys.executable}
@@ -79,7 +81,7 @@ pathlib.Path('readme.json').write_text('not JSON')
 
     def launch(self, *flags):
         return subprocess.run(['/bin/sh', str(self.root / 'scripts/test-oc.sh'),
-            '--server', self.base, '--executable', str(self.fake), *flags],
+            '--server', self.base, '--executable', str(self.fake), '--repo', self.REPO, *flags],
             cwd='/', capture_output=True, text=True, timeout=10)
 
     def unlocked(self):
@@ -110,7 +112,7 @@ pathlib.Path('readme.json').write_text('not JSON')
         self.assertEqual(completed.stdout.count(' live]('), 3)
         self.assertFalse(self.unlocked())
         for path in (self.batch / 'records').glob('run-*/prompt.txt'):
-            self.assertEqual(path.read_text(), 'exact default prompt')
+            self.assertEqual(path.read_text(), f'Analyze {self.REPO}; cite {self.REPO}')
         self.assertNotEqual(self.launch().returncode, 0)
         self.release.touch()
         self.wait_for(self.unlocked)
@@ -129,6 +131,17 @@ pathlib.Path('readme.json').write_text('not JSON')
             self.assertEqual(completed.returncode, 0, completed.stderr)
             self.wait_for(self.unlocked)
             self.assertEqual((self.batch / 'records/run-001/prompt.txt').read_text(), 'custom exact prompt')
+
+    def test_repository_url_required_and_validated(self):
+        command = ['/bin/sh', str(self.root / 'scripts/test-oc.sh'),
+            '--server', self.base, '--executable', str(self.fake)]
+        missing = subprocess.run(command, capture_output=True, text=True)
+        self.assertNotEqual(missing.returncode, 0)
+        self.assertIn('Require --repo', missing.stderr)
+        invalid = self.launch('--repo', 'https://example.com/owner/repo')
+        self.assertNotEqual(invalid.returncode, 0)
+        self.assertIn('Require a GitHub repository URL', invalid.stderr)
+        self.assertFalse(self.batch.exists())
 
     def test_timeout_aborts_session(self):
         self.assertEqual(self.launch('--runs', '1', '--timeout', '.2').returncode, 0)

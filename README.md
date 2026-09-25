@@ -1,6 +1,6 @@
 # Launch game analyses
 
-Run `./scripts/test-oc.sh` to print three OpenCode session links and return while analysis continues in the background.
+Run `./scripts/test-oc.sh --repo https://github.com/owner/repository` to print three OpenCode session links and return while analysis continues in the background.
 
 Edit `prompt.md` to change the request or the example `readme.json`. Ask Codex to use `$review-oc-reports` to read completed reports and assess them manually.
 

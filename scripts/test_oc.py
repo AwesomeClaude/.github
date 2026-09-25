@@ -234,6 +234,7 @@ def main():
     parser.add_argument('--runs', type=int, default=3)
     parser.add_argument('--timeout', type=float, default=900, help='Seconds per run')
     parser.add_argument('--prompt', type=Path, default=ROOT / 'prompt.md')
+    parser.add_argument('--repo', help='GitHub repository URL, optionally with /tree/<branch>')
     parser.add_argument('--model', default=MODEL)
     parser.add_argument('--executable', default='opencode')
     parser.add_argument('--server', help='Existing local OpenCode server URL')
@@ -245,6 +246,11 @@ def main():
     args = parser.parse_args()
     if args.worker:
         return worker(args)
+    if not args.repo:
+        parser.error('Require --repo')
+    if not re.fullmatch(r'https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(?:/tree/[A-Za-z0-9_./-]+)?/?', args.repo):
+        parser.error('Require a GitHub repository URL, optionally with /tree/<branch>')
+    args.repo = args.repo.rstrip('/')
     if args.runs <= 0 or not 0 < args.timeout < float('inf'):
         parser.error('runs and timeout must be positive and finite')
     executable = shutil.which(args.executable)
@@ -255,6 +261,7 @@ def main():
         prompt = args.prompt.read_text(encoding='utf-8')
         if not prompt.strip():
             parser.error('Prompt must not be empty')
+        prompt = prompt.replace('{{repository_url}}', args.repo)
         return launch(args, prompt)
     except KeyboardInterrupt:
         return 130
