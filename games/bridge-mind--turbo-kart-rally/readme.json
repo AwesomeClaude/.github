@@ -1,0 +1,111 @@
+{
+  "repository_url": "https://github.com/bridge-mind/turbo-kart-rally/tree/main",
+  "title": "Turbo Kart Rally",
+  "source_analysis": [
+    {
+      "finding": "Arcade kart racer built entirely with Three.js r170 as ES modules with no build step; all meshes, CanvasTexture textures, sounds and music are generated procedurally in code with no asset files.",
+      "url": "https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md"
+    },
+    {
+      "finding": "Built by five Claude Opus 5.5 sub-agents working in parallel from a single Mario Kart clone prompt, coordinated via an architecture contract and shared config plus event bus, with no follow-up questions.",
+      "url": "https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md"
+    },
+    {
+      "finding": "Roster of 8 original racers (Blaze, Zippy, Bella, Toadly, Rex, Grumbo, Koopz, Dotty) with speed/accel/handling/weight stats, 50cc/100cc/150cc classes, and single Palm Cove Circuit (~2.1km, 8 boost pads, 2 jump ramps, 30 item boxes).",
+      "url": "https://github.com/bridge-mind/turbo-kart-rally/blob/main/src/config.js"
+    },
+    {
+      "finding": "Arcade driving model: hop/drift with 3-stage mini-turbo (blue-orange-purple), rocket start, trick boosts, off-road slowdown, wall bumps, weight-based kart collisions, and AI that follows racing line, drifts, dodges hazards and rubber-bands.",
+      "url": "https://github.com/bridge-mind/turbo-kart-rally/blob/main/ARCHITECTURE.md"
+    },
+    {
+      "finding": "Eight position-weighted items (mushroom, triple mushroom, banana, green shell, homing red shell, star, lightning, blue shell) with roulette, item boxes, projectiles and hazards, plus pooled particles, bloom, chase camera and minimap HUD.",
+      "url": "https://github.com/bridge-mind/turbo-kart-rally/blob/main/ARCHITECTURE.md"
+    },
+    {
+      "finding": "Fully procedural Web Audio: engine/drift/item sounds plus sequenced chiptune menu/race music that speeds up on final lap; game flow is Title > Character Select > Intro flyover > 3-2-1-GO > 3-lap race vs 7 AI > Results.",
+      "url": "https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/race.jpg",
+      "observation": "Third-person gameplay on asphalt circuit: red player kart chasing two rivals, boost pad chevrons ahead, red-white curbs, TURBO/KART/RALLY billboards, low-poly trees and mountains, HUD with LAP 1/3, timer, 8-place leaderboard, item slot, minimap, 137 km/h speedometer and 7th place."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/items.jpg",
+      "observation": "Gameplay beside grandstand: red kart on grass next to crowded colorful low-poly spectators, checkered start line visible, HUD shows triple-mushroom item x3, LAP 1/3, 8th place at 36 km/h, minimap and leaderboard."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/title.jpg",
+      "observation": "Title card overlaying live demo race: large TURBO KART RALLY logo, PRESS ENTER / CLICK TO START prompt, three karts on start straight under gantry, mountains and trees behind; menu/title, not active racing."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/character-select.jpg",
+      "observation": "Character-select menu: 8 racer cards with portraits and SPD/ACC/HDL/WGT bars, Blaze detail panel with class 100cc NORMAL and 3 LAPS selectors, RACE! button and controls footer over blurred track background."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/results.jpg",
+      "observation": "Results menu: VICTORY! 2 LAP RACE FINAL STANDINGS table 1st-8th with best/total times, Rex YOU first at 1:34.74, RACE AGAIN and MAIN MENU buttons over dimmed track; menu, not gameplay."
+    }
+  ],
+  "screenshot_based_score": {
+    "score": 7,
+    "reason": "Visible gameplay shows coherent colorful low-poly stylization, readable karts/track, varied scenery with mountains/trees/grandstands, and polished HUD/minimap/leaderboard. Detail, lighting and textures are simple indie-level, not high-end, but composition and polish are strong for procedural assets."
+  },
+  "reconstructed_prompt": "Build Turbo Kart Rally, a Mario Kart-style arcade kart racer in Three.js with no build step and 100% procedural assets. Include 8 original racers with stats, one 2km scenic circuit with boost pads, jumps and item boxes, drift with 3-stage mini-turbo, 8 position-balanced items, 7 rubber-banding AI, chase camera, minimap HUD, menus/results, and synthesized sound plus chiptune music. Playable in desktop WebGL2 browser with keyboard and gamepad.",
+  "how_to_play": [
+    "Open the play link in a desktop WebGL2 browser and click or press Enter on the title screen.",
+    "Choose one of 8 racers, pick 50cc/100cc/150cc class and lap count, then press RACE!.",
+    "Hold accelerate during the final countdown moment for a rocket start when GO shows.",
+    "Race 3 laps around Palm Cove Circuit against 7 AI, holding position 1st-8th on the HUD.",
+    "Steer with A/D or arrows or left stick, accelerate with W/Up, brake/reverse with S/Down.",
+    "Tap Space to hop, hold Space while steering to drift; release when sparks turn blue/orange/purple for mini-turbo boost.",
+    "Drive over item boxes for roulette, then fire with E/X/Shift to use mushrooms, shells, bananas, star, lightning or blue shell.",
+    "Hit boost pads, trick off jump ramps, avoid off-road grass, bananas and shells; watch minimap, speedometer, final-lap and wrong-way banners to finish first."
+  ],
+  "mechanics": [
+    "8-racer arcade kart physics with drift, hop and 3-level mini-turbo boost",
+    "Rocket start timing, boost pads, jump-ramps with trick boost, off-road slowdown and wall bounce",
+    "Weight-based kart-to-kart collisions, spin/tumble/shrink hit states with star invulnerability",
+    "8 position-weighted items: mushroom, triple mushroom, banana, green shell, homing red shell, star, lightning, blue shell",
+    "Item boxes with respawn, roulette delay, drag-and-throw bananas/shells, projectile bouncing and homing",
+    "7 AI drivers following racing line, drifting, avoiding hazards, using items tactically with rubber-banding",
+    "Lap/checkpoint validation, live places, countdown, final-lap speedup, wrong-way detection and results with splits",
+    "Chase camera with speed FOV, shake and intro flyover, minimap, speedometer and procedural audio/music"
+  ],
+  "tags": [
+    "kart-racer",
+    "arcade",
+    "racing",
+    "threejs",
+    "webgl",
+    "procedural-generation",
+    "single-player",
+    "ai-generated",
+    "browser"
+  ],
+  "rating": {
+    "score": 4,
+    "reason": "Impressive complete indie kart racer with full loop, 8 karts, items, AI, HUD and music, but far from AAA: single track, no multiplayer/online, limited modes, simple low-poly procedural art/audio, and no evidence of extensive balancing, QA, accessibility or live-ops scale. Evidence gaps: no playtest metrics, performance data, or depth beyond one circuit."
+  },
+  "fictional_reviews": [
+    {
+      "rating": 5,
+      "text": "Fictional review: I picked Rex for the memes and stayed for the drift sparks. That purple mini-turbo out of the S-bend felt illegal in a browser tab."
+    },
+    {
+      "rating": 3,
+      "text": "Fictional review: Fun for three races, but my couch crew wanted split-screen and a second cup. The blue shell has personal beef with me specifically."
+    },
+    {
+      "rating": 4,
+      "text": "Fictional review: As a fictional kart dad, I approve: readable track, bouncy chiptune, grandstands full of gummy bears. Docked one star because Toadly beat me on the bridge."
+    }
+  ],
+  "links": [
+    "https://bridge-mind.github.io/turbo-kart-rally/",
+    "https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md",
+    "https://github.com/bridge-mind/turbo-kart-rally/blob/main/ARCHITECTURE.md"
+  ]
+}

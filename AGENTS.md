@@ -19,3 +19,10 @@ Copy every live OpenCode session URL printed by `scripts/test-oc.sh` immediately
 ## Wiki index
 
 - Read [OpenCode batch testing](wiki/oc-batch-testing.md) before changing the batch runner.
+
+## Verification
+
+- Don't write or run unit tests, mock tests, or static analysis.
+- Don't use mockups instead of a real end-to-end run.
+- Don't ask the user to test or analyze; do it directly.
+- Don't finish without running and analyzing the end-to-end flow.
