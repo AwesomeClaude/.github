@@ -1,7 +1,13 @@
-# Launch game analyses
+# Game catalog
 
-Run `./scripts/test-oc.sh --repo https://github.com/owner/repository` to print three OpenCode session links and return while analysis continues in the background.
+Browse the rated games. Open each game page for evidence and play instructions.
 
-Edit `prompt.md` to change the request or the example `readme.json`. Ask Codex to use `$review-oc-reports` to read completed reports and assess them manually.
+Add games with `./scripts/games.sh <github-game-url> [more-urls...]` or `./scripts/games.sh --file links.txt`. Rebuild every page and this index with `./scripts/games.sh`. Inspect `games/added.jsonl` for dated additions. Inspect `work/game-batches/` for agent logs and rejected reports.
 
-Read [batch instructions](wiki/oc-batch-testing.md) for lifecycle and result paths.
+## Games
+
+No valid games yet.
+
+## Screenshot gallery
+
+No scored screenshots yet.
