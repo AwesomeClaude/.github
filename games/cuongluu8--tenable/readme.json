@@ -1,0 +1,118 @@
+{
+  "fictional_reviews": [
+    {
+      "rating": 70,
+      "text": "Fictional illustrative review: Club Run had our pub group shouting - Genk to Chelsea to Napoli via the loans, one life left, typed De Bruyne with seconds to spare. Ugly page, great tension."
+    },
+    {
+      "rating": 50,
+      "text": "Fictional illustrative review: neat trivia box with four games and remote codes that actually work, but it is all flat cards and typeahead on a dark background. Fun quiz night, zero spectacle next to the kart racers."
+    },
+    {
+      "rating": 100,
+      "text": "Fictional illustrative review: as a fictional full-stack nerd I love this - D1 answer sets, R2 badges, Durable Object races, verify scripts for every guess. The least flashy, most over-engineered quiz app ever, and I mean that fondly."
+    }
+  ],
+  "how_to_play": [
+    "Open the live build at https://top-10-tension.cuong-luu.workers.dev (or run locally with npm install then npm run dev at http://localhost:5173).",
+    "Pick Daily categories and guess a Top 10 list (e.g. Champions League winners by club) in Classic with unlimited guesses or Tension with 5 lives.",
+    "Play Club Run solo: look at the club-badge career chain with loan satellites and type the mystery player's name, using Hint or Give up if stuck.",
+    "Play Teammate Tell solo: read the former-teammates clues and type the mystery player from curated Sets.",
+    "Play Roll of Honour solo: fill every season cell of the competition grid with the champion, using 5 lives and the country hint.",
+    "Try pass-and-play multiplayer on one device, taking turns on the same question or season.",
+    "Try remote play: create a session code, have friends join on their own devices, race first-correct-guess per question or season with lobby, timed hints, chat/activity pane, mid-game joining and Play again."
+  ],
+  "links": [
+    "https://github.com/cuongluu8/tenable",
+    "https://top-10-tension.cuong-luu.workers.dev",
+    "https://github.com/cuongluu8/tenable/blob/main/README.md",
+    "https://github.com/cuongluu8/tenable/blob/main/agents.md"
+  ],
+  "mechanics": [
+    "Daily Top 10 guessing in Classic (unlimited guesses) and Tension (5 lives) modes with streaks and per-device progress",
+    "Club Run career-chain guessing from club badges with loan-club satellite detours, typeahead, hints and give-up",
+    "Teammate Tell mystery-player guessing from former teammates as curated Sets",
+    "Roll of Honour season-champion grid for European Cup, Champions League, English First Division and Premier League with 5 lives and country hint",
+    "Single-player, pass-and-play multiplayer, and remote session-code racing with first-correct-guess wins per question or season",
+    "Remote lobby with timed hints, give up, chat/activity pane, mid-game joining and Play again backed by one SQLite-backed Cloudflare Durable Object per session",
+    "D1 quiz content model: categories, entities, dated stats, materialized answer sets, Club Run and Teammate Tell question tables, plus KV progress/streaks and live-scores ticker",
+    "R2-hosted club badge and country flag images with local-first research, cache, review, upload and D1-apply media workflow",
+    "Guess-matching, category-definition, query-plan, content-source and club-badge verification scripts plus unit, integration, Playwright e2e and slow reconnect test suites"
+  ],
+  "rating": {
+    "reason": "Far from AAA: flat DOM quiz UI with no 3D world, physics, animation, voice, cinematics, or live-ops scale; source and stills do not prove playability, balance, pacing, or performance. Most relevant comparators are TypeScript-Blackjack (28 overall, complete single-table DOM card game with full rules and persistence) and Taipo (35 overall, complete niche typing-TD loop with desktop plus web builds and multi-year releases): Top-10 Tension exceeds Blackjack on breadth with four trivia games, three play ways, and a real remote-multiplayer backend, and matches Taipo on finished-loop completeness with a larger full-stack backend, but trails Taipo on distinctive moment-to-moment systems and both kart racers on action depth and visual scene rendering. It sits above Neural Sight (30 overall, photographic prototype with almost no game loop) on finished loops and multiplayer scope, and well below Turbo Kart Rally (40 overall, complete 3D racer with AI field, items, HUD and menus) and neverquest (45 overall, deepest catalog systems scope) on gameplay depth and technical spectacle. Evidence gaps: judged from repository pages and raw files plus two inspected images only after gh api rate-limiting; did not play the live build, so answer quality, match fairness, socket reliability, and difficulty balance are unverified.",
+    "score": 32
+  },
+  "reconstructed_prompt": "Build Top-10 Tension, a football trivia web app in React plus Vite with a Hono backend on Cloudflare Workers: four games (daily Top 10 lists in Classic and 5-life Tension modes, Club Run badge-chain player guessing, Teammate Tell teammate-clue guessing, Roll of Honour season-champion grid), three ways to play (solo with Sets, pass-and-play, remote session-code racing with lobby, timed hints, chat, mid-game join and Play again via Durable Objects), D1 categories and entities with materialized answer sets, KV streaks and scores ticker, R2 badges and flags, dark quiz UI with typeahead, lives, hints and give-up, plus lint, unit, integration, e2e and content-verification scripts.",
+  "repository_url": "https://github.com/cuongluu8/tenable",
+  "screenshot_based_score": {
+    "reason": "Only the Club Run frame counts as gameplay: clean dark card UI with lives dots, Who is this prompt, badge chain with loan satellites and arrows, hint, guess input and give-up. Against catalog calibration (Kart Royale 70, Turbo Kart Rally 70 and Neural Sight 70 for coherent 3D or photographic scenes with lighting, scenery and composition; Taipo 55 for readable pixel-art board; TypeScript-Blackjack 35 and Beachy Beachy Ball 35 for clean but flat DOM or minimal 3D; neverquest 30 for monochrome dashboard), this matches the Blackjack and neverquest band: legible, coherent stylized quiz UI with real badge images, but flat DOM cards, no environment, lighting, staging, or scene detail, and sparse composition with large empty margins. The title banner is discounted as non-gameplay. No motion or game feel inferred from stills.",
+    "score": 32
+  },
+  "screenshots": [
+    {
+      "observation": "Inspected 1364x896 gameplay frame of Club Run: dark navy page with New game back link, Question 1 of 1, five coral lives dots, green Who is this banner, central card showing a badge career chain from Genk to Chelsea with two small LOAN satellites then down to Napoli, Man City and Wolfsburg with directional arrows, This may not show their full career note, Hint pill button, Type your guess text input, and Give up link. Game's own runtime output, not concept art.",
+      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/kdb-club-badges-screenshot.jpg"
+    },
+    {
+      "observation": "Inspected 1200x630 promotional title card: dark background with glowing green circular 10-plus-football badge mark above Top-10 Tension wordmark in green gradient and Top 10 football trivia subtitle. Static share banner, no gameplay, HUD, or interactive elements; discounted for graphics scoring.",
+      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/public/og-image.png"
+    }
+  ],
+  "source_analysis": [
+    {
+      "finding": "Title is Top-10 Tension, football trivia with four games and three ways to play, started as a daily Top 10 game inspired by Football Tenable and the ITV show Tenable",
+      "url": "https://github.com/cuongluu8/tenable/blob/main/README.md"
+    },
+    {
+      "finding": "Four games: Daily categories in Classic or 5-life Tension, Club Run badges-to-player, Teammate Tell teammates-to-player, Roll of Honour season-champion grid over European Cup, Champions League, First Division and Premier League",
+      "url": "https://github.com/cuongluu8/tenable/blob/main/README.md"
+    },
+    {
+      "finding": "Three ways to play: solo at own pace with curated Sets, pass-and-play on one device, and remote race on one session code with lobby, timed hints, give up, chat/activity pane, mid-game joining and Play again backed by a Cloudflare Durable Object",
+      "url": "https://github.com/cuongluu8/tenable/blob/main/README.md"
+    },
+    {
+      "finding": "Stack is React plus Vite frontend in src/react-app, Hono backend on Cloudflare Workers in src/worker, D1 quiz content, KV progress and ticker, R2 badge and flag images, and SQLite-backed Durable Objects per remote session",
+      "url": "https://github.com/cuongluu8/tenable/blob/main/README.md"
+    },
+    {
+      "finding": "Renamed from Tenable to Top-10 Tension on 2026-09-08 to avoid colliding with the ITV show and Football Tenable site; GitHub repo slug left as-is; live at top-10-tension.cuong-luu.workers.dev",
+      "url": "https://github.com/cuongluu8/tenable/blob/main/agents.md"
+    },
+    {
+      "finding": "Repo has 398 commits on main with 0 stars and 0 forks; file tree includes src, db, docs, public, scripts, test, wrangler.json, vite and vitest configs",
+      "url": "https://github.com/cuongluu8/tenable"
+    },
+    {
+      "finding": "Frontend routes cover category list, PlayScreen, ClubBadgeSets and SetPlay, TeammateSets and SetPlay, RollOfHonourSolo, pass-and-play Multiplayer and RemoteMultiplayer with deep-linkable play paths",
+      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/src/react-app/App.tsx"
+    },
+    {
+      "finding": "Verification posture includes lint, unit, integration, Playwright e2e, slow offline-reconnect e2e, coverage-gated verify:all, plus verify:matching, verify:category-defs, verify:query-plans, verify:content-source, verify:club-badges, playtest and loadtest scripts",
+      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/package.json"
+    },
+    {
+      "finding": "Media pipeline is local-first: research Wikipedia manifests, cache locally, review against local cache, upload to R2 tenable-media bucket, then apply image keys to D1 in a separate reversible step",
+      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/docs/media-assets.md"
+    },
+    {
+      "finding": "Remote-play scaling design uses one Durable Object per session, WebSocket push with poll fallback, per-socket fingerprints, hibernation between events, and rate-limiting bindings; free-tier polling ceilings analyzed in scaling doc",
+      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/docs/scaling.md"
+    }
+  ],
+  "tags": [
+    "trivia",
+    "quiz",
+    "football",
+    "soccer",
+    "guessing-game",
+    "multiplayer",
+    "browser-game",
+    "react",
+    "typescript",
+    "cloudflare-workers",
+    "2d"
+  ],
+  "title": "Top-10 Tension"
+}

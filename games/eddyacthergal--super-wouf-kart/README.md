@@ -1,0 +1,91 @@
+# Wouf Kart
+
+[Open the game source](https://github.com/eddyacthergal/super-wouf-kart)
+
+**Overall rating:** 38/100. Closest comparators are Turbo Kart Rally (40 overall, single 2.1 km procedural Three.js kart loop with 8 racers, 8 items, 3-tier drift, 7 AI, menus/results, chiptune music) and Kart Royale (50 overall, single 1.6 km ~60k-line 3D physics/AI/synthesis demo with verified 70/100 screenshots). Super Wouf Kart matches their core loop (one garden circuit, 3 laps, 8-dog field, rank-weighted items, tiered drift, AI, HUD/menus/results, fully procedural 3D and audio) and adds a garage with 4 stat breeds plus 9 persisted accessories, touch controls, deterministic fixed-step sim with unit plus 8-AI integration tests, and WCAG AA aims. It trails both on proven scope: only 4 items vs Turbo's 8, a shorter 911 m track with no class/lap options, explicitly no music, gamepad, multiplayer, extra tracks or progression, French-only docs, 1 star, v0.2.2 prototype age (Sept 2026), and critically zero inspectable gameplay screenshots so visual polish is unverified. Above Taipo (35, complete but sparse 2D typing-TD) on 3D systems depth and above Neural Sight (30, tech prototype with no loop) on finished race loop; below neverquest (45) on long-tail progression depth but ahead on moment-to-moment 3D action structure. Evidence gaps: judged from repository content via GitHub API plus raw file reads only; did not play the live build, so playability, performance, balance and actual rendered quality are not proven by source or stills.
+
+**Screenshot score:** not scored. No inspectable gameplay screenshot.
+
+## Play
+
+- Install Node.js 22, run \`npm install\` then \`npm start\`, and open http://localhost:4200.
+- On the home page, read the controls card and version/build stamp, then open the garage.
+- In the garage, pick one of 4 dog breeds (Chihuahua, Carlin/Pug, Teckel/Dachshund, Jack Russell) and one accessory per slot (head, neck, body); choices are remembered and previewed on a 3D dog.
+- Start the race: 3 laps on the 911 m garden circuit against 7 AI dogs, with countdown lights and live standings.
+- Accelerate with Up/Z/W, steer with Left/Q/A and Right/D, brake/reverse with Down/S, hop and hold drift with Space while turning, fire the held item with E/Shift, pause with Esc/P.
+- On AZERTY keyboards use ZQSD positions (physical keys); touch devices get auto-accelerate, a floating left-half joystick, Brake/Jump/Item buttons and a pause button in landscape.
+- Hold drift through corners to charge sparks from yellow to blue (~0.6 s), orange (~1.2 s) or violet (~2 s), then release for a tiered mini-turbo boost.
+- Drive through item boxes to draw one of 4 canine items: Bone (straight projectile, backward while braking, bounces off hedges), Tennis ball (homing at the racer ahead), Mud puddle (trap dropped behind), Turbo kibble (instant boost).
+- Finish 3 laps to see the results screen; use /course?autopilot=1 for an AI demo, ?debug=1 for console event logs, ?touch=1 to force touch controls.
+
+## Mechanics
+
+- Single 911 m garden circuit (Catmull-Rom spline): kennel hairpin, chicane, big lawn curve, valley U-turn, 3 item-box rows
+- 3-lap, 8-racer arcade format: player vs 7 AI dogs with countdown, checkpoints, live ranking and results screen
+- 4 dog breeds with speed/acceleration/weight/handling stats (Chihuahua 3/5/1/5, Pug 4/2/5/3, Dachshund 5/3/4/2, Jack Russell 4/4/3/3) and distinct procedural 3D silhouettes
+- 9 garage accessories in 3 slots (head: cap, crown, beanie, party hat; neck: bandana, bowtie, bell collar; body: striped sweater, hero cape), persisted, with 3D dog preview
+- Hop/drift with skid marks and yellow sparks charging 3 mini-turbo tiers (blue ~0.6 s, orange ~1.2 s, violet ~2 s)
+- 4 rank-weighted items: bouncing Bone, homing Tennis ball, Mud-puddle trap, instant Turbo kibble, drawn from track item boxes
+- AI drivers with pure-pursuit aiming, corner speed limits, long-corner drifting, blocking avoidance, stuck-reverse and wrong-way U-turn recovery, tactical item use with personalities
+- Deterministic 2D ground-plane simulation at fixed 60 Hz with seeded RNG, decoupled from three.js rendering with interpolation
+- Procedural everything: code-built dogs, karts, accessories, garden decor and textures, plus real-time Web Audio sound effects with mute (no audio files, no music)
+- Full Angular shell: home, garage, race canvas, HUD (position, lap, timer, speed, drift gauge, item slot, minimap, wrong-way banner), countdown, pause dialog, results, touch controls
+- Keyboard plus touch input (floating joystick, Brake/Jump/Item buttons, gesture blocking) with AZERTY/QWERTY physical-key handling
+- Accessibility aims: keyboard-operable menus, visible focus, aria-live lap/finish announcements, AA contrast, prefers-reduced-motion support, axe-core audit goal
+
+## Tags
+
+- kart-racer
+- racing
+- 3d
+- threejs
+- angular
+- typescript
+- browser-game
+- single-player
+- ai-racers
+- procedural-generation
+- single-track
+- cute
+- dogs
+- french
+
+## Reconstructed prompt
+
+Build Wouf Kart, a French-language Mario Kart-style 3D browser kart racer with Angular 22 UI and three.js rendering: miniature dogs racing in a giant garden (flowers, tennis balls, kennel, watering can). One 911 m Catmull-Rom circuit, 3 laps with 8 racers (player vs 7 AI), 4 dog breeds with stats, garage with 9 persisted accessories and 3D dog preview, hop/drift with 3-tier mini-turbo, 4 rank-weighted canine items, countdown/HUD/minimap/pause/results, keyboard plus touch controls, deterministic 2D fixed-step (60 Hz) sim decoupled from rendering, fully code-built 3D models and textures, procedural Web Audio SFX, Vitest unit plus 8-AI integration tests, and WCAG AA accessibility. No multiplayer, gamepad, extra tracks, music or progression.
+
+## Source evidence
+
+- Repo is eddyacthergal/super-wouf-kart, described as 'Super Wouf kart made with AI (Opus 5.5)', TypeScript-dominant (~989k bytes TS), 1 star, 0 forks, default branch main, created 2026-09-23, pushed 2026-09-26. ([source](https://github.com/eddyacthergal/super-wouf-kart))
+- French README presents Wouf Kart: arcade browser kart game where all drivers are small dogs racing in a giant garden (flowers, tennis balls, kennel, watering can); built with Angular 22 UI and three.js 3D. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md))
+- Scope is one 911 m garden circuit (kennel hairpin, chicane, big curve, start straight) and 3-lap races of 8 drivers (player vs 7 AI) with countdown, live standings and results screen. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md))
+- Garden track is a closed centripetal Catmull-Rom spline of ~910 m defined by ~80 control points starting at the finish line, with item-box rows and corner radii documented in code comments. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/track/garden-layout.ts))
+- 4 breeds with stats: Chihuahua (3/5/1/5), Carlin/Pug (4/2/5/3), Teckel/Dachshund (5/3/4/2), Jack Russell (4/4/3/3), each with detailed procedural 3D body parameters (ears, tail, torso, muzzle, colors). ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/breeds.ts))
+- 9 accessories in 3 slots (head: cap, crown, beanie, party hat; neck: bandana, bowtie, bell collar; body: sweater, cape) with localStorage validation; choices remembered; 3D preview in garage. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/skins-catalog.ts))
+- Drift/mini-turbo: kart slides with tire marks and yellow sparks, then 3 tiers (blue ~0.6 s, orange ~1.2 s, violet ~2 s); 4 canine items (Bone, homing Tennis ball, Mud puddle, Turbo kibble) drawn from item boxes. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md))
+- Item draw is rank-weighted: leaders mostly get bones/mud, backmarkers mostly tennis balls/turbos, with linear interpolation across rank fraction. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/items/item-rules.ts))
+- AI controller does pure-pursuit aiming, corner-speed braking, drifting in long tight corners, blocker avoidance, stuck-reverse, wrong-way U-turns, and tactical item use with per-driver personalities. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/ai/ai-controller.ts))
+- Architecture: strict Angular/UI vs pure-TypeScript engine split; 2D deterministic seeded simulation at fixed 60 Hz with render interpolation; HUD published ~10x/sec via signals; three.js lazy-loaded (~260 kB initial bundle); all 3D models and textures code-built with zero external assets. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md))
+- Procedural Web Audio sound effects with mute button; touch controls (floating joystick, Brake/Jump/Item, gesture blocking, iOS silent-mode handling); keyboard plus URL params (autopilot, debug, touch override). ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md))
+- Verification claims: Vitest unit tests per engine/UI module, full 8-AI integration race (finish, containment, determinism), headless-Chrome autopilot races with screenshots and axe-core accessibility audit targeting 0 violations; WCAG AA aims with aria-live and reduced-motion support. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md))
+- Explicit non-goals: multiplayer, gamepad, extra circuits, music, progression/unlocks; extension points documented per data file; package name test-opus-5-5 v0.2.2 with three ^0.186.0 and Angular 22 dependencies. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md))
+- Recursive repo tree (207 entries) contains no gameplay image or video files; public/ holds only favicon.svg (inspected: green rounded square with yellow paw-print icon, branding only, not gameplay); docs/ holds only the design-spec markdown; README links no screenshots. ([source](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md))
+- Target is not listed in the local catalog, whose Games section rates 8 prior games (Kart Royale 50, neverquest 45, Turbo Kart Rally 40, Taipo 35, Neural Sight 30, TypeScript-Blackjack 28, Beachy Beachy Ball 25, curiosity 18). ([source](https://github.com/eddyacthergal/super-wouf-kart))
+
+## Fictional reviews
+
+Treat these as illustrative, not real user reviews.
+
+- 78/100: \[Fictional review\] Imagined garden-racer fan: picking the Teckel for straight-line speed, then drifting the niche hairpin with violet sparks while my cap-wearing chihuahua chases tennis balls is adorable chaos. The oversized watering can looming over the track sold me.
+- 55/100: \[Fictional review\] Made-up casual player note: the garage accessories and drift tiers are fun, but one 911 m track, only four dog items and no music wore thin after a few 3-lap races. I never saw a real screenshot before installing, so the visuals were a gamble.
+- 95/100: \[Fictional review\] Invented tech-enthusiast take: a deterministic 2D sim at fixed 60 Hz decoupled from three.js, full Vitest coverage plus an 8-AI integration race, procedural dogs/karts/garden with zero external assets, and a WCAG AA touch-friendly Angular shell? As an open-source kart prototype this is impressively engineered.
+
+## Links
+
+- [https://github.com/eddyacthergal/super-wouf-kart](https://github.com/eddyacthergal/super-wouf-kart)
+- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md)
+- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/track/garden-layout.ts](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/track/garden-layout.ts)
+- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/breeds.ts](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/breeds.ts)
+- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/items/item-rules.ts](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/items/item-rules.ts)
+- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/ai/ai-controller.ts](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/ai/ai-controller.ts)
+- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/docs/superpowers/specs/2026-09-23-wouf-kart-design.md](https://github.com/eddyacthergal/super-wouf-kart/blob/main/docs/superpowers/specs/2026-09-23-wouf-kart-design.md)

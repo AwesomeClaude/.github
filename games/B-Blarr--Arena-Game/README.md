@@ -1,0 +1,91 @@
+# Neon Arena
+
+[Open the game source](https://github.com/B-Blarr/Arena-Game)
+
+**Overall rating:** 48/100. Far from AAA (no campaign, online, voice, cinematics or live-ops scale; 0 stars/forks; German-only docs; unverified balance/performance). On catalog evidence it sits just below Kart Royale (50 overall, ~60k-line 3D demo with inspected 70 screenshot polish on one 1.6km track) and above neverquest (45 overall, deepest text-systems catalog scope) and Turbo Kart Rally (40 overall, complete Three.js procedural kart loop). It exceeds neverquest by pairing comparable systems breadth (27+ upgrades across 5 rarities, 9 enemies, 5 bosses, 7 heroes/abilities, elites, journey/daily modes, 54 achievements, profiles/leaderboard, co-op) with real-time 3D execution (fixed-timestep, pools, InstancedMesh, spatial hash, HDR bloom, synthesized audio, vitest/ESLint/CI, 42 commits), and exceeds Turbo Kart on mode/build variety and meta-progression. It trails Kart Royale only because Kart has two inspected polished gameplay frames while Neon Arena ships zero inspectable gameplay pixels, so visual polish, feel and playability cannot be verified. Source and stills alone do not prove playability, frame rate or balance.
+
+**Screenshot score:** not scored. No inspectable gameplay screenshot.
+
+## Play
+
+- Install Node.js 20+ LTS, open a terminal in the repo folder and run npm install once.
+- Run npm run dev and open http://localhost:5173; for a shareable build run npm run build then npm run preview.
+- Move with WASD or arrow keys; auto-fire shoots for you and auto-aim is on by default.
+- Press Space to dash (brief invulnerability); turn Auto-Zielen off in the menu to aim with mouse for +10% damage.
+- Survive each wave spawning from the edges; red ground marks and sounds warn of boss attacks — red always means dodge.
+- After each wave press 1 / 2 / 3 to pick 1 of 3 stacking upgrades; Y on gamepad re-rolls.
+- Every 5 waves a boss appears (PRISMA, GOLIATH, MINOS, HYDRA-KERN, WIRBEL); exploit stun windows and keep moving.
+- Collect cores that persist forever and spend them in the Werkstatt on heroes (BLITZ, BROCKEN and premiums), starting weapons and permanent bonuses.
+- Pause with P or Esc, restart after game over with R; pick Einfach first and unlock Schwer by reaching wave 10 on Normal.
+- Co-op: click Zusammen in the menu, P2 joins with Enter (dash), moves with arrows or a second pad; revive a downed partner by standing next to them; full gamepad play uses left stick move, right stick aim, A/RT dash-confirm, B back, Start pause.
+
+## Mechanics
+
+- Wave survival with budget-scaled spawns, staggered packs, portals and boss-every-5-waves rotation with tier scaling past wave 30
+- 1-of-3 roguelite upgrade draft with rarity weights, pity, wave gates and 17 stackables plus 6 legendary and 4 mythic build-definers
+- Auto-fire with auto-aim plus optional manual mouse/right-stick aim for damage bonus
+- Dash with cooldown, distance, i-frames, ghost images and legendary black-hole singularity throw
+- Five multi-phase bosses with salvos, charges, shockwaves, bomb zones, fans, splits, suction and spirals, all telegraphed
+- Nine enemy archetypes (chaser, shooter, swarm, tank, splitter, bomber, thief, phantom) plus shield/rage elites
+- Golden waves, supply capsules, hearts, magnets, rapid-fire and core pickups with mercy and anti-infinity rules
+- Seven heroes with distinct HP/speed/weapons plus cooldown active abilities and two unlockable shared weapons
+- Persistent meta: cores, workshop unlocks, permanent stat bonuses, profiles, leaderboard, 54 achievements with colorway rewards
+- Local 2-player co-op with shared auto-zoom camera, separate builds, down/revive, guest-or-profile P2 and co-op balance scaling
+- Journey path-choice between waves, hazard/mono/collapse rooms, rotating arena color worlds and daily seeded arena
+- Score/combo/perfect-wave economy with run-stats (build, DPS, best hit, best combo) and difficulty-gated progression
+
+## Tags
+
+- arena-shooter
+- survival
+- roguelite
+- wave-survival
+- boss-rush
+- 3d
+- threejs
+- browser-game
+- twin-stick
+- auto-shooter
+- local-coop
+- procedural-generation
+- neon
+- single-player
+
+## Reconstructed prompt
+
+Build NEON ARENA, a German-language 3D arena-survival roguelite in Vite + TypeScript + three.js with zero external assets: twin-stick movement with dash i-frames and auto-fire, endless scaling waves with a boss every 5 waves (5 distinct patterns with \>=0.8s telegraphs), 1-of-3 stacking upgrades (17 commons/rares/epics plus rare legendary and mythic build-definers), 9 enemies plus elites/golden waves/supply capsules, 7 heroes with unique weapons and active abilities, workshop meta-progression with persistent cores, profiles/leaderboard/54 achievements/colorways, daily arena and journey path-choice modes, local 2-player co-op with shared camera and revive, full gamepad + vibration, HDR neon bloom with reactive floor/starfield/particles, synthesized Web Audio music, localStorage saves, fixed-timestep pooled InstancedMesh architecture with centralized balancing and vitest coverage.
+
+## Source evidence
+
+- Title is NEON ARENA: a 3D arena-survival roguelite in neon look — survive harder waves, pick upgrades, beat bosses, permanently unlock heroes. Built with Vite + TypeScript + three.js, all graphics and sound generated procedurally in code with no external assets. ([source](https://github.com/B-Blarr/Arena-Game/blob/main/README.md))
+- Core loop: survive edge-spawned waves, pick 1 of 3 stacking upgrades after each wave, boss every 5 waves (PRISMA, GOLIATH, HYDRA-KERN plus MINOS wave 15 and WIRBEL wave 25) with ground telegraphs, collect persistent cores for workshop unlocks (BLITZ, BROCKEN), daily arena with same waves for all players. ([source](https://github.com/B-Blarr/Arena-Game/blob/main/README.md))
+- Controls: WASD/arrows move, Space dash with i-frames, auto-fire plus optional manual aim for +10% damage, 1/2/3 upgrade pick, P/Esc pause, R instant restart; full Xbox gamepad support with vibration and auto-pause on disconnect; local 2-player co-op via Zusammen button / Enter join with split keyboard or two pads. ([source](https://github.com/B-Blarr/Arena-Game/blob/main/README.md))
+- Update 3 adds local 2-player co-op with shared auto-zoom camera, separate heroes/upgrades/HP, downed-revive instead of death, guest or profile P2, plus 54 achievements on 7 pages with core and hero-colorway rewards and gold for 100%. ([source](https://github.com/B-Blarr/Arena-Game/blob/main/README.md))
+- Update 2 adds MINOS mine-king and WIRBEL suction vortex bosses, buffed GOLIATH with debris rocks and P2 wall-bounce plus double shockwave, player profiles with leaderboard, distinct hero silhouettes with engine glow, reworked black-hole dash, rarer legendaries and leaner healing. ([source](https://github.com/B-Blarr/Arena-Game/blob/main/README.md))
+- Update 1 adds legendary tier (6 cards: mirror clone, chain reaction, orbital laser, black hole, overcharge, mega shots), 3 new enemies (Zuender bomber, core thief, phantom teleporter), elites with shield/rage affixes, golden waves and supply capsules, 5 rotating arena color worlds, tracers, boss intros and dash ghosts, plus run-stats screen. ([source](https://github.com/B-Blarr/Arena-Game/blob/main/README.md))
+- Tech claims: 60 Hz fixed-timestep simulation with render interpolation, object pools, InstancedMesh rendering, spatial-hash collisions, HDR emissive materials plus mipmap bloom via postprocessing, procedural grid textures, fully synthesized Web Audio sequencer music that speeds up per wave, localStorage saves, all numbers centralized in src/config. ([source](https://github.com/B-Blarr/Arena-Game/blob/main/README.md))
+- package.json neon-arena v1.0.0 is ESM Vite+TypeScript with runtime deps three and postprocessing only, and devDeps eslint, prettier, vitest, typescript; scripts for dev/build/preview/typecheck/test/lint/format. ([source](https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/package.json))
+- src/ has 11 subsystems: audio, config, core, debug, entities, input, render, save, systems, ui, utils; systems/ alone has Collision, Combat, Coop, Hazard, JuiceDirector, Particle, Path, Pickup, Rumble, RunStats, Score, Sticker, SurpriseDirector, Upgrade and Wave systems. ([source](https://github.com/B-Blarr/Arena-Game/tree/main/src/systems))
+- Upgrade pool: 17 stackable (7 common, 7 rare, 3 epic) plus 6 legendary (max 1 per run, pity-gated from wave 6) plus 4 mythic above legendary (timeBreak, phoenixCore, prismBeam, singularity, max 1 mythic per run, from wave 10, no pity) plus 3 instant fallbacks so selection is never empty. ([source](https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/src/config/upgrades.ts))
+- Heroes: 7 playable (VOLT/blaster, BLITZ/pulse, BROCKEN/spread plus premium KOLOSS/moerser, KRISTALL/prisma, PHANTOM/railgun, ORBIT/orbiter) with distinct HP/speed/dash/weapon DPS bands plus 7 active abilities (blast, blink, shockwave, bulwark, shardNova, orbitalStrike, blackhole); 2 unlockable shared weapons and 6 permanent shop bonuses. ([source](https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/src/config/heroes.ts))
+- Enemies: 9 types (chaser, shooter, swarm, tank, splitter+child, bomber/Zuender, thief, phantom) with radius/scale/HP/speed/damage/budget/minWave/share/group/maxAlive tuning, red-only enemy projectiles rule, plus shooter/separation/bomber/thief/phantom AI params and elite variants with shield/rage affixes. ([source](https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/src/config/enemies.ts))
+- Bosses: 5-definition rotation PRISMA/GOLIATH/MINOS/HYDRA/VORTEX on waves 5/10/15/20/25 with telegraphs \>=0.8s, phase-2 denser patterns, plus-tier scaling beyond wave 30 via cooldown and projectile-speed multipliers and wave-based HP formula. ([source](https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/src/config/bosses.ts))
+- Balance is centralized: arena radius 22, player/dash/aim/pool caps (192 enemies, 384 player projectiles), co-op scaling (1.5x budget, 1.2x HP, revive hold 1.5s), 3 difficulties with hard locked until wave 10 on normal, wave budget/HP/speed/damage formulas, spawn packs, pickups, surprise golden-wave/capsule odds, combo tiers and score/core economy. ([source](https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/src/config/balance.ts))
+- Commit history shows 42 commits on main including tooling/tests/ESLint/error-boundary/CI, premium heroes, journey mode, hazard/mono rooms, mythic rarity and graphics passes A-I (post-FX, adaptive quality, reactive floor, particles, enemy rim-glow, starfield, energy wall, hero aura, menu/HUD polish). ([source](https://github.com/B-Blarr/Arena-Game/commits/main))
+- No gameplay screenshots are shipped: root listing is only .github/workflows, src, tests/helpers, configs, index.html and README with no docs/screenshots/assets image folders, README raw contains no image markdown, and probed raw image paths (docs/screenshot.png, screenshots/, public/, assets/, docs/images/gameplay.jpg) all return 404. ([source](https://github.com/B-Blarr/Arena-Game))
+- App shell is a single canvas plus DOM UI overlay with hidden-class screens for menu, upgrade, path/journey, pause, gameover, shop, profiles, leaderboard, album and coop-setup; main.ts adds fatal-error boundary, dev pad-mock hook and Vite HMR dispose to avoid leaking WebGL contexts. ([source](https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/src/main.ts))
+
+## Fictional reviews
+
+Treat these as illustrative, not real user reviews.
+
+- 85/100: Fictional illustrative review: wave 15 MINOS buried me in ticking rings and I loved it — my BROCKEN spread plus orbital laser finally clicked and the revive saved our co-op run.
+- 60/100: Fictional illustrative review: deep upgrade math and fun bosses, but with no screenshots or demo to judge the neon look I cannot tell if the bloom and tracers read well in motion.
+- 100/100: Fictional illustrative review: the config-driven tuning, pools, fixed timestep and full gamepad co-op read like a real little live game — daily arena plus 54 achievements kept my build brain busy.
+
+## Links
+
+- [https://github.com/B-Blarr/Arena-Game](https://github.com/B-Blarr/Arena-Game)
+- [https://github.com/B-Blarr/Arena-Game/blob/main/README.md](https://github.com/B-Blarr/Arena-Game/blob/main/README.md)
+- [https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/package.json](https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/package.json)
+- [https://github.com/B-Blarr/Arena-Game/tree/main/src/systems](https://github.com/B-Blarr/Arena-Game/tree/main/src/systems)
