@@ -11,11 +11,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  analyze:
+  analyze-and-publish:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     permissions:
-      contents: read
+      contents: write
+      pull-requests: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,6 +45,15 @@ jobs:
         timeout-minutes: 275
         run: python3 scripts/issue_catalog.py --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact"
 
+      - name: Create review PR and report to the issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh auth setup-git
+          python3 scripts/publish_issue_catalog.py --artifact "$RUNNER_TEMP/issue-artifact"
+
       - name: Save catalog results
         if: always()
         uses: actions/upload-artifact@v4
@@ -66,29 +77,3 @@ jobs:
       - name: Keep owner worker for 30 minutes after completion or failure
         if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
         run: sleep 1800
-
-  publish:
-    needs: analyze
-    if: always()
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      issues: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - name: Download catalog results
-        uses: actions/download-artifact@v4
-        continue-on-error: true
-        with:
-          name: issue-catalog-${{ github.run_id }}
-          path: ${{ runner.temp }}/issue-artifact
-
-      - name: Create review PR and report to the issue
-        env:
-          GH_TOKEN: ${{ github.token }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: python3 scripts/publish_issue_catalog.py --artifact "$RUNNER_TEMP/issue-artifact"

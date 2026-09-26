@@ -153,10 +153,9 @@ def publish_result(url, result, publish_dir, ledger, args):
         _, destination = games.game_url(data['repository_url'])
         status = 'added'
     relative = destination.relative_to(games.ROOT)
-    if (destination / 'readme.json').exists():
-        return outcome(url, 'already_cataloged', output=str(relative))
-    games.write_atomic(destination / 'readme.json', json.dumps(data, indent=2, ensure_ascii=False) + '\n')
     artifact = publish_dir / relative / 'readme.json'
+    if (destination / 'readme.json').exists() or artifact.exists():
+        return outcome(url, 'already_cataloged', output=str(relative))
     games.write_atomic(artifact, json.dumps(data, indent=2, ensure_ascii=False) + '\n')
     ledger.append({'added_at': datetime.now(timezone.utc).isoformat(), 'source_url': url,
                    'output': str(relative), 'title': data['title'],
@@ -202,7 +201,6 @@ def run(args):
                         summary['outcomes'].append(publish_result(url, future.result(), publish_dir, ledger, args))
                     except Exception as exc:
                         summary['outcomes'].append(outcome(url, 'failed', str(exc)[:500]))
-        games.rebuild()
     games.write_atomic(args.output / 'summary.json', json.dumps(summary, indent=2, ensure_ascii=False) + '\n')
     games.write_atomic(args.output / 'ledger.jsonl', ''.join(json.dumps(row, ensure_ascii=False) + '\n'
                                                          for row in ledger))
