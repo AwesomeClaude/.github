@@ -1,0 +1,94 @@
+name: Collect games from issue links
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions: {}
+
+concurrency:
+  group: issue-games-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Read only links from the issue body
+        id: preflight
+        run: python3 scripts/issue_catalog.py --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact" --preflight
+
+      - name: Install OpenCode
+        if: steps.preflight.outputs.ready == 'true'
+        run: |
+          npm install --prefix "$HOME/.local" opencode-ai@1.18.31
+          echo "$HOME/.local/node_modules/.bin" >> "$GITHUB_PATH"
+
+      - name: Start owner-only SSH debugging
+        if: steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
+        continue-on-error: true
+        env:
+          AGENTSWEB_SSH_PUBLIC_KEY: ${{ secrets.AGENTSWEB_SSH_PUBLIC_KEY }}
+        run: ./scripts/start-agentsweb-ssh.sh
+
+      - name: Analyze game links
+        if: steps.preflight.outputs.ready == 'true'
+        timeout-minutes: 275
+        run: python3 scripts/issue_catalog.py --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact"
+
+      - name: Save catalog results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: issue-catalog-${{ github.run_id }}
+          path: ${{ runner.temp }}/issue-artifact
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Save OpenCode diagnostics
+        if: always() && steps.preflight.outputs.ready == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: issue-debug-${{ github.run_id }}
+          path: |
+            work/issue-batches
+            work/oc-server/server.log
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Keep owner worker for 30 minutes after completion or failure
+        if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
+        run: sleep 1800
+
+  publish:
+    needs: analyze
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Download catalog results
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: issue-catalog-${{ github.run_id }}
+          path: ${{ runner.temp }}/issue-artifact
+
+      - name: Create review PR and report to the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python3 scripts/publish_issue_catalog.py --artifact "$RUNNER_TEMP/issue-artifact"
