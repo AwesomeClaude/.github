@@ -132,6 +132,12 @@ def publish_result(url, result, publish_dir, ledger, args):
         return outcome(url, 'failed', 'OpenCode finished without readme.json or rejection.json')
     data = json.loads(report.read_text(encoding='utf-8'))
     data['source_url'] = url
+    player_modes = data.get('player_modes')
+    if isinstance(player_modes, dict) and isinstance(player_modes.get('modes'), list):
+        aliases = {'local-multiplayer': 'local multiplayer',
+                   'online-multiplayer': 'online multiplayer'}
+        player_modes['modes'] = [aliases.get(mode, mode) if isinstance(mode, str) else mode
+                                 for mode in player_modes['modes']]
     if not isinstance(data.get('links'), list):
         raise ValueError('Report links must be a list')
     if url not in data['links']:
