@@ -2,9 +2,9 @@
 
 [Open the game source](https://github.com/bridge-mind/turbo-kart-rally/tree/main)
 
-**Overall rating:** 4/10. Impressive complete indie kart racer with full loop, 8 karts, items, AI, HUD and music, but far from AAA: single track, no multiplayer/online, limited modes, simple low-poly procedural art/audio, and no evidence of extensive balancing, QA, accessibility or live-ops scale. Evidence gaps: no playtest metrics, performance data, or depth beyond one circuit.
+**Overall rating:** 40/100. Impressive complete indie kart racer with full loop, 8 karts, items, AI, HUD and music, but far from AAA: single track, no multiplayer/online, limited modes, simple low-poly procedural art/audio, and no evidence of extensive balancing, QA, accessibility or live-ops scale. Evidence gaps: no playtest metrics, performance data, or depth beyond one circuit.
 
-**Screenshot score:** 7/10. Visible gameplay shows coherent colorful low-poly stylization, readable karts/track, varied scenery with mountains/trees/grandstands, and polished HUD/minimap/leaderboard. Detail, lighting and textures are simple indie-level, not high-end, but composition and polish are strong for procedural assets.
+**Screenshot score:** 70/100. Visible gameplay shows coherent colorful low-poly stylization, readable karts/track, varied scenery with mountains/trees/grandstands, and polished HUD/minimap/leaderboard. Detail, lighting and textures are simple indie-level, not high-end, but composition and polish are strong for procedural assets.
 
 ## Screenshots
 
@@ -79,9 +79,9 @@ Build Turbo Kart Rally, a Mario Kart-style arcade kart racer in Three.js with no
 
 Treat these as illustrative, not real user reviews.
 
-- 5/5: Fictional review: I picked Rex for the memes and stayed for the drift sparks. That purple mini-turbo out of the S-bend felt illegal in a browser tab.
-- 3/5: Fictional review: Fun for three races, but my couch crew wanted split-screen and a second cup. The blue shell has personal beef with me specifically.
-- 4/5: Fictional review: As a fictional kart dad, I approve: readable track, bouncy chiptune, grandstands full of gummy bears. Docked one star because Toadly beat me on the bridge.
+- 100/100: Fictional review: I picked Rex for the memes and stayed for the drift sparks. That purple mini-turbo out of the S-bend felt illegal in a browser tab.
+- 60/100: Fictional review: Fun for three races, but my couch crew wanted split-screen and a second cup. The blue shell has personal beef with me specifically.
+- 80/100: Fictional review: As a fictional kart dad, I approve: readable track, bouncy chiptune, grandstands full of gummy bears. Docked one star because Toadly beat me on the bridge.
 
 ## Links
 

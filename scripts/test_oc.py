@@ -262,6 +262,7 @@ def main():
         if not prompt.strip():
             parser.error('Prompt must not be empty')
         prompt = prompt.replace('{{repository_url}}', args.repo)
+        prompt = prompt.replace('{{catalog_readme_path}}', str(ROOT / 'README.md'))
         return launch(args, prompt)
     except KeyboardInterrupt:
         return 130

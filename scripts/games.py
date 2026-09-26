@@ -67,11 +67,11 @@ def safe_url(value):
 def score(value, name, nullable=False):
     if value is None and nullable:
         return None
-    if not isinstance(value, dict) or isinstance(value.get('score'), bool):
-        raise ValueError(f'{name} must contain a numeric score')
+    if not isinstance(value, dict):
+        raise ValueError(f'{name} must contain an integer score')
     number = value.get('score')
-    if not isinstance(number, (int, float)) or not 0 <= number <= 10:
-        raise ValueError(f'{name}.score must be between 0 and 10')
+    if type(number) is not int or not 0 <= number <= 100:
+        raise ValueError(f'{name}.score must be an integer between 0 and 100')
     return number
 
 
@@ -94,6 +94,9 @@ def validate(data, expected_url=None):
     for key in ('source_analysis', 'how_to_play', 'mechanics', 'tags', 'fictional_reviews', 'links'):
         if not isinstance(data.get(key), list):
             raise ValueError(f'Report must have a {key} list')
+    for review in data['fictional_reviews']:
+        if not isinstance(review, dict) or type(review.get('rating')) is not int or not 0 <= review['rating'] <= 100:
+            raise ValueError('Each fictional review rating must be an integer between 0 and 100')
     return data
 
 
@@ -105,9 +108,9 @@ def game_readme(data):
     title = markdown(data['title'])
     url = safe_url(data['repository_url'])
     graphic = data['screenshot_based_score']
-    graphic_text = 'not scored' if graphic is None else f"{graphic['score']}/10"
+    graphic_text = 'not scored' if graphic is None else f"{graphic['score']}/100"
     out = [f'# {title}', '', f'[Open the game source]({url})', '',
-           f"**Overall rating:** {data['rating']['score']}/10. {markdown(data['rating'].get('reason', ''))}", '',
+           f"**Overall rating:** {data['rating']['score']}/100. {markdown(data['rating'].get('reason', ''))}", '',
            f"**Screenshot score:** {graphic_text}. " +
            (markdown(graphic.get('reason', '')) if graphic else 'No inspectable gameplay screenshot.'), '']
     if data['screenshots']:
@@ -131,7 +134,7 @@ def game_readme(data):
         out += ['## Fictional reviews', '', 'Treat these as illustrative, not real user reviews.', '']
         for review in data['fictional_reviews']:
             if isinstance(review, dict):
-                out.append(f"- {markdown(review.get('rating', '?'))}/5: {markdown(review.get('text', ''))}")
+                out.append(f"- {markdown(review.get('rating', '?'))}/100: {markdown(review.get('text', ''))}")
         out.append('')
     if data['links']:
         out += ['## Links', '']
@@ -172,8 +175,8 @@ def rebuild():
     for directory, data in entries:
         target = quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/')
         graphic = data['screenshot_based_score']
-        graphic_text = 'not scored' if graphic is None else f"{graphic['score']}/10"
-        out.append(f"- [{markdown(data['title'])}]({target}) — overall {data['rating']['score']}/10; screenshots {graphic_text}")
+        graphic_text = 'not scored' if graphic is None else f"{graphic['score']}/100"
+        out.append(f"- [{markdown(data['title'])}]({target}) — overall {data['rating']['score']}/100; screenshots {graphic_text}")
     if not entries:
         out.append('No valid games yet.')
     gallery = [(directory, data) for directory, data in entries
@@ -184,7 +187,7 @@ def rebuild():
     for directory, data in gallery:
         shot = data['screenshots'][0]
         target = quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/')
-        out += [f"### [{markdown(data['title'])}]({target}) — {data['screenshot_based_score']['score']}/10", '',
+        out += [f"### [{markdown(data['title'])}]({target}) — {data['screenshot_based_score']['score']}/100", '',
                 f"![{markdown(shot.get('observation', data['title']))}]({safe_url(shot['url'])})", '']
     if not gallery:
         out.append('No scored screenshots yet.')
@@ -219,6 +222,7 @@ def analyze(items, args):
     try:
         for index, (url, directory) in enumerate(items, 1):
             prompt = prompt_template.replace('{{repository_url}}', url)
+            prompt = prompt.replace('{{catalog_readme_path}}', str(ROOT / 'README.md'))
             meta = test_oc.prepare(index, args, batch, base, prompt)
             prepared.append((url, directory, meta))
         def stop(*_):

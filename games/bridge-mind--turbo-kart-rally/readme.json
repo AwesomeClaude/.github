@@ -50,7 +50,7 @@
     }
   ],
   "screenshot_based_score": {
-    "score": 7,
+    "score": 70,
     "reason": "Visible gameplay shows coherent colorful low-poly stylization, readable karts/track, varied scenery with mountains/trees/grandstands, and polished HUD/minimap/leaderboard. Detail, lighting and textures are simple indie-level, not high-end, but composition and polish are strong for procedural assets."
   },
   "reconstructed_prompt": "Build Turbo Kart Rally, a Mario Kart-style arcade kart racer in Three.js with no build step and 100% procedural assets. Include 8 original racers with stats, one 2km scenic circuit with boost pads, jumps and item boxes, drift with 3-stage mini-turbo, 8 position-balanced items, 7 rubber-banding AI, chase camera, minimap HUD, menus/results, and synthesized sound plus chiptune music. Playable in desktop WebGL2 browser with keyboard and gamepad.",
@@ -86,20 +86,20 @@
     "browser"
   ],
   "rating": {
-    "score": 4,
+    "score": 40,
     "reason": "Impressive complete indie kart racer with full loop, 8 karts, items, AI, HUD and music, but far from AAA: single track, no multiplayer/online, limited modes, simple low-poly procedural art/audio, and no evidence of extensive balancing, QA, accessibility or live-ops scale. Evidence gaps: no playtest metrics, performance data, or depth beyond one circuit."
   },
   "fictional_reviews": [
     {
-      "rating": 5,
+      "rating": 100,
       "text": "Fictional review: I picked Rex for the memes and stayed for the drift sparks. That purple mini-turbo out of the S-bend felt illegal in a browser tab."
     },
     {
-      "rating": 3,
+      "rating": 60,
       "text": "Fictional review: Fun for three races, but my couch crew wanted split-screen and a second cup. The blue shell has personal beef with me specifically."
     },
     {
-      "rating": 4,
+      "rating": 80,
       "text": "Fictional review: As a fictional kart dad, I approve: readable track, bouncy chiptune, grandstands full of gummy bears. Docked one star because Toadly beat me on the bridge."
     }
   ],
