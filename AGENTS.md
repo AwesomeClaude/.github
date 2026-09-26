@@ -19,5 +19,3 @@ Copy every live OpenCode session URL printed by `scripts/test-oc.sh` immediately
 ## Wiki index
 
 - Read [OpenCode batch testing](wiki/oc-batch-testing.md) before changing the batch runner.
-
-- Read [OpenCode event viewer](wiki/oc-event-viewer.md) to launch and verify the local log dashboard.

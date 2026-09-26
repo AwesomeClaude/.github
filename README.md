@@ -4,4 +4,4 @@ Run `./scripts/test-oc.sh --repo https://github.com/owner/repository` to print t
 
 Edit `prompt.md` to change the request or the example `readme.json`. Ask Codex to use `$review-oc-reports` to read completed reports and assess them manually.
 
-Read [batch instructions](wiki/oc-batch-testing.md) for lifecycle and result paths. Open the [event viewer](wiki/oc-event-viewer.md) to inspect logs.
+Read [batch instructions](wiki/oc-batch-testing.md) for lifecycle and result paths.
