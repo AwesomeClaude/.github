@@ -5,6 +5,7 @@ import argparse
 import concurrent.futures
 from datetime import datetime, timezone
 import fcntl
+import html
 import json
 import os
 from pathlib import Path
@@ -184,12 +185,27 @@ def rebuild():
     gallery.sort(key=lambda item: (-item[1]['screenshot_based_score']['score'],
                                   item[1]['title'].casefold(), str(item[0])))
     out += ['', '## Screenshot gallery', '']
-    for directory, data in gallery:
-        shot = data['screenshots'][0]
-        target = quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/')
-        out += [f"### [{markdown(data['title'])}]({target}) — {data['screenshot_based_score']['score']}/100", '',
-                f"![{markdown(shot.get('observation', data['title']))}]({safe_url(shot['url'])})", '']
-    if not gallery:
+    if gallery:
+        out.append('<table>')
+        for index in range(0, len(gallery), 3):
+            row = gallery[index:index + 3]
+            out.append('<tr>')
+            for directory, data in row:
+                shot = data['screenshots'][0]
+                target = html.escape(quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/'), quote=True)
+                screenshot = html.escape(safe_url(shot['url']), quote=True)
+                title = html.escape(data['title'], quote=True)
+                observation = html.escape(str(shot.get('observation', data['title'])).replace('\n', ' '), quote=True)
+                screenshot_score = data['screenshot_based_score']['score'] / 10
+                out.append(
+                    f'<td align="center" width="33%"><a href="{target}">'
+                    f'<img src="{screenshot}" alt="{observation}" height="180"></a><br>'
+                    f'<a href="{target}"><strong>{title}</strong></a> · 📸 {screenshot_score:.1f}/10</td>'
+                )
+            out.extend(['<td width="33%"></td>'] * (3 - len(row)))
+            out.append('</tr>')
+        out.extend(['</table>', ''])
+    else:
         out.append('No scored screenshots yet.')
     write_atomic(ROOT / 'README.md', '\n'.join(out).rstrip() + '\n')
     print(f'Rebuilt {len(entries)} game pages and the root README.', flush=True)
