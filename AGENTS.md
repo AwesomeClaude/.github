@@ -2,6 +2,8 @@
 
 ## AgentsWeb runner testing
 
+Treat an unqualified request to connect to SSH in this repository as a request for the current AgentsWeb GitHub Actions runner. Locate its live run and connect through its published tunnel endpoint with `~/.ssh/aiplay-agentsweb`; verify `hostname`, `id -un`, and `pwd`. If no runner is live, ask whether to start a new five-hour run. Use `a2` only when the user explicitly names it.
+
 Connect over SSH to an existing AgentsWeb runner and verify it before writing or changing a runner workflow YAML. Reuse the verified tunnel format and key path.
 
 ## OpenCode smoke command
