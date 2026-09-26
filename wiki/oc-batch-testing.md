@@ -37,7 +37,3 @@ Read `result.json` for the session link, state, and exit code. Treat `finished` 
 Move the completed current batch into `work/oc-previous-batches/batch-NNN` before launching another. Increment the highest existing number; preserve every archived file. Refuse symlink batch/archive paths. Treat archived session links as historical: inspect archived files directly instead of resuming against reused directories.
 
 Inspect the PID in `worker.pid` and confirm it still belongs to this batch before sending SIGTERM. Abort attached server sessions and stop CLI process groups on worker termination or per-run timeout. Leave the server running. Inspect `worker.log` if startup acknowledgement fails.
-
-## Test changes
-
-Run `python3 -m unittest discover -s scripts -p test_oc_runner.py -v`. Exercise prompt overrides, detached execution, live URLs, lock ownership, archive preservation, startup failure, timeout, and termination against fake local sessions.
