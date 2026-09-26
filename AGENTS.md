@@ -2,7 +2,11 @@
 
 ## AgentsWeb runner testing
 
-For SSH requests here, use the live AgentsWeb Actions runner and `~/.ssh/aiplay-agentsweb`; use `a2` only if named. Ask before starting a runner. Verify SSH before editing runner YAML.
+For SSH requests here, use the live AgentsWeb Actions runner and `~/.ssh/aiplay-agentsweb`; use `a2` only if named. Verify SSH before editing runner YAML.
+
+## Issue catalog workflow
+
+Open a real test issue automatically after changing the issue catalog workflow. Publish the review PR or branch fallback and the issue report, including branch README links for added games, before the owner-only 30-minute SSH hold. Keep the same worker and tunnel alive during the hold, including after analysis or publication failure. Skip the hold for non-owner issues. Report PR and issue-comment links as soon as they appear; do not wait for the hold to end.
 
 ## OpenCode smoke command
 
