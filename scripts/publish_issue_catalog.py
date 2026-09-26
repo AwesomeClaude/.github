@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+from urllib.parse import quote
 
 import games
 
@@ -63,7 +64,7 @@ def publish_files(artifact, summary):
     return published
 
 
-def issue_comment(summary, link, run_url):
+def issue_comment(summary, link, run_url, repo, branch, published):
     lines = [f'Issue catalog run: [Actions log]({run_url}).']
     if link:
         lines.append(f'Catalog changes: {link}.')
@@ -86,6 +87,13 @@ def issue_comment(summary, link, run_url):
         lines.extend(['', f'### {title}'])
         for item in items:
             original = games.safe_url(item['input_url'])
+            if status in ('added', 'no_source') and item['output'] in published:
+                relative = safe_output(item['output'])
+                readme_url = (f'https://github.com/{repo}/blob/{quote(branch, safe="/")}/'
+                              f'{quote(str(relative), safe="/")}/README.md')
+                game_title = games.markdown(item.get('title') or relative.name)
+                lines.append(f'- [{game_title}]({readme_url}) — [Original link]({original})')
+                continue
             note = item.get('reason') or item.get('output') or item.get('title') or ''
             lines.append(f'- [Original link]({original}) — {games.markdown(note)[:600]}')
     return '\n'.join(lines) + '\n'
@@ -136,7 +144,7 @@ def main():
         else:
             summary['outcomes'].append({'input_url': f'https://github.com/{repo}/issues/{issue}',
                                         'status': 'failed', 'reason': f'PR creation failed: {pr.stderr.strip()[:300]}'})
-    comment = issue_comment(summary, link, run_url)
+    comment = issue_comment(summary, link, run_url, repo, branch, published)
     command('gh', 'issue', 'comment', str(issue), '--repo', repo, '--body', comment)
     print(comment)
 
