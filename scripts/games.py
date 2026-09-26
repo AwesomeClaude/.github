@@ -98,6 +98,29 @@ def validate(data, expected_url=None):
     for review in data['fictional_reviews']:
         if not isinstance(review, dict) or type(review.get('rating')) is not int or not 0 <= review['rating'] <= 100:
             raise ValueError('Each fictional review rating must be an integer between 0 and 100')
+    controls = data.get('controls')
+    if controls is not None:
+        if not isinstance(controls, dict) or set(controls) != {
+                'mobile_controls', 'motion_controls', 'gamepad', 'keyboard_mouse'}:
+            raise ValueError('controls must contain all four control types')
+        if any(value not in ('supported', 'not_supported', 'unknown') for value in controls.values()):
+            raise ValueError('Each control status must be supported, not_supported, or unknown')
+    player_modes = data.get('player_modes')
+    if player_modes is not None:
+        if not isinstance(player_modes, dict) or set(player_modes) != {'human_players', 'modes'}:
+            raise ValueError('player_modes must contain human_players and modes')
+        players = player_modes['human_players']
+        if players is not None and not (
+                (type(players) is int and players > 0) or
+                (isinstance(players, str) and players.strip())):
+            raise ValueError('human_players must be a positive integer, nonempty range, or null')
+        modes = player_modes['modes']
+        allowed = {'single-player', 'local multiplayer', 'online multiplayer'}
+        if not isinstance(modes, list) or any(not isinstance(mode, str) or mode not in allowed for mode in modes) or len(set(modes)) != len(modes):
+            raise ValueError('player_modes.modes must list distinct supported modes')
+    play_url = data.get('play_game_url')
+    if play_url is not None and not safe_url(play_url):
+        raise ValueError('play_game_url must be an HTTP(S) URL or null')
     return data
 
 
@@ -110,7 +133,10 @@ def game_readme(data):
     url = safe_url(data['repository_url'])
     graphic = data['screenshot_based_score']
     graphic_text = 'not scored' if graphic is None else f"{graphic['score']}/100"
-    out = [f'# {title}', '', f'[Open the game source]({url})', '',
+    out = [f'# {title}', '', f'[Open the game source]({url})']
+    if data.get('play_game_url'):
+        out.append(f"[Play the game]({safe_url(data['play_game_url'])})")
+    out += ['',
            f"**Overall rating:** {data['rating']['score']}/100. {markdown(data['rating'].get('reason', ''))}", '',
            f"**Screenshot score:** {graphic_text}. " +
            (markdown(graphic.get('reason', '')) if graphic else 'No inspectable gameplay screenshot.'), '']
@@ -123,6 +149,20 @@ def game_readme(data):
         items = lines_list(data[key])
         if items:
             out += [f'## {heading}', '', *items, '']
+    if data.get('controls') is not None:
+        out += ['## Controls', '']
+        labels = [('Mobile controls', 'mobile_controls'), ('Motion controls', 'motion_controls'),
+                  ('Gamepad', 'gamepad'), ('Keyboard/mouse', 'keyboard_mouse')]
+        statuses = {'supported': 'Supported', 'not_supported': 'Not supported',
+                    'unknown': 'Not established'}
+        out += [f'- {label}: {statuses[data["controls"][key]]}' for label, key in labels]
+        out.append('')
+    if data.get('player_modes') is not None:
+        players = data['player_modes']['human_players']
+        modes = data['player_modes']['modes']
+        out += ['## Player modes', '',
+                f'- Human players: {markdown(players) if players is not None else "Not established"}',
+                f'- Modes: {markdown(", ".join(modes)) if modes else "Not established"}', '']
     if isinstance(data.get('reconstructed_prompt'), str):
         out += ['## Reconstructed prompt', '', markdown(data['reconstructed_prompt']), '']
     if data['source_analysis']:
