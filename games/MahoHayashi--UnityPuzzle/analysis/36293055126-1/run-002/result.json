@@ -1,0 +1,11 @@
+{
+  "run": "run-002",
+  "directory": "/home/runner/work/Astra-Top-Games/Astra-Top-Games/work/game-batches/36293055126-1/run-002",
+  "status": "finished",
+  "session_id": "ses_f1ef9e8c7ffeQAfuMfYDbb7ww1",
+  "live_url": "https://int-above-remain-modelling.trycloudflare.com/L2hvbWUvcnVubmVyL3dvcmsvQXN0cmEtVG9wLUdhbWVzL0FzdHJhLVRvcC1HYW1lcy93b3JrL2dhbWUtYmF0Y2hlcy8zNjI5MzA1NTEyNi0xL3J1bi0wMDI/session/ses_f1ef9e8c7ffeQAfuMfYDbb7ww1",
+  "prompt_sha256": "77157924bb3959be84b3ca8c3090736e0969cbfd04addc70b830b9ead3b0e7cf",
+  "cli_pid": 2655,
+  "exit_code": 0,
+  "elapsed_seconds": 90.19
+}
