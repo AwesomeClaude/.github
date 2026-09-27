@@ -69,3 +69,13 @@ Separate navigation, scores, metadata, and screenshots. Show scores in a compact
 ## Verify submission isolation
 
 Submit a real game and a real non-game link in the same owner issue. Inspect both outcomes and retained evidence over SSH. Confirm that publication succeeds and auto-merges the valid report alongside failure diagnostics. Verify independent per-run history files, readable report tables, expandable scoring details, and the unchanged owner hold. Keep publication failures distinct from submission failures.
+
+## Reuse partial-success and layout evidence
+
+Inspect [mixed-result issue #32](https://github.com/agents-dev/Astra-Top-Games/issues/32), [its result](https://github.com/agents-dev/Astra-Top-Games/issues/32#issuecomment-5853034640), and [merged PR #34](https://github.com/agents-dev/Astra-Top-Games/pull/34). Confirm one updated moorestech report and one rejected non-game repository, successful analysis and publication steps, and automatic merge. Inspect the retained candidates, conversations, and `games/history/36297444704-1.jsonl`. Preserve the original inclusion timestamp and immutable previous-report link.
+
+Inspect [diagnostic-only issue #33](https://github.com/agents-dev/Astra-Top-Games/issues/33), [its result](https://github.com/agents-dev/Astra-Top-Games/issues/33#issuecomment-5853037091), and [merged PR #35](https://github.com/agents-dev/Astra-Top-Games/pull/35). Confirm Example Domain rejection, successful publication, and changes limited to diagnostic evidence and `games/history/36297527438-1.jsonl`. Compare the two independent history files. Verify all 39 migrated entries byte-for-byte against the former aggregate. Treat per-run history as removal of one conflict hotspot, not proof that same-game reports or the generated index cannot conflict.
+
+Open the published moorestech report on GitHub. Check the separate navigation row, score table, collapsed rationale, working disclosure, readable UTC metadata, and screenshots. Keep all 36 regenerated pages consistent with the renderer. Preserve precise JSON timestamps and full scoring evidence.
+
+Use the recorded analysis durations of 108.46 seconds for moorestech, 71.31 seconds for the rejected repository, and 35.45 seconds for Example Domain as this run's throughput evidence. Treat source inspection and catalog comparison as the main analysis cost. Inspect the successful publication steps before the owner holds. Reuse the SSH observation at 05:35 UTC on 2026-09-27: both workers retained their original OpenCode servers, public tunnels, AgentsWeb tunnels, and `sleep 1800` processes. Leave both holds uninterrupted. Distinguish these observations from unexercised simultaneous lock contention, interrupted pipelines, and forced merge failures.
