@@ -175,6 +175,19 @@ def validate(data, expected_url=None):
     if not isinstance(models, list) or any(not isinstance(m, dict) or
             not isinstance(m.get('name'), str) or not safe_url(m.get('evidence_url')) for m in models):
         raise ValueError('creation_models must contain names and evidence URLs')
+    technologies = data.setdefault('technologies', [])
+    if not isinstance(technologies, list):
+        raise ValueError('technologies must be a list')
+    for technology in technologies:
+        if not isinstance(technology, dict) or not isinstance(technology.get('name'), str) or not technology['name'].strip():
+            raise ValueError('Each technology needs a name')
+        if not isinstance(technology.get('category'), str) or not technology['category'].strip():
+            raise ValueError('Each technology needs a category')
+        if not safe_url(technology.get('evidence_url')):
+            raise ValueError('Each technology needs an evidence_url')
+        version = technology.setdefault('version', None)
+        if version is not None and (not isinstance(version, str) or not version.strip()):
+            raise ValueError('Technology version must be a nonempty string or null')
     if data.get('catalog_slug'):
         catalog_path(data['catalog_slug'])
     return data
@@ -244,6 +257,13 @@ def game_readme(data):
         out += ['## Player modes', '',
                 f'- Human players: {markdown(players) if players is not None else "Not established"}',
                 f'- Modes: {markdown(", ".join(modes)) if modes else "Not established"}', '']
+    if data.get('technologies'):
+        out += ['## Technologies', '']
+        for technology in data['technologies']:
+            name = technology['name'] + (f" {technology['version']}" if technology.get('version') else '')
+            out.append(f"- **{markdown(name)}** — {markdown(technology['category'])} "
+                       f"([evidence]({safe_url(technology['evidence_url'])}))")
+        out.append('')
     if isinstance(data.get('reconstructed_prompt'), str):
         out += ['## Reconstructed prompt', '', markdown(data['reconstructed_prompt']), '']
     if data['source_analysis']:

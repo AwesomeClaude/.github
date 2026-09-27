@@ -14,6 +14,8 @@ Determine whether the game supports mobile touch controls (including an on-scree
 
 Find a publicly reachable URL where the game can actually be played. Verify that it opens the playable game, not just a repository, screenshot, promotional page, or store listing. Set `play_game_url` to `null` if no playable URL is established.
 
+Identify the game's engine, languages, frameworks, rendering, physics, audio, and build technologies from inspected project documentation, configuration, manifests, or source evidence. Record only technologies used by the game, not tools merely mentioned or used to analyze it. Use `technologies` objects shaped exactly as `{"name": "Godot", "version": "4.3", "category": "engine", "evidence_url": "https://example.com/project-config"}`. Treat that object as a schema example, not a finding. Use categories such as `engine`, `language`, `framework`, `rendering`, `physics`, `audio`, or `build`. Copy a version only when explicitly supported; preserve documented ranges and use null when unknown. Cite an inspected evidence URL for each entry. Use an empty array when no technology is established. Do not infer an engine or version from appearance alone.
+
 Document AI models used to create the game only when explicitly attributed in project sources. Use objects shaped exactly as `{"name": "Exact documented model name", "evidence_url": "https://example.com/evidence"}` in `creation_models`; use an empty array when unknown. Distinguish creation models from the model analyzing the game. Preserve labeled links from the existing report and add verified source repository, play, and submission links. Do not invent repository dates or catalog timestamps; the catalog code supplies them.
 
 For a qualifying game, write only `readme.json` in the current workspace. Follow this example's shape and replace its values with your findings. Use integer scores from 0 to 100 for every rating, including all three clearly fictional reviews. Do not run catalog scripts or change catalog files.
@@ -22,6 +24,7 @@ For a qualifying game, write only `readme.json` in the current workspace. Follow
 {
   "catalog_slug": null,
   "creation_models": [],
+  "technologies": [],
   "source_url": "{{repository_url}}",
   "repository_url": null,
   "title": "Game title",
