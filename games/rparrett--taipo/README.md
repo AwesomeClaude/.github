@@ -1,10 +1,29 @@
 # Taipo
 
-[Open the game source](https://github.com/rparrett/taipo)
+[View source](https://github.com/rparrett/taipo)
 
-**Overall rating:** 35/100. Closest comparators are Turbo Kart Rally (40) and Kart Royale (50): both are complete single-track 3D arcade loops with AI fields, items, physics, HUD/menus and procedural tech. Neural Sight (30) is a 24-hour photographic prototype with no real game loop. Taipo sits between Turbo Kart and Neural Sight at 35: it has a genuinely complete and distinctive loop (typing-only TD economy, three tower roles, Tiled waves, four word lists, Bevy desktop plus web builds, multi-year releases, 4.7/5 from 9 itch ratings), which beats Neural Sight's tech demo scope, but its scope is narrower than either kart game (one small tilemap, a handful of reused/BrowserQuest-adjacent sprites, acknowledged TODO gaps in sound, art, levels, and word lists) and its 2D pixel presentation is flatter and sparser. Evidence gaps: judged from source via gh api plus two still screenshots and the itch page; no live playthrough, no video, no performance, balance, or late-wave depth verified, so playability and tuning are not proven.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **35/100** | **55/100** |
 
-**Screenshot score:** 55/100. The inspected English-mode gameplay frame shows coherent readable pixel art (winding road, towers, skeletons, yen and timer HUD, typing buffer) with a charming station-house map, but large flat empty water expanses, sparse decoration, and simple small sprites put it below all three catalog 70s: Kart Royale and Turbo Kart Rally show denser 3D scenes with lighting, crowds, scenery and full race HUDs, and Neural Sight shows photographic captured detail. The second inspected image is a word-list menu overlay, discounted as non-gameplay. Judged from stills only; no motion, feel, or performance inferred.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Closest comparators are Turbo Kart Rally (40) and Kart Royale (50): both are complete single-track 3D arcade loops with AI fields, items, physics, HUD/menus and procedural tech. Neural Sight (30) is a 24-hour photographic prototype with no real game loop. Taipo sits between Turbo Kart and Neural Sight at 35: it has a genuinely complete and distinctive loop (typing-only TD economy, three tower roles, Tiled waves, four word lists, Bevy desktop plus web builds, multi-year releases, 4.7/5 from 9 itch ratings), which beats Neural Sight's tech demo scope, but its scope is narrower than either kart game (one small tilemap, a handful of reused/BrowserQuest-adjacent sprites, acknowledged TODO gaps in sound, art, levels, and word lists) and its 2D pixel presentation is flatter and sparser. Evidence gaps: judged from source via gh api plus two still screenshots and the itch page; no live playthrough, no video, no performance, balance, or late-wave depth verified, so playability and tuning are not proven.
+
+### Screenshot score
+
+The inspected English-mode gameplay frame shows coherent readable pixel art (winding road, towers, skeletons, yen and timer HUD, typing buffer) with a charming station-house map, but large flat empty water expanses, sparse decoration, and simple small sprites put it below all three catalog 70s: Kart Royale and Turbo Kart Rally show denser 3D scenes with lighting, crowds, scenery and full race HUDs, and Neural Sight shows photographic captured detail. The second inspected image is a word-list menu overlay, discounted as non-gameplay. Judged from stills only; no motion, feel, or performance inferred.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

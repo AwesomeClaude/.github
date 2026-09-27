@@ -1,14 +1,32 @@
 # Devi's Lab
 
-[Open the game source](https://github.com/shyamathreye/devis-lab)
-[Play the game](https://shyamathreye.github.io/devis-lab/)
-**Repository created:** 2026-06-17T03:12:52Z
-**Added to catalog:** 2026-09-27T04:41:33.565601+00:00
-**Updated in catalog:** 2026-09-27T04:41:33.565601+00:00
+[Play the game](https://shyamathreye.github.io/devis-lab/) · [View source](https://github.com/shyamathreye/devis-lab)
 
-**Overall rating:** 33/100. Three complete kid-friendly loops (hangman, unscramble, whack-a-mole) with 4 themes, 4 difficulties, word banks, TTS voice, synth audio, and local leaderboard give it broader scope than single-mechanic catalog games like 2048 (38), chess rot (30), TypeScript-Blackjack (28), and T-Rex Runner (35). Closest comparators: Pizza Chef (44) has deeper arcade systems and touch+keyboard support on the same React+Vite+Tailwind+Web Audio stack, so the target sits below it; Top-10 Tension (32) and Taipo (35) are similarly educational guessing/typing games with hints and word lists, placing the target between them at 33; Beachy Beachy Ball (25) shares modes/difficulties/local-best structure but the target has three games versus one. Far below Ashlands (55), OSRS Tower Defense (52), and Kart Royale (50) on 3D scope, systems depth, and polish. No gameplay screenshots could be inspected (repo contains zero images), so visual polish is unverified; score reflects documented scope and code evidence, not proven playability, performance, or balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **33/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Three complete kid-friendly loops (hangman, unscramble, whack-a-mole) with 4 themes, 4 difficulties, word banks, TTS voice, synth audio, and local leaderboard give it broader scope than single-mechanic catalog games like 2048 (38), chess rot (30), TypeScript-Blackjack (28), and T-Rex Runner (35). Closest comparators: Pizza Chef (44) has deeper arcade systems and touch+keyboard support on the same React+Vite+Tailwind+Web Audio stack, so the target sits below it; Top-10 Tension (32) and Taipo (35) are similarly educational guessing/typing games with hints and word lists, placing the target between them at 33; Beachy Beachy Ball (25) shares modes/difficulties/local-best structure but the target has three games versus one. Far below Ashlands (55), OSRS Tower Defense (52), and Kart Royale (50) on 3D scope, systems depth, and polish. No gameplay screenshots could be inspected (repo contains zero images), so visual polish is unverified; score reflects documented scope and code evidence, not proven playability, performance, or balance.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 17 Jun 2026 · 03:12 UTC |
+| Added to catalog | 27 Sep 2026 · 04:41 UTC |
+| Last updated | 27 Sep 2026 · 04:41 UTC |
+| Documented creation models | Not established |
 
 ## Play
 

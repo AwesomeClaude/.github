@@ -1,10 +1,29 @@
 # Flip Runner Racing
 
-[Open the game source](https://github.com/markcastle/fliprunner)
+[View source](https://github.com/markcastle/fliprunner)
 
-**Overall rating:** 33/100. Far from AAA with no 3D world, AI rivals, multiplayer, cinematics, or live-ops scale; single-file Canvas 2D heightfield art and WebAudio synth only. Most relevant comparators: Taipo (35 overall, complete niche Bevy typing-TD with one small map and acknowledged art and sound gaps), Beachy Beachy Ball (25 overall, single roll-to-star mechanic with two short tours and flat minimal art), and Turbo Kart Rally (40 overall, complete 3D kart loop with 8 racers, AI field, items, and menus). Flip Runner sits just below Taipo and below Turbo Kart Rally: it exceeds Beachy on scope with 10 themed levels, fuel plus flips plus chute plus ice plus collapsing bridges, 3-star progression, and bot-verified completability, and it beats Neural Sight (30, tiny prototype with no real loop) on finished-loop depth, but it trails the kart racers badly on visual scene rendering, opponents, and technical ambition, and trails Taipo on shipped validation (Taipo has multi-year releases and itch ratings; Flip Runner is a 2-commit one-shot with 2 stars, no live URL, and no inspectable screenshots). Evidence gaps: judged from repository file listing and README plus partial index.html source via unauthenticated fetch without cloning; gh api was unavailable without auth, no screenshots exist in the repo to inspect, and the live build was not played, so playability, balance, performance, and audio quality are unverified and source claims do not prove them.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **33/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA with no 3D world, AI rivals, multiplayer, cinematics, or live-ops scale; single-file Canvas 2D heightfield art and WebAudio synth only. Most relevant comparators: Taipo (35 overall, complete niche Bevy typing-TD with one small map and acknowledged art and sound gaps), Beachy Beachy Ball (25 overall, single roll-to-star mechanic with two short tours and flat minimal art), and Turbo Kart Rally (40 overall, complete 3D kart loop with 8 racers, AI field, items, and menus). Flip Runner sits just below Taipo and below Turbo Kart Rally: it exceeds Beachy on scope with 10 themed levels, fuel plus flips plus chute plus ice plus collapsing bridges, 3-star progression, and bot-verified completability, and it beats Neural Sight (30, tiny prototype with no real loop) on finished-loop depth, but it trails the kart racers badly on visual scene rendering, opponents, and technical ambition, and trails Taipo on shipped validation (Taipo has multi-year releases and itch ratings; Flip Runner is a 2-commit one-shot with 2 stars, no live URL, and no inspectable screenshots). Evidence gaps: judged from repository file listing and README plus partial index.html source via unauthenticated fetch without cloning; gh api was unavailable without auth, no screenshots exist in the repo to inspect, and the live build was not played, so playability, balance, performance, and audio quality are unverified and source claims do not prove them.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Play
 

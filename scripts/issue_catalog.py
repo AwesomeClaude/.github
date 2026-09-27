@@ -186,6 +186,11 @@ def score_text(report, key):
 def issue_comment(summary, link, run_url, repo, branch, merge_status):
     lines = [f'Issue catalog run: [Actions log]({run_url}).',
              f'Catalog changes: {link}.' if link else 'No catalog changes were published.']
+    counts = {status: sum(item['status'] == status for item in summary['outcomes'])
+              for status in ('added', 'updated', 'unchanged', 'failed')}
+    lines.append('**Results:** ' + ' · '.join(f'{count} {status}' for status, count in counts.items()))
+    if counts['failed']:
+        lines.append('Failed submissions retain diagnostics; valid reports publish independently.')
     if merge_status:
         lines.append(merge_status)
     if summary.get('error'):
@@ -253,6 +258,8 @@ def publish(args):
         if completed:
             by_url = {item['input_url']: item for item in completed}
             summary['outcomes'] = [by_url.get(item['input_url'], item) for item in summary['outcomes']]
+    if os.getenv('ANALYSIS_SUCCEEDED') != 'true' and not summary.get('error'):
+        summary['error'] = 'Analysis pipeline did not complete; inspect the Actions log.'
     base = os.getenv('CATALOG_BASE_BRANCH', 'main')
     run_url = os.getenv('ISSUE_CATALOG_RUN_URL') or f'https://github.com/{repo}/actions/runs/{run_id}'
     branch = f"codex/issue-{summary['issue_number']}-run-{run_id}-attempt-{os.getenv('GITHUB_RUN_ATTEMPT', '1')}"
@@ -293,8 +300,8 @@ def publish(args):
             print(f'Published pull request: {pr_url}', flush=True)
             if os.getenv('CATALOG_AUTO_MERGE', 'true').lower() == 'false':
                 merge_status = 'Automatic merge is disabled.'
-            elif any(i['status'] == 'failed' for i in summary['outcomes']) or os.getenv('ANALYSIS_SUCCEEDED') != 'true':
-                merge_status = 'Left the PR open because some analyses failed.'
+            elif summary.get('error'):
+                merge_status = 'Left the PR open because the analysis pipeline did not complete.'
             else:
                 merge_status = merge_pr(repo, pr_url, head, title, body)
     except Exception as exc:
@@ -311,7 +318,7 @@ def publish(args):
     summary['publication'] = {'pull_request': pr_url, 'comment': result.stdout.strip(), 'merge_status': merge_status}
     games.write_atomic(summary_path, json.dumps(summary, indent=2) + '\n')
     print(f'Issue report: {result.stdout.strip()}', flush=True)
-    return int(bool(summary.get('error')) or any(i['status'] == 'failed' for i in summary['outcomes'])
+    return int(bool(summary.get('error'))
                or bool(merge_status and merge_status.startswith('Automatic merge failed')))
 
 

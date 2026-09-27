@@ -1,11 +1,31 @@
 # Infinite Craft
 
-[Open the original game link](https://neal.fun/infinite-craft/) — No verified source repository.
-[Play the game](https://neal.fun/infinite-craft/)
+[Play the game](https://neal.fun/infinite-craft/) · [View original submission](https://neal.fun/infinite-craft/)
 
-**Overall rating:** 52/100. Far from AAA: single blank-canvas drag-and-drop loop, no campaign, multiplayer, cinematics, voice, progression economy or live-ops scale; source code not public so performance, balance and backend cost are unverified. Catalog comparison across all 18 listed games: Ashlands (55 overall, ~94k-line 3D RPG systems breadth but zero inspectable screenshots) is the calibration top; Kart Royale (50 overall, ~60k-line complete 3D kart loop with two inspected 70/100 polished frames) and Turbo Kart Rally (40, complete 3D racer) beat it on visual polish, composition and real-time execution; neverquest (45, deepest text-systems scope but monochrome dashboard) is the closest scope analogue. Infinite Craft exceeds neverquest, TypeScript-Blackjack (28, single-table DOM), Top-10 Tension (32, flat quiz UI), Beachy Beachy Ball (25), Taipo (35, single-map typing TD), Neural Sight (30, 4-scene prototype) and curiositY (18, static riddles) on content infinitude, shipped maturity and proven traction: 2024 viral hit on Twitch/YouTube, 100M+ combos claimed, official iOS/Android apps, global shared database. It trails Ashlands on simulated systems depth and both kart racers on scene rendering, but its verified live playability and cultural scale place it just above Kart Royale at 52. Code and stills do not prove performance, fairness or long-term balance.
+No verified source repository.
 
-**Screenshot score:** 32/100. One inspected gameplay frame only; judged from stills without inferring motion. The frame shows the game's own output: white infinite canvas with small pill-shaped text nodes and thin grey link lines, plus a right sidebar discovery list. Clean, coherent and readable minimalist styling, but flat DOM text with no lighting, texture, environment, effects or composed scene. Against catalog calibration it sits with TypeScript-Blackjack (35, clean flat card table), Top-10 Tension (32, flat quiz cards) and neverquest (30, monochrome dashboard), below Taipo (55, pixel-art board with map decor) and far below Kart Royale, Turbo Kart Rally and Neural Sight (all 70 for dense 3D or photographic scenes with HUD, scenery and dynamic framing). Title and logo art discounted.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **52/100** | **32/100** |
+
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: single blank-canvas drag-and-drop loop, no campaign, multiplayer, cinematics, voice, progression economy or live-ops scale; source code not public so performance, balance and backend cost are unverified. Catalog comparison across all 18 listed games: Ashlands (55 overall, ~94k-line 3D RPG systems breadth but zero inspectable screenshots) is the calibration top; Kart Royale (50 overall, ~60k-line complete 3D kart loop with two inspected 70/100 polished frames) and Turbo Kart Rally (40, complete 3D racer) beat it on visual polish, composition and real-time execution; neverquest (45, deepest text-systems scope but monochrome dashboard) is the closest scope analogue. Infinite Craft exceeds neverquest, TypeScript-Blackjack (28, single-table DOM), Top-10 Tension (32, flat quiz UI), Beachy Beachy Ball (25), Taipo (35, single-map typing TD), Neural Sight (30, 4-scene prototype) and curiositY (18, static riddles) on content infinitude, shipped maturity and proven traction: 2024 viral hit on Twitch/YouTube, 100M+ combos claimed, official iOS/Android apps, global shared database. It trails Ashlands on simulated systems depth and both kart racers on scene rendering, but its verified live playability and cultural scale place it just above Kart Royale at 52. Code and stills do not prove performance, fairness or long-term balance.
+
+### Screenshot score
+
+One inspected gameplay frame only; judged from stills without inferring motion. The frame shows the game's own output: white infinite canvas with small pill-shaped text nodes and thin grey link lines, plus a right sidebar discovery list. Clean, coherent and readable minimalist styling, but flat DOM text with no lighting, texture, environment, effects or composed scene. Against catalog calibration it sits with TypeScript-Blackjack (35, clean flat card table), Top-10 Tension (32, flat quiz cards) and neverquest (30, monochrome dashboard), below Taipo (55, pixel-art board with map decor) and far below Kart Royale, Turbo Kart Rally and Neural Sight (all 70 for dense 3D or photographic scenes with HUD, scenery and dynamic framing). Title and logo art discounted.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

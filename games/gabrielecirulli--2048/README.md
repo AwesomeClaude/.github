@@ -1,15 +1,32 @@
 # 2048
 
-[Open the game source](https://github.com/gabrielecirulli/2048)
-[Play the game](https://play2048.co/)
-[Previous report](https://github.com/agents-dev/Astra-Top-Games/blob/f74936bf945284f98485556c55b8c7b477b69177/games/gabrielecirulli--2048/README.md)
-**Repository created:** 2014-03-05T16:03:26Z
-**Added to catalog:** 2026-09-27T01:22:14Z
-**Updated in catalog:** 2026-09-27T03:34:34.296548+00:00
+[Play the game](https://play2048.co/) · [View source](https://github.com/gabrielecirulli/2048) · [Previous report](https://github.com/agents-dev/Astra-Top-Games/blob/f74936bf945284f98485556c55b8c7b477b69177/games/gabrielecirulli--2048/README.md)
 
-**Overall rating:** 38/100. Same game as catalog gabrielecirulli--2048 (38/100), resubmitted via its official homepage play2048.co. One flawless 4x4 sliding-merge loop, shipped on web plus iOS/Android with 13.4k stars and 17.6k forks evidencing mass validation. Against the catalog it sits above flat single-screen casuals such as TypeScript-Blackjack (28), chess rot (30), and Top-10 Tension (32) on tuning and proven appeal, roughly alongside Taipo (35) and Wouf Kart (38) as complete but narrow in scope, and trails Turbo Kart Rally (40), THORNMERE (46), and catalog-top Ashlands (55) enormously on scope, depth, and audiovisual richness. Nowhere near AAA: no 3D scene, audio design, narrative, or progression. Evidence gaps: play2048.co requires JavaScript so gameplay was verified from page scaffolding plus the mirrored playable DOM and repo files, not a live playthrough; animations, feel, performance, and spawn balance unmeasured.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **38/100** | **45/100** |
 
-**Screenshot score:** 45/100. First image is the game's own full-board output: clean cream board, readable color progression, gold 2048 tile with You win overlay. Coherent and iconic but flat DOM tiles with no scene, lighting, or compositional depth. It ranks below richer catalog frames such as Kart Royale and Turbo Kart Rally (70), THORNMERE (60), and Taipo (55), and above plainer flat UIs such as chess rot (40) and Blackjack/Beachy (35). Second image is a curated angled promotional crop with beveled tiles, discounted as non-full gameplay reference. Still images only; motion and feel cannot be judged.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Same game as catalog gabrielecirulli--2048 (38/100), resubmitted via its official homepage play2048.co. One flawless 4x4 sliding-merge loop, shipped on web plus iOS/Android with 13.4k stars and 17.6k forks evidencing mass validation. Against the catalog it sits above flat single-screen casuals such as TypeScript-Blackjack (28), chess rot (30), and Top-10 Tension (32) on tuning and proven appeal, roughly alongside Taipo (35) and Wouf Kart (38) as complete but narrow in scope, and trails Turbo Kart Rally (40), THORNMERE (46), and catalog-top Ashlands (55) enormously on scope, depth, and audiovisual richness. Nowhere near AAA: no 3D scene, audio design, narrative, or progression. Evidence gaps: play2048.co requires JavaScript so gameplay was verified from page scaffolding plus the mirrored playable DOM and repo files, not a live playthrough; animations, feel, performance, and spawn balance unmeasured.
+
+### Screenshot score
+
+First image is the game's own full-board output: clean cream board, readable color progression, gold 2048 tile with You win overlay. Coherent and iconic but flat DOM tiles with no scene, lighting, or compositional depth. It ranks below richer catalog frames such as Kart Royale and Turbo Kart Rally (70), THORNMERE (60), and Taipo (55), and above plainer flat UIs such as chess rot (40) and Blackjack/Beachy (35). Second image is a curated angled promotional crop with beveled tiles, discounted as non-full gameplay reference. Still images only; motion and feel cannot be judged.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 05 Mar 2014 · 16:03 UTC |
+| Added to catalog | 27 Sep 2026 · 01:22 UTC |
+| Last updated | 27 Sep 2026 · 03:34 UTC |
+| Documented creation models | Not established |
 
 ## Screenshots
 

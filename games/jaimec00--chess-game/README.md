@@ -1,10 +1,29 @@
 # chess rot
 
-[Open the game source](https://github.com/jaimec00/chess-game)
+[View source](https://github.com/jaimec00/chess-game)
 
-**Overall rating:** 30/100. Far from AAA: single fixed chessboard, white-only, depth-3 minimax plus prompt-based LLM, flat 2D DOM/SVG presentation, no multiplayer, ratings, variants, progression, or live-ops scale; source and stills do not prove playability, strength, balance or performance. Most relevant comparators: TypeScript-Blackjack (28 overall) as complete single-table 2D rules-faithful game — chess rot exceeds it on rules breadth, hand-rolled engine, and dual AI/LLM modes with cleaner glass UI; Taipo (35) as complete distinctive loop with multi-year releases and itch traction — chess rot trails on originality, scope variety and shipped validation; Neural Sight (30) as narrow tech prototype — chess rot matches on overall polish-vs-scope tradeoff with a finished loop but flat visuals. Below neverquest (45) systems depth and both kart racers (40-50) 3D systems/HUD/menus. Evidence gaps: gh api rate-limited so judged via web README plus raw source and 3 PR screenshots only; did not play live, no stars/forks, no performance or AI-strength data.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **30/100** | **40/100** |
 
-**Screenshot score:** 40/100. Best gameplay frame shows a clean coherent flat 2D board: sharp cburnett SVGs, aligned coordinates, glass frame and readable side panel. Rewarded for tidy stylization above TypeScript-Blackjack (35) flat felt and Beachy Beachy Ball (35) sparse runway and neverquest (30) text dashboard. Deducted heavily vs Taipo (55) pixel scene and all three catalog 70s (Kart Royale, Turbo Kart Rally, Neural Sight) for no lighting, texture, environment, effects or composition beyond a single board; stills reveal nothing about motion or feel.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: single fixed chessboard, white-only, depth-3 minimax plus prompt-based LLM, flat 2D DOM/SVG presentation, no multiplayer, ratings, variants, progression, or live-ops scale; source and stills do not prove playability, strength, balance or performance. Most relevant comparators: TypeScript-Blackjack (28 overall) as complete single-table 2D rules-faithful game — chess rot exceeds it on rules breadth, hand-rolled engine, and dual AI/LLM modes with cleaner glass UI; Taipo (35) as complete distinctive loop with multi-year releases and itch traction — chess rot trails on originality, scope variety and shipped validation; Neural Sight (30) as narrow tech prototype — chess rot matches on overall polish-vs-scope tradeoff with a finished loop but flat visuals. Below neverquest (45) systems depth and both kart racers (40-50) 3D systems/HUD/menus. Evidence gaps: gh api rate-limited so judged via web README plus raw source and 3 PR screenshots only; did not play live, no stars/forks, no performance or AI-strength data.
+
+### Screenshot score
+
+Best gameplay frame shows a clean coherent flat 2D board: sharp cburnett SVGs, aligned coordinates, glass frame and readable side panel. Rewarded for tidy stylization above TypeScript-Blackjack (35) flat felt and Beachy Beachy Ball (35) sparse runway and neverquest (30) text dashboard. Deducted heavily vs Taipo (55) pixel scene and all three catalog 70s (Kart Royale, Turbo Kart Rally, Neural Sight) for no lighting, texture, environment, effects or composition beyond a single board; stills reveal nothing about motion or feel.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

@@ -1,10 +1,29 @@
 # Ashlands
 
-[Open the game source](https://github.com/PeterBlenessy/ashlands)
+[View source](https://github.com/PeterBlenessy/ashlands)
 
-**Overall rating:** 55/100. New catalog top on scope/depth/technical ambition, but far from AAA. Most relevant comparators: Kart Royale (50 overall, ~60k-line complete 3D kart loop with 2 verified polished screenshots), neverquest (45 overall, deepest prior systems scope but text-UI only across ~591 files), Turbo Kart Rally (40 overall, complete indie 3D racer with HUD/menus) and Neural Sight (30 overall, photographic prototype with almost no loop). Ashlands exceeds all on paper breadth: ~94k lines, 16 contract-first subsystems, deferred engine (CDLOD, CSM, GTAO, TAA, AgX), 27 skills-by-use, spellmaking/alchemy/enchanting, topic dialogue/factions/crime, 18 completable quests and a 32-check + e2e harness. It therefore ranks above Kart Royale and neverquest on gameplay depth, scope and technical execution. Capped at 55 because visual polish is unverifiable (0 images committed, shots/ gitignored, no inspectable gameplay frame), self-reports 1/32 gate failing, waterline aliasing, terrain mottling and 20-35 fps on M3 Air, admits the blind Morrowind comparison never happened and AAA/perfect not reached, and source alone does not prove playability, performance, balance or fun. Above Taipo (35), Blackjack (28), Beachy (25) and curiosity (18) which are far narrower in systems and 3D tech.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **55/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+New catalog top on scope/depth/technical ambition, but far from AAA. Most relevant comparators: Kart Royale (50 overall, ~60k-line complete 3D kart loop with 2 verified polished screenshots), neverquest (45 overall, deepest prior systems scope but text-UI only across ~591 files), Turbo Kart Rally (40 overall, complete indie 3D racer with HUD/menus) and Neural Sight (30 overall, photographic prototype with almost no loop). Ashlands exceeds all on paper breadth: ~94k lines, 16 contract-first subsystems, deferred engine (CDLOD, CSM, GTAO, TAA, AgX), 27 skills-by-use, spellmaking/alchemy/enchanting, topic dialogue/factions/crime, 18 completable quests and a 32-check + e2e harness. It therefore ranks above Kart Royale and neverquest on gameplay depth, scope and technical execution. Capped at 55 because visual polish is unverifiable (0 images committed, shots/ gitignored, no inspectable gameplay frame), self-reports 1/32 gate failing, waterline aliasing, terrain mottling and 20-35 fps on M3 Air, admits the blind Morrowind comparison never happened and AAA/perfect not reached, and source alone does not prove playability, performance, balance or fun. Above Taipo (35), Blackjack (28), Beachy (25) and curiosity (18) which are far narrower in systems and 3D tech.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Play
 

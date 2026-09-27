@@ -1,10 +1,29 @@
 # Wouf Kart
 
-[Open the game source](https://github.com/eddyacthergal/super-wouf-kart)
+[View source](https://github.com/eddyacthergal/super-wouf-kart)
 
-**Overall rating:** 38/100. Closest comparators are Turbo Kart Rally (40 overall, single 2.1 km procedural Three.js kart loop with 8 racers, 8 items, 3-tier drift, 7 AI, menus/results, chiptune music) and Kart Royale (50 overall, single 1.6 km ~60k-line 3D physics/AI/synthesis demo with verified 70/100 screenshots). Super Wouf Kart matches their core loop (one garden circuit, 3 laps, 8-dog field, rank-weighted items, tiered drift, AI, HUD/menus/results, fully procedural 3D and audio) and adds a garage with 4 stat breeds plus 9 persisted accessories, touch controls, deterministic fixed-step sim with unit plus 8-AI integration tests, and WCAG AA aims. It trails both on proven scope: only 4 items vs Turbo's 8, a shorter 911 m track with no class/lap options, explicitly no music, gamepad, multiplayer, extra tracks or progression, French-only docs, 1 star, v0.2.2 prototype age (Sept 2026), and critically zero inspectable gameplay screenshots so visual polish is unverified. Above Taipo (35, complete but sparse 2D typing-TD) on 3D systems depth and above Neural Sight (30, tech prototype with no loop) on finished race loop; below neverquest (45) on long-tail progression depth but ahead on moment-to-moment 3D action structure. Evidence gaps: judged from repository content via GitHub API plus raw file reads only; did not play the live build, so playability, performance, balance and actual rendered quality are not proven by source or stills.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **38/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Closest comparators are Turbo Kart Rally (40 overall, single 2.1 km procedural Three.js kart loop with 8 racers, 8 items, 3-tier drift, 7 AI, menus/results, chiptune music) and Kart Royale (50 overall, single 1.6 km ~60k-line 3D physics/AI/synthesis demo with verified 70/100 screenshots). Super Wouf Kart matches their core loop (one garden circuit, 3 laps, 8-dog field, rank-weighted items, tiered drift, AI, HUD/menus/results, fully procedural 3D and audio) and adds a garage with 4 stat breeds plus 9 persisted accessories, touch controls, deterministic fixed-step sim with unit plus 8-AI integration tests, and WCAG AA aims. It trails both on proven scope: only 4 items vs Turbo's 8, a shorter 911 m track with no class/lap options, explicitly no music, gamepad, multiplayer, extra tracks or progression, French-only docs, 1 star, v0.2.2 prototype age (Sept 2026), and critically zero inspectable gameplay screenshots so visual polish is unverified. Above Taipo (35, complete but sparse 2D typing-TD) on 3D systems depth and above Neural Sight (30, tech prototype with no loop) on finished race loop; below neverquest (45) on long-tail progression depth but ahead on moment-to-moment 3D action structure. Evidence gaps: judged from repository content via GitHub API plus raw file reads only; did not play the live build, so playability, performance, balance and actual rendered quality are not proven by source or stills.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Play
 

@@ -4,7 +4,7 @@ Post the banner and “I’m on it. Analyzing the links may take 10–30 minutes
 
 Put every qualifying game in the root catalog and screenshot gallery. Treat `repository_url` as optional; normalize an omitted, null, or empty value to null. Require an original `source_url`; reuse the repository URL for existing repository-only reports. Verify every supplied source repository. Preserve existing game directories and original-link-derived directories. Always reanalyze submitted games. Use one validation and publication path for additions and refreshes.
 
-Fetch the latest default branch before applying report artifacts. Create a catalog PR and request a squash auto-merge with an exact head-commit match. Enable repository auto-merge. Set repository variable `ISSUE_CATALOG_AUTO_MERGE=false` to leave new catalog PRs open. Respect required checks and reviews. Leave partial or failed analyses open. Report merge failures on the issue and fail the publication step. Keep published branches available for the game README links.
+Fetch the latest default branch before applying report artifacts. Create a catalog PR and request a squash auto-merge with an exact head-commit match. Enable repository auto-merge. Set repository variable `ISSUE_CATALOG_AUTO_MERGE=false` to leave new catalog PRs open. Respect required checks and reviews. Auto-merge completed batches independently of individual submission failures. Keep pipeline errors visible and leave their recovery PRs open. Report merge failures on the issue and fail the publication step. Keep published branches available for the game README links.
 
 Publish the final report before uploading diagnostics and starting the owner-only 30-minute hold. Keep the worker and SSH tunnel alive through that hold, including on failure. Preserve the configured Chat-ID in generated and squash commit messages as the automation’s implementation provenance.
 
@@ -26,9 +26,9 @@ Use `prompt.md` for every analysis instruction. Use `games.py` for shared sessio
 
 Ask OpenCode to inspect the catalog and reuse an existing `catalog_slug` for the same game. Match concrete repository paths and play URLs again against the latest catalog during publication. Preserve labeled historical links; add source, play, and submission links; deduplicate by URL. Record documented creation models with evidence separately from the analysis model. Avoid title-only and fork-ancestry-only matches.
 
-Record Added, Updated, Unchanged, or Failed for every attempt in `games/log.jsonl`. Reanalyze Unchanged games. Preserve prior reports on failure. Store UTC repository creation, first catalog inclusion, and material update timestamps. Preserve original inclusion dates; recover legacy dates from Git. Link Updated reports to the prior committed README. Compare content independently of refresh provenance.
+Record Added, Updated, Unchanged, or Failed for every attempt in `games/history/<run>-<attempt>.jsonl`. Preserve migrated entries in `games/history/legacy.jsonl`. Write each run independently to avoid shared append conflicts. Reanalyze Unchanged games. Preserve prior reports on failure. Store UTC repository creation, first catalog inclusion, and material update timestamps. Preserve original inclusion dates; recover legacy dates from Git. Link Updated reports to the prior committed README. Compare content independently of refresh provenance.
 
-Commit redacted session messages, tool events, prompts, diagnostics, and result metadata under each game's `analysis/<run>-<attempt>/<record>/` directory. Put unmatched failures under `games/analysis/`. Publish logs-only PRs when reports are unchanged or fail. Keep failed batches open for inspection. Retain previous report versions in Git.
+Commit redacted session messages, tool events, prompts, diagnostics, and result metadata under each game's `analysis/<run>-<attempt>/<record>/` directory. Put unmatched failures under `games/analysis/`. Publish logs-only PRs when reports are unchanged or fail. Auto-merge diagnostic-only PRs when every submission fails but the pipeline completes. Retain previous report versions in Git.
 
 Serialize publication through atomic creation of `codex/catalog-publication-lock`. Release the lock after publication, before the debug hold. Inspect the owning run before deleting a stale lock after cancellation. Reapply later runs to the latest default branch. Respect repository merge requirements; queued PRs may still require reconciliation if the base changes before their eventual merge.
 
@@ -61,3 +61,11 @@ Inspect [mixed-result issue #23](https://github.com/agents-dev/Astra-Top-Games/i
 Reproduce public-tunnel failure on a separate runner without changing production holds: start OpenCode normally, run preparation with an unreachable HTTPS proxy and localhost excluded from proxying, then clear proxies before analysis. Inspect the observed preflight-runner artifacts at `/tmp/catalog-preflight-work/artifact` while that runner remains alive. Confirm actual cloudflared download failure, `debug_available: false`, successful real 2048 analysis, and a real Example Domain rejection. Do not publish this isolated negative test to the catalog.
 
 Inspect [issue #16's startup comment](https://github.com/agents-dev/Astra-Top-Games/issues/16#issuecomment-5852311996) for the real expiry confirmation. Check the successful hold/expiry steps at 04:05:50/51 UTC on 2026-09-27; observe the former public session returning HTTP 530 and the former SSH endpoint closing after the worker exits. Preserve later workers' full holds without waiting idle. Distinguish these observed checks from unexercised exact-content Unchanged and simultaneous-publication branches.
+
+## Keep reports readable
+
+Separate navigation, scores, metadata, and screenshots. Show scores in a compact table. Collapse scoring explanations behind a labeled disclosure. Format display dates to UTC minutes; preserve precise timestamps in structured reports. Rebuild existing game pages with `./scripts/games.sh` after changing the renderer.
+
+## Verify submission isolation
+
+Submit a real game and a real non-game link in the same owner issue. Inspect both outcomes and retained evidence over SSH. Confirm that publication succeeds and auto-merges the valid report alongside failure diagnostics. Verify independent per-run history files, readable report tables, expandable scoring details, and the unchanged owner hold. Keep publication failures distinct from submission failures.

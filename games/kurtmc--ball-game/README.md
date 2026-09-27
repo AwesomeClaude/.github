@@ -1,13 +1,32 @@
 # Ballz
 
-[Open the game source](https://github.com/kurtmc/ball-game)
-**Repository created:** 2026-04-05T22:46:08Z
-**Added to catalog:** 2026-09-27T04:42:43.868463+00:00
-**Updated in catalog:** 2026-09-27T04:42:43.868463+00:00
+[View source](https://github.com/kurtmc/ball-game)
 
-**Overall rating:** 40/100. Far from AAA: one 2D puzzle loop with no 3D scene, narrative, multiplayer, or live-ops scale. Calibrated against all catalog games. Closest comparators are Turbo Kart Rally (40, complete racer with AI field, items, HUD, menus), 2048 (38, flawless single-mechanic viral classic with mass validation), T-Rex Runner (35, single-reflex loop with shipped maturity), and Beachy Beachy Ball (25, single ball-rolling mechanic with minimal art). Ballz sits at the Turbo Kart Rally tier: deeper systems than 2048/T-Rex/Beachy with custom raycast physics, trajectory preview, mutations, Chaos Zone modifiers, drafting, particles, procedural audio, and multi-platform CI (Windows, AppImage, Android APK, .love), but narrower scope and unproven polish versus neverquest (45, deepest catalog systems), THORNMERE (46), OSRS Tower Defense (52), and catalog-top Ashlands (55). Evidence gaps: no inspectable screenshots or video, no browser-playable build so no live playthrough, and code plus spec alone do not prove playability, performance with 100+ balls, or difficulty balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **40/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: one 2D puzzle loop with no 3D scene, narrative, multiplayer, or live-ops scale. Calibrated against all catalog games. Closest comparators are Turbo Kart Rally (40, complete racer with AI field, items, HUD, menus), 2048 (38, flawless single-mechanic viral classic with mass validation), T-Rex Runner (35, single-reflex loop with shipped maturity), and Beachy Beachy Ball (25, single ball-rolling mechanic with minimal art). Ballz sits at the Turbo Kart Rally tier: deeper systems than 2048/T-Rex/Beachy with custom raycast physics, trajectory preview, mutations, Chaos Zone modifiers, drafting, particles, procedural audio, and multi-platform CI (Windows, AppImage, Android APK, .love), but narrower scope and unproven polish versus neverquest (45, deepest catalog systems), THORNMERE (46), OSRS Tower Defense (52), and catalog-top Ashlands (55). Evidence gaps: no inspectable screenshots or video, no browser-playable build so no live playthrough, and code plus spec alone do not prove playability, performance with 100+ balls, or difficulty balance.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 05 Apr 2026 · 22:46 UTC |
+| Added to catalog | 27 Sep 2026 · 04:42 UTC |
+| Last updated | 27 Sep 2026 · 04:42 UTC |
+| Documented creation models | Not established |
 
 ## Play
 

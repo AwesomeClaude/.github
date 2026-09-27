@@ -1,15 +1,32 @@
 # UnityPuzzle
 
-[Open the game source](https://github.com/MahoHayashi/UnityPuzzle)
-[Previous report](https://github.com/agents-dev/Astra-Top-Games/blob/796938a221f7bc9b20f657c7cbf9cdb31cd783fe/games/MahoHayashi--UnityPuzzle/README.md)
-**Repository created:** 2026-07-10T07:28:29Z
-**Added to catalog:** 2026-09-27T03:49:50.928883+00:00
-**Updated in catalog:** 2026-09-27T04:05:54.621530+00:00
-**Built with:** [Claude Opus 4.8](https://github.com/MahoHayashi/UnityPuzzle/commit/44dcdea5b61c678f968b78f4a09f1c995758ffe2)
+[View source](https://github.com/MahoHayashi/UnityPuzzle) · [Previous report](https://github.com/agents-dev/Astra-Top-Games/blob/796938a221f7bc9b20f657c7cbf9cdb31cd783fe/games/MahoHayashi--UnityPuzzle/README.md)
 
-**Overall rating:** 15/100. Far from AAA production quality and below every cataloged game on available evidence. Kart Royale (50) and Turbo Kart Rally (40) are complete 3D racers with AI fields, HUDs, and stylized worlds; 2048 (38) and T-Rex Runner (35) are finished, instantly playable browser loops; even curiositY (18), the lowest-rated catalog entry, ships a complete 15-level riddle trail with a live site. UnityPuzzle is a single-commit Unity prototype with one scene, five small CSV maps, arrow-key teleport movement, and placeholder sprites (plain beige square Wall, Unity-cube Block, multicolor Goal shard — three sprites visually inspected), and no README, no playable WebGL/Pages build, no releases, and no evidenced win, collision, or block-pushing rules in the inspected GameManager/StageManager sources. It earns points for a coherent Sokoban-like structure (tile types, 5 stages, directional sprites) but cannot be played without the Unity Editor, so scope, polish, and technical execution are all unverified beyond static project files. Evidence gaps: no gameplay screenshots, video, builds, or docs; gh CLI was unavailable so evidence came via public api.github.com and raw file fetches instead; source-file findings cannot prove playability, performance, or balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **15/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA production quality and below every cataloged game on available evidence. Kart Royale (50) and Turbo Kart Rally (40) are complete 3D racers with AI fields, HUDs, and stylized worlds; 2048 (38) and T-Rex Runner (35) are finished, instantly playable browser loops; even curiositY (18), the lowest-rated catalog entry, ships a complete 15-level riddle trail with a live site. UnityPuzzle is a single-commit Unity prototype with one scene, five small CSV maps, arrow-key teleport movement, and placeholder sprites (plain beige square Wall, Unity-cube Block, multicolor Goal shard — three sprites visually inspected), and no README, no playable WebGL/Pages build, no releases, and no evidenced win, collision, or block-pushing rules in the inspected GameManager/StageManager sources. It earns points for a coherent Sokoban-like structure (tile types, 5 stages, directional sprites) but cannot be played without the Unity Editor, so scope, polish, and technical execution are all unverified beyond static project files. Evidence gaps: no gameplay screenshots, video, builds, or docs; gh CLI was unavailable so evidence came via public api.github.com and raw file fetches instead; source-file findings cannot prove playability, performance, or balance.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 10 Jul 2026 · 07:28 UTC |
+| Added to catalog | 27 Sep 2026 · 03:49 UTC |
+| Last updated | 27 Sep 2026 · 04:05 UTC |
+| Documented creation models | [Claude Opus 4.8](https://github.com/MahoHayashi/UnityPuzzle/commit/44dcdea5b61c678f968b78f4a09f1c995758ffe2) |
 
 ## Play
 

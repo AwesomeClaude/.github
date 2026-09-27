@@ -1,13 +1,32 @@
 # PirateSeas
 
-[Open the game source](https://github.com/AndreiBesliu/PirateSeas)
-**Repository created:** 2026-09-14T07:56:53Z
-**Added to catalog:** 2026-09-27T04:44:55.352967+00:00
-**Updated in catalog:** 2026-09-27T04:44:55.352967+00:00
+[View source](https://github.com/AndreiBesliu/PirateSeas)
 
-**Overall rating:** 50/100. Deepest naval simulation in the catalog: physical buoyancy, wind/sail model, ballistic gunnery with measured verification, AI squadrons, convoy campaign layer, islands and synthesized audio across ~590KB of C++ and ~485KB of Python. That technical depth exceeds THORNMERE (46) and rivals top-ranked Ashlands (55). But no gameplay screenshot could be inspected, there is no publicly downloadable or browser-playable build (Windows-only packaged exe, excluded from git), and docs are Romanian-only, so polish, performance and playability are unverified. Ranked just below Ashlands and OSRS Tower Defense (52) and above THORNMERE.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **50/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Deepest naval simulation in the catalog: physical buoyancy, wind/sail model, ballistic gunnery with measured verification, AI squadrons, convoy campaign layer, islands and synthesized audio across ~590KB of C++ and ~485KB of Python. That technical depth exceeds THORNMERE (46) and rivals top-ranked Ashlands (55). But no gameplay screenshot could be inspected, there is no publicly downloadable or browser-playable build (Windows-only packaged exe, excluded from git), and docs are Romanian-only, so polish, performance and playability are unverified. Ranked just below Ashlands and OSRS Tower Defense (52) and above THORNMERE.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 14 Sep 2026 · 07:56 UTC |
+| Added to catalog | 27 Sep 2026 · 04:44 UTC |
+| Last updated | 27 Sep 2026 · 04:44 UTC |
+| Documented creation models | Not established |
 
 ## Play
 

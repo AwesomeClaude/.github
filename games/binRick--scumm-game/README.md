@@ -1,14 +1,32 @@
 # scumm-game
 
-[Open the game source](https://github.com/binRick/scumm-game)
-[Play the game](https://binrick.github.io/scumm-game/)
-**Repository created:** 2026-04-20T20:30:10Z
-**Added to catalog:** 2026-09-27T04:41:33.592260+00:00
-**Updated in catalog:** 2026-09-27T04:41:33.592260+00:00
+[Play the game](https://binrick.github.io/scumm-game/) · [View source](https://github.com/binRick/scumm-game)
 
-**Overall rating:** 38/100. Far from AAA (two demo rooms, a handful of hotspots, no documented win state, NPC follow-only AI, no voice/cinematics/multiplayer; judged from repo docs, raw data files, and stills only, with no live playthrough, so balance, pacing, and performance are unverified). Most relevant comparators: THORNMERE (46 overall, full retro RPG campaign with 57 monsters/84 spells/town plus 3 dungeons) and The Nine Lives of Ash (47, deep deckbuilder rules core) both exceed it clearly on gameplay depth, scope, and content volume; neverquest (45, deep systems breadth in text UI) also exceeds it on systems. Closest peers are Taipo (35, complete single-loop typing-TD on one tilemap), T-Rex Runner (35, single endless mechanic), and TypeScript-Blackjack (28, rules-faithful single-table game): scumm-game matches or beats them on technical execution (single-file C engine, Dijkstra visibility-graph pathing, ear-clipped walk-behinds, y-scaled sprites, WASM web build, live polygon/sprite editors) and on visual polish of its best frame, but trails Taipo/Blackjack on finished-loop completeness since it is an engine demo with tip-the-butler micro-interactions rather than a full game arc. Above Beachy Beachy Ball (25, single ball-roller) and curiositY (18, static riddle pages) on engine depth and interactivity. Evidence gaps: gh CLI unavailable without auth so GitHub REST/raw endpoints used instead; screenshots and docs do not prove playability, performance, or balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **38/100** | **62/100** |
 
-**Screenshot score:** 62/100. Best frame shows a coherent, polished pixel-art night dock: huge dithered moon, star field, lit stone arch, ship rigging, moonlit water reflection, wooden dock planks, barrels/rope/shells, Guybrush sprite, and a Look at/Use verb bar. Composition and lighting exceed Taipo (55, sparser flat TD board), TypeScript-Blackjack (35) and Beachy Beachy Ball (35) flat presentations, and sit near THORNMERE (60, textured dungeon/street frames with portraits) and below OSRS Tower Defense (65, dense HUD-heavy action board) and the catalog 70s (Kart Royale, Turbo Kart Rally, Neural Sight) with 3D/photographic depth. Second and third images are bare background assets with no actor or UI and are discounted. Judged from stills only; no motion or gameplay feel inferred.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA (two demo rooms, a handful of hotspots, no documented win state, NPC follow-only AI, no voice/cinematics/multiplayer; judged from repo docs, raw data files, and stills only, with no live playthrough, so balance, pacing, and performance are unverified). Most relevant comparators: THORNMERE (46 overall, full retro RPG campaign with 57 monsters/84 spells/town plus 3 dungeons) and The Nine Lives of Ash (47, deep deckbuilder rules core) both exceed it clearly on gameplay depth, scope, and content volume; neverquest (45, deep systems breadth in text UI) also exceeds it on systems. Closest peers are Taipo (35, complete single-loop typing-TD on one tilemap), T-Rex Runner (35, single endless mechanic), and TypeScript-Blackjack (28, rules-faithful single-table game): scumm-game matches or beats them on technical execution (single-file C engine, Dijkstra visibility-graph pathing, ear-clipped walk-behinds, y-scaled sprites, WASM web build, live polygon/sprite editors) and on visual polish of its best frame, but trails Taipo/Blackjack on finished-loop completeness since it is an engine demo with tip-the-butler micro-interactions rather than a full game arc. Above Beachy Beachy Ball (25, single ball-roller) and curiositY (18, static riddle pages) on engine depth and interactivity. Evidence gaps: gh CLI unavailable without auth so GitHub REST/raw endpoints used instead; screenshots and docs do not prove playability, performance, or balance.
+
+### Screenshot score
+
+Best frame shows a coherent, polished pixel-art night dock: huge dithered moon, star field, lit stone arch, ship rigging, moonlit water reflection, wooden dock planks, barrels/rope/shells, Guybrush sprite, and a Look at/Use verb bar. Composition and lighting exceed Taipo (55, sparser flat TD board), TypeScript-Blackjack (35) and Beachy Beachy Ball (35) flat presentations, and sit near THORNMERE (60, textured dungeon/street frames with portraits) and below OSRS Tower Defense (65, dense HUD-heavy action board) and the catalog 70s (Kart Royale, Turbo Kart Rally, Neural Sight) with 3D/photographic depth. Second and third images are bare background assets with no actor or UI and are discounted. Judged from stills only; no motion or gameplay feel inferred.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 20 Apr 2026 · 20:30 UTC |
+| Added to catalog | 27 Sep 2026 · 04:41 UTC |
+| Last updated | 27 Sep 2026 · 04:41 UTC |
+| Documented creation models | Not established |
 
 ## Screenshots
 

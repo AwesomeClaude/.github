@@ -211,29 +211,48 @@ def lines_list(items):
     return [f'- {markdown(item)}' for item in items if isinstance(item, str)]
 
 
+def display_date(value):
+    if not value:
+        return 'Not established'
+    try:
+        date = datetime.fromisoformat(value.replace('Z', '+00:00'))
+        if date.tzinfo is None:
+            date = date.replace(tzinfo=timezone.utc)
+        return date.astimezone(timezone.utc).strftime('%d %b %Y · %H:%M UTC')
+    except (TypeError, ValueError):
+        return markdown(value)
+
+
 def game_readme(data):
     title = markdown(data['title'])
     url = safe_url(data['repository_url'])
     graphic = data['screenshot_based_score']
-    graphic_text = 'not scored' if graphic is None else f"{graphic['score']}/100"
-    source_line = (f'[Open the game source]({url})' if url else
-                   f'[Open the original game link]({safe_url(data["source_url"])}) — No verified source repository.')
-    out = [f'# {title}', '', source_line]
+    graphic_text = 'Not scored' if graphic is None else f"{graphic['score']}/100"
+    links = []
     if data.get('play_game_url'):
-        out.append(f"[Play the game]({safe_url(data['play_game_url'])})")
+        links.append(f"[Play the game]({safe_url(data['play_game_url'])})")
+    links.append(f'[View source]({url})' if url else
+                 f'[View original submission]({safe_url(data["source_url"])})')
     if data.get('previous_report_url'):
-        out.append(f"[Previous report]({safe_url(data['previous_report_url'])})")
+        links.append(f"[Previous report]({safe_url(data['previous_report_url'])})")
+    out = [f'# {title}', '', ' · '.join(links), '']
+    if not url:
+        out += ['No verified source repository.', '']
+    out += ['| Overall rating | Screenshot score |', '| :---: | :---: |',
+            f"| **{data['rating']['score']}/100** | **{graphic_text}** |", '',
+            '<details>', '<summary>Read the scoring rationale</summary>', '',
+            '### Overall rating', '', markdown(data['rating'].get('reason', '')), '',
+            '### Screenshot score', '',
+            markdown(graphic.get('reason', '')) if graphic else 'No inspectable gameplay screenshot.',
+            '', '</details>', '', '## At a glance', '', '| Detail | Value |', '| --- | --- |']
     for label, key in [('Repository created', 'repository_created_at'),
-                       ('Added to catalog', 'catalog_added_at'), ('Updated in catalog', 'catalog_updated_at')]:
+                       ('Added to catalog', 'catalog_added_at'), ('Last updated', 'catalog_updated_at')]:
         if data.get(key):
-            out.append(f"**{label}:** {markdown(data[key])}")
-    if data.get('creation_models'):
-        out.append('**Built with:** ' + ', '.join(
-            f"[{markdown(m['name'])}]({safe_url(m['evidence_url'])})" for m in data['creation_models']))
-    out += ['',
-           f"**Overall rating:** {data['rating']['score']}/100. {markdown(data['rating'].get('reason', ''))}", '',
-           f"**Screenshot score:** {graphic_text}. " +
-           (markdown(graphic.get('reason', '')) if graphic else 'No inspectable gameplay screenshot.'), '']
+            out.append(f"| {label} | {display_date(data[key])} |")
+    models = ', '.join(f"[{markdown(m['name'])}]({safe_url(m['evidence_url'])})"
+                       for m in data.get('creation_models', []))
+    out.append(f"| Documented creation models | {models or 'Not established'} |")
+    out.append('')
     if data['screenshots']:
         out += ['## Screenshots', '']
         for shot in data['screenshots']:
@@ -315,7 +334,7 @@ def rebuild():
            'Browse games with or without public source code in the same ranking and screenshot gallery.', '',
            'Add games with `./scripts/games.sh <game-url> [more-urls...]` or '
            '`./scripts/games.sh --file links.txt`. Rebuild every page and this index with '
-           '`./scripts/games.sh`. Inspect `games/log.jsonl` for analysis outcomes and provenance. '
+           '`./scripts/games.sh`. Inspect `games/history/` for per-run analysis outcomes and provenance. '
            'Inspect `work/game-batches/` for agent logs and rejected reports.', '', '## Games', '']
     for directory, data in entries:
         target = quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/')
@@ -508,6 +527,7 @@ def apply_results(artifact, outcomes):
     run_key = os.getenv('GITHUB_RUN_ID', str(time.time_ns())) + '-' + os.getenv('GITHUB_RUN_ATTEMPT', '1')
     repo = os.getenv('GITHUB_REPOSITORY', 'agents-dev/Astra-Top-Games')
     changed = set()
+    history = []
     for item in outcomes:
         record = item.get('record')
         evidence = artifact / 'records' / record if record else None
@@ -561,9 +581,9 @@ def apply_results(artifact, outcomes):
                     write_atomic(logs / file.name, redact(file.read_text()))
         log_entry = {k: v for k, v in item.items() if k not in ('before', 'report')}
         log_entry['logs'] = str(logs.relative_to(ROOT)) if evidence else None
-        GAMES.mkdir(exist_ok=True)
-        with (GAMES / 'log.jsonl').open('a') as out:
-            out.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
+        history.append(log_entry)
+        write_atomic(GAMES / 'history' / f'{run_key}.jsonl',
+                     ''.join(json.dumps(entry, ensure_ascii=False) + '\n' for entry in history))
     if changed:
         rebuild()
     return changed

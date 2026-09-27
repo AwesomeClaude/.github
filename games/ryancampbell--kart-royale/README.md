@@ -1,10 +1,29 @@
 # Kart Royale
 
-[Open the game source](https://github.com/ryancampbell/kart-royale)
+[View source](https://github.com/ryancampbell/kart-royale)
 
-**Overall rating:** 50/100. Strong technical execution for a 4-day multi-agent demo (~60k lines, kart physics, AI, synthesis, test harnesses) and cohesive indie visuals, but single 1.6km track, thin drift-skill ladder per author's own 62/100 vs Mario Kart measurement, known mobile/iGPU gaps and dead post-FX chain for rounds. Evidence gaps: judged only 2 still screenshots plus source via gh api, did not play live build, no video/menus/results flow inspected, no low-end performance data.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **50/100** | **70/100** |
 
-**Screenshot score:** 70/100. Both gameplay frames show coherent stylized golden-hour art: banked tarmac with aggregate detail, red-white kerbs, grass/crowd/props trackside, glossy chunky karts with drivers, full kart-racer HUD. Composition is dynamic with strong sense of speed. Deducted for low-poly blocky crowd, flat distant foliage, dark crushed tarmac, and heavy blur obscuring detail in drift shot. Good polished indie look, not photoreal AAA.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Strong technical execution for a 4-day multi-agent demo (~60k lines, kart physics, AI, synthesis, test harnesses) and cohesive indie visuals, but single 1.6km track, thin drift-skill ladder per author's own 62/100 vs Mario Kart measurement, known mobile/iGPU gaps and dead post-FX chain for rounds. Evidence gaps: judged only 2 still screenshots plus source via gh api, did not play live build, no video/menus/results flow inspected, no low-end performance data.
+
+### Screenshot score
+
+Both gameplay frames show coherent stylized golden-hour art: banked tarmac with aggregate detail, red-white kerbs, grass/crowd/props trackside, glossy chunky karts with drivers, full kart-racer HUD. Composition is dynamic with strong sense of speed. Deducted for low-poly blocky crowd, flat distant foliage, dark crushed tarmac, and heavy blur obscuring detail in drift shot. Good polished indie look, not photoreal AAA.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

@@ -1,10 +1,29 @@
 # Beachy Beachy Ball!
 
-[Open the game source](https://github.com/michaelkolesidis/beachy-beachy-ball)
+[View source](https://github.com/michaelkolesidis/beachy-beachy-ball)
 
-**Overall rating:** 25/100. Closest catalog comparators are Turbo Kart Rally (40/100) and Kart Royale (50/100) as complete browser Three.js driving games with AI, items, laps, HUD and menus, and Neural Sight (30/100) as a tiny-scope technical prototype with photographic scenes but no full loop. Beachy Beachy Ball sits below all three: single roll-to-star mechanic with no AI, items, laps or multiplayer, two short tour layouts plus random remixes versus full kart-racer systems, and flat minimal art versus the kart games' tracks/crowds/props and Neural Sight's captured realism. It earns credit for a complete loop (menu, settings, timer, high scores, finish state) and competent Rapier kinematic-obstacle execution, but scope, depth, visual polish and technical ambition are narrower. Evidence gaps: judged from README plus gh api source and 6 still screenshots only, did not play live build, no video, no performance/balance/QA data; stills and code alone do not prove playability, frame rate, or difficulty balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **25/100** | **35/100** |
 
-**Screenshot score:** 35/100. Judged only from stills without inferring motion. Best gameplay frames show a coherent minimal style — glossy-paneled beach ball with soft shadow on a flat orange strip under cyan void sky, red bar obstacles and tiny gold star, clean mode/time HUD. Against catalog baselines (Kart Royale 70, Turbo Kart Rally 70, Neural Sight 70) with detailed tracks, crowds, billboards, lighting variation and photographic texture, this has far less scene detail, no environment beyond track plus sky, flat untextured surfaces, and weak composition (long empty runway, distant tiny obstacles). Rewarded for clean readable stylization and consistent palette; discounted heavily for sparseness. Menus/title/end-screen frames excluded from graphics scoring.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Closest catalog comparators are Turbo Kart Rally (40/100) and Kart Royale (50/100) as complete browser Three.js driving games with AI, items, laps, HUD and menus, and Neural Sight (30/100) as a tiny-scope technical prototype with photographic scenes but no full loop. Beachy Beachy Ball sits below all three: single roll-to-star mechanic with no AI, items, laps or multiplayer, two short tour layouts plus random remixes versus full kart-racer systems, and flat minimal art versus the kart games' tracks/crowds/props and Neural Sight's captured realism. It earns credit for a complete loop (menu, settings, timer, high scores, finish state) and competent Rapier kinematic-obstacle execution, but scope, depth, visual polish and technical ambition are narrower. Evidence gaps: judged from README plus gh api source and 6 still screenshots only, did not play live build, no video, no performance/balance/QA data; stills and code alone do not prove playability, frame rate, or difficulty balance.
+
+### Screenshot score
+
+Judged only from stills without inferring motion. Best gameplay frames show a coherent minimal style — glossy-paneled beach ball with soft shadow on a flat orange strip under cyan void sky, red bar obstacles and tiny gold star, clean mode/time HUD. Against catalog baselines (Kart Royale 70, Turbo Kart Rally 70, Neural Sight 70) with detailed tracks, crowds, billboards, lighting variation and photographic texture, this has far less scene detail, no environment beyond track plus sky, flat untextured surfaces, and weak composition (long empty runway, distant tiny obstacles). Rewarded for clean readable stylization and consistent palette; discounted heavily for sparseness. Menus/title/end-screen frames excluded from graphics scoring.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

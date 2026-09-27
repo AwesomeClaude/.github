@@ -1,13 +1,32 @@
 # HEX DANMAKU
 
-[Open the game source](https://github.com/macjoocan/hex-danmaku)
-**Repository created:** 2026-08-19T16:05:10Z
-**Added to catalog:** 2026-09-27T04:42:36.648365+00:00
-**Updated in catalog:** 2026-09-27T04:42:36.648365+00:00
+[View source](https://github.com/macjoocan/hex-danmaku)
 
-**Overall rating:** 48/100. Far from AAA: no voice, cinematics, multiplayer, proven audio, or device-verified performance, and pipeline notes leave numeric fun targets and late balance unverified. Most relevant comparators: OSRS Tower Defense (52, denser 2D TD with 12 towers/61 monsters/130 waves and 65 screenshot score), Ashlands (55, catalog top on paper breadth but zero inspectable screenshots), Kart Royale (50, complete 3D kart loop with 70 screenshots), THORNMERE (46, full retro RPG with 60 screenshots), and Taipo (35, single-map typing TD at 55 screenshots). Hex Danmaku exceeds Taipo, Blackjack (28), and Beachy (25) on depth and scope with 24 stages plus a 5-room hunt, daily/endless/editor modes, seeded RNG, and 124+ headless tests, and its inspected mobile boss frame is more polished than Taipo. It sits below OSRS TD and Ashlands on systems breadth, test scale, and content volume, and below the catalog 70s on 3D lighting and scene density, landing beside Frosty Tactics/Neon Arena (48) as a complete polished indie tactics loop. Source and stills do not prove playability, performance, or balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **48/100** | **60/100** |
 
-**Screenshot score:** 60/100. Both gameplay frames are the game's own output: coherent cute-chibi fantasy styling, readable hex composition, detailed hero/dragon sprites, clear teal/coral telegraph language, and complete HUD/skill UI across mobile and dark-HUD skins. Against catalog calibration this sits with THORNMERE (60, deliberate textured retro scene with portrait) and just above Taipo (55, sparser flat pixel TD board), below OSRS Tower Defense (65, denser varied 2D battlefield) and far below Kart Royale/Turbo Kart Rally/Neural Sight (70, dense 3D or photographic scenes with lighting and depth). Flat mint tiles, simple dot bullets, and shared boss art cap it. Menu frame discounted as non-gameplay. Stills prove nothing about motion, feel, performance, or balance.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: no voice, cinematics, multiplayer, proven audio, or device-verified performance, and pipeline notes leave numeric fun targets and late balance unverified. Most relevant comparators: OSRS Tower Defense (52, denser 2D TD with 12 towers/61 monsters/130 waves and 65 screenshot score), Ashlands (55, catalog top on paper breadth but zero inspectable screenshots), Kart Royale (50, complete 3D kart loop with 70 screenshots), THORNMERE (46, full retro RPG with 60 screenshots), and Taipo (35, single-map typing TD at 55 screenshots). Hex Danmaku exceeds Taipo, Blackjack (28), and Beachy (25) on depth and scope with 24 stages plus a 5-room hunt, daily/endless/editor modes, seeded RNG, and 124+ headless tests, and its inspected mobile boss frame is more polished than Taipo. It sits below OSRS TD and Ashlands on systems breadth, test scale, and content volume, and below the catalog 70s on 3D lighting and scene density, landing beside Frosty Tactics/Neon Arena (48) as a complete polished indie tactics loop. Source and stills do not prove playability, performance, or balance.
+
+### Screenshot score
+
+Both gameplay frames are the game's own output: coherent cute-chibi fantasy styling, readable hex composition, detailed hero/dragon sprites, clear teal/coral telegraph language, and complete HUD/skill UI across mobile and dark-HUD skins. Against catalog calibration this sits with THORNMERE (60, deliberate textured retro scene with portrait) and just above Taipo (55, sparser flat pixel TD board), below OSRS Tower Defense (65, denser varied 2D battlefield) and far below Kart Royale/Turbo Kart Rally/Neural Sight (70, dense 3D or photographic scenes with lighting and depth). Flat mint tiles, simple dot bullets, and shared boss art cap it. Menu frame discounted as non-gameplay. Stills prove nothing about motion, feel, performance, or balance.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 19 Aug 2026 · 16:05 UTC |
+| Added to catalog | 27 Sep 2026 · 04:42 UTC |
+| Last updated | 27 Sep 2026 · 04:42 UTC |
+| Documented creation models | Not established |
 
 ## Screenshots
 

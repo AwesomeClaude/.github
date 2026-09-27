@@ -1,14 +1,32 @@
 # OSRS Tower Defense
 
-[Open the game source](https://github.com/hamilton-junior/osrs-tower-defense)
-[Play the game](https://hamilton-junior.github.io/osrs-tower-defense/)
-**Repository created:** 2026-02-20T05:58:55Z
-**Added to catalog:** 2026-09-27T03:50:49.379278+00:00
-**Updated in catalog:** 2026-09-27T03:50:49.379278+00:00
+[Play the game](https://hamilton-junior.github.io/osrs-tower-defense/) · [View source](https://github.com/hamilton-junior/osrs-tower-defense)
 
-**Overall rating:** 52/100. Closest comparators: Ashlands (55, catalog top on paper breadth with 3D engine tech but zero inspectable screenshots), Kart Royale (50, complete 3D arcade loop with polished frames but one track and thin systems), neverquest (45, deepest prior systems scope but text-UI only), and Taipo (35, fellow tower defense with one small map and three towers). OSRS Tower Defense exceeds Kart Royale and neverquest on gameplay depth and scope (12 forgeable towers, 61 monsters, 14 bosses with bespoke mechanics, affixes, spellbooks, six OSRS skills, two modes, seven difficulties, 130 waves plus Endless, seven regions, collection/achievement/diary/pet/shop metagame, daily seed, ~890 commits, 1,703 tests across 70 files) and crushes Taipo on TD scope, while its screenshots show a denser, more authentic 2D scene than Taipo's sparse map. It sits below Ashlands (55) because Ashlands claims a far more ambitious custom 3D engine and verification harness, and OSRS TD is explicitly a prototype/WIP ('nothing here is final', 3 stars, 2 forks) with no live playthrough, video, performance, balance, or late-wave verification available — source and stills alone do not prove playability, performance, or balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **52/100** | **65/100** |
 
-**Screenshot score:** 65/100. Board frame shows a dense coherent top-down 2D scene: textured grass with trees, rocks, flowers and ruins, varied OSRS-authentic tower/enemy sprites, winding road, boss HP bar, wave banner, damage numbers, tower hotbar and full gold/lives/speed HUD — clearly the game's own runtime output and richer than Taipo (55, sparse flat map with empty water) and THORNMERE (60). Below the catalog 70s (Kart Royale, Turbo Kart Rally, Neural Sight) which show 3D lighting, depth, crowds/scenery or photographic detail that a flat canvas cannot match. Collection-log frame is real game UI with a modal overlay; start frame is a menu picker, discounted as non-gameplay. Judged from stills only; no motion, feel, or performance inferred.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Closest comparators: Ashlands (55, catalog top on paper breadth with 3D engine tech but zero inspectable screenshots), Kart Royale (50, complete 3D arcade loop with polished frames but one track and thin systems), neverquest (45, deepest prior systems scope but text-UI only), and Taipo (35, fellow tower defense with one small map and three towers). OSRS Tower Defense exceeds Kart Royale and neverquest on gameplay depth and scope (12 forgeable towers, 61 monsters, 14 bosses with bespoke mechanics, affixes, spellbooks, six OSRS skills, two modes, seven difficulties, 130 waves plus Endless, seven regions, collection/achievement/diary/pet/shop metagame, daily seed, ~890 commits, 1,703 tests across 70 files) and crushes Taipo on TD scope, while its screenshots show a denser, more authentic 2D scene than Taipo's sparse map. It sits below Ashlands (55) because Ashlands claims a far more ambitious custom 3D engine and verification harness, and OSRS TD is explicitly a prototype/WIP ('nothing here is final', 3 stars, 2 forks) with no live playthrough, video, performance, balance, or late-wave verification available — source and stills alone do not prove playability, performance, or balance.
+
+### Screenshot score
+
+Board frame shows a dense coherent top-down 2D scene: textured grass with trees, rocks, flowers and ruins, varied OSRS-authentic tower/enemy sprites, winding road, boss HP bar, wave banner, damage numbers, tower hotbar and full gold/lives/speed HUD — clearly the game's own runtime output and richer than Taipo (55, sparse flat map with empty water) and THORNMERE (60). Below the catalog 70s (Kart Royale, Turbo Kart Rally, Neural Sight) which show 3D lighting, depth, crowds/scenery or photographic detail that a flat canvas cannot match. Collection-log frame is real game UI with a modal overlay; start frame is a menu picker, discounted as non-gameplay. Judged from stills only; no motion, feel, or performance inferred.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 20 Feb 2026 · 05:58 UTC |
+| Added to catalog | 27 Sep 2026 · 03:50 UTC |
+| Last updated | 27 Sep 2026 · 03:50 UTC |
+| Documented creation models | Not established |
 
 ## Screenshots
 

@@ -1,10 +1,29 @@
 # SpaceHo2
 
-[Open the game source](https://github.com/PierreHoule/SpaceHo2)
+[View source](https://github.com/PierreHoule/SpaceHo2)
 
-**Overall rating:** 42/100. Far from AAA: single 30-star map config, 4 empires, no campaign, multiplayer, diplomacy, cinematics, voice, or live-ops scale; small ~180KB HTML/JS/CSS codebase from 7 commits with 0 stars, judged from source plus README only without playing. Most relevant comparators: neverquest (45 overall, deepest catalog systems scope with 8 attributes, 15+ stats, 9 crew roles, 100+ quests across ~591 files) and Turbo Kart Rally (40 overall, complete single-track 3D arcade loop with AI field, items, menus and procedural audio). SpaceHo2 matches Turbo Kart on finished-loop completeness (explore/settle/research/fight to elimination, AI rivals, fog of war, tech obsolescence, two automated test suites) and rivals neverquest on strategic systems breadth (suitability economy, terraforming, mining, 6 tech tracks, 6 ship types, range/speed logistics), but its content breadth is narrower than neverquest's long-tail progression and its presentation is unverified 2D canvas versus Turbo Kart's inspected 3D world. Above Taipo (35, complete typing-TD loop but one small tilemap with acknowledged placeholder art/sound TODOs), Neural Sight (30, photographic prototype with almost no game loop), TypeScript-Blackjack (28, faithful single-table card rules but flat DOM), Beachy Beachy Ball (25, single roll-to-star mechanic with minimal art), and curiositY (18, static riddle pages). Evidence gaps: no screenshots or video inspected, no live playtest, so playability, balance, pacing, and rendering performance are unverified; source and text descriptions do not prove graphics quality or fun.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **42/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: single 30-star map config, 4 empires, no campaign, multiplayer, diplomacy, cinematics, voice, or live-ops scale; small ~180KB HTML/JS/CSS codebase from 7 commits with 0 stars, judged from source plus README only without playing. Most relevant comparators: neverquest (45 overall, deepest catalog systems scope with 8 attributes, 15+ stats, 9 crew roles, 100+ quests across ~591 files) and Turbo Kart Rally (40 overall, complete single-track 3D arcade loop with AI field, items, menus and procedural audio). SpaceHo2 matches Turbo Kart on finished-loop completeness (explore/settle/research/fight to elimination, AI rivals, fog of war, tech obsolescence, two automated test suites) and rivals neverquest on strategic systems breadth (suitability economy, terraforming, mining, 6 tech tracks, 6 ship types, range/speed logistics), but its content breadth is narrower than neverquest's long-tail progression and its presentation is unverified 2D canvas versus Turbo Kart's inspected 3D world. Above Taipo (35, complete typing-TD loop but one small tilemap with acknowledged placeholder art/sound TODOs), Neural Sight (30, photographic prototype with almost no game loop), TypeScript-Blackjack (28, faithful single-table card rules but flat DOM), Beachy Beachy Ball (25, single roll-to-star mechanic with minimal art), and curiositY (18, static riddle pages). Evidence gaps: no screenshots or video inspected, no live playtest, so playability, balance, pacing, and rendering performance are unverified; source and text descriptions do not prove graphics quality or fun.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Play
 

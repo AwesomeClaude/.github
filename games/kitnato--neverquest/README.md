@@ -1,10 +1,29 @@
 # neverquest
 
-[Open the game source](https://github.com/kitnato/neverquest)
+[View source](https://github.com/kitnato/neverquest)
 
-**Overall rating:** 45/100. Far from AAA (no 3D world, voice, cinematics, multiplayer or live-ops scale; monochrome text UI only), but the deepest systems scope in the catalog: 8 attributes, 15+ derived stats, 9 caravan crew roles, multiple weapon classes, ailments, gems/relics, 100+ quests, indefinite stages and retirement metagame across ~591 tracked files of TypeScript/React. Most relevant comparators: Turbo Kart Rally (40 overall, complete indie loop with menus/HUD but one track and simple arcade systems) and Kart Royale (50 overall, ~60k-line 3D tech demo with one 1.6km track) — Neverquest exceeds both on mechanics breadth, build variety and long-tail progression, but trails both badly on visual scene rendering and moment-to-moment action feel. Above Neural Sight (30 overall, tiny 4-scene shooter prototype) on scope and completeness. Evidence gaps: judged from gh api source plus 5 still screenshots only; did not play the live build, so playability, balance, pacing and performance are unverified from stills and code alone.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **45/100** | **30/100** |
 
-**Screenshot score:** 30/100. Visible gameplay frames show a clean, coherent monochrome dashboard UI (health/stamina bars, stat grids, gear cards, monster panels, progress meters) that is legible and consistent, but there is no rendered 3D scene, lighting, environment or character art — only icons and bars. Against catalog calibration (Kart Royale, Turbo Kart Rally and Neural Sight all 70/100 for coherent in-engine 3D worlds with HUD, scenery and composition), Neverquest ranks far lower on polish, composition and scene detail despite its UI tidiness. Stills reveal nothing about motion or combat feel, so no animation or game-feel credit is inferred.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA (no 3D world, voice, cinematics, multiplayer or live-ops scale; monochrome text UI only), but the deepest systems scope in the catalog: 8 attributes, 15+ derived stats, 9 caravan crew roles, multiple weapon classes, ailments, gems/relics, 100+ quests, indefinite stages and retirement metagame across ~591 tracked files of TypeScript/React. Most relevant comparators: Turbo Kart Rally (40 overall, complete indie loop with menus/HUD but one track and simple arcade systems) and Kart Royale (50 overall, ~60k-line 3D tech demo with one 1.6km track) — Neverquest exceeds both on mechanics breadth, build variety and long-tail progression, but trails both badly on visual scene rendering and moment-to-moment action feel. Above Neural Sight (30 overall, tiny 4-scene shooter prototype) on scope and completeness. Evidence gaps: judged from gh api source plus 5 still screenshots only; did not play the live build, so playability, balance, pacing and performance are unverified from stills and code alone.
+
+### Screenshot score
+
+Visible gameplay frames show a clean, coherent monochrome dashboard UI (health/stamina bars, stat grids, gear cards, monster panels, progress meters) that is legible and consistent, but there is no rendered 3D scene, lighting, environment or character art — only icons and bars. Against catalog calibration (Kart Royale, Turbo Kart Rally and Neural Sight all 70/100 for coherent in-engine 3D worlds with HUD, scenery and composition), Neverquest ranks far lower on polish, composition and scene detail despite its UI tidiness. Stills reveal nothing about motion or combat feel, so no animation or game-feel credit is inferred.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

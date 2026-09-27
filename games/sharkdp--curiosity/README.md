@@ -1,10 +1,29 @@
 # curiositY
 
-[Open the game source](https://github.com/sharkdp/curiosity)
+[View source](https://github.com/sharkdp/curiosity)
 
-**Overall rating:** 18/100. Far below all three catalog games on AAA proximity. Kart Royale (50) and Turbo Kart Rally (40) are complete 3D kart racers with physics, AI fields, items, HUDs and stylized 3D worlds; Neural Sight (30) is a WebGPU Gaussian-splat FPS prototype with photographic scenes. Curiosity has a complete 15-level riddle loop and genuinely clever multi-discipline puzzle design (view-source, console, terminal, CSV, unicode, geography), which beats a bare demo on gameplay depth per unit of code, but its scope is ~200 tiny static files, its visual presentation is near-zero (unstyled text pages under one banner, single decorative font), and its technical execution is static hosting plus small scripts rather than an engine. It earns points for a finished, hand-tuned loop with log-driven dead ends, yet sits clearly beneath Neural Sight's rendering tech and the kart racers' systems depth. Evidence gaps: judged from repository content via gh api plus the live landing page only; no full playthrough of all 15 levels, no solution verification, no traffic or completion data, and no audio, animation, persistence, or accessibility evidence. Static pages alone cannot prove pacing, difficulty balance, or hint sufficiency.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **18/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far below all three catalog games on AAA proximity. Kart Royale (50) and Turbo Kart Rally (40) are complete 3D kart racers with physics, AI fields, items, HUDs and stylized 3D worlds; Neural Sight (30) is a WebGPU Gaussian-splat FPS prototype with photographic scenes. Curiosity has a complete 15-level riddle loop and genuinely clever multi-discipline puzzle design (view-source, console, terminal, CSV, unicode, geography), which beats a bare demo on gameplay depth per unit of code, but its scope is ~200 tiny static files, its visual presentation is near-zero (unstyled text pages under one banner, single decorative font), and its technical execution is static hosting plus small scripts rather than an engine. It earns points for a finished, hand-tuned loop with log-driven dead ends, yet sits clearly beneath Neural Sight's rendering tech and the kart racers' systems depth. Evidence gaps: judged from repository content via gh api plus the live landing page only; no full playthrough of all 15 levels, no solution verification, no traffic or completion data, and no audio, animation, persistence, or accessibility evidence. Static pages alone cannot prove pacing, difficulty balance, or hint sufficiency.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

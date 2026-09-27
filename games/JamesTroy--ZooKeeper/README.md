@@ -1,13 +1,32 @@
 # Zoo Keeper
 
-[Open the game source](https://github.com/JamesTroy/ZooKeeper)
-**Repository created:** 2026-02-16T10:43:38Z
-**Added to catalog:** 2026-09-27T04:44:37.584145+00:00
-**Updated in catalog:** 2026-09-27T04:44:37.584145+00:00
+[View source](https://github.com/JamesTroy/ZooKeeper)
 
-**Overall rating:** 42/100. Closest comparators: Ashlands (55, catalog top on broad unverified 3D-engine scope with no inspectable screenshots), THORNMERE (46, real inspected combat screenshots at 60) and neverquest (45, deepest prior systems scope with a playable build), Wilderness (44, fellow ambitious 3D world project) and SpaceHo2 (42). ZooKeeper's documented paper scope is among the broadest in the catalog (behavior-tree animal AI with needs and breeding, enclosures, economy, visitors, staff, research, weather, time, rating, milestones, random events, save/load, full UMG suite, ~465KB of C++ across ~150 files). But like Ashlands it offers zero inspectable screenshots and no playable artifact (no Pages site, no releases, no homepage; a native UE 5.7 C++ build is required), its 12 commits all landed in a single day at version 0.1.0, and the runtime level is assembled from tinted engine basic-shape meshes, so visual polish and technical execution are unverifiable. It therefore sits below Ashlands (55), which claims a custom engine plus verification harness, and below screenshot-backed games such as THORNMERE and neverquest, roughly alongside SpaceHo2/Wilderness-tier ambitious-but-unverifiable 3D projects. Source and commit messages alone do not prove playability, performance, or balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **42/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Closest comparators: Ashlands (55, catalog top on broad unverified 3D-engine scope with no inspectable screenshots), THORNMERE (46, real inspected combat screenshots at 60) and neverquest (45, deepest prior systems scope with a playable build), Wilderness (44, fellow ambitious 3D world project) and SpaceHo2 (42). ZooKeeper's documented paper scope is among the broadest in the catalog (behavior-tree animal AI with needs and breeding, enclosures, economy, visitors, staff, research, weather, time, rating, milestones, random events, save/load, full UMG suite, ~465KB of C++ across ~150 files). But like Ashlands it offers zero inspectable screenshots and no playable artifact (no Pages site, no releases, no homepage; a native UE 5.7 C++ build is required), its 12 commits all landed in a single day at version 0.1.0, and the runtime level is assembled from tinted engine basic-shape meshes, so visual polish and technical execution are unverifiable. It therefore sits below Ashlands (55), which claims a custom engine plus verification harness, and below screenshot-backed games such as THORNMERE and neverquest, roughly alongside SpaceHo2/Wilderness-tier ambitious-but-unverifiable 3D projects. Source and commit messages alone do not prove playability, performance, or balance.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 16 Feb 2026 · 10:43 UTC |
+| Added to catalog | 27 Sep 2026 · 04:44 UTC |
+| Last updated | 27 Sep 2026 · 04:44 UTC |
+| Documented creation models | Not established |
 
 ## Play
 

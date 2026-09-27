@@ -1,13 +1,32 @@
 # moorestech
 
-[Open the game source](https://github.com/moorestech/moorestech)
-**Repository created:** 2021-03-31T04:00:14Z
-**Added to catalog:** 2026-09-27T04:44:06.266417+00:00
-**Updated in catalog:** 2026-09-27T04:44:06.266417+00:00
+[View source](https://github.com/moorestech/moorestech)
 
-**Overall rating:** 64/100. Catalog comparison: most relevant comparators are Ashlands (55, current top), Wilderness (44, blocky exploration crafter), Kart Royale (50) and Neural Sight (30/70 screenshots, polished 3D but narrower scope). moorestech shows broader systems (gear power, belts, tech eras, story, tutorial, co-op server, mod tools), 15,000+ commits, and more polished stylized 3D than any catalog game, placing it above Ashlands. Capped well below AAA because the game is unreleased, with no playable build to verify performance, balance, or netcode, and evidence gaps on audio and gamepad/touch support.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **64/100** | **76/100** |
 
-**Screenshot score:** 76/100. Visible gameplay frames show coherent anime-stylized 3D with dense grass, soft shadows, detailed machines, and full HUDs, exceeding catalog mid-tier gameplay shots such as OSRS Tower Defense (65) and matching or passing the sharpest kart-racer frames (Kart Royale/Turbo Kart Rally 70) on scene detail, though still frames cannot prove motion, performance, or balance.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Catalog comparison: most relevant comparators are Ashlands (55, current top), Wilderness (44, blocky exploration crafter), Kart Royale (50) and Neural Sight (30/70 screenshots, polished 3D but narrower scope). moorestech shows broader systems (gear power, belts, tech eras, story, tutorial, co-op server, mod tools), 15,000+ commits, and more polished stylized 3D than any catalog game, placing it above Ashlands. Capped well below AAA because the game is unreleased, with no playable build to verify performance, balance, or netcode, and evidence gaps on audio and gamepad/touch support.
+
+### Screenshot score
+
+Visible gameplay frames show coherent anime-stylized 3D with dense grass, soft shadows, detailed machines, and full HUDs, exceeding catalog mid-tier gameplay shots such as OSRS Tower Defense (65) and matching or passing the sharpest kart-racer frames (Kart Royale/Turbo Kart Rally 70) on scene detail, though still frames cannot prove motion, performance, or balance.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 31 Mar 2021 · 04:00 UTC |
+| Added to catalog | 27 Sep 2026 · 04:44 UTC |
+| Last updated | 27 Sep 2026 · 04:44 UTC |
+| Documented creation models | Not established |
 
 ## Screenshots
 

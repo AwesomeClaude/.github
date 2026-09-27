@@ -1,10 +1,29 @@
 # TypeScript-Blackjack
 
-[Open the game source](https://github.com/KSmith8888/TypeScript-Blackjack)
+[View source](https://github.com/KSmith8888/TypeScript-Blackjack)
 
-**Overall rating:** 28/100. Closest catalog comparator is Turbo Kart Rally (40/100, complete single-track 3D racer with AI field, items, menus, procedural audio) and second is Kart Royale (50/100, ~60k-line 3D physics/AI/synthesis demo); Neural Sight (30/100, photographic tech prototype with almost no game loop) is the scope floor. This Blackjack is a genuinely complete and rules-faithful 2D card game — full hit/stay/double/split/surrender/insurance, 1-8 deck shoe, side bets, bankroll, settings persistence, TypeScript/Vite structure — so it beats Neural Sight on finished loop depth, but its flat DOM/CSS presentation, single-table scope, dealer-only opposition, and lack of multiplayer, progression, or systems depth place it well below both kart racers on gameplay depth, visual polish, and technical ambition. Evidence gaps: judged from gh api source plus one still screenshot without playing the live build, so balance, sound quality, mobile feel, and long-session robustness are unverified; source and screenshot do not prove performance or fairness.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **28/100** | **35/100** |
 
-**Screenshot score:** 35/100. The single inspected gameplay frame is the game's own output and is clean and readable — green felt, four sharp cards, Dealer ?? vs Player 18 scores, bank/high-score bar, shoe meter, and red bet/action buttons — but it is flat DOM/CSS with solid colors, minimal texture, lighting, or staging. Against the catalog calibration of 70/100 for both kart racers' coherent 3D worlds with HUD, scenery, and dynamic composition and Neural Sight's photographic splat scenes, this is a functional card table, not a polished scene. No motion or feel inferred from the still.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Closest catalog comparator is Turbo Kart Rally (40/100, complete single-track 3D racer with AI field, items, menus, procedural audio) and second is Kart Royale (50/100, ~60k-line 3D physics/AI/synthesis demo); Neural Sight (30/100, photographic tech prototype with almost no game loop) is the scope floor. This Blackjack is a genuinely complete and rules-faithful 2D card game — full hit/stay/double/split/surrender/insurance, 1-8 deck shoe, side bets, bankroll, settings persistence, TypeScript/Vite structure — so it beats Neural Sight on finished loop depth, but its flat DOM/CSS presentation, single-table scope, dealer-only opposition, and lack of multiplayer, progression, or systems depth place it well below both kart racers on gameplay depth, visual polish, and technical ambition. Evidence gaps: judged from gh api source plus one still screenshot without playing the live build, so balance, sound quality, mobile feel, and long-session robustness are unverified; source and screenshot do not prove performance or fairness.
+
+### Screenshot score
+
+The single inspected gameplay frame is the game's own output and is clean and readable — green felt, four sharp cards, Dealer ?? vs Player 18 scores, bank/high-score bar, shoe meter, and red bet/action buttons — but it is flat DOM/CSS with solid colors, minimal texture, lighting, or staging. Against the catalog calibration of 70/100 for both kart racers' coherent 3D worlds with HUD, scenery, and dynamic composition and Neural Sight's photographic splat scenes, this is a functional card table, not a polished scene. No motion or feel inferred from the still.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

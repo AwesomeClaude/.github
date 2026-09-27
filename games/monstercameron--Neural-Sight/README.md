@@ -1,10 +1,29 @@
 # Neural Sight
 
-[Open the game source](https://github.com/monstercameron/Neural-Sight)
+[View source](https://github.com/monstercameron/Neural-Sight)
 
-**Overall rating:** 30/100. Impressive 24-hour technical prototype for photographic static worlds and responsive screen-space weapons, but far from AAA: tiny scope (4 streamed captures, 1 weapon performance, balls + experimental zombies), baked lighting with capture holes, no campaign/progression/multiplayer/economy, and acknowledged continuity and performance tradeoffs. Evidence gaps: no live playtest possible from static analysis alone, no verified frame-rate/GPU cost across devices, no HUD, audio, or full-loop encounter depth visible in screenshots.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **30/100** | **70/100** |
 
-**Screenshot score:** 70/100. All three are the game's own output (not concept art) per README. Environments show photographic captured lighting, convincing rust, timber, plaster and foliage with coherent first-person weapon compositing. Deducted for splat softness/smearing on fine edges, empty HUD-less showcase framing, portrait crops, and visible screen-space weapon integration limits versus true geometric 3D.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Impressive 24-hour technical prototype for photographic static worlds and responsive screen-space weapons, but far from AAA: tiny scope (4 streamed captures, 1 weapon performance, balls + experimental zombies), baked lighting with capture holes, no campaign/progression/multiplayer/economy, and acknowledged continuity and performance tradeoffs. Evidence gaps: no live playtest possible from static analysis alone, no verified frame-rate/GPU cost across devices, no HUD, audio, or full-loop encounter depth visible in screenshots.
+
+### Screenshot score
+
+All three are the game's own output (not concept art) per README. Environments show photographic captured lighting, convincing rust, timber, plaster and foliage with coherent first-person weapon compositing. Deducted for splat softness/smearing on fine edges, empty HUD-less showcase framing, portrait crops, and visible screen-space weapon integration limits versus true geometric 3D.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

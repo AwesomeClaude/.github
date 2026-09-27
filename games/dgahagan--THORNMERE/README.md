@@ -1,10 +1,29 @@
 # THORNMERE — The Founding Song
 
-[Open the game source](https://github.com/dgahagan/THORNMERE)
+[View source](https://github.com/dgahagan/THORNMERE)
 
-**Overall rating:** 46/100. Far from AAA (no voice, cinematics, multiplayer, live-ops scale; 320x240 retro bitmaps and synth audio by design), but the strongest retro-RPG package in the catalog. Most relevant comparators: neverquest (45 overall, deepest systems scope with 8 attributes/100+ quests but monochrome text UI only) and Kart Royale (50 overall, ~60k-line 3D kart tech demo on one 1.6km track). THORNMERE matches neverquest on systems breadth (57 monsters, 84 spells, 7 songs, 61 items, 5 races, 10 classes, town plus 3 dungeons, class-change to Riddlemaster, 53 logic/art/audio/feelies tests) while exceeding it clearly on visual polish and technical execution (textured first-person viewport with distance shading, animated monster portraits, signboard navigation, parchment automap, zero-dependency Canvas engine with DOM-free core under node --test). It trails Kart Royale on real-time 3D physics/AI ambition and moment-to-moment action feel, and Turbo Kart Rally (40 overall, complete 3D kart loop with 8 racers/items/AI/menus) on pick-up-and-play arcade depth, but beats Turbo Kart on campaign scope and content editability. Above Taipo (35, complete typing-TD niche loop on one tilemap), Neural Sight (30, 24-hour photographic prototype with almost no game loop), TypeScript-Blackjack (28, rules-faithful single-table card game), Beachy Beachy Ball (25, single ball-roller mechanic), and curiositY (18, 15 static riddle pages) on gameplay depth, scope, and finished-loop completeness. Evidence gaps: judged from repository content via GitHub API plus raw files and 9 inspected stills only; no live playthrough, so playability, balance, pacing, and performance are unverified and not proven by code or screenshots.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **46/100** | **60/100** |
 
-**Screenshot score:** 60/100. Visible gameplay frames show a coherent deliberate 1985 style: chunky 320x240 indexed pixels, textured walls with torch/daylight distance shading, readable signboard streets, a large detailed Fen Rat portrait, roster/roster-chip UI, and ornate thorn-vine chrome with blackletter/serif type. Composition is consistent and charming but flat and low-detail next to the catalog 70s (Kart Royale, Turbo Kart Rally, Neural Sight), which show dense 3D/photographic scenes with lighting, crowds, scenery, and dynamic framing. Above Taipo (55, sparser flat pixel TD board) on texture depth, portrait quality, and UI polish, and well above TypeScript-Blackjack (35), Beachy Beachy Ball (35), and neverquest (30) flat DOM/text presentations. Title card and full-screen automap discounted as non-gameplay/menu. Judged from stills only; no motion or game feel inferred.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA (no voice, cinematics, multiplayer, live-ops scale; 320x240 retro bitmaps and synth audio by design), but the strongest retro-RPG package in the catalog. Most relevant comparators: neverquest (45 overall, deepest systems scope with 8 attributes/100+ quests but monochrome text UI only) and Kart Royale (50 overall, ~60k-line 3D kart tech demo on one 1.6km track). THORNMERE matches neverquest on systems breadth (57 monsters, 84 spells, 7 songs, 61 items, 5 races, 10 classes, town plus 3 dungeons, class-change to Riddlemaster, 53 logic/art/audio/feelies tests) while exceeding it clearly on visual polish and technical execution (textured first-person viewport with distance shading, animated monster portraits, signboard navigation, parchment automap, zero-dependency Canvas engine with DOM-free core under node --test). It trails Kart Royale on real-time 3D physics/AI ambition and moment-to-moment action feel, and Turbo Kart Rally (40 overall, complete 3D kart loop with 8 racers/items/AI/menus) on pick-up-and-play arcade depth, but beats Turbo Kart on campaign scope and content editability. Above Taipo (35, complete typing-TD niche loop on one tilemap), Neural Sight (30, 24-hour photographic prototype with almost no game loop), TypeScript-Blackjack (28, rules-faithful single-table card game), Beachy Beachy Ball (25, single ball-roller mechanic), and curiositY (18, 15 static riddle pages) on gameplay depth, scope, and finished-loop completeness. Evidence gaps: judged from repository content via GitHub API plus raw files and 9 inspected stills only; no live playthrough, so playability, balance, pacing, and performance are unverified and not proven by code or screenshots.
+
+### Screenshot score
+
+Visible gameplay frames show a coherent deliberate 1985 style: chunky 320x240 indexed pixels, textured walls with torch/daylight distance shading, readable signboard streets, a large detailed Fen Rat portrait, roster/roster-chip UI, and ornate thorn-vine chrome with blackletter/serif type. Composition is consistent and charming but flat and low-detail next to the catalog 70s (Kart Royale, Turbo Kart Rally, Neural Sight), which show dense 3D/photographic scenes with lighting, crowds, scenery, and dynamic framing. Above Taipo (55, sparser flat pixel TD board) on texture depth, portrait quality, and UI polish, and well above TypeScript-Blackjack (35), Beachy Beachy Ball (35), and neverquest (30) flat DOM/text presentations. Title card and full-screen automap discounted as non-gameplay/menu. Judged from stills only; no motion or game feel inferred.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

@@ -1,14 +1,32 @@
 # hypeJumper
 
-[Open the game source](https://github.com/parkjongbin0520-spec/hypeJumper)
-**Repository created:** 2026-06-01T02:23:07Z
-**Added to catalog:** 2026-09-27T04:41:33.536018+00:00
-**Updated in catalog:** 2026-09-27T04:41:33.536018+00:00
-**Built with:** [Opus 4.8](https://raw.githubusercontent.com/parkjongbin0520-spec/hypeJumper/main/CLAUDE.md)
+[View source](https://github.com/parkjongbin0520-spec/hypeJumper)
 
-**Overall rating:** 36/100. Far from AAA: small prototype scope with no browser play, no verified gameplay visuals, no multiplayer, narrative, or live-ops scale. Most relevant comparators: Flip Runner Racing (33, ten-level hill-climb with fuel/flips/chute but a one-shot with no live URL), Taipo (35, complete typing-TD loop with multi-year releases and itch ratings), T-Rex Runner (35, single flawless reflex loop with massive validation), 2048 (38, mass-validated flawless merge loop), and Turbo Kart Rally (40, complete 3D kart loop with AI field, items, and menus). hypeJumper sits just above Flip Runner and around Taipo/T-Rex: its Celeste-grade movement tech (coyote, buffers, 8-way dash, super/hyper/wallbounce, grab puzzles), six text-map stages, dual Python plus frame-parity C#/MonoGame implementations with 21 passing tests, and two shipped Windows releases beat Flip Runner on technical depth, but it trails 2048 on proven tuning and validation and trails Turbo Kart Rally badly on scope, opponents, and rendered world richness. Catalog top Ashlands (55) is far ahead on world scale. Evidence gaps: no browser-playable build, no inspectable gameplay screenshots, and no live playthrough, so playability, performance, balance, and audio quality are unverified and source files do not prove them.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **36/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: small prototype scope with no browser play, no verified gameplay visuals, no multiplayer, narrative, or live-ops scale. Most relevant comparators: Flip Runner Racing (33, ten-level hill-climb with fuel/flips/chute but a one-shot with no live URL), Taipo (35, complete typing-TD loop with multi-year releases and itch ratings), T-Rex Runner (35, single flawless reflex loop with massive validation), 2048 (38, mass-validated flawless merge loop), and Turbo Kart Rally (40, complete 3D kart loop with AI field, items, and menus). hypeJumper sits just above Flip Runner and around Taipo/T-Rex: its Celeste-grade movement tech (coyote, buffers, 8-way dash, super/hyper/wallbounce, grab puzzles), six text-map stages, dual Python plus frame-parity C#/MonoGame implementations with 21 passing tests, and two shipped Windows releases beat Flip Runner on technical depth, but it trails 2048 on proven tuning and validation and trails Turbo Kart Rally badly on scope, opponents, and rendered world richness. Catalog top Ashlands (55) is far ahead on world scale. Evidence gaps: no browser-playable build, no inspectable gameplay screenshots, and no live playthrough, so playability, performance, balance, and audio quality are unverified and source files do not prove them.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 01 Jun 2026 · 02:23 UTC |
+| Added to catalog | 27 Sep 2026 · 04:41 UTC |
+| Last updated | 27 Sep 2026 · 04:41 UTC |
+| Documented creation models | [Opus 4.8](https://raw.githubusercontent.com/parkjongbin0520-spec/hypeJumper/main/CLAUDE.md) |
 
 ## Screenshots
 

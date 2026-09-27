@@ -1,10 +1,29 @@
 # Top-10 Tension
 
-[Open the game source](https://github.com/cuongluu8/tenable)
+[View source](https://github.com/cuongluu8/tenable)
 
-**Overall rating:** 32/100. Far from AAA: flat DOM quiz UI with no 3D world, physics, animation, voice, cinematics, or live-ops scale; source and stills do not prove playability, balance, pacing, or performance. Most relevant comparators are TypeScript-Blackjack (28 overall, complete single-table DOM card game with full rules and persistence) and Taipo (35 overall, complete niche typing-TD loop with desktop plus web builds and multi-year releases): Top-10 Tension exceeds Blackjack on breadth with four trivia games, three play ways, and a real remote-multiplayer backend, and matches Taipo on finished-loop completeness with a larger full-stack backend, but trails Taipo on distinctive moment-to-moment systems and both kart racers on action depth and visual scene rendering. It sits above Neural Sight (30 overall, photographic prototype with almost no game loop) on finished loops and multiplayer scope, and well below Turbo Kart Rally (40 overall, complete 3D racer with AI field, items, HUD and menus) and neverquest (45 overall, deepest catalog systems scope) on gameplay depth and technical spectacle. Evidence gaps: judged from repository pages and raw files plus two inspected images only after gh api rate-limiting; did not play the live build, so answer quality, match fairness, socket reliability, and difficulty balance are unverified.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **32/100** | **32/100** |
 
-**Screenshot score:** 32/100. Only the Club Run frame counts as gameplay: clean dark card UI with lives dots, Who is this prompt, badge chain with loan satellites and arrows, hint, guess input and give-up. Against catalog calibration (Kart Royale 70, Turbo Kart Rally 70 and Neural Sight 70 for coherent 3D or photographic scenes with lighting, scenery and composition; Taipo 55 for readable pixel-art board; TypeScript-Blackjack 35 and Beachy Beachy Ball 35 for clean but flat DOM or minimal 3D; neverquest 30 for monochrome dashboard), this matches the Blackjack and neverquest band: legible, coherent stylized quiz UI with real badge images, but flat DOM cards, no environment, lighting, staging, or scene detail, and sparse composition with large empty margins. The title banner is discounted as non-gameplay. No motion or game feel inferred from stills.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: flat DOM quiz UI with no 3D world, physics, animation, voice, cinematics, or live-ops scale; source and stills do not prove playability, balance, pacing, or performance. Most relevant comparators are TypeScript-Blackjack (28 overall, complete single-table DOM card game with full rules and persistence) and Taipo (35 overall, complete niche typing-TD loop with desktop plus web builds and multi-year releases): Top-10 Tension exceeds Blackjack on breadth with four trivia games, three play ways, and a real remote-multiplayer backend, and matches Taipo on finished-loop completeness with a larger full-stack backend, but trails Taipo on distinctive moment-to-moment systems and both kart racers on action depth and visual scene rendering. It sits above Neural Sight (30 overall, photographic prototype with almost no game loop) on finished loops and multiplayer scope, and well below Turbo Kart Rally (40 overall, complete 3D racer with AI field, items, HUD and menus) and neverquest (45 overall, deepest catalog systems scope) on gameplay depth and technical spectacle. Evidence gaps: judged from repository pages and raw files plus two inspected images only after gh api rate-limiting; did not play the live build, so answer quality, match fairness, socket reliability, and difficulty balance are unverified.
+
+### Screenshot score
+
+Only the Club Run frame counts as gameplay: clean dark card UI with lives dots, Who is this prompt, badge chain with loan satellites and arrows, hint, guess input and give-up. Against catalog calibration (Kart Royale 70, Turbo Kart Rally 70 and Neural Sight 70 for coherent 3D or photographic scenes with lighting, scenery and composition; Taipo 55 for readable pixel-art board; TypeScript-Blackjack 35 and Beachy Beachy Ball 35 for clean but flat DOM or minimal 3D; neverquest 30 for monochrome dashboard), this matches the Blackjack and neverquest band: legible, coherent stylized quiz UI with real badge images, but flat DOM cards, no environment, lighting, staging, or scene detail, and sparse composition with large empty margins. The title banner is discounted as non-gameplay. No motion or game feel inferred from stills.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

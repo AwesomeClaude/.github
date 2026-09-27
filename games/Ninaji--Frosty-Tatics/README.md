@@ -1,10 +1,29 @@
 # Frosty Tactics — A Lamina Runica · The Runic Blade
 
-[Open the game source](https://github.com/Ninaji/Frosty-Tatics)
+[View source](https://github.com/Ninaji/Frosty-Tatics)
 
-**Overall rating:** 48/100. Closest comparators: neverquest (45 overall, deepest catalog systems scope but monochrome text UI only) and Kart Royale (50, ~60k-line 3D procedural tech demo with one 1.6km track) / Turbo Kart Rally (40, complete single-track 3D racer). Frosty Tactics exceeds neverquest on scope-plus-rendering (50-battle campaign plus endless mode, 115 enemies x 279 adjectives, D&D 5e rule layer, 13 actives + 10 passives, Three.js isometric scenes, procedural bosses, 10-track music engine, bilingual UI, sim-validated balance) and exceeds both kart racers and Taipo (35, single-map typing TD), Neural Sight (30, 4-scene shooter prototype), TypeScript-Blackjack (28, single-table card rules), Beachy Beachy Ball (25, single roll-to-star mechanic), and curiositY (18, static riddle pages) on gameplay depth and content volume. It ranks just below Kart Royale because visual polish, composition, and scene detail are unverified: the repo ships zero gameplay screenshots (only shields.io badges, discounted), the live canvas app exposes no static frames to inspect, and with 0 stars, 11 commits, and no playtest, playability, performance, and balance are unproven from source alone despite the sim harness.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **48/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Closest comparators: neverquest (45 overall, deepest catalog systems scope but monochrome text UI only) and Kart Royale (50, ~60k-line 3D procedural tech demo with one 1.6km track) / Turbo Kart Rally (40, complete single-track 3D racer). Frosty Tactics exceeds neverquest on scope-plus-rendering (50-battle campaign plus endless mode, 115 enemies x 279 adjectives, D&D 5e rule layer, 13 actives + 10 passives, Three.js isometric scenes, procedural bosses, 10-track music engine, bilingual UI, sim-validated balance) and exceeds both kart racers and Taipo (35, single-map typing TD), Neural Sight (30, 4-scene shooter prototype), TypeScript-Blackjack (28, single-table card rules), Beachy Beachy Ball (25, single roll-to-star mechanic), and curiositY (18, static riddle pages) on gameplay depth and content volume. It ranks just below Kart Royale because visual polish, composition, and scene detail are unverified: the repo ships zero gameplay screenshots (only shields.io badges, discounted), the live canvas app exposes no static frames to inspect, and with 0 stars, 11 commits, and no playtest, playability, performance, and balance are unproven from source alone despite the sim harness.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Play
 

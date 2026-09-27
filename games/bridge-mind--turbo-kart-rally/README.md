@@ -1,10 +1,29 @@
 # Turbo Kart Rally
 
-[Open the game source](https://github.com/bridge-mind/turbo-kart-rally/tree/main)
+[View source](https://github.com/bridge-mind/turbo-kart-rally/tree/main)
 
-**Overall rating:** 40/100. Impressive complete indie kart racer with full loop, 8 karts, items, AI, HUD and music, but far from AAA: single track, no multiplayer/online, limited modes, simple low-poly procedural art/audio, and no evidence of extensive balancing, QA, accessibility or live-ops scale. Evidence gaps: no playtest metrics, performance data, or depth beyond one circuit.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **40/100** | **70/100** |
 
-**Screenshot score:** 70/100. Visible gameplay shows coherent colorful low-poly stylization, readable karts/track, varied scenery with mountains/trees/grandstands, and polished HUD/minimap/leaderboard. Detail, lighting and textures are simple indie-level, not high-end, but composition and polish are strong for procedural assets.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Impressive complete indie kart racer with full loop, 8 karts, items, AI, HUD and music, but far from AAA: single track, no multiplayer/online, limited modes, simple low-poly procedural art/audio, and no evidence of extensive balancing, QA, accessibility or live-ops scale. Evidence gaps: no playtest metrics, performance data, or depth beyond one circuit.
+
+### Screenshot score
+
+Visible gameplay shows coherent colorful low-poly stylization, readable karts/track, varied scenery with mountains/trees/grandstands, and polished HUD/minimap/leaderboard. Detail, lighting and textures are simple indie-level, not high-end, but composition and polish are strong for procedural assets.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Screenshots
 

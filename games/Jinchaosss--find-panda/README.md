@@ -1,13 +1,32 @@
 # 找熊猫 (Find Panda)
 
-[Open the game source](https://github.com/Jinchaosss/find-panda)
-**Repository created:** 2026-04-01T04:05:27Z
-**Added to catalog:** 2026-09-27T03:51:07.716371+00:00
-**Updated in catalog:** 2026-09-27T03:51:07.716371+00:00
+[View source](https://github.com/Jinchaosss/find-panda)
 
-**Overall rating:** 30/100. Far from AAA: single flat 2D grid-puzzle mechanic rendered with programmatic vector shapes, no audio, no animation/physics/multiplayer/cinematics/live-ops evidence, no deployed build, and no gameplay screenshots to inspect — source alone does not prove playability, pacing, or balance. Most relevant comparators: 2048 (38/100, a mass-validated single-mechanic puzzle with shipped web/mobile builds) sits above it on polish and validation; chess rot (30/100, complete single-board ruleset with flat presentation) is the closest peer; TypeScript-Blackjack (28/100, complete single-table DOM card game) sits just below on systems depth since Find Panda adds 12 solver-verified levels, a level generator with uniqueness proofs, hints, lives, and multiple screens. neverquest (45/100) far exceeds it on systems scope. A 30/100 places it as a complete but tiny and unvalidated logic puzzler at the chess-rot tier.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **30/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: single flat 2D grid-puzzle mechanic rendered with programmatic vector shapes, no audio, no animation/physics/multiplayer/cinematics/live-ops evidence, no deployed build, and no gameplay screenshots to inspect — source alone does not prove playability, pacing, or balance. Most relevant comparators: 2048 (38/100, a mass-validated single-mechanic puzzle with shipped web/mobile builds) sits above it on polish and validation; chess rot (30/100, complete single-board ruleset with flat presentation) is the closest peer; TypeScript-Blackjack (28/100, complete single-table DOM card game) sits just below on systems depth since Find Panda adds 12 solver-verified levels, a level generator with uniqueness proofs, hints, lives, and multiple screens. neverquest (45/100) far exceeds it on systems scope. A 30/100 places it as a complete but tiny and unvalidated logic puzzler at the chess-rot tier.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 01 Apr 2026 · 04:05 UTC |
+| Added to catalog | 27 Sep 2026 · 03:51 UTC |
+| Last updated | 27 Sep 2026 · 03:51 UTC |
+| Documented creation models | Not established |
 
 ## Play
 

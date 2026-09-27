@@ -1,14 +1,32 @@
 # The Nine Lives of Ash
 
-[Open the game source](https://github.com/phirogue/SparkyGames)
-**Repository created:** 2026-07-29T18:49:28Z
-**Added to catalog:** 2026-09-27T04:05:54.560546+00:00
-**Updated in catalog:** 2026-09-27T04:05:54.560546+00:00
-**Built with:** [ChatGPT](https://raw.githubusercontent.com/phirogue/SparkyGames/main/docs/design/ai-transparency.md), [Kling](https://raw.githubusercontent.com/phirogue/SparkyGames/main/docs/design/ai-transparency.md)
+[View source](https://github.com/phirogue/SparkyGames)
 
-**Overall rating:** 47/100. Deep roguelite deckbuilder scope with a deterministic rules core, JSON content engine, unit tests, balance sims, screenshot tour, and extensive design canon supports near-top catalog depth, but evidence is local-only with no public playable URL, no releases, no Pages, and only two inspected reference frames (one modal-obscured). Below Ashlands 55 for open-world breadth, below OSRS Tower Defense 52 and Kart Royale 50 for public play plus richer runtime visuals, and closest to Frosty Tactics 48, Neon Arena 48, Dead Signal 47, and THORNMERE 46: strong systems and coherent stylized art with limited public playability evidence. Screenshots and docs do not prove performance, balance, or full-run playability.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **47/100** | **50/100** |
 
-**Screenshot score:** 50/100. Battle frame shows coherent storybook UI with a detailed painted enemy portrait, legible intent/energy/skill systems, and portrait-phone composition, placing it above minimal DOM games like 2048 (45), chess rot (40), and Beachy Beachy Ball (35), but below densely detailed runtime frames like Taipo (55), THORNMERE (60), and OSRS Tower Defense (65); the central victory modal hides the chronicle and hand, and the second image is a title card that is discounted. Still images do not prove motion, feel, performance, or balance.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Deep roguelite deckbuilder scope with a deterministic rules core, JSON content engine, unit tests, balance sims, screenshot tour, and extensive design canon supports near-top catalog depth, but evidence is local-only with no public playable URL, no releases, no Pages, and only two inspected reference frames (one modal-obscured). Below Ashlands 55 for open-world breadth, below OSRS Tower Defense 52 and Kart Royale 50 for public play plus richer runtime visuals, and closest to Frosty Tactics 48, Neon Arena 48, Dead Signal 47, and THORNMERE 46: strong systems and coherent stylized art with limited public playability evidence. Screenshots and docs do not prove performance, balance, or full-run playability.
+
+### Screenshot score
+
+Battle frame shows coherent storybook UI with a detailed painted enemy portrait, legible intent/energy/skill systems, and portrait-phone composition, placing it above minimal DOM games like 2048 (45), chess rot (40), and Beachy Beachy Ball (35), but below densely detailed runtime frames like Taipo (55), THORNMERE (60), and OSRS Tower Defense (65); the central victory modal hides the chronicle and hand, and the second image is a title card that is discounted. Still images do not prove motion, feel, performance, or balance.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 29 Jul 2026 · 18:49 UTC |
+| Added to catalog | 27 Sep 2026 · 04:05 UTC |
+| Last updated | 27 Sep 2026 · 04:05 UTC |
+| Documented creation models | [ChatGPT](https://raw.githubusercontent.com/phirogue/SparkyGames/main/docs/design/ai-transparency.md), [Kling](https://raw.githubusercontent.com/phirogue/SparkyGames/main/docs/design/ai-transparency.md) |
 
 ## Screenshots
 

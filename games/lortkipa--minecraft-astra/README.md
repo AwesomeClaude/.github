@@ -1,10 +1,29 @@
 # Wilderness
 
-[Open the game source](https://github.com/lortkipa/minecraft-astra)
+[View source](https://github.com/lortkipa/minecraft-astra)
 
-**Overall rating:** 44/100. AAA proximity judged from source via web API plus README because the game could not be played: no inspectable gameplay screenshots exist and the listed preview returned 404. Closest comparators are Kart Royale (50, ~60k-line 3D kart tech demo with proven polished screenshots and full race loop), neverquest (45, deepest catalog systems scope but text-only), and Turbo Kart Rally (40, complete single-track 3D racer with menus, AI, and items). Wilderness sits between Turbo Kart Rally and Kart Royale at 44: its scope exceeds Turbo Kart (open 192x192 voxel survival world with mining, 8-recipe crafting, hunger, XP, animals, night enemies, quests, map, and persistence versus one circuit) and matches Kart Royale on technical ambition (chunked voxels, raycasts, AO, shadows, water shader, viewmodel), but trails Kart Royale on proven polish (no gameplay frames to inspect, dead demo, 2 same-day commits from a single prompt with no balancing, QA, multiplayer, or live-ops evidence) and trails neverquest on long-tail progression depth and multi-year iteration. Clearly above Taipo (35, single-map 2D typing TD), TypeScript-Blackjack (28, flat single-table card game), Beachy Beachy Ball (25, minimal ball roller), and curiositY (18, static riddle pages) on 3D engine complexity and survival-loop breadth. Evidence gaps: source and docs alone do not prove playability, frame rate, balance, or late-game depth.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **44/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+AAA proximity judged from source via web API plus README because the game could not be played: no inspectable gameplay screenshots exist and the listed preview returned 404. Closest comparators are Kart Royale (50, ~60k-line 3D kart tech demo with proven polished screenshots and full race loop), neverquest (45, deepest catalog systems scope but text-only), and Turbo Kart Rally (40, complete single-track 3D racer with menus, AI, and items). Wilderness sits between Turbo Kart Rally and Kart Royale at 44: its scope exceeds Turbo Kart (open 192x192 voxel survival world with mining, 8-recipe crafting, hunger, XP, animals, night enemies, quests, map, and persistence versus one circuit) and matches Kart Royale on technical ambition (chunked voxels, raycasts, AO, shadows, water shader, viewmodel), but trails Kart Royale on proven polish (no gameplay frames to inspect, dead demo, 2 same-day commits from a single prompt with no balancing, QA, multiplayer, or live-ops evidence) and trails neverquest on long-tail progression depth and multi-year iteration. Clearly above Taipo (35, single-map 2D typing TD), TypeScript-Blackjack (28, flat single-table card game), Beachy Beachy Ball (25, minimal ball roller), and curiositY (18, static riddle pages) on 3D engine complexity and survival-loop breadth. Evidence gaps: source and docs alone do not prove playability, frame rate, balance, or late-game depth.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Play
 

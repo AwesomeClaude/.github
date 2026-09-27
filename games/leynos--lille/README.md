@@ -1,13 +1,32 @@
 # Lille
 
-[Open the game source](https://github.com/leynos/lille)
-**Repository created:** 2025-01-17T23:11:03Z
-**Added to catalog:** 2026-09-27T04:41:33.426397+00:00
-**Updated in catalog:** 2026-09-27T04:41:33.426397+00:00
+[View source](https://github.com/leynos/lille)
 
-**Overall rating:** 28/100. Far from AAA: Phase 1 RTS prototype with no campaign, win or loss loop, multiplayer, audio, cinematics or live-ops scale, no public playable URL, no releases or Pages, and no inspectable gameplay frame, so playability, performance and balance are unverified. Most relevant comparators: UnityPuzzle (15, single-commit engine prototype with placeholder sprites and no build) is the floor Lille clearly exceeds on codebase scale, docs and test discipline across 341 tracked paths; curiosity (18, complete 15-level riddle trail with a live site) ships a finished loop Lille lacks; Beachy Beachy Ball (25, complete minimal live loop) and TypeScript-Blackjack (28, complete single-table rules) are the shipped-tiny-game tier Lille roughly matches on AAA proximity for opposite reasons; Neural Sight (30), chess rot (30) and Find Panda (30) all pair narrow scope with either inspectable visuals or a complete loop, which Lille cannot match; SpaceHo2 (42), neverquest (45), Kart Royale (50) and Ashlands (55) vastly exceed it on finished gameplay depth and proven execution. Ranked at 28: above the prototype floor on technical ambition, below every complete loop with verified play.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **28/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: Phase 1 RTS prototype with no campaign, win or loss loop, multiplayer, audio, cinematics or live-ops scale, no public playable URL, no releases or Pages, and no inspectable gameplay frame, so playability, performance and balance are unverified. Most relevant comparators: UnityPuzzle (15, single-commit engine prototype with placeholder sprites and no build) is the floor Lille clearly exceeds on codebase scale, docs and test discipline across 341 tracked paths; curiosity (18, complete 15-level riddle trail with a live site) ships a finished loop Lille lacks; Beachy Beachy Ball (25, complete minimal live loop) and TypeScript-Blackjack (28, complete single-table rules) are the shipped-tiny-game tier Lille roughly matches on AAA proximity for opposite reasons; Neural Sight (30), chess rot (30) and Find Panda (30) all pair narrow scope with either inspectable visuals or a complete loop, which Lille cannot match; SpaceHo2 (42), neverquest (45), Kart Royale (50) and Ashlands (55) vastly exceed it on finished gameplay depth and proven execution. Ranked at 28: above the prototype floor on technical ambition, below every complete loop with verified play.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 17 Jan 2025 · 23:11 UTC |
+| Added to catalog | 27 Sep 2026 · 04:41 UTC |
+| Last updated | 27 Sep 2026 · 04:41 UTC |
+| Documented creation models | Not established |
 
 ## Play
 

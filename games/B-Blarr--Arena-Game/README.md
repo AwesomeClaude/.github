@@ -1,10 +1,29 @@
 # Neon Arena
 
-[Open the game source](https://github.com/B-Blarr/Arena-Game)
+[View source](https://github.com/B-Blarr/Arena-Game)
 
-**Overall rating:** 48/100. Far from AAA (no campaign, online, voice, cinematics or live-ops scale; 0 stars/forks; German-only docs; unverified balance/performance). On catalog evidence it sits just below Kart Royale (50 overall, ~60k-line 3D demo with inspected 70 screenshot polish on one 1.6km track) and above neverquest (45 overall, deepest text-systems catalog scope) and Turbo Kart Rally (40 overall, complete Three.js procedural kart loop). It exceeds neverquest by pairing comparable systems breadth (27+ upgrades across 5 rarities, 9 enemies, 5 bosses, 7 heroes/abilities, elites, journey/daily modes, 54 achievements, profiles/leaderboard, co-op) with real-time 3D execution (fixed-timestep, pools, InstancedMesh, spatial hash, HDR bloom, synthesized audio, vitest/ESLint/CI, 42 commits), and exceeds Turbo Kart on mode/build variety and meta-progression. It trails Kart Royale only because Kart has two inspected polished gameplay frames while Neon Arena ships zero inspectable gameplay pixels, so visual polish, feel and playability cannot be verified. Source and stills alone do not prove playability, frame rate or balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **48/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA (no campaign, online, voice, cinematics or live-ops scale; 0 stars/forks; German-only docs; unverified balance/performance). On catalog evidence it sits just below Kart Royale (50 overall, ~60k-line 3D demo with inspected 70 screenshot polish on one 1.6km track) and above neverquest (45 overall, deepest text-systems catalog scope) and Turbo Kart Rally (40 overall, complete Three.js procedural kart loop). It exceeds neverquest by pairing comparable systems breadth (27+ upgrades across 5 rarities, 9 enemies, 5 bosses, 7 heroes/abilities, elites, journey/daily modes, 54 achievements, profiles/leaderboard, co-op) with real-time 3D execution (fixed-timestep, pools, InstancedMesh, spatial hash, HDR bloom, synthesized audio, vitest/ESLint/CI, 42 commits), and exceeds Turbo Kart on mode/build variety and meta-progression. It trails Kart Royale only because Kart has two inspected polished gameplay frames while Neon Arena ships zero inspectable gameplay pixels, so visual polish, feel and playability cannot be verified. Source and stills alone do not prove playability, frame rate or balance.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Documented creation models | Not established |
 
 ## Play
 

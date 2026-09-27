@@ -1,14 +1,32 @@
 # Pizza Chef
 
-[Open the game source](https://github.com/PizzaDAO/pizza-chef)
-[Play the game](https://pizza-chef-six.vercel.app)
-**Repository created:** 2026-01-09T10:26:36Z
-**Added to catalog:** 2026-09-27T03:49:50.534326+00:00
-**Updated in catalog:** 2026-09-27T03:49:50.534326+00:00
+[Play the game](https://pizza-chef-six.vercel.app) · [View source](https://github.com/PizzaDAO/pizza-chef)
 
-**Overall rating:** 44/100. Far from AAA (no 3D, voice, cinematics, multiplayer) but a complete real-time arcade loop with unusually broad systems: 4-lane cooking/serving/plate-catching, 8 customer variants, 10 power-ups, bosses, UFO/raids, store economy, workers, death replay and Supabase leaderboard across ~160 tracked files with tests. Most relevant comparators: neverquest (45, deeper RPG systems but text-UI only), Wilderness (44, similar scope tier), SpaceHo2 (42) and Turbo Kart Rally (40, complete indie loop but single-track/simple systems) - Pizza Chef sits with Wilderness just below neverquest/THORNMERE (46) because visual polish is unverified (only empty background, How-to-Play card and icon inspected, no full gameplay frame with entities/HUD), and below catalog-top Ashlands (55) and Kart Royale (50) on technical ambition and proven rendering. Above 2048 (38), Taipo (35) and Blackjack (28) on depth and scope. Evidence gaps: no live playthrough; playability, performance, balance and mobile feel judged from code and docs only, not motion.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **44/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA (no 3D, voice, cinematics, multiplayer) but a complete real-time arcade loop with unusually broad systems: 4-lane cooking/serving/plate-catching, 8 customer variants, 10 power-ups, bosses, UFO/raids, store economy, workers, death replay and Supabase leaderboard across ~160 tracked files with tests. Most relevant comparators: neverquest (45, deeper RPG systems but text-UI only), Wilderness (44, similar scope tier), SpaceHo2 (42) and Turbo Kart Rally (40, complete indie loop but single-track/simple systems) - Pizza Chef sits with Wilderness just below neverquest/THORNMERE (46) because visual polish is unverified (only empty background, How-to-Play card and icon inspected, no full gameplay frame with entities/HUD), and below catalog-top Ashlands (55) and Kart Royale (50) on technical ambition and proven rendering. Above 2048 (38), Taipo (35) and Blackjack (28) on depth and scope. Evidence gaps: no live playthrough; playability, performance, balance and mobile feel judged from code and docs only, not motion.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 09 Jan 2026 · 10:26 UTC |
+| Added to catalog | 27 Sep 2026 · 03:49 UTC |
+| Last updated | 27 Sep 2026 · 03:49 UTC |
+| Documented creation models | Not established |
 
 ## Screenshots
 

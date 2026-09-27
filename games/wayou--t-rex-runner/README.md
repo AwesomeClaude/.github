@@ -1,14 +1,32 @@
 # T-Rex Runner
 
-[Open the game source](https://github.com/wayou/t-rex-runner)
-[Play the game](https://wayou.github.io/t-rex-runner/)
-**Repository created:** 2014-11-29T10:04:04Z
-**Added to catalog:** 2026-09-27T03:35:32.755095+00:00
-**Updated in catalog:** 2026-09-27T03:35:32.755095+00:00
+[Play the game](https://wayou.github.io/t-rex-runner/) · [View source](https://github.com/wayou/t-rex-runner)
 
-**Overall rating:** 35/100. Far from AAA: one endless track, one reflex mechanic, no levels, rivals, multiplayer, progression, or live-ops scale. Calibrated against all 20 catalog games. Closest comparators: 2048 (38 overall, single-mechanic viral classic with mass validation and a flawless loop), Flip Runner Racing (33, ten-level hill-climb with fuel/flips/chute but a 2-commit one-shot with no live URL), and Taipo (35, complete niche loop with multi-year releases). T-Rex Runner sits with that tier: it beats Beachy Beachy Ball (25, single roll-to-star mechanic with minimal art and no cultural validation) and TypeScript-Blackjack (28, faithful single-table rules but flat DOM) on execution polish, shipped maturity, and validation (Chrome offline easter egg played by billions; repo holds 2186 stars and 1286 forks), but trails Turbo Kart Rally (40, complete 3D racer with AI field, items, HUD, menus) and neverquest (45, deepest catalog systems scope) badly on gameplay depth, scope, and technical ambition. Evidence gaps: judged from repository metadata, README, index.html, and API-read index.js evidence plus one inspected animation frame without cloning and without playing a verified session, so playability, frame rate, difficulty balance, and audio quality are unverified; source and stills do not prove them.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **35/100** | **30/100** |
 
-**Screenshot score:** 30/100. Scored only from the inspected first frame of the repo's own gameplay GIF without inferring motion. The frame shows the game's authentic monochrome pixel output: small standing T-Rex sprite on a ground line against a blank white void. Against catalog baselines (Kart Royale 70, Turbo Kart Rally 70 with detailed tracks, HUDs, and crowds; 2048 at 45 with a polished flat UI; Beachy Beachy Ball 35 with a 3D ball, shadows, and obstacles) this has coherent iconic pixel styling but almost no scene detail, composition, or environment in the inspected frame. It sits near neverquest (30, text UI only) and above curiositY (18, near-zero presentation), clearly below 2048 and Beachy on visible polish. Later animation frames (obstacles, night cycle, score) were not extracted, so the score reflects only what was actually inspected.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: one endless track, one reflex mechanic, no levels, rivals, multiplayer, progression, or live-ops scale. Calibrated against all 20 catalog games. Closest comparators: 2048 (38 overall, single-mechanic viral classic with mass validation and a flawless loop), Flip Runner Racing (33, ten-level hill-climb with fuel/flips/chute but a 2-commit one-shot with no live URL), and Taipo (35, complete niche loop with multi-year releases). T-Rex Runner sits with that tier: it beats Beachy Beachy Ball (25, single roll-to-star mechanic with minimal art and no cultural validation) and TypeScript-Blackjack (28, faithful single-table rules but flat DOM) on execution polish, shipped maturity, and validation (Chrome offline easter egg played by billions; repo holds 2186 stars and 1286 forks), but trails Turbo Kart Rally (40, complete 3D racer with AI field, items, HUD, menus) and neverquest (45, deepest catalog systems scope) badly on gameplay depth, scope, and technical ambition. Evidence gaps: judged from repository metadata, README, index.html, and API-read index.js evidence plus one inspected animation frame without cloning and without playing a verified session, so playability, frame rate, difficulty balance, and audio quality are unverified; source and stills do not prove them.
+
+### Screenshot score
+
+Scored only from the inspected first frame of the repo's own gameplay GIF without inferring motion. The frame shows the game's authentic monochrome pixel output: small standing T-Rex sprite on a ground line against a blank white void. Against catalog baselines (Kart Royale 70, Turbo Kart Rally 70 with detailed tracks, HUDs, and crowds; 2048 at 45 with a polished flat UI; Beachy Beachy Ball 35 with a 3D ball, shadows, and obstacles) this has coherent iconic pixel styling but almost no scene detail, composition, or environment in the inspected frame. It sits near neverquest (30, text UI only) and above curiositY (18, near-zero presentation), clearly below 2048 and Beachy on visible polish. Later animation frames (obstacles, night cycle, score) were not extracted, so the score reflects only what was actually inspected.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 29 Nov 2014 · 10:04 UTC |
+| Added to catalog | 27 Sep 2026 · 03:35 UTC |
+| Last updated | 27 Sep 2026 · 03:35 UTC |
+| Documented creation models | Not established |
 
 ## Screenshots
 

@@ -1,14 +1,32 @@
 # Dead Signal: Exclusion Zone
 
-[Open the game source](https://github.com/bridge-mind/claude-opus-5.5-zombies-game)
-**Repository created:** 2026-09-22T17:55:29Z
-**Added to catalog:** 2026-09-27T03:49:50.908522+00:00
-**Updated in catalog:** 2026-09-27T03:49:50.908522+00:00
-**Built with:** [Claude Opus 5.5](https://github.com/bridge-mind/claude-opus-5.5-zombies-game/blob/main/README.md)
+[View source](https://github.com/bridge-mind/claude-opus-5.5-zombies-game)
 
-**Overall rating:** 47/100. Far from AAA: no campaign beyond one 8-10 minute mission, no multiplayer, no voice/cinematics/live-ops scale, 2 stars and 3 forks, a single commit, and no public playable deployment or inspectable screenshots, so visual polish, performance, and balance are unverified. On systems scope it outranks Turbo Kart Rally (40, sibling single-track kart loop) and Neural Sight (30, FPS tech prototype with only experimental zombies and no game loop), and roughly matches THORNMERE (46) and neverquest (45) on structured mission-plus-economy depth, but it sits below Kart Royale (50, complete verified 3D loop with polished screenshots) and Ashlands (55, catalog top) because its 3D presentation cannot be verified from any image evidence. Judged from repository sources and docs only; source code and tests do not prove playability, performance, or balance.
+| Overall rating | Screenshot score |
+| :---: | :---: |
+| **47/100** | **Not scored** |
 
-**Screenshot score:** not scored. No inspectable gameplay screenshot.
+<details>
+<summary>Read the scoring rationale</summary>
+
+### Overall rating
+
+Far from AAA: no campaign beyond one 8-10 minute mission, no multiplayer, no voice/cinematics/live-ops scale, 2 stars and 3 forks, a single commit, and no public playable deployment or inspectable screenshots, so visual polish, performance, and balance are unverified. On systems scope it outranks Turbo Kart Rally (40, sibling single-track kart loop) and Neural Sight (30, FPS tech prototype with only experimental zombies and no game loop), and roughly matches THORNMERE (46) and neverquest (45) on structured mission-plus-economy depth, but it sits below Kart Royale (50, complete verified 3D loop with polished screenshots) and Ashlands (55, catalog top) because its 3D presentation cannot be verified from any image evidence. Judged from repository sources and docs only; source code and tests do not prove playability, performance, or balance.
+
+### Screenshot score
+
+No inspectable gameplay screenshot.
+
+</details>
+
+## At a glance
+
+| Detail | Value |
+| --- | --- |
+| Repository created | 22 Sep 2026 · 17:55 UTC |
+| Added to catalog | 27 Sep 2026 · 03:49 UTC |
+| Last updated | 27 Sep 2026 · 03:49 UTC |
+| Documented creation models | [Claude Opus 5.5](https://github.com/bridge-mind/claude-opus-5.5-zombies-game/blob/main/README.md) |
 
 ## Play
 
