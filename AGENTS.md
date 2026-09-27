@@ -6,7 +6,7 @@ For SSH requests here, use the live AgentsWeb Actions runner and `~/.ssh/aiplay-
 
 ## Issue catalog workflow
 
-Open a real test issue automatically after changing the issue catalog workflow. Publish the review PR or branch fallback and the issue report, including branch README links for added games, before the owner-only 30-minute SSH hold. Keep the same worker and tunnel alive during the hold, including after analysis or publication failure. Skip the hold for non-owner issues. During analysis, SSH into the issue worker; inspect OpenCode records, logs, and processes; and assess progress directly. Report PR and issue-comment links as soon as they appear. Do not wait for the idle period to finish.
+Open a real test issue automatically after changing the issue catalog workflow. Post the banner, 10–30-minute estimate, and Actions link before analysis. Publish and auto-merge eligible catalog PRs by default. Publish the PR or branch fallback and the issue report, including branch README links for added games, before the owner-only 30-minute SSH hold. Keep the same worker and tunnel alive during the hold, including after analysis or publication failure. Skip the hold for non-owner issues. During analysis, SSH into the issue worker; inspect OpenCode records, logs, and processes; and assess progress directly. Report PR and issue-comment links as soon as they appear. Do not wait for the idle period to finish.
 
 ## OpenCode smoke command
 
@@ -22,6 +22,7 @@ Copy every live OpenCode session URL printed by `scripts/test-oc.sh` immediately
 
 ## Wiki index
 
+- Read [Issue catalog publishing](wiki/issue-catalog.md) before changing issue publication.
 - Read [OpenCode batch testing](wiki/oc-batch-testing.md) before changing the batch runner.
 
 ## Verification

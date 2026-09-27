@@ -15,10 +15,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     permissions:
+      actions: read
       contents: write
       pull-requests: write
       issues: write
     steps:
+      - name: Acknowledge the issue with the live Actions link
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          job_url="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/attempts/$GITHUB_RUN_ATTEMPT/jobs" \
+            --jq '.jobs[] | select(.name == "analyze-and-publish") | .html_url' 2>/dev/null || true)"
+          log_url="${job_url:-$run_url}"
+          echo "ISSUE_CATALOG_RUN_URL=$log_url" >> "$GITHUB_ENV"
+          banner="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$GITHUB_SHA/assets/issue-analysis-banner.png"
+          printf '![I’m on it! Analyzing game links — 10–30 minutes.](%s)\n\nI’m on it. Analyzing the links may take 10–30 minutes.\n\n[Follow the Actions run](%s).\n' \
+            "$banner" "$log_url" > "$RUNNER_TEMP/issue-started.md"
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/issue-started.md"
+
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
@@ -41,15 +57,20 @@ jobs:
         run: ./scripts/start-agentsweb-ssh.sh
 
       - name: Analyze game links
+        id: analysis
         if: steps.preflight.outputs.ready == 'true'
         timeout-minutes: 275
         run: python3 scripts/issue_catalog.py --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact"
 
-      - name: Create review PR and report to the issue
+      - name: Publish and auto-merge the catalog PR, then report to the issue
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+          CATALOG_BASE_BRANCH: ${{ github.event.repository.default_branch }}
+          CATALOG_AUTO_MERGE: ${{ vars.ISSUE_CATALOG_AUTO_MERGE || 'true' }}
+          ANALYSIS_SUCCEEDED: ${{ steps.analysis.outcome == 'success' }}
+          CATALOG_CHAT_ID: 01a0e059-9f64-7ed0-b30c-314d3ec269ba
         run: |
           gh auth setup-git
           python3 scripts/publish_issue_catalog.py --artifact "$RUNNER_TEMP/issue-artifact"

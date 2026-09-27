@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-"""Publish an issue catalog artifact on a review branch and comment on the issue."""
+"""Publish validated issue reports, merge the catalog PR, and report the result."""
 
 import argparse
 import json
 import os
 from pathlib import Path
 import subprocess
+import time
 from urllib.parse import quote
 
 import games
 
 
 def command(*args, check=True):
-    return subprocess.run(args, check=check, text=True, capture_output=True)
+    result = subprocess.run(args, check=False, text=True, capture_output=True, timeout=120)
+    if check and result.returncode:
+        raise RuntimeError(f'{args[0]} {args[1]} failed: {result.stderr.strip()[:1000]}')
+    return result
 
 
 def safe_output(value):
@@ -27,7 +31,7 @@ def safe_output(value):
 def publish_files(artifact, summary):
     published = set()
     for item in summary['outcomes']:
-        if item['status'] not in ('added', 'no_source'):
+        if item['status'] != 'added':
             continue
         relative = safe_output(item['output'])
         source = artifact / 'publish' / relative / 'readme.json'
@@ -36,12 +40,8 @@ def publish_files(artifact, summary):
             continue
         try:
             data = json.loads(source.read_text(encoding='utf-8'))
-            if item['status'] == 'no_source':
-                games.validate(data, allow_no_source=True)
-                expected = games.no_source_destination(data['source_url'])
-            else:
-                games.validate(data)
-                _, expected = games.game_url(data['repository_url'])
+            games.validate(data)
+            expected = games.report_destination(data)
             if relative != expected.relative_to(games.ROOT):
                 raise ValueError('Report artifact path mismatch')
         except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
@@ -51,7 +51,7 @@ def publish_files(artifact, summary):
         if destination.exists():
             item.update(status='already_cataloged', reason='Added by another run')
             continue
-        games.write_atomic(destination, source.read_text(encoding='utf-8'))
+        games.write_atomic(destination, json.dumps(data, indent=2, ensure_ascii=False) + '\n')
         published.add(str(relative))
     if published:
         ledger = games.GAMES / 'added.jsonl'
@@ -64,17 +64,18 @@ def publish_files(artifact, summary):
     return published
 
 
-def issue_comment(summary, link, run_url, repo, branch, published):
+def issue_comment(summary, link, run_url, repo, branch, published, merge_status):
     lines = [f'Issue catalog run: [Actions log]({run_url}).']
     if link:
         lines.append(f'Catalog changes: {link}.')
     else:
         lines.append('No catalog changes were published.')
+    if merge_status:
+        lines.append(merge_status)
     if summary.get('error'):
-        lines.append(f'Input: {games.markdown(summary["error"])}')
+        lines.append(f'Notice: {games.markdown(summary["error"])}')
     groups = [
-        ('added', 'GitHub-source games'),
-        ('no_source', 'Games without GitHub source'),
+        ('added', 'Validated games'),
         ('already_cataloged', 'Already cataloged'),
         ('not_game', 'Not game projects'),
         ('inaccessible', 'Could not inspect'),
@@ -87,7 +88,7 @@ def issue_comment(summary, link, run_url, repo, branch, published):
         lines.extend(['', f'### {title}'])
         for item in items:
             original = games.safe_url(item['input_url'])
-            if status in ('added', 'no_source') and item['output'] in published:
+            if status == 'added' and item['output'] in published and link:
                 relative = safe_output(item['output'])
                 readme_url = (f'https://github.com/{repo}/blob/{quote(branch, safe="/")}/'
                               f'{quote(str(relative), safe="/")}/README.md')
@@ -97,6 +98,26 @@ def issue_comment(summary, link, run_url, repo, branch, published):
             note = item.get('reason') or item.get('output') or item.get('title') or ''
             lines.append(f'- [Original link]({original}) — {games.markdown(note)[:600]}')
     return '\n'.join(lines) + '\n'
+
+
+def merge_pr(repo, pr_url, head, title, body):
+    for attempt in range(3):
+        result = command('gh', 'pr', 'merge', pr_url, '--repo', repo, '--auto', '--squash',
+                         '--match-head-commit', head, '--subject', title, '--body', body,
+                         check=False)
+        state = command('gh', 'pr', 'view', pr_url, '--repo', repo,
+                        '--json', 'state,autoMergeRequest', check=False)
+        if state.returncode == 0:
+            details = json.loads(state.stdout)
+            if details['state'] == 'MERGED':
+                return 'Merged automatically into the default catalog branch.'
+            if details.get('autoMergeRequest'):
+                return 'Auto-merge enabled; waiting for the repository’s merge requirements.'
+        if result.returncode == 0:
+            return 'Merge requested; check the pull request for its current status.'
+        if attempt < 2:
+            time.sleep(5)
+    return f'Automatic merge failed; inspect the pull request. {games.markdown(result.stderr.strip())[:600]}'
 
 
 def main():
@@ -112,42 +133,66 @@ def main():
         summary = {'issue_number': int(os.environ['ISSUE_NUMBER']), 'outcomes': [],
                    'error': 'The analysis job did not produce a result artifact.'}
     issue = summary['issue_number']
-    run_url = f'https://github.com/{repo}/actions/runs/{run_id}'
-    try:
-        published = publish_files(args.artifact, summary) if summary_path.is_file() else set()
-    except (OSError, ValueError, KeyError, json.JSONDecodeError) as exc:
-        published = set()
-        summary['error'] = f'Could not prepare catalog publication: {exc}'
-    branch = f'codex/issue-{issue}-run-{run_id}'
+    run_url = os.getenv('ISSUE_CATALOG_RUN_URL') or f'https://github.com/{repo}/actions/runs/{run_id}'
+    base = os.getenv('CATALOG_BASE_BRANCH', 'main')
+    attempt = os.getenv('GITHUB_RUN_ATTEMPT', '1')
+    branch = f'codex/issue-{issue}-run-{run_id}-attempt-{attempt}'
+    published = set()
     link = None
-    if published:
-        command('git', 'config', 'user.name', 'github-actions[bot]')
-        command('git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
-        command('git', 'switch', '-c', branch)
-        command('git', 'add', '--', 'README.md', 'Readme-nosrc.md', 'games')
-        command('git', 'diff', '--cached', '--check')
-        command('git', 'commit', '-m', f'Add games from issue #{issue}', '-m',
-                f'Context: Issue #{issue} requested catalog analysis of public links.\n\n'
-                f'Decision: Publish only validated generated reports on a review branch, not directly to the default branch. '
-                f'Additions: {len(published)}. Verification: the production analysis completed and the catalog was rebuilt. '
-                f'Known caveat: claims in generated reports require human editorial review.\n\n'
-                f'Issue: #{issue}\nRun-ID: {run_id}\nChat-ID: 01a0dbeb-cd22-74a3-9140-d15455968a0d')
-        command('git', 'push', '--set-upstream', 'origin', branch)
-        branch_url = f'https://github.com/{repo}/tree/{branch}'
-        link = f'[branch]({branch_url})'
-        pr = command('gh', 'pr', 'create', '--repo', repo, '--base', 'main', '--head', branch,
-                     '--title', f'Add games requested in issue #{issue}',
-                     '--body', f'Collect verified game reports from issue #{issue}.\n\n'
-                               f'Analysis run: {run_url}', check=False)
-        if pr.returncode == 0:
-            link = f'[pull request]({pr.stdout.strip()})'
-        else:
-            summary['outcomes'].append({'input_url': f'https://github.com/{repo}/issues/{issue}',
-                                        'status': 'failed', 'reason': f'PR creation failed: {pr.stderr.strip()[:300]}'})
-    comment = issue_comment(summary, link, run_url, repo, branch, published)
-    command('gh', 'issue', 'comment', str(issue), '--repo', repo, '--body', comment)
-    print(comment)
+    pr_url = None
+    merge_status = None
+    try:
+        # Apply validated additions to the latest catalog, not the issue event's stale checkout.
+        command('git', 'fetch', 'origin', base)
+        command('git', 'switch', '--detach', f'origin/{base}')
+        published = publish_files(args.artifact, summary) if summary_path.is_file() else set()
+        if published:
+            command('git', 'config', 'user.name', 'github-actions[bot]')
+            command('git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
+            command('git', 'switch', '-c', branch)
+            command('git', 'add', '--', 'README.md', 'games')
+            title = f'Add games from issue #{issue}'
+            body = (f'Context: Issue #{issue} requested analysis of public game links.\n\n'
+                    f'Decision: Publish {len(published)} validated reports through a catalog PR and '
+                    f'automatically merge eligible results. Include games with optional source code '
+                    f'in the same ranking and gallery instead of splitting the catalog.\n\n'
+                    f'Verification: Inspect the production analysis and per-game evidence at {run_url}. '
+                    f'Validate report structure and destinations; rebuild the combined catalog. '
+                    f'Caveat: Generated claims are limited to the evidence the analysis could inspect.\n\n'
+                    f'Issue: #{issue}\nRun-ID: {run_id}\n'
+                    f'Chat-ID: {os.environ["CATALOG_CHAT_ID"]}')
+            command('git', 'commit', '-m', title, '-m', body)
+            head = command('git', 'rev-parse', 'HEAD').stdout.strip()
+            command('git', 'push', '--set-upstream', 'origin', branch)
+            branch_url = f'https://github.com/{repo}/tree/{branch}'
+            link = f'[branch]({branch_url})'
+            print(f'Published branch: {branch_url}', flush=True)
+            pr = command('gh', 'pr', 'create', '--repo', repo, '--base', base, '--head', branch,
+                         '--title', title, '--body', body, check=False)
+            if pr.returncode == 0:
+                pr_url = pr.stdout.strip()
+                link = f'[pull request]({pr_url})'
+                print(f'Published pull request: {pr_url}', flush=True)
+                if os.getenv('CATALOG_AUTO_MERGE', 'true').lower() == 'false':
+                    merge_status = 'Automatic merge is disabled for this repository’s catalog workflow.'
+                elif summary.get('error') or any(item['status'] == 'failed' for item in summary['outcomes']) or os.getenv('ANALYSIS_SUCCEEDED') != 'true':
+                    merge_status = 'Left the pull request open because analysis or validation did not fully succeed.'
+                else:
+                    merge_status = merge_pr(repo, pr_url, head, title, body)
+            else:
+                summary['error'] = f'PR creation failed; inspect the published branch: {pr.stderr.strip()[:600]}'
+    except (OSError, ValueError, KeyError, RuntimeError, subprocess.TimeoutExpired) as exc:
+        summary['error'] = f'Catalog publication failed: {exc}'
+    comment = issue_comment(summary, link, run_url, repo, branch, published, merge_status)
+    result = command('gh', 'issue', 'comment', str(issue), '--repo', repo, '--body', comment)
+    summary['publication'] = {'branch': branch if link else None, 'pull_request': pr_url,
+                              'merge_status': merge_status, 'comment': result.stdout.strip()}
+    games.write_atomic(summary_path, json.dumps(summary, indent=2, ensure_ascii=False) + '\n')
+    print(comment, flush=True)
+    print(f'Issue report: {result.stdout.strip()}', flush=True)
+    return int(bool(summary.get('error')) or any(item['status'] == 'failed' for item in summary['outcomes'])
+               or bool(merge_status and merge_status.startswith('Automatic merge failed')))
 
 
 if __name__ == '__main__':
-    main()
+    raise SystemExit(main())

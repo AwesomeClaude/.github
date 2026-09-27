@@ -86,18 +86,28 @@ def score(value, name, nullable=False):
     return number
 
 
-def validate(data, expected_url=None, allow_no_source=False):
+def report_destination(data):
+    if data.get('repository_url'):
+        return game_url(data['repository_url'])[1]
+    return no_source_destination(data['source_url'])
+
+
+def validate(data, expected_url=None):
     if not isinstance(data, dict):
         raise ValueError('Report must be a JSON object')
     url = data.get('repository_url')
-    if url == '' and allow_no_source:
-        source_url = data.get('source_url')
-        if not isinstance(source_url, str) or not safe_url(source_url):
-            raise ValueError('A game without GitHub source needs source_url')
-        no_source_destination(source_url)
-        normalized = ''
+    if url in (None, ''):
+        normalized = None
+    elif isinstance(url, str):
+        normalized, _ = game_url(url)
     else:
-        normalized, _ = game_url(url) if isinstance(url, str) else (None, None)
+        raise ValueError('repository_url must be a GitHub URL or null')
+    data['repository_url'] = normalized
+    source_url = data.get('source_url') or normalized
+    if not isinstance(source_url, str) or not safe_url(source_url):
+        raise ValueError('A game needs an original source_url')
+    no_source_destination(source_url)
+    data['source_url'] = source_url
     if expected_url and normalized != expected_url:
         raise ValueError(f'Report URL does not match input: {url}')
     if not isinstance(data.get('title'), str) or not data['title'].strip():
@@ -151,7 +161,7 @@ def game_readme(data):
     graphic = data['screenshot_based_score']
     graphic_text = 'not scored' if graphic is None else f"{graphic['score']}/100"
     source_line = (f'[Open the game source]({url})' if url else
-                   f'[Open the original game link]({safe_url(data["source_url"])}) — GitHub source not available.')
+                   f'[Open the original game link]({safe_url(data["source_url"])}) — No verified source repository.')
     out = [f'# {title}', '', source_line]
     if data.get('play_game_url'):
         out.append(f"[Play the game]({safe_url(data['play_game_url'])})")
@@ -217,11 +227,9 @@ def log(message):
 def rebuild():
     entries = []
     for path in sorted(GAMES.rglob('readme.json')) if GAMES.exists() else []:
-        if GAMES / 'no-source' in path.parents:
-            continue
         try:
             data = validate(json.loads(path.read_text(encoding='utf-8')))
-            _, expected = game_url(data['repository_url'])
+            expected = report_destination(data)
             if path.parent != expected:
                 raise ValueError(f'Report belongs at {expected}')
             write_atomic(path.with_name('README.md'), game_readme(data))
@@ -230,7 +238,7 @@ def rebuild():
             log(f'Skip {path}: {exc}')
     entries.sort(key=lambda item: (-item[1]['rating']['score'], item[1]['title'].casefold(), str(item[0])))
     out = ['# Game catalog', '', 'Browse the rated games. Open each game page for evidence and play instructions.',
-           'Browse [games without GitHub source](Readme-nosrc.md) separately.', '',
+           'Browse games with or without public source code in the same ranking and screenshot gallery.', '',
            'Add games with `./scripts/games.sh <github-game-url> [more-urls...]` or '
            '`./scripts/games.sh --file links.txt`. Rebuild every page and this index with '
            '`./scripts/games.sh`. Inspect `games/added.jsonl` for dated additions. '
@@ -239,7 +247,8 @@ def rebuild():
         target = quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/')
         graphic = data['screenshot_based_score']
         graphic_text = 'not scored' if graphic is None else f"{graphic['score']}/100"
-        out.append(f"- [{markdown(data['title'])}]({target}) — overall {data['rating']['score']}/100; screenshots {graphic_text}")
+        source_text = '' if data['repository_url'] else '; no verified source repository'
+        out.append(f"- [{markdown(data['title'])}]({target}) — overall {data['rating']['score']}/100; screenshots {graphic_text}{source_text}")
     if not entries:
         out.append('No valid games yet.')
     gallery = [(directory, data) for directory, data in entries
@@ -270,28 +279,6 @@ def rebuild():
     else:
         out.append('No scored screenshots yet.')
     write_atomic(ROOT / 'README.md', '\n'.join(out).rstrip() + '\n')
-    no_source = []
-    no_source_root = GAMES / 'no-source'
-    for path in sorted(no_source_root.rglob('readme.json')) if no_source_root.exists() else []:
-        try:
-            data = validate(json.loads(path.read_text(encoding='utf-8')), allow_no_source=True)
-            if data['repository_url'] != '' or path.parent != no_source_destination(data['source_url']):
-                raise ValueError('No-source report belongs in its original-link directory')
-            write_atomic(path.with_name('README.md'), game_readme(data))
-            no_source.append((path.parent, data))
-        except (OSError, ValueError, json.JSONDecodeError) as exc:
-            log(f'Skip {path}: {exc}')
-    no_source.sort(key=lambda item: (-item[1]['rating']['score'], item[1]['title'].casefold()))
-    no_source_index = ['# Games without GitHub source', '',
-                       'Open each game page for evidence. Treat source code as unavailable, not disproven.', '']
-    for directory, data in no_source:
-        target = quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/')
-        original = safe_url(data['source_url'])
-        no_source_index.append(f'- [{markdown(data["title"])}]({target}) — overall '
-                               f'{data["rating"]["score"]}/100; [original link]({original})')
-    if not no_source:
-        no_source_index.append('No qualifying games without verified GitHub source yet.')
-    write_atomic(ROOT / 'Readme-nosrc.md', '\n'.join(no_source_index).rstrip() + '\n')
     print(f'Rebuilt {len(entries)} game pages and the root README.', flush=True)
 
 
