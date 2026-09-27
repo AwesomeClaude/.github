@@ -1,6 +1,6 @@
 # moorestech
 
-[View source](https://github.com/moorestech/moorestech)
+[View source](https://github.com/moorestech/moorestech) · [Previous report](https://github.com/agents-dev/Astra-Top-Games/blob/6834fee43bf7e21225ca0ef6906590661443ff6f/games/moorestech--moorestech/README.md)
 
 | Overall rating | Screenshot score |
 | :---: | :---: |
@@ -11,11 +11,11 @@
 
 ### Overall rating
 
-Catalog comparison: most relevant comparators are Ashlands (55, current top), Wilderness (44, blocky exploration crafter), Kart Royale (50) and Neural Sight (30/70 screenshots, polished 3D but narrower scope). moorestech shows broader systems (gear power, belts, tech eras, story, tutorial, co-op server, mod tools), 15,000+ commits, and more polished stylized 3D than any catalog game, placing it above Ashlands. Capped well below AAA because the game is unreleased, with no playable build to verify performance, balance, or netcode, and evidence gaps on audio and gamepad/touch support.
+Excluding the target itself, most relevant comparators are Ashlands (55, current non-self top: broadest systems scope but zero inspectable screenshots), Kart Royale (50, complete polished 3D loop but single-track), Wilderness (44, blocky exploration crafter, no screenshots), and Neural Sight (30 overall / 70 screenshots, polished 3D but narrow prototype scope). moorestech shows broader verified systems (gear/torque power, belts, tech eras, story, tutorial, co-op server, mod tools), ~15,520 commits since 2021, and more polished stylized 3D with dense gameplay HUDs than any of them, placing it above Ashlands. Capped well below AAA because the game is unreleased with no playable build to verify performance, balance, or netcode, and evidence gaps remain on audio, gamepad/touch support, and human-player count.
 
 ### Screenshot score
 
-Visible gameplay frames show coherent anime-stylized 3D with dense grass, soft shadows, detailed machines, and full HUDs, exceeding catalog mid-tier gameplay shots such as OSRS Tower Defense (65) and matching or passing the sharpest kart-racer frames (Kart Royale/Turbo Kart Rally 70) on scene detail, though still frames cannot prove motion, performance, or balance.
+All four inspected frames are the game's own runtime output with coherent anime-stylized 3D, dense grass, soft shadows, detailed machines, and full HUDs. Exceeds catalog mid-tier gameplay shots such as OSRS Tower Defense (65) and matches or passes the sharpest kart-racer frames (Kart Royale/Neural Sight/Turbo Kart Rally 70) on scene detail and UI density, while remaining below photoreal AAA. Still frames cannot prove motion, performance, or balance.
 
 </details>
 
@@ -25,31 +25,31 @@ Visible gameplay frames show coherent anime-stylized 3D with dense grass, soft s
 | --- | --- |
 | Repository created | 31 Mar 2021 · 04:00 UTC |
 | Added to catalog | 27 Sep 2026 · 04:44 UTC |
-| Last updated | 27 Sep 2026 · 04:44 UTC |
+| Last updated | 27 Sep 2026 · 05:33 UTC |
 | Documented creation models | Not established |
 
 ## Screenshots
 
-![Inspected: top-down 3D factory yard with conveyors carrying ore, brick furnaces with fire, pipes, anime protagonist in pink/white outfit, and 9-slot hotbar with item counts. Densest gameplay UI and clearest factory-building evidence; game's own runtime output.](https://moores.tech/assets/game-screenshot-1-DJ3aSHbO.webp)
+![Inspected downloaded copy: top-down 3D factory yard with conveyors carrying ore piles, brick furnaces with fire, white pipes, anime protagonist in pink/white outfit center, and 9-slot hotbar with item counts at bottom. Densest gameplay UI and clearest factory-building evidence; game's own runtime output.](https://moores.tech/assets/game-screenshot-1-DJ3aSHbO.webp)
 
-Inspected: top-down 3D factory yard with conveyors carrying ore, brick furnaces with fire, pipes, anime protagonist in pink/white outfit, and 9-slot hotbar with item counts. Densest gameplay UI and clearest factory-building evidence; game's own runtime output.
+Inspected downloaded copy: top-down 3D factory yard with conveyors carrying ore piles, brick furnaces with fire, white pipes, anime protagonist in pink/white outfit center, and 9-slot hotbar with item counts at bottom. Densest gameplay UI and clearest factory-building evidence; game's own runtime output.
 
-![Inspected: desert factory with Metal Processing Equipment panel, inventory grid with gears/ingots counts, conveyors with metal rolls, character from behind, bottom hotbar. Full machine/inventory UI; game's own runtime output.](https://moores.tech/assets/game-screenshot-2-Bdgb5b21.webp)
+![Inspected downloaded copy: desert factory with Metal Processing Equipment panel, inventory grid with gears/ingots and counts, conveyors carrying metal rolls, anime character from behind, bottom hotbar. Full machine/inventory UI; game's own runtime output.](https://moores.tech/assets/game-screenshot-2-Bdgb5b21.webp)
 
-Inspected: desert factory with Metal Processing Equipment panel, inventory grid with gears/ingots counts, conveyors with metal rolls, character from behind, bottom hotbar. Full machine/inventory UI; game's own runtime output.
+Inspected downloaded copy: desert factory with Metal Processing Equipment panel, inventory grid with gears/ingots and counts, conveyors carrying metal rolls, anime character from behind, bottom hotbar. Full machine/inventory UI; game's own runtime output.
 
-![Inspected: grassy meadow with translucent building placement ghost, anime character placing a structure, waterfall/rocks/trees behind, bottom hotbar. Shows build-preview gameplay state; game's own runtime output.](https://moores.tech/assets/game-feature-tutorial-BuGQjo7s.webp)
+![Inspected downloaded copy: grassy meadow with translucent striped building-placement ghost, anime character placing a structure, waterfall/rocks/trees behind, bottom hotbar. Shows build-preview gameplay state; game's own runtime output.](https://moores.tech/assets/game-feature-tutorial-BuGQjo7s.webp)
 
-Inspected: grassy meadow with translucent building placement ghost, anime character placing a structure, waterfall/rocks/trees behind, bottom hotbar. Shows build-preview gameplay state; game's own runtime output.
+Inspected downloaded copy: grassy meadow with translucent striped building-placement ghost, anime character placing a structure, waterfall/rocks/trees behind, bottom hotbar. Shows build-preview gameplay state; game's own runtime output.
 
-![Inspected: anime character running across a vast green open world with cliffs, forests, lake, and mountains, hotbar visible at bottom. Shows exploration scale; game's own runtime output.](https://moores.tech/assets/game-feature-openworld-DViLb0zE.webp)
+![Inspected downloaded copy: anime character running across a vast green open world with cliffs, forests, lake and snow-capped mountains, hotbar visible at bottom. Shows exploration scale; game's own runtime output.](https://moores.tech/assets/game-feature-openworld-DViLb0zE.webp)
 
-Inspected: anime character running across a vast green open world with cliffs, forests, lake, and mountains, hotbar visible at bottom. Shows exploration scale; game's own runtime output.
+Inspected downloaded copy: anime character running across a vast green open world with cliffs, forests, lake and snow-capped mountains, hotbar visible at bottom. Shows exploration scale; game's own runtime output.
 
 ## Play
 
 - Move with W/A/S/D and jump with Space.
-- Hold Left Click to mine and collect resources.
+- Hold Left Click to mine and collect resources; Left Click opens machines and chests.
 - Press B to open the build menu and Tab for inventory.
 - Place with Left Click, rotate with R, demolish with G, undo with Ctrl+Z.
 - Follow the Current Challenges panel for the next objective.
@@ -106,16 +106,20 @@ Create an anime-style 3D open-world factory automation game in Unity: third-pers
 
 ## Source evidence
 
-- Repository is an actual game: description 'Animated open world automated factory game' with C# primary language and topics including game, game-development, unity, unity3d-game, realtime-server. ([source](https://github.com/moorestech/moorestech))
-- Repo metadata via API: C# dominant language, topics csharp/dotnet/unity, 83 stars, default branch master, no homepage; releases dev-v1.0.0 through dev-v1.2.0 exist with no downloadable game builds. ([source](https://api.github.com/repos/moorestech/moorestech))
-- README states this is the Unity server and client of factory game moorestech and instructs opening moorestech\_client in Unity and playing the MainGame scene. ([source](https://raw.githubusercontent.com/moorestech/moorestech/master/README.md))
-- CONTEXT.md defines the game as a factory-building sandbox where the player places blocks, mines resources, and assembles production lines, with hotbar slots 1-9, build costs, belts, and power wiring. ([source](https://raw.githubusercontent.com/moorestech/moorestech/master/CONTEXT.md))
-- Steam page lists Features as Single-player and Online Co-op, release 'To be announced' / 'not yet available', system requirements Windows/macOS/Linux, and full source code on GitHub with planned Workshop mod support. ([source](https://store.steampowered.com/app/1958160/moorestech/))
-- Official site describes gear-driven factory construction, anime open world, tech progression from waterwheel to fusion, story of exiled princess Yori, tutorial, and Summer 2026 Steam release target. ([source](https://moores.tech/home.html))
-- Gamescom play guide lists keyboard+mouse controls: WASD move, Space jump, hold Left Click mine/collect, Tab inventory, B build menu, Left Click place, R rotate, G demolish, Ctrl+Z undo, plus a Current Challenges objective panel. ([source](https://raw.githubusercontent.com/moorestech/moorestech/master/docs/gamescom/a4-play-guide-en.html))
+- Repository is an actual game: description 'Animated open world automated factory game', primary language C#, topics include game, game-development, unity, unity3d-game, realtime-server. API metadata: 83 stars, 10 forks, default branch master, created 2021-03-31, Apache-2.0 license, no homepage. ([source](https://api.github.com/repos/moorestech/moorestech))
+- Repository page confirms the same game identity, 83 stars / 10 forks, ~15,520 commits, folders moorestech\_client / moorestech\_server / moorestech\_web / docs, and README text identifying the Unity server and client of factory game moorestech. gh CLI was unavailable without auth (no GH\_TOKEN in runner), so unauthenticated public REST/raw endpoints were used instead for the same GitHub evidence. ([source](https://github.com/moorestech/moorestech))
+- README instructs opening mooresech\_client in Unity and playing the MainGame scene, with CEF/Git-LFS setup scripts; confirms this is a runnable Unity game project, not a non-game tool. ([source](https://raw.githubusercontent.com/moorestech/moorestech/master/README.md))
+- CONTEXT.md defines the game as a factory-building sandbox where the player places blocks, mines resources, and assembles production lines, with 9-slot hotbar (keys 1-9), build costs, belt-conveyor families, and power wiring rules. ([source](https://raw.githubusercontent.com/moorestech/moorestech/master/CONTEXT.md))
+- Steam page lists Features as Single-player and Online Co-op (+ Family Sharing), release 'To be announced' / 'not yet available', genres Indie/RPG/Simulation/Strategy, developer/publisher sakastudio, Windows/macOS/Linux requirements, full source on GitHub, planned Workshop mod support, and no user reviews. ([source](https://store.steampowered.com/app/1958160/moorestech/))
+- Official site describes gear-driven factory construction with rotation speed/torque, anime open world, tech progression from waterwheel to steam/electricity/fusion with rocket goal, story of exiled princess Yori with companions Ereno and Kurua, tutorial guidance, mod support with open-source code, and Summer 2026 Steam release target. ([source](https://moores.tech/home.html))
+- Gamescom play guide establishes keyboard/mouse controls: WASD move, Space jump, hold Left Click mine/collect, Left Click open machines/place, Tab inventory, B build menu, R rotate, G demolish, Ctrl+Z undo, plus Current Challenges objective panel. This is the evidence for keyboard\_mouse=supported. ([source](https://raw.githubusercontent.com/moorestech/moorestech/master/docs/gamescom/a4-play-guide-en.html))
+- No source explicitly rules in or out mobile touch, device-motion, or gamepad support; no touch joystick, accelerometer/gyroscope, or gamepad binding was found in the inspected pages, so those remain unknown rather than not\_supported. ([source](https://github.com/moorestech/moorestech))
+- Language breakdown via API is C# dominant (~18.6M bytes) with ShaderLab, TypeScript, Python, HLSL and others; supports the C# language finding. ([source](https://api.github.com/repos/moorestech/moorestech/languages))
 - Unity editor version pinned at 6000.3.8f1 in client ProjectSettings. ([source](https://raw.githubusercontent.com/moorestech/moorestech/master/moorestech_client/ProjectSettings/ProjectVersion.txt))
-- Client package manifest includes Universal Render Pipeline 17.3.0 and Input System 1.18.0 among Unity dependencies. ([source](https://github.com/moorestech/moorestech/blob/master/moorestech_client/Packages/manifest.json))
-- No public playable browser build found: Steam is an unreleased store listing, the repository requires opening the Unity project locally, and moorestech\_web is an in-game WebUI frontend, not a hosted playable game. ([source](https://raw.githubusercontent.com/moorestech/moorestech/master/moorestech_web/README.md))
+- Client package manifest pins com.unity.render-pipelines.universal 17.3.0 and com.unity.inputsystem 1.18.0 among Unity dependencies. ([source](https://github.com/moorestech/moorestech/blob/master/moorestech_client/Packages/manifest.json))
+- Releases dev-v1.0.0 through dev-v1.2.0 exist (2022-2023) with zero downloadable game assets; no public playable browser build found. Steam is an unreleased store listing, the repo requires opening the Unity project locally, and moorestech\_web is an in-game WebUI frontend (TypeScript+React+Vite spawned by the Unity client), not a hosted playable game, so play\_game\_url is null. ([source](https://api.github.com/repos/moorestech/moorestech/releases?per_page=5))
+- moorestech\_web README confirms the web project is a WebUI frontend plus Node.js/pnpm binaries spawned by the Unity client, not a standalone playable URL. ([source](https://raw.githubusercontent.com/moorestech/moorestech/master/moorestech_web/README.md))
+- Existing catalog match: games/moorestech--moorestech already catalogs this exact repository (overall 64, screenshots 76); verified by identical repository URL and game identity, not by title alone, so the existing slug is reused. ([source](https://github.com/moorestech/moorestech))
 
 ## Fictional reviews
 
