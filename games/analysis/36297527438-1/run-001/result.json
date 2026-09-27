@@ -1,0 +1,11 @@
+{
+  "run": "run-001",
+  "directory": "/home/runner/work/Astra-Top-Games/Astra-Top-Games/work/game-batches/36297527438-1/run-001",
+  "status": "finished",
+  "session_id": "ses_f1ea52a38ffeeJDunc2UoLOfSs",
+  "live_url": "https://table-dimensions-anytime-employer.trycloudflare.com/L2hvbWUvcnVubmVyL3dvcmsvQXN0cmEtVG9wLUdhbWVzL0FzdHJhLVRvcC1HYW1lcy93b3JrL2dhbWUtYmF0Y2hlcy8zNjI5NzUyNzQzOC0xL3J1bi0wMDE/session/ses_f1ea52a38ffeeJDunc2UoLOfSs",
+  "prompt_sha256": "42ac73ce843c8367fe671b988637e3e6a9313d055d97d6d789e80d9bdb5ae471",
+  "cli_pid": 2840,
+  "exit_code": 0,
+  "elapsed_seconds": 35.45
+}

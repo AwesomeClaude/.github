@@ -1,0 +1,6 @@
+{
+  "status": "not_game",
+  "source_url": "https://example.com",
+  "repository_url": null,
+  "reason": "https://example.com is the IANA documentation placeholder ('Example Domain - This domain is for use in documentation examples without needing permission'), not an actual game. Inspected page shows only a heading, one descriptive sentence, and a link to https://iana.org/domains/example, with no gameplay, controls, screenshots, playable URL, or repository reference. No catalog entry in /home/runner/work/Astra-Top-Games/Astra-Top-Games/README.md matches this URL, repository, or playable source."
+}
