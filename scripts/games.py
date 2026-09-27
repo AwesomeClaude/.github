@@ -168,6 +168,10 @@ def validate(data, expected_url=None):
          {'label': 'Source repository', 'url': normalized},
          {'label': 'Play game', 'url': play_url}])
     models = data.setdefault('creation_models', [])
+    if isinstance(models, list):
+        for model in models:
+            if isinstance(model, dict) and not model.get('evidence_url') and model.get('url'):
+                model['evidence_url'] = model.pop('url')
     if not isinstance(models, list) or any(not isinstance(m, dict) or
             not isinstance(m.get('name'), str) or not safe_url(m.get('evidence_url')) for m in models):
         raise ValueError('creation_models must contain names and evidence URLs')
@@ -185,7 +189,7 @@ def labeled_links(*groups):
                 continue
             url = item['url']
             label = str(item.get('label') or 'Related link')
-            if url not in links or links[url]['label'] == 'Related link':
+            if url not in links or links[url]['label'] == 'Related link' or label == 'Source repository':
                 links[url] = {'label': label, 'url': url}
     return list(links.values())
 
@@ -384,8 +388,10 @@ def repository_created(url):
     if not url:
         return None
     owner, repo = urlsplit(url).path.strip('/').split('/')[:2]
-    request = urllib.request.Request(f'https://api.github.com/repos/{owner}/{repo}',
-                                    headers={'User-Agent': 'Astra-Top-Games'})
+    headers = {'User-Agent': 'Astra-Top-Games'}
+    if os.getenv('GH_TOKEN'):
+        headers['Authorization'] = 'Bearer ' + os.environ['GH_TOKEN']
+    request = urllib.request.Request(f'https://api.github.com/repos/{owner}/{repo}', headers=headers)
     with urllib.request.urlopen(request, timeout=30) as response:
         return json.load(response)['created_at']
 
@@ -408,6 +414,10 @@ def collect_analysis(run, result, base, args, output):
         write_atomic(evidence / 'messages.json', redact(json.dumps(messages, indent=2)) + '\n')
     except Exception as exc:
         write_atomic(evidence / 'export-error.txt', str(exc))
+    workspace = Path(result['directory'])
+    for name in ('readme.json', 'rejection.json'):
+        if (workspace / name).is_file():
+            write_atomic(evidence / ('candidate-' + name), redact((workspace / name).read_text()))
     try:
         if result['status'] != 'finished':
             raise ValueError(f"OpenCode {result['status']}")
@@ -423,7 +433,7 @@ def collect_analysis(run, result, base, args, output):
         slug = data.get('catalog_slug')
         if slug and not (catalog_path(slug) / 'readme.json').is_file():
             raise ValueError('Selected existing catalog slug does not exist')
-        data['repository_created_at'] = repository_created(data['repository_url'])
+        data['repository_created_at'] = None
         data['analysis'] = item['analysis']
         write_atomic(evidence / 'report.json', json.dumps(data, indent=2) + '\n')
         item.update(status='analyzed', output=str(report_destination(data).relative_to(ROOT)), title=data['title'])
@@ -484,7 +494,12 @@ def apply_results(artifact, outcomes):
         data = None
         destination = None
         if item['status'] == 'analyzed':
-            data = validate(json.loads((evidence / 'report.json').read_text()))
+            try:
+                data = validate(json.loads((evidence / 'report.json').read_text()))
+                data['repository_created_at'] = repository_created(data['repository_url'])
+            except Exception as exc:
+                item.update(status='failed', reason=f'Repository metadata or report validation failed: {exc}')
+        if item['status'] == 'analyzed':
             destination = existing_report(data)
             old_path = destination / 'readme.json'
             old = json.loads(old_path.read_text()) if old_path.exists() else None

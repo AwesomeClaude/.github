@@ -35,3 +35,11 @@ Serialize publication through atomic creation of `codex/catalog-publication-lock
 Start unauthenticated TryCloudflare sessions only for owner debug runs. Add temporary session URLs to the initial banner comment before analysis. Continue analysis when tunnel startup fails. Keep the same worker and tunnels alive through the 30-minute hold, stop the public tunnel afterward, and edit the comment to mark sessions expired. Treat forced cancellation as an exceptional lifecycle interruption; inspect Actions if an expiry update could not run.
 
 Show outcome, report, overall and graphics scores, verified play/source links, documented creation models, and repository creation date with elapsed hours/days in each game comment. Show score transitions and the previous report link for updates. Keep analysis provenance in the committed log rather than confusing it with creation models.
+
+## Recover metadata and model-field failures
+
+Fetch authenticated GitHub repository metadata during publication, not in the unauthenticated analysis process. Keep the workflow token out of OpenCode's environment. Normalize creation-model `url` evidence to `evidence_url`; specify the exact object shape in the prompt. Commit raw candidate reports alongside diagnostic logs even when validation fails.
+
+Inspect [issue #16](https://github.com/agents-dev/Astra-Top-Games/issues/16), [merged PR #17](https://github.com/agents-dev/Astra-Top-Games/pull/17), and [its result](https://github.com/agents-dev/Astra-Top-Games/issues/16#issuecomment-5852336200) for a real alternative-URL refresh of 2048 and addition of T-Rex Runner. Verify original inclusion time, previous report link, labeled link union, and conversation exports. Observe 85- and 143-second analyses with public unauthenticated sessions and retained SSH hold.
+
+Inspect [five-game issue #18](https://github.com/agents-dev/Astra-Top-Games/issues/18) and [partial PR #19](https://github.com/agents-dev/Astra-Top-Games/pull/19) for the regression evidence: UnityPuzzle emitted a valid evidence URL under `url`, while OSRS Tower Defense and Find Panda hit unauthenticated GitHub metadata rate limits. Retain these failed-attempt logs; reanalyze the five randomly selected games after deploying the recovery changes. Do not infer failure of game analysis from failure of metadata enrichment.
