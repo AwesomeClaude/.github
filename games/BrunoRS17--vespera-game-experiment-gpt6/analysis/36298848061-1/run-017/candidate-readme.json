@@ -1,0 +1,195 @@
+{
+  "catalog_slug": null,
+  "creation_models": [
+    {
+      "name": "GPT-6 Astra",
+      "evidence_url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    }
+  ],
+  "technologies": [
+    {
+      "name": "JavaScript",
+      "version": null,
+      "category": "language",
+      "evidence_url": "https://api.github.com/repos/BrunoRS17/vespera-game-experiment-gpt6/languages"
+    },
+    {
+      "name": "HTML",
+      "version": null,
+      "category": "language",
+      "evidence_url": "https://api.github.com/repos/BrunoRS17/vespera-game-experiment-gpt6/languages"
+    },
+    {
+      "name": "Canvas 2D",
+      "version": null,
+      "category": "rendering",
+      "evidence_url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/src/shell.html"
+    },
+    {
+      "name": "Web Audio",
+      "version": null,
+      "category": "audio",
+      "evidence_url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/src/core.js"
+    },
+    {
+      "name": "Node.js",
+      "version": null,
+      "category": "build",
+      "evidence_url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/scripts/build.cjs"
+    }
+  ],
+  "source_url": "https://github.com/BrunoRS17/vespera-game-experiment-gpt6",
+  "repository_url": "https://github.com/BrunoRS17/vespera-game-experiment-gpt6",
+  "title": "Véspera — O Último Sino",
+  "source_analysis": [
+    {
+      "finding": "Public repository BrunoRS17/vespera-game-experiment-gpt6 exists, default branch main, primary language HTML with JavaScript, created 2026-09-25, pushed 2026-09-26, 0 stars, 0 forks, no description, no homepage, no topics, Pages disabled.",
+      "url": "https://api.github.com/repos/BrunoRS17/vespera-game-experiment-gpt6"
+    },
+    {
+      "finding": "README defines Véspera as a pure GPT-6 Astra experiment: a 2D metroidvania prototype inspired by Blasphemous and Dark Souls atmosphere, explicitly not a finished game, with third-party assets credited separately.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "Author states the result was not 100%: many bugs and problems in movement, animations and especially scenery; level design, pacing, balancing and the overall experience need significant revision; passing automated tests do not mean a consistent finished game.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "Documented scope: two rebuilt areas with six districts each (21,600 and 22,800 units, 117 platforms, eight progression challenges), 89 distributed enemies plus 28 across four mandatory vigils in three groups each (dogs, summoner beasts, executioners, ghosts, flying skulls), plus village, garden, belfry, aqueduct, cloister, galleries and ossuary with optional reliquaries.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "Systems documented: NPC guidance and shops (Baltasar sword tempers, Iria armor), journal with current objective plus seal/vigil map and fast travel between lit altars, visible magnetized souls economy, sword/parry/special combat numbers, death persistence rules, autosave and local progress with Continue pilgrimage.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "Boss O Guardião documented: 700 HP, second phase at 50% with protected transformation, eight attack patterns across two phases, two elevated bells that interrupt attacks with 24s cooldown each, music accelerating from 132 to 172 BPM.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "Keyboard controls documented: move A/D or arrows, jump/double-jump Space, attack J, defend/parry K, Talho Consagrado L, interact E, journal M, pause Esc; dialogues use Tab/Enter and Esc closes dialogs.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "Gamepad supported: DualShock 4 / Xbox column maps move to left stick/d-pad, jump to X/A, attack to Square/X, parry to L1/LB, special to Triangle/Y, interact to Circle/B, journal to Share/View, pause to Options/Menu; a recognized controller with default mapping can be connected via USB/Bluetooth and a button press detects it.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "Touch controls supported: README states touch buttons exist on compatible devices, and input code wires on-screen data-key buttons via pointerdown/pointerup/pointercancel with setPointerCapture.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "Single-player only: the game is a solo pilgrimage with local per-browser saves and altars as checkpoints; no multiplayer, co-op, versus, or networked mode is documented anywhere in the README, file tree, or API metadata.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "No motion controls documented: no accelerometer or gyroscope mention in README, shell, input, or core sources inspected via API.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/src/shell.html"
+    },
+    {
+      "finding": "No publicly reachable playable URL established: repository homepage is null, Pages flag is false, the guessed Pages address returns 404, and README instructs opening local index.html in the browser instead of giving a hosted build, demo, or store link.",
+      "url": "https://api.github.com/repos/BrunoRS17/vespera-game-experiment-gpt6"
+    },
+    {
+      "finding": "Build is a dependency-free standalone bundle: editable code lives in src/ (core.js, adventure.js, input.js, shell.html), index.html is generated by node scripts/build.cjs with sprites embedded from assets/manifest.json; tests run with node tests/game.test.cjs.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/scripts/build.cjs"
+    },
+    {
+      "finding": "Art is third-party CC0: Gothicvania Patreon's Collection by Ansimuz/Luis Zuno (hero, hell hound/beast, ghost, fire skull, flying demon boss, castle and night-town layers) plus a preserved-but-unused DevWizard knight pack; audio is locally synthesized with no Blasphemous or Dark Souls recordings.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/ASSETS-E-CREDITOS.md"
+    },
+    {
+      "finding": "Only two commits exist (playable prototype, then expanded campaign plus GPT-6 Astra experiment documentation); rendering uses a 1920x1080 canvas element and Web Audio (AudioContext) with localStorage-style local saves described in the README.",
+      "url": "https://api.github.com/repos/BrunoRS17/vespera-game-experiment-gpt6/commits?per_page=5"
+    },
+    {
+      "finding": "No runtime gameplay screenshots found in the repository: README contains no embedded images, and assets/sprites previews inspected are third-party pack strips (night town, castle interior, gothic horror) without HUD, hero, enemies, or Véspera runtime UI, so they were excluded as curated reference art rather than the game's own output.",
+      "url": "https://raw.githubusercontent.com/BrunoRS17/vespera-game-experiment-gpt6/main/README.md"
+    },
+    {
+      "finding": "No existing catalog game matches this repository, playable URL, or explicit project reference; the catalog index and sampled entries (THORNMERE retro RPG, HEX DANMAKU tactics, The Nine Lives of Ash) describe different projects, so catalog_slug is null and title similarity alone was not used.",
+      "url": "https://github.com/BrunoRS17/vespera-game-experiment-gpt6"
+    }
+  ],
+  "screenshots": [],
+  "screenshot_based_score": null,
+  "reconstructed_prompt": "Build Véspera — O Último Sino, a Blasphemous/Dark-Souls-inspired 2D metroidvania prototype in dependency-free HTML/JS Canvas with locally synthesized Web Audio: two areas of six districts each with 117 platforms, 8 progression gates, 89 field enemies plus 28 across four 3-group vigils, NPC shops, soul economy with sword/armor upgrades, parry and special attacks, bell/mirror/relic/clock/flame puzzles, diary with map and altar fast travel, local saves, an 8-pattern two-phase Guardian boss with counter-bells, keyboard plus DualShock/Xbox gamepad plus on-screen touch buttons, CC0 Gothicvania art embedded by a Node build script, and Node logic tests; document it honestly as a buggy GPT-6 Astra experiment, not a finished game.",
+  "controls": {
+    "mobile_controls": "supported",
+    "motion_controls": "unknown",
+    "gamepad": "supported",
+    "keyboard_mouse": "supported"
+  },
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": null,
+  "how_to_play": [
+    "Clone or download the repository and open index.html in a desktop browser (no hosted build exists; art, music and effects work offline).",
+    "Click Iniciar on the title screen; click once to unlock audio if the browser requires interaction.",
+    "Move with A/D or arrow keys, jump with Space (double jump after obtaining the Eco), attack with J, defend/parry with K, Talho Consagrado with L, interact with E, journal/map/altars with M, pause with Esc; on DualShock 4/Xbox use stick/d-pad, X/A, Square/X, L1/LB, Triangle/Y, Circle/B, Share/View, Options/Menu.",
+    "On compatible touch devices use the on-screen touch buttons; connect a gamepad by USB/Bluetooth and press any button to detect it.",
+    "Collect souls, spend them with Baltasar (sword) and Iria (armor), rest at altars to restore resources and set the return point; progress saves automatically and offers Continuar peregrinação on reopen in the same browser.",
+    "Mosteiro route: ring bells II → I → III, earn the three chapel vows, push the reliquary onto the plate, defeat the three executioners and break their seals, and complete the two journal vigils to pass the final door.",
+    "Cripta route: align mirrors LUA → SOL → ESTRELA, claim the Eco double jump, collect two fragments, pull the lever and touch the clock seal within 18 seconds, light flames III → II → I, and complete both vigils to reach the Sanctuary.",
+    "Against O Guardião, climb to avoid the ember tide, leave marked platforms during profanation, and ring the two elevated bells to interrupt attacks (24s cooldown each)."
+  ],
+  "mechanics": [
+    "2D metroidvania platforming across two six-district areas with 117 platforms and elevated/optional routes",
+    "Melee sword combat with startup/contact/recovery frames and one hit per enemy per swing, plus aerial attack",
+    "Parry window (0.18s) with riposte buff, stamina-based block, red unblockable attacks, projectile reflection",
+    "Talho Consagrado ground special with fervor cost and cooldown",
+    "Double jump gated behind the Eco relic",
+    "Souls economy with magnetized pickups, sword tempers and armor upgrades",
+    "Four three-group combat vigils and three-executioner seal encounters",
+    "Bell-ringing, mirror-alignment, reliquary-pushing, timed clock-seal, and flame-lighting puzzles",
+    "NPC guidance and shops, journal objective/map, altar checkpoints, healing, and fast travel",
+    "Two-phase Guardian boss with eight patterns, protected transformation, and counter-bell mechanics",
+    "Death persistence for souls/items/upgrades/seals with vigil-group resets",
+    "Local autosave and Continue pilgrimage in the same browser",
+    "Locally synthesized music and effects with settings for fullscreen, volumes, and controls"
+  ],
+  "tags": [
+    "metroidvania",
+    "2d-platformer",
+    "action",
+    "gothic-horror",
+    "souls-like",
+    "single-player",
+    "browser-game",
+    "pixel-art",
+    "boss-fight",
+    "ai-experiment"
+  ],
+  "rating": {
+    "score": 44,
+    "reason": "Far from AAA: admitted prototype with movement/animation/scenery bugs, unvalidated pacing and balance, no voice, cinematics, multiplayer, or hosted/telemetry evidence; judged from API metadata plus raw README, credits, manifest, shell, input, and build sources only, with no live playthrough, so playability, performance, and balance are unverified and code/tests prove nothing about feel. Most relevant comparators: The Nine Lives of Ash (47, similarly deep systems-rich local-only build with no public playable URL but two inspected runtime frames), THORNMERE (46, full zero-dependency retro RPG with a verified hosted build and 60 screenshot score), HEX DANMAKU (48, complete tactics loop with inspected gameplay frames and 60 screenshot score), and neverquest (45, deep systems with flat text UI). Véspera matches or exceeds them on paper scope (two areas, 117 platforms, 117 enemies, vigils, puzzles, shops, diary/map/fast travel, 8-pattern two-phase boss, keyboard+gamepad+touch, synth audio) but sits below all three 46-48 titles because it has zero inspectable runtime gameplay frames, no verified playable URL, and the author's own critical assessment of bugs and unfinished level design/pacing. It stays above Taipo (35, complete single-map loop), TypeScript-Blackjack (28, single-table card game), Beachy Beachy Ball (25, single mechanic), and curiositY (18, static pages) on gameplay depth and systems breadth."
+  },
+  "fictional_reviews": [
+    {
+      "rating": 78,
+      "text": "[Fictional review] Imagined metroidvania fan: the bell order, mirror alignment, and reliquary push feel like a real campaign, and parrying a projectile back at a flying skull never gets old — I just wish the jumps and scenery behaved as well as the systems read."
+    },
+    {
+      "rating": 55,
+      "text": "[Fictional review] Made-up casual player note: strong pilgrimage mood and a generous journal, but the honest README warning proved accurate — movement quirks, animation pops, and no hosted build make this one to study rather than speedrun."
+    },
+    {
+      "rating": 95,
+      "text": "[Fictional review] Invented dev-fan take: as a labeled GPT-6 Astra experiment with embedded CC0 art, a real Node bundle pipeline, and critical self-review instead of hype, this is exactly the kind of transparent AI prototype the catalog should keep."
+    }
+  ],
+  "links": [
+    {
+      "label": "Original submission",
+      "url": "https://github.com/BrunoRS17/vespera-game-experiment-gpt6"
+    },
+    {
+      "label": "Source repository",
+      "url": "https://github.com/BrunoRS17/vespera-game-experiment-gpt6"
+    }
+  ]
+}

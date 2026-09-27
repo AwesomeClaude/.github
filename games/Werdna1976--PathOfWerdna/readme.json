@@ -1,0 +1,152 @@
+{
+  "catalog_slug": "Werdna1976--PathOfWerdna",
+  "creation_models": [],
+  "technologies": [
+    {
+      "name": "Godot",
+      "version": "4.7.2",
+      "category": "engine",
+      "evidence_url": "https://github.com/Werdna1976/PathOfWerdna"
+    },
+    {
+      "name": "GDScript",
+      "version": null,
+      "category": "language",
+      "evidence_url": "https://github.com/Werdna1976/PathOfWerdna/tree/main/tests"
+    },
+    {
+      "name": "Jolt Physics",
+      "version": null,
+      "category": "physics",
+      "evidence_url": "https://raw.githubusercontent.com/Werdna1976/PathOfWerdna/main/project.godot"
+    },
+    {
+      "name": "Forward Plus",
+      "version": null,
+      "category": "rendering",
+      "evidence_url": "https://raw.githubusercontent.com/Werdna1976/PathOfWerdna/main/project.godot"
+    }
+  ],
+  "source_url": "https://github.com/Werdna1976/PathOfWerdna",
+  "repository_url": "https://github.com/Werdna1976/PathOfWerdna",
+  "title": "Path of Werdna",
+  "source_analysis": [
+    {
+      "finding": "Repository is a public Godot 4.7.2 isometric action RPG in the spirit of Path of Exile; README documents milestones Walk, Fight, Gems/potions, Items/drops, Inventory/equipment, Sockets/gems, Crafting, and Town/vendors/zones with test arena, Werdna's Camp town and Goblin Shore zone.",
+      "url": "https://github.com/Werdna1976/PathOfWerdna"
+    },
+    {
+      "finding": "Design doc confirms Godot 4.7.2 3D placeholder-shapes approach, dark torch/fog tone, 10 gear slots, item-level/affix-tier loot model, 3 active and 5 support gems, charms, vendors, and deferred XP/levels/skill-tree/content milestones.",
+      "url": "https://raw.githubusercontent.com/Werdna1976/PathOfWerdna/main/DESIGN.md"
+    },
+    {
+      "finding": "project.godot sets main scene to scenes/main.tscn, features Godot 4.7 with Forward Plus, Jolt Physics, physics interpolation, 1920x1080 viewport, perspective-friendly nav/physics layers (world/player/enemy/player_attack/enemy_attack/npc), and mouse/keyboard input actions (move, attack, skill_1-5, potion_1-5, inventory, character, passives, show_labels, menu).",
+      "url": "https://raw.githubusercontent.com/Werdna1976/PathOfWerdna/main/project.godot"
+    },
+    {
+      "finding": "Controls table documents working left-click move, right-click Heavy Strike skill, QWERT skill slots, 1/2 potions, I inventory, C character sheet, orb crafting, Alt affix tiers, ground-label pickup, Esc panels; P passive tree bound with no behavior yet.",
+      "url": "https://github.com/Werdna1976/PathOfWerdna"
+    },
+    {
+      "finding": "Combat/loot scope: Heavy Strike/Cleave/Leap Slam plus 5 supports, goblins with 40 life and 4-7 damage, 50 item bases, 40 affixes, rarity weights, 8 orb types, PoE-style 12x5 inventory, 10-slot equipment, block/evasion/armour/resist/energy-shield defenses, and two vendors (Greta gear, Ilsa gems) with shard economy.",
+      "url": "https://github.com/Werdna1976/PathOfWerdna"
+    },
+    {
+      "finding": "Run instructions require importing project.godot into Godot 4.7.2 and pressing F5; no web export, release, homepage, or playable browser URL is documented, and About lists no description, website, or topics.",
+      "url": "https://github.com/Werdna1976/PathOfWerdna"
+    },
+    {
+      "finding": "assets/ contains only .gitkeep (placeholders per docs); tests/ lists headless GDScript suites (walk, fight, skills, loot, equipment, gems, crafting, town) plus capture_screenshot.gd and screenshot_m1.png, confirming GDScript source and a single checked-in gameplay capture.",
+      "url": "https://github.com/Werdna1976/PathOfWerdna/tree/main/tests"
+    },
+    {
+      "finding": "No catalog directory matches this repository; local games/ listing has no Werdna or Path-named entry, so this is a new catalog candidate.",
+      "url": "https://github.com/Werdna1976/PathOfWerdna"
+    }
+  ],
+  "screenshots": [
+    {
+      "url": "https://raw.githubusercontent.com/Werdna1976/PathOfWerdna/main/tests/screenshot_m1.png",
+      "observation": "Inspected 1600x900 runtime frame: dark isometric stone floor with mottled texture, capsule hero with red facing marker centered, two torch pillars casting warm orange pools and long shadows, primitive box/crate and wall blocks; no HUD, enemies, items, or UI visible; the game's own output per capture_screenshot flow, explicitly placeholder meshes."
+    }
+  ],
+  "screenshot_based_score": {
+    "score": 30,
+    "reason": "Single inspected gameplay frame shows coherent dark fog/torch lighting with shadows and readable hero marker, but only primitive placeholder boxes, pillars, and floor with no HUD, enemies, items, or composed scene. At the catalog floor with neverquest (30, tidy but flat text UI) and T-Rex Runner (30, near-blank runner frame), well below THORNMERE (60, textured portrait/dungeon/town UI), OSRS Tower Defense (65, dense boss-wave board), and Kart Royale/Turbo Kart/Neural Sight (70s, detailed 3D worlds). Judged from still only; no motion or feel inferred."
+  },
+  "reconstructed_prompt": "Build a dark isometric Path-of-Exile-like action RPG in Godot 4.7 with click-to-move, right-click melee skills, QWERT skill bar, potions, PoE-style grid inventory and 10-slot equipment, socketed active/support gems, JSON item bases and affixes with rarity tiers, 8 crafting orbs, goblin enemies, a safe vendor town and combat shore zone, torch/fog lighting, and headless milestone tests.",
+  "controls": {
+    "mobile_controls": "unknown",
+    "motion_controls": "unknown",
+    "gamepad": "unknown",
+    "keyboard_mouse": "supported"
+  },
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": null,
+  "how_to_play": [
+    "Import project.godot into Godot 4.7.2 and press F5; there is no verified browser playable build.",
+    "Hold left click to move to the cursor, click ground labels to pick up loot, click vendors to trade.",
+    "Hold right click to attack with the RMB skill; use Q W E R T for socketed skills and 1/2 for health/mana potions.",
+    "Press I for PoE-style inventory and equipment, C for character sheet, Alt in tooltips for affix tiers.",
+    "Right-click an orb then left-click an item to craft (Shift keeps the orb); travel via zone doorways between camp and shore."
+  ],
+  "mechanics": [
+    "Click-to-move isometric navigation with fixed 55-degree pitch camera",
+    "Melee active skills Heavy Strike, Cleave, and Leap Slam with mana and cooldowns",
+    "Socketed active plus support gems (Added Fire, Melee Splash, Faster Attacks, Life Leech, Brutality) with Default Attack fallback",
+    "PoE-style loot with 50 bases, 40 tiered affixes, rarity weights, item levels, sockets, and rare names",
+    "Eight crafting orbs including Transmutation, Augmentation, Alteration, Regal, Chaos, Ascension, Scouring, and Jeweller's",
+    "10-slot equipment, attributes, block/evasion/armour/resists/energy-shield, potions with kill charges",
+    "Vendor town with gear and gem shops, shard economy, and zone travel between safe camp and goblin shore"
+  ],
+  "tags": [
+    "action-rpg",
+    "isometric",
+    "dungeon-crawler",
+    "loot",
+    "crafting",
+    "single-player",
+    "godot",
+    "3d",
+    "prototype"
+  ],
+  "rating": {
+    "score": 42,
+    "reason": "Far from AAA: placeholder capsule/box art, no audio evidence, one goblin enemy type, three zones (test arena plus camp plus shore), and no verified playable web build (Godot import only), with XP/levels/skill-tree/content deferred. Systems documentation is unusually deep for a prototype (50 bases, 40 affixes, 8 orbs, gem supports, defenses, vendors, 8 headless test suites). Most relevant comparators: neverquest (45, deeper progression and playable web but text-only) and THORNMERE (46, narrower retro RPG with stronger visual/UI polish) sit above; Wilderness (44, ambitious unplayable 3D survival) sits just above on proven breadth; level with SpaceHo2/Zoo Keeper (42) and above Turbo Kart Rally/Ballz (40, complete but shallow arcade loops) and 2048/scumm-game (38) on ARPG systems ambition despite weaker visual/playability proof. Evidence gaps: no live playthrough; playability, performance, balance, and late-game depth unverified from docs and one still."
+  },
+  "fictional_reviews": [
+    {
+      "rating": 78,
+      "text": "The item bible alone hooked me: tiered affixes, tags, orb upgrades that keep your mods. I theory-crafted a mace stunner for an hour from text files."
+    },
+    {
+      "rating": 55,
+      "text": "Cleave feels fine and vendors work, but it is still capsule-man versus goblin in a dark box. I want a real dungeon before I commit."
+    },
+    {
+      "rating": 95,
+      "text": "Leap Slam across the shore, splash-cleave the pack, vendor the rares for orbs, repeat. The loop already whispers Path of Exile."
+    }
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/Werdna1976/PathOfWerdna"
+    }
+  ],
+  "repository_created_at": "2026-09-26T16:29:28Z",
+  "analysis": {
+    "analyzed_at": "2026-09-27T06:13:09.351979+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36298848061/job/108562614077",
+    "session_id": "ses_f1e8b89f8ffeJTHYwrSDpHn8dU",
+    "prompt_sha256": "4902a8e8563a1d1938645f27a59e3c929ffabc9b50f171d863f172623455cb67"
+  },
+  "catalog_added_at": "2026-09-27T06:13:09.351979+00:00",
+  "catalog_updated_at": "2026-09-27T06:13:09.351979+00:00"
+}

@@ -1,0 +1,164 @@
+{
+  "catalog_slug": null,
+  "controls": {
+    "gamepad": "unknown",
+    "keyboard_mouse": "supported",
+    "mobile_controls": "supported",
+    "motion_controls": "unknown"
+  },
+  "creation_models": [],
+  "fictional_reviews": [
+    {
+      "rating": 85,
+      "text": "My crabs do tiny wave dances during fever and the tap-melody climbs with every click. I came for the clicker and stayed to collect all thirteen species."
+    },
+    {
+      "rating": 62,
+      "text": "Cozy and generous with hats, expeditions and daily wishes, but most of the day it plays itself. Best in short happy bursts."
+    },
+    {
+      "rating": 100,
+      "text": "The golden lucky crab sprinted past and my whole living room glowed gold. A perfect little crab diorama that sings back."
+    }
+  ],
+  "how_to_play": [
+    "Open https://kamibukuro18.github.io/opuscrabhouse/ in a browser and press Go To House (sound on for chiptune music).",
+    "Tap anywhere in the room to earn KP with scissor power; chain taps for combo bonus up to 1.5x and fill the fever gauge.",
+    "When the gauge fills, fever starts: taps pay 3x for 10 seconds with music change, confetti and dancing crabs; tap 60 times for super fever at 5x.",
+    "Spend KP at the door to invite new crabs, in training on 9 uncapped upgrades, and on food to level crabs for per-minute income.",
+    "Send crabs on expeditions (5 min to 8 h, offline progress), collect hats that boost income, catch the golden lucky crab, and finish 3 daily wishes.",
+    "Rearrange furniture, expand the house through 5 stages, toggle the wall light switch, change chiptune tracks, and prestige via molting for permanent +10% per pearl."
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/kamibukuro18/opuscrabhouse"
+    },
+    {
+      "label": "Play the game",
+      "url": "https://kamibukuro18.github.io/opuscrabhouse/"
+    }
+  ],
+  "mechanics": [
+    "Tap-anywhere clicker with combo multiplier and 10-second fever meter with super-fever extension",
+    "9 uncapped training upgrades including auto-tapper, savings, combo mastery and expedition maps",
+    "Crab raising: 13 illustrated species, per-crab levels, growth stages, per-minute KP income and rarity multipliers",
+    "4 real-time expeditions with offline progress, KP souvenirs and 9 income-boosting hats",
+    "Golden lucky crab random event with KP, buff, instant-fever, hat or pearl rewards",
+    "3 daily wishes with streak bonus, 29 achievements, prestige molting for permanent multipliers, furniture, 5 house expansions and localStorage saves"
+  ],
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": "https://kamibukuro18.github.io/opuscrabhouse/",
+  "rating": {
+    "reason": "Far from AAA: single 192x144 canvas room, no 3D, voice, cinematics or multiplayer; one small static-file browser build. Most relevant comparators: neverquest (45, deeper RPG systems but text-UI only), Pizza Chef (44, similarly broad arcade plus economy scope with unverified visuals), Zoo Keeper (42, broader paper simulation scope but no playable build or screenshots) and 2048 (38, tight minimal loop). Crabhouse v2 sits just below neverquest on mechanical depth but above Zoo Keeper and 2048 because it has a verified live playable build, a complete idle loop with expeditions, dailies, achievements and prestige, plus fully procedural pixel art and 6-track chiptune. Evidence gaps: no inspectable gameplay screenshot; no live playthrough, so playability, pacing, balance and performance are unverified from docs and code excerpts alone.",
+    "score": 43
+  },
+  "reconstructed_prompt": "Create a cozy Japanese browser idle game called Crabhouse v2: a pixel-art crab-raising clicker in one room. Tap anywhere for KP with combos and a fever mode, 9 uncapped upgrades, 13 crab species with levels and hats, real-time expeditions with offline progress, daily wishes, achievements, prestige, furniture and house expansions, procedural canvas pixel art and Web Audio chiptune with no external assets, and localStorage saves.",
+  "repository_url": "https://github.com/kamibukuro18/opuscrabhouse",
+  "screenshot_based_score": null,
+  "screenshots": [],
+  "source_analysis": [
+    {
+      "finding": "Repository page exists as kamibukuro18/opuscrabhouse titled Crabhouse v2 with 1 commit, 0 stars/forks, and files .gitignore, .nojekyll, README.md, game.js, index.html, style.css; no image assets listed.",
+      "url": "https://github.com/kamibukuro18/opuscrabhouse"
+    },
+    {
+      "finding": "README describes a browser crab-raising clicker: tap room for KP, combos to 1.5x, 10s fever at 3x with dedicated BGM, 9 uncapped upgrades, crab levels with per-minute KP, 4 expeditions (5 min/30 min/2 h/8 h) with offline progress, 9 hats, golden lucky crab, 3 daily wishes, prestige pearls, 13-species encyclopedia, 11 furniture items, 5 house stages, 5 chiptune tracks, 29 achievements and localStorage saves. All pixel art and music are code-generated with no image or audio files.",
+      "url": "https://github.com/kamibukuro18/opuscrabhouse"
+    },
+    {
+      "finding": "README gives the playable browser URL and local-run instructions (python3 -m http.server).",
+      "url": "https://github.com/kamibukuro18/opuscrabhouse"
+    },
+    {
+      "finding": "Playable page opens the actual game, not just a repo: title Crabhouse with Go To House start button, KP header, 192x144 room canvas, fever gauge, dialog box and menu buttons for door, crabs, training, expedition, wishes, redecorating, encyclopedia and music.",
+      "url": "https://kamibukuro18.github.io/opuscrabhouse/"
+    },
+    {
+      "finding": "index.html shows a mobile-ready shell: viewport-fit meta, 192x144 room canvas plus title canvas, menu buttons, and script tag loading game.js.",
+      "url": "https://raw.githubusercontent.com/kamibukuro18/opuscrabhouse/main/index.html"
+    },
+    {
+      "finding": "game.js header states all pixel art and chiptune are procedural with no external assets; code excerpts show canvas 2D rendering (getContext('2d')), Web Audio chiptune (AudioContext, oscillators, track/lead/bass scheduler) and localStorage save key crabhouse-v2. No engine, multiplayer, gamepad or motion-control code was found in the inspected excerpts.",
+      "url": "https://raw.githubusercontent.com/kamibukuro18/opuscrabhouse/main/game.js"
+    },
+    {
+      "finding": "Keyboard/mouse support: canvas uses pointerdown plus click handlers for dialog, modal, menu and start button, so mouse clicks drive taps and UI.",
+      "url": "https://raw.githubusercontent.com/kamibukuro18/opuscrabhouse/main/game.js"
+    },
+    {
+      "finding": "Touch support: core verb is tap (README: tap anywhere for KP, tap speech bubbles and lucky crab), canvas input uses Pointer Events which unify mouse/touch, and the page sets a mobile viewport with touch-action manipulation CSS.",
+      "url": "https://raw.githubusercontent.com/kamibukuro18/opuscrabhouse/main/index.html"
+    },
+    {
+      "finding": "Single-player with one human: single-room idle game with one localStorage save and no multiplayer, lobby, versus or network-play systems in the README or inspected code.",
+      "url": "https://github.com/kamibukuro18/opuscrabhouse"
+    },
+    {
+      "finding": "gh api could not be used: gh CLI has no login in this runner and unauthenticated api.github.com calls were rate-limited, so evidence was gathered by inspecting the repository page, raw files and live playable page instead.",
+      "url": "https://github.com/kamibukuro18/opuscrabhouse"
+    },
+    {
+      "finding": "No gameplay screenshot could be inspected: the repo contains no image files and no screenshot was reachable, so graphics scoring is null and no motion or feel is inferred.",
+      "url": "https://github.com/kamibukuro18/opuscrabhouse"
+    }
+  ],
+  "source_url": "https://github.com/kamibukuro18/opuscrabhouse",
+  "tags": [
+    "clicker",
+    "idle",
+    "pet-raising",
+    "simulation",
+    "management",
+    "pixel-art",
+    "cozy",
+    "single-player",
+    "browser"
+  ],
+  "technologies": [
+    {
+      "category": "language",
+      "evidence_url": "https://raw.githubusercontent.com/kamibukuro18/opuscrabhouse/main/game.js",
+      "name": "JavaScript",
+      "version": null
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://raw.githubusercontent.com/kamibukuro18/opuscrabhouse/main/index.html",
+      "name": "HTML5",
+      "version": null
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://raw.githubusercontent.com/kamibukuro18/opuscrabhouse/main/style.css",
+      "name": "CSS",
+      "version": null
+    },
+    {
+      "category": "rendering",
+      "evidence_url": "https://raw.githubusercontent.com/kamibukuro18/opuscrabhouse/main/game.js",
+      "name": "Canvas 2D",
+      "version": null
+    },
+    {
+      "category": "audio",
+      "evidence_url": "https://raw.githubusercontent.com/kamibukuro18/opuscrabhouse/main/game.js",
+      "name": "Web Audio API",
+      "version": null
+    }
+  ],
+  "title": "Crabhouse v2",
+  "repository_created_at": null,
+  "analysis": {
+    "analyzed_at": "2026-09-27T06:08:40.618461+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36298848061/job/108562614077",
+    "session_id": "ses_f1e8b8b39ffeQADTYunHA9PZJY",
+    "prompt_sha256": "bc1352633e269179646f61f9078790d806dcdcd5d30bf396bf594b7db46e673f"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "run": "run-027",
+  "directory": "/home/runner/work/Astra-Top-Games/Astra-Top-Games/work/game-batches/36298848061-1/run-027",
+  "status": "finished",
+  "session_id": "ses_f1e8b8703ffew1ZZchZafVqpM8",
+  "live_url": "https://trainer-nail-poem-scored.trycloudflare.com/L2hvbWUvcnVubmVyL3dvcmsvQXN0cmEtVG9wLUdhbWVzL0FzdHJhLVRvcC1HYW1lcy93b3JrL2dhbWUtYmF0Y2hlcy8zNjI5ODg0ODA2MS0xL3J1bi0wMjc/session/ses_f1e8b8703ffew1ZZchZafVqpM8",
+  "prompt_sha256": "59f61c66a02b715cf8ae1d9a89cf168541c853f643fac3512e223c407ddfd06e",
+  "cli_pid": 14012,
+  "exit_code": 0,
+  "elapsed_seconds": 112.8
+}

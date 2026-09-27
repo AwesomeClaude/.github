@@ -1,0 +1,153 @@
+{
+  "catalog_slug": null,
+  "controls": {
+    "gamepad": "supported",
+    "keyboard_mouse": "supported",
+    "mobile_controls": "supported",
+    "motion_controls": "unknown"
+  },
+  "creation_models": [
+    {
+      "evidence_url": "https://github.com/TetrisSQC/carveline/blob/main/README.md",
+      "name": "Claude Opus"
+    }
+  ],
+  "how_to_play": [
+    "Serve the folder over HTTP (for example `python -m http.server 8000`) and open it in a browser; `file://` does not work because of ES modules.",
+    "Pick one of three courses (Classic 3.2 km, Waldpfad 2.6 km, Nordwand 2.8 km), then ride the countdown-to-finish downhill run and beat the per-course best time.",
+    "Steer with A/D or arrows (left stick / side-stick on touch), crouch with W/Up, brake with S/Down, Ollie by holding and releasing Space, grab/flip/spin in the air, switch camera with C, pause with P/Esc."
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/TetrisSQC/carveline"
+    }
+  ],
+  "mechanics": [
+    "Edge/grip/sidecut snowboard physics with carving, skidding, braking, Ollie charging, and push-to-start at very low speed",
+    "Aerial tricks: spins, front/backflips, Indy grab with combo scoring plus an in-air landing aid",
+    "Three courses with distinct width/grade/character, slalom gates with bonus/penalty time, collectible stars, and per-course best time",
+    "AI rivals Mia and Tom on the same physics with nameplates, live/finish placement, and graded collisions; transparent ghost of personal best",
+    "NPC skiers with near-miss scoring and slow motion; chairlifts, huts, hamlet with church, valley town, safety nets, day/night and snow/fog weather",
+    "Procedural comic look: cel-shading, outline pass, bloom, color grading, three graphics presets with auto step-down; dynamic Web Audio music with crash/overtake/finish stingers"
+  ],
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": null,
+  "rating": {
+    "reason": "Compared against the full catalog excluding the target: moorestech (64, broadest verified systems plus dense inspected 3D HUDs), Ashlands (55, current non-self top on systems scope), Kart Royale (50, complete polished single-track 3D racer with AI/HUD), and Turbo Kart Rally (40, complete single-circuit indie kart loop). CARVE LINE documents broader racing scope than both kart games (three 2.6-3.2 km courses, edge/grip carve model, tricks/combos/landing aid, 2 AI rivals plus ghost, gates/stars, skier traffic, resort/weather/day-night, character customization, dynamic music, PWA offline) with a credible single-file three.js plus Pascal-port architecture. Capped at mid-50s well below AAA because no gameplay screenshot or public playable build could be inspected (0 stars, 5 commits, created 26 Sep 2026, no homepage, no GitHub Pages), so visual polish, performance, balance, and the full race loop remain unverified from stills/source claims alone.",
+    "score": 53
+  },
+  "reconstructed_prompt": "Build a browser downhill snowboard game called CARVE LINE in comic cel-shaded style as a single index.html (no build step) using three.js via import map plus Web Audio dynamic music; include carve/grip sidecut physics, Ollie, spins/flips/grabs with combos and landing aid, 3 courses, AI rivals plus best-time ghost, slalom gates, stars, skier traffic with near-miss slow-mo, ski-resort world with lifts/villages, day/weather options, rider customization, keyboard/gamepad/touch controls, HUD/menus/pause/best times, and installable PWA offline support.",
+  "screenshots": [],
+  "screenshot_based_score": null,
+  "source_analysis": [
+    {
+      "finding": "Repository TetrisSQC/carveline is public, not a fork, described as 'A downhill snowboard game'; default branch main; no homepage URL configured.",
+      "url": "https://github.com/TetrisSQC/carveline"
+    },
+    {
+      "finding": "Repo file list is index.html, downhill-music.js, PROMPT.md, README.md, manifest.webmanifest, sw.js, icons/, qtx/; recursive tree contains only app icons (192/512/maskable, apple-touch-icon, html5.png) and no gameplay screenshots.",
+      "url": "https://github.com/TetrisSQC/carveline"
+    },
+    {
+      "finding": "README documents the full game: comic-look browser snowboard downhill, single HTML file, procedural characters/trees/houses/terrain/textures/sound, installable PWA playable offline on desktop and phone.",
+      "url": "https://github.com/TetrisSQC/carveline/blob/main/README.md"
+    },
+    {
+      "finding": "README features list documents snowboard edge/grip/sidecut physics, spins/flips/Indy grab with combos and landing aid, 3 courses, AI rivals Mia and Tom on same physics, best-time ghost, slalom gates, stars, skiers with near-miss slow motion, lifts/huts/hamlet/valley town, noon/evening plus clear/snow/fog, rider color customization, dynamic music, cel-shading/outlines/bloom/grading with 3 presets.",
+      "url": "https://github.com/TetrisSQC/carveline/blob/main/README.md"
+    },
+    {
+      "finding": "README control table explicitly maps keyboard (A/D/arrows, W/S, Space, E/Shift, C, P/Esc), gamepad (left stick, RT/LT, A, X/RB, Y, Start), and touch (side stick, up/down stick, jump/grab/cam/pause buttons, virtual stick) plus responsive landscape phone layout.",
+      "url": "https://github.com/TetrisSQC/carveline/blob/main/README.md"
+    },
+    {
+      "finding": "README course table lists Classic 3.2 km, Waldpfad 2.6 km, Nordwand 2.8 km with widths, grades, and characters; start section requires a web server and first-run internet for three.js r0.186.1 via jsDelivr import map.",
+      "url": "https://github.com/TetrisSQC/carveline/blob/main/README.md"
+    },
+    {
+      "finding": "index.html import map pins three@0.186.1 module and three/addons paths and imports EffectComposer, RenderPass, UnrealBloomPass, SMAAPass, ShaderPass, OutputPass, and Sky addons.",
+      "url": "https://github.com/TetrisSQC/carveline/blob/main/index.html"
+    },
+    {
+      "finding": "GitHub Pages API returns 404 and repo metadata reports has_pages false with homepage null, so no verified hosted playable URL; README only documents local `python -m http.server` play plus PWA install/offline caching.",
+      "url": "https://github.com/TetrisSQC/carveline"
+    },
+    {
+      "finding": "Inspected 512px app icon shows a chibi snowboarder carving with red trail, pines, and mountains; it is promotional/app icon art, not an inspectable gameplay screenshot, so no screenshot-based graphics score is given.",
+      "url": "https://github.com/TetrisSQC/carveline/blob/main/icons/icon-512.png"
+    },
+    {
+      "finding": "README Entstehung section explicitly attributes the entire JS game (code, shaders, models, physics, AI, PWA, README) exclusively to Claude Opus via Claude Code; qtx/PORTING.md further documents the Pascal port by Claude Opus through Claude Code using Quartex Pascal IDE MCP.",
+      "url": "https://github.com/TetrisSQC/carveline/blob/main/README.md"
+    }
+  ],
+  "source_url": "https://github.com/TetrisSQC/carveline",
+  "tags": [
+    "snowboard",
+    "downhill",
+    "racing",
+    "sports",
+    "3d",
+    "procedural",
+    "comic",
+    "cel-shading",
+    "single-player",
+    "pwa"
+  ],
+  "technologies": [
+    {
+      "category": "rendering",
+      "evidence_url": "https://github.com/TetrisSQC/carveline/blob/main/index.html",
+      "name": "three.js",
+      "version": "0.186.1"
+    },
+    {
+      "category": "audio",
+      "evidence_url": "https://github.com/TetrisSQC/carveline/blob/main/downhill-music.js",
+      "name": "Web Audio API",
+      "version": null
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://github.com/TetrisSQC/carveline/blob/main/index.html",
+      "name": "JavaScript",
+      "version": null
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://github.com/TetrisSQC/carveline/blob/main/qtx/PORTING.md",
+      "name": "Quartex Pascal",
+      "version": null
+    }
+  ],
+  "title": "CARVE LINE \u2014 Snowboard Downhill",
+  "repository_url": "https://github.com/TetrisSQC/carveline",
+  "fictional_reviews": [
+    {
+      "rating": 85,
+      "text": "Fictional review: finally a browser carver with real edges \u2014 laying trenches down Classic at dusk while the ghost of my best run breathes down my neck is pure flow."
+    },
+    {
+      "rating": 62,
+      "text": "Fictional review: ambitious package with tricks, gates, and skiers everywhere, but without a demo to test the landings and frame pacing it reads better than it can prove."
+    },
+    {
+      "rating": 95,
+      "text": "Fictional review: three mountains, a living resort, and music that swells with every combo \u2014 the most complete arcade snowboard fantasy I have seen in a single HTML file."
+    }
+  ],
+  "repository_created_at": null,
+  "analysis": {
+    "analyzed_at": "2026-09-27T06:15:43.735066+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36298848061/job/108562614077",
+    "session_id": "ses_f1e8b89b2ffeUcyhsNebUBGw2A",
+    "prompt_sha256": "565dd8a0057b681a4d3c18900e944498d6a21b772e8de493889091ca0d134533"
+  }
+}
