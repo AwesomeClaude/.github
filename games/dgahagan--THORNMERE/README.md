@@ -110,7 +110,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/dgahagan/THORNMERE)
+- [Source repository](https://github.com/dgahagan/THORNMERE)
 - [Related link](https://dgahagan.github.io/THORNMERE/)
 - [Related link](https://github.com/dgahagan/THORNMERE/blob/main/README.md)
 - [Related link](https://github.com/dgahagan/THORNMERE/blob/main/docs/art-pipeline.md)

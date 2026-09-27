@@ -71,7 +71,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/PeterBlenessy/ashlands)
+- [Source repository](https://github.com/PeterBlenessy/ashlands)
 - [Related link](https://github.com/addable-labs/ashlands)
 - [Related link](https://github.com/addable-labs/ashlands/blob/main/README.md)
 - [Related link](https://github.com/addable-labs/ashlands/blob/main/EVALUATION.md)

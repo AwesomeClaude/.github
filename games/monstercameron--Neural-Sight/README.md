@@ -83,4 +83,4 @@ Treat these as illustrative, not real user reviews.
 - [Related link](https://monstercameron.github.io/Neural-Sight/experiment.html)
 - [Related link](https://github.com/monstercameron/Neural-Sight/blob/main/README.md)
 - [Related link](https://superspl.at/)
-- [Original submission](https://github.com/monstercameron/Neural-Sight)
+- [Source repository](https://github.com/monstercameron/Neural-Sight)

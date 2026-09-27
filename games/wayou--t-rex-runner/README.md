@@ -82,5 +82,5 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/wayou/t-rex-runner)
+- [Source repository](https://github.com/wayou/t-rex-runner)
 - [Play the game](https://wayou.github.io/t-rex-runner/)

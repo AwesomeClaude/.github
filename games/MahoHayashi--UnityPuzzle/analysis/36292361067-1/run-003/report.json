@@ -1,0 +1,122 @@
+{
+  "catalog_slug": null,
+  "controls": {
+    "gamepad": "unknown",
+    "keyboard_mouse": "supported",
+    "mobile_controls": "unknown",
+    "motion_controls": "unknown"
+  },
+  "creation_models": [
+    {
+      "evidence_url": "https://github.com/MahoHayashi/UnityPuzzle/commit/44dcdea5b61c678f968b78f4a09f1c995758ffe2",
+      "name": "Claude Opus 4.8"
+    }
+  ],
+  "fictional_reviews": [
+    {
+      "rating": 55,
+      "text": "Fictional take: a neat little Sokoban sketch \u2014 five tiny maps, chunky tiles, and arrow-key shuffling that feels like a first-week Unity exercise. Charming as a starting point."
+    },
+    {
+      "rating": 30,
+      "text": "Fictional take: I pushed around the test map for a minute and ran out of things to discover. No win fanfare, no push rules I could verify, placeholder art everywhere."
+    },
+    {
+      "rating": 70,
+      "text": "Fictional take: as a prototype it has bones \u2014 CSV levels, clean prefab-per-tile structure, directional sprites. Give it collision, goals, and a WebGL build and it could be a real coffee-break puzzler."
+    }
+  ],
+  "how_to_play": [
+    "No public playable build exists, so Unity Editor is required: clone https://github.com/MahoHayashi/UnityPuzzle and open it as a Unity project",
+    "Open Assets/Scenes/Main.unity and press Play",
+    "Move the player one tile per press with the Up, Down, Left, and Right arrow keys",
+    "Explore the five CSV maps under Assets/StageTexts (stage0.txt through stage4.txt); win, push, and goal rules are not documented or evidenced in the verified sources"
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/MahoHayashi/UnityPuzzle"
+    }
+  ],
+  "mechanics": [
+    "Arrow-key grid movement of a single player token (one tile per key press)",
+    "CSV text-defined stages loaded at runtime (five maps: stage0.txt through stage4.txt)",
+    "Prefab-per-tile stage construction (Wall, Ground, Block, BlockPoint, Goal, directional player sprites)",
+    "Tile-coordinate to screen-position mapping with centered grid layout",
+    "Single Main.unity scene bootstrapped by GameManager plus StageManager"
+  ],
+  "play_game_url": null,
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "rating": {
+    "reason": "Far from AAA production quality and below every cataloged game on available evidence. Kart Royale (50) and Turbo Kart Rally (40) are complete 3D racers with AI fields, HUDs, and stylized worlds; 2048 (38) and T-Rex Runner (35) are finished, instantly playable browser loops; even curiositY (18), the lowest-rated catalog entry, ships a complete 15-level riddle trail with a live site. UnityPuzzle is a single-commit Unity prototype with one scene, five small CSV maps, arrow-key teleport movement, and placeholder sprites (plain beige/brown squares, a Unity-cube block, keyboard-key player icons) \u2014 and no README, no playable WebGL/pages build, no releases, and no evidenced win, collision, or block-pushing rules in the inspected GameManager/StageManager sources. It earns points for a coherent Sokoban-like structure (tile types, 5 stages, directional sprites) but cannot be played without the Unity Editor, so scope, polish, and technical execution are all unverified beyond static project files. Evidence gaps: no gameplay video, screenshots, builds, or docs; source-file findings limited to API-served file content, which cannot prove playability, performance, or balance.",
+    "score": 15
+  },
+  "reconstructed_prompt": "Create a small Unity 2D Sokoban-style puzzle: a Main scene bootstrapped by GameManager, StageManager, and PlayerManager scripts; load 5 small CSV grid maps from text files (walls, ground, blocks, block-goals, player starts); instantiate one prefab per tile with plain 2D sprites including directional player keys; move the player one tile per arrow-key press.",
+  "repository_url": "https://github.com/MahoHayashi/UnityPuzzle",
+  "screenshot_based_score": null,
+  "screenshots": [],
+  "source_analysis": [
+    {
+      "finding": "Repository is MahoHayashi/UnityPuzzle: public, C#, single main branch, 1 commit, 0 stars, 0 forks, no description, no homepage, no topics, has_pages false",
+      "url": "https://api.github.com/repos/MahoHayashi/UnityPuzzle"
+    },
+    {
+      "finding": "Only commit is 'Initial commit: Unity puzzle game' dated 2026-07-10, co-authored by Claude Opus 4.8 <noreply@anthropic.com>",
+      "url": "https://github.com/MahoHayashi/UnityPuzzle/commit/44dcdea5b61c678f968b78f4a09f1c995758ffe2"
+    },
+    {
+      "finding": "Repo root has no README and only Assets, Packages, ProjectSettings plus .gitignore; it is a Unity project, not a web build",
+      "url": "https://api.github.com/repos/MahoHayashi/UnityPuzzle/contents/"
+    },
+    {
+      "finding": "GameManager.cs moves the player one tile per arrow-key press via Input.GetKeyDown(KeyCode.UpArrow/DownArrow/LeftArrow/RightArrow) with no touch, motion, or gamepad input evidenced",
+      "url": "https://github.com/MahoHayashi/UnityPuzzle/blob/main/Assets/GameManager.cs"
+    },
+    {
+      "finding": "StageManager.cs loads a CSV TextAsset into WALL/GROUND/BLOCK_POINT/BLOCK/PLAYER enums and instantiates one prefab per tile plus a ground layer; only PLAYER and BLOCK positions are tracked, with no win/collision logic evidenced",
+      "url": "https://github.com/MahoHayashi/UnityPuzzle/blob/main/Assets/StageManager.cs"
+    },
+    {
+      "finding": "PlayerManager.cs exposes only a Move(Vector3) transform setter with empty Start/Update; single-player token movement only, no multiplayer evidence",
+      "url": "https://github.com/MahoHayashi/UnityPuzzle/blob/main/Assets/PlayerManager.cs"
+    },
+    {
+      "finding": "Five stage maps stage0.txt through stage4.txt exist (each ~125 bytes, 7x9 CSV grids of tile ids 0-4); e.g. stage0 is a walled room with goal/block/player markers",
+      "url": "https://raw.githubusercontent.com/MahoHayashi/UnityPuzzle/main/Assets/StageTexts/stage0.txt"
+    },
+    {
+      "finding": "Single scene Assets/Scenes/Main.unity plus 9 tile prefabs (Block, BlockPoint, Goal, Ground, Wall, Up/Down/Left/RightImage)",
+      "url": "https://api.github.com/repos/MahoHayashi/UnityPuzzle/contents/Assets/Scenes?ref=main"
+    },
+    {
+      "finding": "Asset art is 9 tiny placeholder sprites (3-7 KB each, inspected locally): plain beige Wall and pale-green Ground squares, Unity-logo cube Block, multicolor Goal shard, honeycomb BlockPoint, yellow keyboard-key directional player icons; no composited gameplay screenshot exists in the repo",
+      "url": "https://github.com/MahoHayashi/UnityPuzzle/tree/main/Assets/Images"
+    },
+    {
+      "finding": "No releases, no GitHub Pages site, and null homepage: no publicly reachable playable URL is established",
+      "url": "https://api.github.com/repos/MahoHayashi/UnityPuzzle/releases"
+    }
+  ],
+  "source_url": "https://github.com/MahoHayashi/UnityPuzzle",
+  "tags": [
+    "puzzle",
+    "sokoban",
+    "grid",
+    "2d",
+    "unity"
+  ],
+  "title": "UnityPuzzle",
+  "repository_created_at": null,
+  "analysis": {
+    "analyzed_at": "2026-09-27T03:49:50.928883+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36292361067/job/108544759923",
+    "session_id": "ses_f1f0721c7ffeOzBL7oaUTybORn",
+    "prompt_sha256": "0356abb41665d2a70944e371b66aac5d8a09fce7e437e70fcd28828f10d8fd9e"
+  }
+}

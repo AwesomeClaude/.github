@@ -71,7 +71,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/PierreHoule/SpaceHo2)
+- [Source repository](https://github.com/PierreHoule/SpaceHo2)
 - [Related link](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/README.md)
 - [Related link](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/model.js)
 - [Related link](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/ai.js)

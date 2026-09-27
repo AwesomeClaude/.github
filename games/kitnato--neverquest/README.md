@@ -86,6 +86,6 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/kitnato/neverquest)
+- [Source repository](https://github.com/kitnato/neverquest)
 - [Related link](https://kitnato.github.io/neverquest/)
 - [Related link](https://github.com/kitnato/neverquest/blob/main/source/data/manual.md)

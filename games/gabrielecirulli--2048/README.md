@@ -86,7 +86,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/gabrielecirulli/2048)
+- [Source repository](https://github.com/gabrielecirulli/2048)
 - [Play game](https://gabrielecirulli.github.io/2048/)
 - [Related link](https://play2048.co)
 - [Play Store app](https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048)

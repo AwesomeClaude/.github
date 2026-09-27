@@ -86,7 +86,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/jaimec00/chess-game)
+- [Source repository](https://github.com/jaimec00/chess-game)
 - [Related link](https://github.com/jaimec00/chess-game/blob/master/README.md)
 - [Related link](https://github.com/jaimec00/chess-game/blob/master/src/engine/ai.js)
 - [Related link](https://github.com/jaimec00/chess-game/pull/34)

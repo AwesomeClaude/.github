@@ -82,7 +82,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/eddyacthergal/super-wouf-kart)
+- [Source repository](https://github.com/eddyacthergal/super-wouf-kart)
 - [Related link](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md)
 - [Related link](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/track/garden-layout.ts)
 - [Related link](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/breeds.ts)

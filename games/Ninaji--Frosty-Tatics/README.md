@@ -68,6 +68,6 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/Ninaji/Frosty-Tatics)
+- [Source repository](https://github.com/Ninaji/Frosty-Tatics)
 - [Related link](https://ninaji.github.io/Frosty-Tatics/)
 - [Related link](https://github.com/Ninaji/Frosty-Tatics/blob/main/README.md)

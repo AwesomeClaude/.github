@@ -1,0 +1,11 @@
+{
+  "run": "run-004",
+  "directory": "/home/runner/work/Astra-Top-Games/Astra-Top-Games/work/game-batches/36292361067-1/run-004",
+  "status": "finished",
+  "session_id": "ses_f1f072193ffeyaHVE2hBRTEg6j",
+  "live_url": "https://origin-buck-palace-governance.trycloudflare.com/L2hvbWUvcnVubmVyL3dvcmsvQXN0cmEtVG9wLUdhbWVzL0FzdHJhLVRvcC1HYW1lcy93b3JrL2dhbWUtYmF0Y2hlcy8zNjI5MjM2MTA2Ny0xL3J1bi0wMDQ/session/ses_f1f072193ffeyaHVE2hBRTEg6j",
+  "prompt_sha256": "08c342f4751ad19ef9af20614bd3c8600c83cb4ed5326802537dc5e4d3eaa719",
+  "cli_pid": 4558,
+  "exit_code": 0,
+  "elapsed_seconds": 138.45
+}

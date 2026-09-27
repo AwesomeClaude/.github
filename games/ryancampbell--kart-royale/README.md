@@ -74,6 +74,6 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/ryancampbell/kart-royale)
+- [Source repository](https://github.com/ryancampbell/kart-royale)
 - [Related link](https://racing.ryancampbell.com)
 - [Related link](https://www.ryancampbell.com/kart-royale)

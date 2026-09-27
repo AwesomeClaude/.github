@@ -85,7 +85,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/B-Blarr/Arena-Game)
+- [Source repository](https://github.com/B-Blarr/Arena-Game)
 - [Related link](https://github.com/B-Blarr/Arena-Game/blob/main/README.md)
 - [Related link](https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/package.json)
 - [Related link](https://github.com/B-Blarr/Arena-Game/tree/main/src/systems)

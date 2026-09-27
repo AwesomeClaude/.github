@@ -88,4 +88,4 @@ Treat these as illustrative, not real user reviews.
 - [Related link](https://bridge-mind.github.io/turbo-kart-rally/)
 - [Related link](https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md)
 - [Related link](https://github.com/bridge-mind/turbo-kart-rally/blob/main/ARCHITECTURE.md)
-- [Original submission](https://github.com/bridge-mind/turbo-kart-rally/tree/main)
+- [Source repository](https://github.com/bridge-mind/turbo-kart-rally/tree/main)

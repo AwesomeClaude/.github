@@ -76,5 +76,5 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/sharkdp/curiosity)
+- [Source repository](https://github.com/sharkdp/curiosity)
 - [Related link](https://shark.fish/curiosity)

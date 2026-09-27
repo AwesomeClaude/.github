@@ -70,7 +70,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [Original submission](https://github.com/lortkipa/minecraft-astra)
+- [Source repository](https://github.com/lortkipa/minecraft-astra)
 - [Related link](https://github.com/lortkipa/minecraft-astra/blob/main/README.md)
 - [Related link](https://github.com/lortkipa/minecraft-astra/blob/main/package.json)
 - [Related link](https://github.com/lortkipa/minecraft-astra/blob/main/src/core.js)

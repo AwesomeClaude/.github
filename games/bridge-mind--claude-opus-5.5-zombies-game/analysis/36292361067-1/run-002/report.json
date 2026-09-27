@@ -1,0 +1,132 @@
+{
+  "catalog_slug": null,
+  "controls": {
+    "gamepad": "unknown",
+    "keyboard_mouse": "supported",
+    "mobile_controls": "not_supported",
+    "motion_controls": "unknown"
+  },
+  "creation_models": [
+    {
+      "evidence_url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game/blob/main/README.md",
+      "name": "Claude Opus 5.5"
+    }
+  ],
+  "fictional_reviews": [
+    {
+      "rating": 85,
+      "text": "The uplink hold into WARDEN-9 hunt into LZ last-stand arc actually works as a ten-minute action block. Threat regions that remix runners and armored infected kept me routing for caches."
+    },
+    {
+      "rating": 62,
+      "text": "Solid systems-first indie FPS with real extraction stakes, but I want a playable build I can just click, plus screenshots that prove the blue-hour district look before I evangelize it."
+    },
+    {
+      "rating": 100,
+      "text": "A procedural everything FPS with zero art files and synthesized audio that still delivers contracts, economy, and a helicopter finale? This is the most ambitious single-prompt build I have seen cataloged."
+    }
+  ],
+  "how_to_play": [
+    "Install and run locally: pnpm install, then pnpm dev, and open the printed localhost URL in a desktop browser with WebGL and pointer lock.",
+    "Click DEPLOY on the title screen to insert at Checkpoint 7; pointer lock captures the mouse for looking.",
+    "Defend the Uplink Relay at Kessler Depot: activate it and stay inside the ring for 60 seconds; progress builds only inside the zone and decays outside.",
+    "Hunt WARDEN-9 at Halcyon Compound: shoot its helmet off, then land headshots; loot supply caches and spend salvage at Quartermaster or Armory stations (E to open, number keys 3-6 to buy).",
+    "Once both contracts are done, go to the LZ radio, signal RAVEN 2-1, survive the 75-second final horde, then walk to the helicopter door and press E before the contamination front or the 5:30 exfil window ends."
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game"
+    },
+    {
+      "label": "Repository README",
+      "url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game/blob/main/README.md"
+    }
+  ],
+  "mechanics": [
+    "First-person movement with sprint, jump, toggle crouch, aim-down-sights, and pointer-lock mouse look",
+    "Two-weapon hitscan/pellet gunplay with reload, weapon switching, frag grenades, and armor-plate application",
+    "Uplink Relay defense contract: 60-second zone hold with progress that builds inside and decays outside",
+    "Elite hunt contract against armored WARDEN-9 with a helmet-break then headshot damage sequence",
+    "Timed extraction finale: LZ radio signal, 75-second horde hold, helicopter boarding, 5:30 exfil window and spreading contamination front",
+    "Threat-region scaling of zombie composition, health, damage, and salvage rewards across the district",
+    "Salvage economy with Quartermaster and Armory vendors plus lootable supply caches",
+    "Tactical map and minimap, HUD, menus, pause, and procedurally synthesized WebAudio"
+  ],
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": null,
+  "rating": {
+    "reason": "Far from AAA: no campaign beyond one 8-10 minute mission, no multiplayer, no voice/cinematics/live-ops scale, 2 stars and 3 forks, a single commit, and no public playable deployment or inspectable screenshots, so visual polish, performance, and balance are unverified. On systems scope it outranks Turbo Kart Rally (40, sibling single-track kart loop) and Neural Sight (30, FPS tech prototype with only experimental zombies and no game loop), and roughly matches THORNMERE (46) and neverquest (45) on structured mission-plus-economy depth, but it sits below Kart Royale (50, complete verified 3D loop with polished screenshots) and Ashlands (55, catalog top) because its 3D presentation cannot be verified from any image evidence. Judged from repository sources and docs only; source code and tests do not prove playability, performance, or balance.",
+    "score": 47
+  },
+  "reconstructed_prompt": "Build a single-player browser FPS extraction-survival zombie shooter with Three.js, TypeScript, and Vite called Dead Signal: Exclusion Zone: an 8-10 minute mission with an uplink-defense contract, an armored elite hunt, vendors and salvage economy, threat-scaled zombie regions, a timed helicopter extraction finale, HUD/minimap/tactical map/menus, procedural textures/meshes/audio with no third-party assets, WASD+mouse pointer-lock controls, and vitest unit tests.",
+  "repository_url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game",
+  "screenshots": [],
+  "screenshot_based_score": null,
+  "source_analysis": [
+    {
+      "finding": "Repository is a real game project: 'Dead Signal: Exclusion Zone \u2014 the Claude Opus 5.5 Zombies Game. A browser FPS extraction-survival zombie shooter built with Three.js + TypeScript, created by Claude Opus 5.5.' Topics include fps, game, threejs, zombies.",
+      "url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game"
+    },
+    {
+      "finding": "README describes a single-player browser first-person extraction-survival shooter: insert into a quarantined district, complete two contracts, upgrade gear, signal a helicopter, and survive the final horde before the contamination front reaches the LZ.",
+      "url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game/blob/main/README.md"
+    },
+    {
+      "finding": "README explicitly labels the game single-player and describes a solo fail state ('Dying, or running out of time, fails the mission'); no multiplayer mode is documented anywhere in the README or file tree.",
+      "url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game/blob/main/README.md"
+    },
+    {
+      "finding": "README controls table documents WASD movement, mouse look, LMB fire, RMB aim, R reload, weapon switching, grenades, armor plates, sprint, jump/crouch, interact, tactical map, and pause \u2014 establishing keyboard and mouse support.",
+      "url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game/blob/main/README.md"
+    },
+    {
+      "finding": "README states the game 'Requires a desktop browser with WebGL and pointer lock', which rules out mobile touch controls as a supported path; no touch, joystick, motion, or gamepad support is documented.",
+      "url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game/blob/main/README.md"
+    },
+    {
+      "finding": "The recursive main-branch file tree contains 60 paths (source, tests, configs, README, index.html) and zero image or docs/screenshots assets, so no gameplay screenshot can be inspected from the repository.",
+      "url": "https://api.github.com/repos/bridge-mind/claude-opus-5.5-zombies-game/git/trees/main?recursive=1"
+    },
+    {
+      "finding": "Repository metadata: homepage is null, has_pages is false, language TypeScript, 1 commit ('Initial release'), 2 stars, 3 forks; the Pages API returns 404 and there are no releases or deployments \u2014 no verified public playable URL exists and the README only offers localhost run commands.",
+      "url": "https://api.github.com/repos/bridge-mind/claude-opus-5.5-zombies-game"
+    },
+    {
+      "finding": "Sibling bridge-mind games expose playable homepages (e.g. turbo-kart-rally on bridge-mind.github.io) while this repository lists no homepage, confirming the absence of a verified play link rather than an oversight in link discovery.",
+      "url": "https://api.github.com/orgs/bridge-mind/repos?per_page=20"
+    },
+    {
+      "finding": "README attributes creation end-to-end to Claude Opus 5.5 in Claude Code from a single prompt, with all textures, meshes, zombie models, signage, and audio generated at runtime and no third-party art or sound files.",
+      "url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game/blob/main/README.md"
+    },
+    {
+      "finding": "No catalog match: the local catalog's 21 games include no zombies FPS; the closest entries are Neural Sight (FPS tech prototype, overall 30) and the sibling Turbo Kart Rally (overall 40, different kart-racing game), so this is a new entry with catalog_slug null.",
+      "url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game"
+    }
+  ],
+  "source_url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game",
+  "tags": [
+    "fps",
+    "zombie",
+    "survival",
+    "extraction-shooter",
+    "3d",
+    "procedural",
+    "single-player"
+  ],
+  "title": "Dead Signal: Exclusion Zone",
+  "repository_created_at": null,
+  "analysis": {
+    "analyzed_at": "2026-09-27T03:49:50.908522+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36292361067/job/108544759923",
+    "session_id": "ses_f1f07220affe4JO3zINxEbwelW",
+    "prompt_sha256": "dd25d42fdebcc1a32264cba29eb1e820380fa9909bb9996c07943a94eeb9c23b"
+  }
+}
