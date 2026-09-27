@@ -7,11 +7,14 @@ Add games with `./scripts/games.sh <game-url> [more-urls...]` or `./scripts/game
 
 ## Games
 
+- [moorestech](games/moorestech--moorestech/README.md) — overall 64/100; screenshots 76/100
 - [Ashlands](games/PeterBlenessy--ashlands/README.md) — overall 55/100; screenshots not scored
 - [Infinite Craft](games/no-source/neal-fun--be5898efdb64/README.md) — overall 52/100; screenshots 32/100; no verified source repository
 - [OSRS Tower Defense](games/hamilton-junior--osrs-tower-defense/README.md) — overall 52/100; screenshots 65/100
 - [Kart Royale](games/ryancampbell--kart-royale/README.md) — overall 50/100; screenshots 70/100
+- [PirateSeas](games/AndreiBesliu--PirateSeas/README.md) — overall 50/100; screenshots not scored
 - [Frosty Tactics — A Lamina Runica · The Runic Blade](games/Ninaji--Frosty-Tatics/README.md) — overall 48/100; screenshots not scored
+- [HEX DANMAKU](games/macjoocan--hex-danmaku/README.md) — overall 48/100; screenshots 60/100
 - [Neon Arena](games/B-Blarr--Arena-Game/README.md) — overall 48/100; screenshots not scored
 - [Dead Signal: Exclusion Zone](games/bridge-mind--claude-opus-5.5-zombies-game/README.md) — overall 47/100; screenshots not scored
 - [The Nine Lives of Ash](games/phirogue--SparkyGames/README.md) — overall 47/100; screenshots 50/100
@@ -20,16 +23,22 @@ Add games with `./scripts/games.sh <game-url> [more-urls...]` or `./scripts/game
 - [Pizza Chef](games/PizzaDAO--pizza-chef/README.md) — overall 44/100; screenshots not scored
 - [Wilderness](games/lortkipa--minecraft-astra/README.md) — overall 44/100; screenshots not scored
 - [SpaceHo2](games/PierreHoule--SpaceHo2/README.md) — overall 42/100; screenshots not scored
+- [Zoo Keeper](games/JamesTroy--ZooKeeper/README.md) — overall 42/100; screenshots not scored
+- [Ballz](games/kurtmc--ball-game/README.md) — overall 40/100; screenshots not scored
 - [Turbo Kart Rally](games/bridge-mind--turbo-kart-rally/README.md) — overall 40/100; screenshots 70/100
 - [2048](games/gabrielecirulli--2048/README.md) — overall 38/100; screenshots 45/100
+- [scumm-game](games/binRick--scumm-game/README.md) — overall 38/100; screenshots 62/100
 - [Wouf Kart](games/eddyacthergal--super-wouf-kart/README.md) — overall 38/100; screenshots not scored
+- [hypeJumper](games/parkjongbin0520-spec--hypeJumper/README.md) — overall 36/100; screenshots not scored
 - [T-Rex Runner](games/wayou--t-rex-runner/README.md) — overall 35/100; screenshots 30/100
 - [Taipo](games/rparrett--taipo/README.md) — overall 35/100; screenshots 55/100
+- [Devi's Lab](games/shyamathreye--devis-lab/README.md) — overall 33/100; screenshots not scored
 - [Flip Runner Racing](games/markcastle--fliprunner/README.md) — overall 33/100; screenshots not scored
 - [Top-10 Tension](games/cuongluu8--tenable/README.md) — overall 32/100; screenshots 32/100
 - [chess rot](games/jaimec00--chess-game/README.md) — overall 30/100; screenshots 40/100
 - [Neural Sight](games/monstercameron--Neural-Sight/README.md) — overall 30/100; screenshots 70/100
 - [找熊猫 (Find Panda)](games/Jinchaosss--find-panda/README.md) — overall 30/100; screenshots not scored
+- [Lille](games/leynos--lille/README.md) — overall 28/100; screenshots not scored
 - [TypeScript-Blackjack](games/KSmith8888--TypeScript-Blackjack/README.md) — overall 28/100; screenshots 35/100
 - [Beachy Beachy Ball!](games/michaelkolesidis--beachy-beachy-ball/README.md) — overall 25/100; screenshots 35/100
 - [curiositY](games/sharkdp--curiosity/README.md) — overall 18/100; screenshots not scored
@@ -39,12 +48,17 @@ Add games with `./scripts/games.sh <game-url> [more-urls...]` or `./scripts/game
 
 <table>
 <tr>
+<td align="center" width="33%"><a href="games/moorestech--moorestech/README.md"><img src="https://moores.tech/assets/game-screenshot-1-DJ3aSHbO.webp" alt="Inspected: top-down 3D factory yard with conveyors carrying ore, brick furnaces with fire, pipes, anime protagonist in pink/white outfit, and 9-slot hotbar with item counts. Densest gameplay UI and clearest factory-building evidence; game&#x27;s own runtime output." height="180"></a><br><a href="games/moorestech--moorestech/README.md"><strong>moorestech</strong></a> · 📸 7.6/10</td>
 <td align="center" width="33%"><a href="games/ryancampbell--kart-royale/README.md"><img src="https://raw.githubusercontent.com/ryancampbell/kart-royale/main/docs/hero-coast.png" alt="Inspected 1920x1080 gameplay frame: chase view behind red kart chasing blue kart on wide sunset tarmac, red-white kerbs, crowd figures and grass left, AMALFI/TURBO signs, cliffs and sea right, HUD with LAP 1/3, 2nd place +0.20 vs KOA, minimap, 0:04.91 timer, item icon, 88 KM/H speedometer. Sharpest and most detailed inspected frame, clearly the game&#x27;s own runtime output." height="180"></a><br><a href="games/ryancampbell--kart-royale/README.md"><strong>Kart Royale</strong></a> · 📸 7.0/10</td>
 <td align="center" width="33%"><a href="games/monstercameron--Neural-Sight/README.md"><img src="https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/nelson-ghost-town.jpg" alt="First-person in-engine view in desert ghost town: weathered timber water tower with HAMM&#x27;S sign, rusted vintage tanker truck and orange car, rocky hills, deep blue sky; gloved hands hold an AK-style rifle low-ready at bottom right; sharp captured sunlight, rust and wood detail with mild splat softness on foliage edges." height="180"></a><br><a href="games/monstercameron--Neural-Sight/README.md"><strong>Neural Sight</strong></a> · 📸 7.0/10</td>
-<td align="center" width="33%"><a href="games/bridge-mind--turbo-kart-rally/README.md"><img src="https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/race.jpg" alt="Third-person gameplay on asphalt circuit: red player kart chasing two rivals, boost pad chevrons ahead, red-white curbs, TURBO/KART/RALLY billboards, low-poly trees and mountains, HUD with LAP 1/3, timer, 8-place leaderboard, item slot, minimap, 137 km/h speedometer and 7th place." height="180"></a><br><a href="games/bridge-mind--turbo-kart-rally/README.md"><strong>Turbo Kart Rally</strong></a> · 📸 7.0/10</td>
 </tr>
 <tr>
+<td align="center" width="33%"><a href="games/bridge-mind--turbo-kart-rally/README.md"><img src="https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/race.jpg" alt="Third-person gameplay on asphalt circuit: red player kart chasing two rivals, boost pad chevrons ahead, red-white curbs, TURBO/KART/RALLY billboards, low-poly trees and mountains, HUD with LAP 1/3, timer, 8-place leaderboard, item slot, minimap, 137 km/h speedometer and 7th place." height="180"></a><br><a href="games/bridge-mind--turbo-kart-rally/README.md"><strong>Turbo Kart Rally</strong></a> · 📸 7.0/10</td>
 <td align="center" width="33%"><a href="games/hamilton-junior--osrs-tower-defense/README.md"><img src="https://raw.githubusercontent.com/hamilton-junior/osrs-tower-defense/main/docs/screenshots/board.png" alt="Inspected 1600x900 gameplay frame: active boss wave (&#x27;Brutus 20407/21559&#x27;, &#x27;Wave 60 BOSS, 36 left&#x27;) on a grass board with winding dirt road, OSRS-authentic towers and enemies, red damage numbers, green HP bars, tower hotbar mid-bottom and full HUD (speed, gold 3,902, lives 20, wave controls). Clearly the game&#x27;s own runtime output; sharpest and most detailed frame." height="180"></a><br><a href="games/hamilton-junior--osrs-tower-defense/README.md"><strong>OSRS Tower Defense</strong></a> · 📸 6.5/10</td>
+<td align="center" width="33%"><a href="games/binRick--scumm-game/README.md"><img src="https://raw.githubusercontent.com/binRick/scumm-game/main/docs/screenshot.png" alt="Inspected 1920px gameplay frame: moonlit pixel-art dock with stone arch, lamps, ship, moonlit water, wooden planks, Guybrush-style actor center, gold debug marker right, bottom verb bar with highlighted &#x27;Look at&#x27;, &#x27;Use&#x27;, and hint text &#x27;Click a verb, click an object, click floor to walk. [D] overlay [E] edit walkbox [B] sprite browser&#x27;. Clearly the game&#x27;s own runtime output; sharpest and most detailed frame." height="180"></a><br><a href="games/binRick--scumm-game/README.md"><strong>scumm-game</strong></a> · 📸 6.2/10</td>
+</tr>
+<tr>
+<td align="center" width="33%"><a href="games/macjoocan--hex-danmaku/README.md"><img src="https://raw.githubusercontent.com/macjoocan/hex-danmaku/main/art-review/fantasy-game-slash-mobile.png" alt="Inspected downloaded copy of fantasy-game-slash-mobile.png: vertical mobile gameplay frame of STAGE 06 boss versus dragon. Mint hex board with teal reachable tiles and pink/hatched danger telegraphs, chibi sword hero with slash arc, detailed dragon boss, small red bullet dots, PHASE 1 banner, turn/score/combo HUD, next-spawn trays, and three skill cards (time rewind, rune slash, frost magic) with Q/E/A/D/Z/X/SPC/R hints. Clearly the game&#x27;s own runtime output." height="180"></a><br><a href="games/macjoocan--hex-danmaku/README.md"><strong>HEX DANMAKU</strong></a> · 📸 6.0/10</td>
 <td align="center" width="33%"><a href="games/dgahagan--THORNMERE/README.md"><img src="https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/combat.png" alt="Inspected gameplay combat frame: large Fen Rat pixel portrait (grey-brown fur, red eyes, fangs) in the animated portrait window labeled FEN RAT, orders panel Round 1 for Hroth vs 4 Fen Rats and 2 Mirefangs, Attack/Defend/Cast/Use/Advance/Run buttons, six-person roster (Blade/Blade/Warden/Skald/Hexen/Lorist) with AC/HP/SP, event log with torch text. Game&#x27;s own runtime output, sharpest portrait detail." height="180"></a><br><a href="games/dgahagan--THORNMERE/README.md"><strong>THORNMERE — The Founding Song</strong></a> · 📸 6.0/10</td>
 <td align="center" width="33%"><a href="games/rparrett--taipo/README.md"><img src="https://img.itch.zone/aW1hZ2UvOTg5MTU0LzU2NjU2MDAucG5n/original/MnHlHT.png" alt="Inspected 1438x954 gameplay frame (English mode): top-down pixel-art TD board with winding gray road, red-roofed towers, skeleton/crab/snake enemies marching the dashed path, BOSS vending machine and station house decor, HUD with 20 yen coin and 0.0 timer, side action-panel prompts (engineer, solar, taut) with enemy labels (gigantic, papal, incomplete, asinine, mourner, hoglet), green range ring around a selected tower, and bottom typing buffer &#x27;&gt; engi&#x27;. Clearly the game&#x27;s own runtime output." height="180"></a><br><a href="games/rparrett--taipo/README.md"><strong>Taipo</strong></a> · 📸 5.5/10</td>
 </tr>

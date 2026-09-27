@@ -1,0 +1,174 @@
+{
+  "catalog_slug": null,
+  "controls": {
+    "gamepad": "supported",
+    "keyboard_mouse": "supported",
+    "mobile_controls": "unknown",
+    "motion_controls": "unknown"
+  },
+  "creation_models": [],
+  "how_to_play": [
+    "Open the Unreal project with PirateSeas.uproject in Unreal Engine 5.7 and press Play to start on the open ocean.",
+    "Or on Windows, package a standalone build with RunUAT BuildCookRun and launch it from Packaged\\Windows\\PirateSeas.exe, optionally via the double-click launchers in the Joaca folder.",
+    "Sail with W/S to raise and lower sail and A/D or arrow keys for the rudder; speed comes from sail, wind strength and wind angle, and the rudder only bites with way on.",
+    "Fire port broadsides with Q and starboard with E; aim guns with the mouse, set barrel elevation with the wheel, hold Left Shift to aim at rigging, press X to lock guns abeam, R to shift crew to repairs, T to order hull planking.",
+    "Win fights by sinking or dismasting enemy warships, or play convoy scenarios: intercept merchants until enough strike their colors, or escort them to the roadstead and into port."
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/AndreiBesliu/PirateSeas"
+    }
+  ],
+  "mechanics": [
+    "Wind-powered square-rig sailing model with sail state, wind strength and point of sail determining speed",
+    "Buoyancy-based floating hull with physical cannonballs, gravity, muzzle velocity and ship-velocity inheritance plus target lead",
+    "Broadside gunnery with four separately reloading guns per side, per-gun traverse limits, elevation control and manual or automatic laying",
+    "Location-based damage: hull integrity, rigging/sail degradation, rudder damage and individual gun knockouts through gunports",
+    "Enemy AI captain with tactics, range keeping, tacking/gybing, squadron line-ahead formation keeping, friendly-fire checks and grounding recovery",
+    "Convoy and escort scenarios with fleeing merchants that strike colors, a roadstead sanctuary, a ship ledger, hull planking purchases and port economy hooks",
+    "Islands with beaches and sandbanks that push ships back offshore and block shots, plus muzzle flash, gun smoke, splinters, shot trails and hull impact marks",
+    "Synthesized positional sound effects for cannon, hull hits, rigging hits and splashes"
+  ],
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": null,
+  "rating": {
+    "reason": "Deepest naval simulation in the catalog: physical buoyancy, wind/sail model, ballistic gunnery with measured verification, AI squadrons, convoy campaign layer, islands and synthesized audio across ~590KB of C++ and ~485KB of Python. That technical depth exceeds THORNMERE (46) and rivals top-ranked Ashlands (55). But no gameplay screenshot could be inspected, there is no publicly downloadable or browser-playable build (Windows-only packaged exe, excluded from git), and docs are Romanian-only, so polish, performance and playability are unverified. Ranked just below Ashlands and OSRS Tower Defense (52) and above THORNMERE.",
+    "score": 50
+  },
+  "reconstructed_prompt": "Create an Unreal Engine 5.7 C++ pirate naval combat prototype: a procedurally modeled square-rigged warship sailing on open ocean with buoyancy physics and a wind model, broadside cannons with real ballistic shells, zoned damage (hull, rigging, rudder, guns), an AI enemy captain with squadron tactics, islands with grounding sandbanks, convoy interception and escort scenarios with surrendering merchants, synthesized sound effects, keyboard/mouse plus gamepad controls, and a scripted build plus automated measurement suite verifying every system.",
+  "repository_url": "https://github.com/AndreiBesliu/PirateSeas",
+  "screenshot_based_score": null,
+  "screenshots": [],
+  "source_analysis": [
+    {
+      "finding": "Repository AndreiBesliu/PirateSeas is a public non-fork C++ project created 2026-09-14, default branch main, with Unreal Engine 5.7 pirate-ship sailing and naval combat prototype content.",
+      "url": "https://api.github.com/repos/AndreiBesliu/PirateSeas"
+    },
+    {
+      "finding": "README describes sailing a pirate ship with sails on open ocean and fighting an AI-driven enemy ship, with physical floating, wind, ballistic cannons and hull integrity, all in C++ with no Blueprint nodes.",
+      "url": "https://github.com/AndreiBesliu/PirateSeas/blob/main/README.md"
+    },
+    {
+      "finding": "README documents keyboard and mouse controls: W/S sail, A/D and arrows rudder, Q/E broadsides, Shift aim at rigging, R repairs, mouse aims camera and guns, wheel sets elevation, X locks guns, T orders planking.",
+      "url": "https://github.com/AndreiBesliu/PirateSeas/blob/main/README.md"
+    },
+    {
+      "finding": "README documents gamepad binding T as gamepad B/circle for planking orders, and DefaultInput.ini maps Fire/Aim/Repair/LayAbeam/Tackle plus sticks and triggers to gamepad keys.",
+      "url": "https://raw.githubusercontent.com/AndreiBesliu/PirateSeas/main/Config/DefaultInput.ini"
+    },
+    {
+      "finding": "DefaultInput.ini maps W/S/arrows, Q/E/R/X/T, mouse axes, wheel elevation and matching gamepad actions, establishing keyboard/mouse and gamepad support.",
+      "url": "https://raw.githubusercontent.com/AndreiBesliu/PirateSeas/main/Config/DefaultInput.ini"
+    },
+    {
+      "finding": "No touch interface is enabled by default (bAlwaysShowTouchInterface=False, bUseMouseForTouch=False) and no accelerometer/gyroscope gameplay mapping is documented, so mobile and motion support are unestablished.",
+      "url": "https://raw.githubusercontent.com/AndreiBesliu/PirateSeas/main/Config/DefaultInput.ini"
+    },
+    {
+      "finding": "Game is single-player versus AI: the player commands one ship against AI captains, enemy squadrons of up to 8, and merchant convoys; no local or online multiplayer is documented.",
+      "url": "https://github.com/AndreiBesliu/PirateSeas/blob/main/README.md"
+    },
+    {
+      "finding": "The only play path is a Windows standalone exe built with RunUAT into Packaged/, which is gitignored, launched via .bat files in the Joaca folder; no web build, store page, release download, or GitHub Pages site exists.",
+      "url": "https://github.com/AndreiBesliu/PirateSeas/tree/main/Joaca"
+    },
+    {
+      "finding": "Releases list is empty and the repo has no homepage or Pages site, so no publicly reachable playable URL is established.",
+      "url": "https://api.github.com/repos/AndreiBesliu/PirateSeas/releases"
+    },
+    {
+      "finding": "Full file tree contains Unreal maps, materials, meshes, sounds and C++/Python sources but the only PNG (Scripts/ship_preview.png) is a Blender hull render on a gradient background, not a gameplay screenshot; the README embeds no gameplay images.",
+      "url": "https://api.github.com/repos/AndreiBesliu/PirateSeas/git/trees/main?recursive=1"
+    },
+    {
+      "finding": "Inspected Scripts/ship_preview.png shows only an untextured Blender ship model on a gradient backdrop with no water, HUD, enemies or game scene, so it is a modeling preview rather than evidence of in-game visuals.",
+      "url": "https://raw.githubusercontent.com/AndreiBesliu/PirateSeas/main/Scripts/ship_preview.png"
+    },
+    {
+      "finding": "PirateSeas.uproject declares EngineAssociation 5.7 with Water, Buoyancy, EnhancedInput and PythonScriptPlugin modules, establishing the engine and version.",
+      "url": "https://raw.githubusercontent.com/AndreiBesliu/PirateSeas/main/PirateSeas.uproject"
+    },
+    {
+      "finding": "Language split is mostly C++ with substantial Python plus small PowerShell/Batch/C# build files, matching the C++ game module and Python asset/build scripts.",
+      "url": "https://api.github.com/repos/AndreiBesliu/PirateSeas/languages"
+    },
+    {
+      "finding": "PirateSeas.Build.cs depends on PhysicsCore among core engine modules, establishing Unreal physics usage by the game.",
+      "url": "https://raw.githubusercontent.com/AndreiBesliu/PirateSeas/main/Source/PirateSeas/PirateSeas.Build.cs"
+    },
+    {
+      "finding": "No AI creation model is attributed in the inspected project sources; the README credits script/procedural generation via Blender and the Unreal Python API, not a named model.",
+      "url": "https://github.com/AndreiBesliu/PirateSeas/blob/main/README.md"
+    },
+    {
+      "finding": "No existing catalog entry matches this repository, playable URL or project; the catalog Games section lists no PirateSeas entry.",
+      "url": "/home/runner/work/Astra-Top-Games/Astra-Top-Games/README.md"
+    }
+  ],
+  "source_url": "https://github.com/AndreiBesliu/PirateSeas",
+  "tags": [
+    "naval-combat",
+    "pirate",
+    "sailing-simulator",
+    "unreal-engine",
+    "single-player",
+    "prototype",
+    "action",
+    "strategy"
+  ],
+  "technologies": [
+    {
+      "category": "engine",
+      "evidence_url": "https://raw.githubusercontent.com/AndreiBesliu/PirateSeas/main/PirateSeas.uproject",
+      "name": "Unreal Engine",
+      "version": "5.7"
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://api.github.com/repos/AndreiBesliu/PirateSeas/languages",
+      "name": "C++",
+      "version": null
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://github.com/AndreiBesliu/PirateSeas/blob/main/Scripts/ship.py",
+      "name": "Python",
+      "version": null
+    },
+    {
+      "category": "physics",
+      "evidence_url": "https://raw.githubusercontent.com/AndreiBesliu/PirateSeas/main/Source/PirateSeas/PirateSeas.Build.cs",
+      "name": "Unreal Physics",
+      "version": null
+    }
+  ],
+  "title": "PirateSeas",
+  "fictional_reviews": [
+    {
+      "rating": 85,
+      "text": "A demanding age-of-sail sim: wind, sail trim and a 12-gun broadside arc finally make maneuver feel like gunnery."
+    },
+    {
+      "rating": 62,
+      "text": "Fascinating systems and honest measurement logs, but Romanian-only docs and no easy download keep it at dock for most players."
+    },
+    {
+      "rating": 100,
+      "text": "Watching a full squadron wear around while my rigging repair timer ticks down is the most Age-of-Sail thing I have played in years."
+    }
+  ],
+  "repository_created_at": null,
+  "analysis": {
+    "analyzed_at": "2026-09-27T04:44:55.352967+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36294749657/job/108551403760",
+    "session_id": "ses_f1ed9d37affegQ6o9x3WMY92fl",
+    "prompt_sha256": "06ad29401a7484c06568d481098fc07a8d0ff004639ba2735d302273df23682b"
+  }
+}

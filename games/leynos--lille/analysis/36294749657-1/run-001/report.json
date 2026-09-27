@@ -1,0 +1,186 @@
+{
+  "catalog_slug": null,
+  "controls": {
+    "gamepad": "unknown",
+    "keyboard_mouse": "supported",
+    "mobile_controls": "unknown",
+    "motion_controls": "unknown"
+  },
+  "creation_models": [],
+  "fictional_reviews": [
+    {
+      "rating": 70,
+      "text": "Fictional illustrative review one: panned across the isometric map with WASD and watched static entities tick through the DBSP loop \u2014 as an overengineered RTS sketch the separation of Bevy state and dataflow logic is genuinely interesting."
+    },
+    {
+      "rating": 45,
+      "text": "Fictional illustrative review two: made-up player note \u2014 interesting architecture docs and a real map asset, but I never saw a gameplay frame, there is no playable link, and Phase 1 is mostly camera plus static entities, so there is no game to judge yet."
+    },
+    {
+      "rating": 95,
+      "text": "Fictional illustrative review three: invented engine-nerd take \u2014 a declarative DBSP physics and behaviour circuit synced into Bevy ECS with Tiled isometric maps and hundreds of tests? As a prototype codebase this is the most rigorous tech demo in its tier."
+    }
+  ],
+  "how_to_play": [
+    "Install the pinned Rust nightly toolchain (rust-toolchain.toml pins nightly-2025-09-14) with rustfmt and clippy components",
+    "Run the desktop game with cargo run -p lille --features render (rendering is gated behind the render feature)",
+    "Optionally enable text rendering with cargo run -p lille --features text, which implies render",
+    "Pan the single presentation camera with W/A/S/D or arrow keys at the configured pan speed",
+    "The map plugin loads assets/maps/primary-isometric.tmx at startup and spawns the player and actors on map readiness; there is no browser or public playable build"
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/leynos/lille"
+    },
+    {
+      "label": "Source README",
+      "url": "https://github.com/leynos/lille/blob/main/README.md"
+    },
+    {
+      "label": "Source Cargo manifest",
+      "url": "https://github.com/leynos/lille/blob/main/Cargo.toml"
+    }
+  ],
+  "mechanics": [
+    "Bevy ECS as state container with a DBSP dataflow circuit as the declarative logic engine, stepped once per tick",
+    "ECS-to-DBSP input sync plus DBSP-to-ECS output sync for positions, velocities, health and behaviour decisions",
+    "Single primary isometric Tiled map loaded at startup via LilleMapPlugin, defaulting to maps/primary-isometric.tmx",
+    "Tiled custom properties translated into engine state such as collidable blocks, slopes, player spawns and spawn points",
+    "Declarative physics streams for kinematics, floor heights, forces, friction and applied acceleration",
+    "Reactive agent behaviour streams including fear, targeting, movement decisions and health and damage pipelines",
+    "Single presentation camera with keyboard panning and planned isometric Y-sorting of sprites",
+    "Fractured-city RTS setting with corporate militias, syndicates, data cults and faction squads described as lore rather than an evidenced win or loss loop"
+  ],
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": null,
+  "rating": {
+    "reason": "Far from AAA: Phase 1 RTS prototype with no campaign, win or loss loop, multiplayer, audio, cinematics or live-ops scale, no public playable URL, no releases or Pages, and no inspectable gameplay frame, so playability, performance and balance are unverified. Most relevant comparators: UnityPuzzle (15, single-commit engine prototype with placeholder sprites and no build) is the floor Lille clearly exceeds on codebase scale, docs and test discipline across 341 tracked paths; curiosity (18, complete 15-level riddle trail with a live site) ships a finished loop Lille lacks; Beachy Beachy Ball (25, complete minimal live loop) and TypeScript-Blackjack (28, complete single-table rules) are the shipped-tiny-game tier Lille roughly matches on AAA proximity for opposite reasons; Neural Sight (30), chess rot (30) and Find Panda (30) all pair narrow scope with either inspectable visuals or a complete loop, which Lille cannot match; SpaceHo2 (42), neverquest (45), Kart Royale (50) and Ashlands (55) vastly exceed it on finished gameplay depth and proven execution. Ranked at 28: above the prototype floor on technical ambition, below every complete loop with verified play.",
+    "score": 28
+  },
+  "reconstructed_prompt": "Build Lille, an overengineered isometric real-time strategy prototype in Rust with Bevy 0.18: a single Bevy app where ECS holds world state and a DBSP incremental dataflow circuit holds all physics, geometry and reactive behaviour logic; load one primary Tiled isometric map with custom properties into ECS and physics; spawn a player plus actors on map readiness; render static entities with a keyboard-pannable presentation camera; document architecture, map pipeline and user configuration; verify with rstest, rspec-style, BDD and contract tests behind cargo features.",
+  "repository_url": "https://github.com/leynos/lille",
+  "screenshot_based_score": null,
+  "screenshots": [],
+  "source_analysis": [
+    {
+      "finding": "Repository leynos/lille is public, described as Overengineered RTS, primary language Rust, created 2025-01-17, pushed 2026-09-25, 0 stars, 0 forks, ISC license, default branch main, homepage empty, has_pages false",
+      "url": "https://api.github.com/repos/leynos/lille"
+    },
+    {
+      "finding": "Language breakdown is Rust-dominated with small Makefile and Shell shares, matching a Rust Bevy workspace",
+      "url": "https://api.github.com/repos/leynos/lille/languages"
+    },
+    {
+      "finding": "README titles the project Lille and calls it a simple real-time strategy prototype with an optional-Bevy-subsystem dataflow game loop, currently Phase 1 synchronizing legacy GameWorld state into Bevy and rendering static entities",
+      "url": "https://github.com/leynos/lille/blob/main/README.md"
+    },
+    {
+      "finding": "Cargo manifest describes the package as A realtime strategy game, edition 2021, with a lille binary gated on render and map features",
+      "url": "https://github.com/leynos/lille/blob/main/Cargo.toml"
+    },
+    {
+      "finding": "The game is run locally with cargo run -p lille --features render, with text rendering layered via cargo run -p lille --features text; rendering tests use cargo test -p lille --features render",
+      "url": "https://github.com/leynos/lille/blob/main/README.md"
+    },
+    {
+      "finding": "Entry point launches a single local Bevy App with DbspPlugin, PresentationPlugin and LilleMapPlugin; no multiplayer, networking, server or client mode is documented or wired",
+      "url": "https://github.com/leynos/lille/blob/main/src/main.rs"
+    },
+    {
+      "finding": "Camera system reads WASD and arrow keys for panning with configurable pan speed and clamped delta time, establishing keyboard support",
+      "url": "https://github.com/leynos/lille/blob/main/src/presentation.rs"
+    },
+    {
+      "finding": "Presentation design says keyboard plus mouse inputs were planned for camera control, but the inspected implementation only evidences keyboard panning, so mouse support beyond windowed desktop play is unestablished",
+      "url": "https://github.com/leynos/lille/blob/main/docs/lille-presentational-layer.md"
+    },
+    {
+      "finding": "No touch, on-screen joystick, accelerometer, gyroscope or gamepad handling was found in the inspected presentation, map, components or run paths; the project targets desktop cargo run with Linux x11, so those statuses remain unknown rather than ruled out",
+      "url": "https://github.com/leynos/lille/blob/main/src/presentation.rs"
+    },
+    {
+      "finding": "Map pipeline loads a single primary Tiled map by default from maps/primary-isometric.tmx, validates the asset path, spawns the player and actors on map readiness, and enforces a single-active-map lifecycle",
+      "url": "https://github.com/leynos/lille/blob/main/docs/users-guide.md"
+    },
+    {
+      "finding": "Recursive main-branch tree has 341 paths and exactly one image file, assets/maps/tiles/iso-tile.png; no docs, screenshots or gameplay captures exist in-repo",
+      "url": "https://api.github.com/repos/leynos/lille/git/trees/main?recursive=1"
+    },
+    {
+      "finding": "The sole image asset was downloaded and visually inspected: a 64x32 single green isometric diamond tile texture, not a gameplay frame, so no graphics score can be given",
+      "url": "https://raw.githubusercontent.com/leynos/lille/main/assets/maps/tiles/iso-tile.png"
+    },
+    {
+      "finding": "No releases exist, the Pages API returns 404, the repo contents show no web build output, and the documented play path is local cargo run, so no publicly reachable playable URL is established",
+      "url": "https://api.github.com/repos/leynos/lille/releases"
+    },
+    {
+      "finding": "Active stack is documented as Bevy 0.18.1 with bevy_ecs_tiled map loading, DBSP dataflow logic, glam math and a nightly-2025-09-14 Rust toolchain",
+      "url": "https://github.com/leynos/lille/blob/main/docs/developers-guide.md"
+    },
+    {
+      "finding": "No prior catalog game references leynos, lille or Overengineered RTS, so no existing slug is reused",
+      "url": "https://github.com/leynos/lille"
+    }
+  ],
+  "source_url": "https://github.com/leynos/lille",
+  "tags": [
+    "rts",
+    "real-time-strategy",
+    "strategy",
+    "isometric",
+    "prototype",
+    "bevy",
+    "rust",
+    "dataflow",
+    "tiled",
+    "single-player"
+  ],
+  "technologies": [
+    {
+      "category": "language",
+      "evidence_url": "https://raw.githubusercontent.com/leynos/lille/main/rust-toolchain.toml",
+      "name": "Rust",
+      "version": null
+    },
+    {
+      "category": "engine",
+      "evidence_url": "https://raw.githubusercontent.com/leynos/lille/main/Cargo.toml",
+      "name": "Bevy",
+      "version": "0.18.1"
+    },
+    {
+      "category": "framework",
+      "evidence_url": "https://raw.githubusercontent.com/leynos/lille/main/Cargo.toml",
+      "name": "bevy_ecs_tiled",
+      "version": "0.12.0"
+    },
+    {
+      "category": "framework",
+      "evidence_url": "https://raw.githubusercontent.com/leynos/lille/main/Cargo.toml",
+      "name": "DBSP",
+      "version": "0.98"
+    },
+    {
+      "category": "framework",
+      "evidence_url": "https://raw.githubusercontent.com/leynos/lille/main/Cargo.toml",
+      "name": "glam",
+      "version": "0.33"
+    }
+  ],
+  "title": "Lille",
+  "repository_created_at": null,
+  "analysis": {
+    "analyzed_at": "2026-09-27T04:41:33.426397+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36294749657/job/108551403760",
+    "session_id": "ses_f1ed9d81dffelHcY5cKl3xZFRP",
+    "prompt_sha256": "4f5124d34182e485bc7c26ee9018c634ec7da0aca5a5d917c4e8b9f3cbc0b964"
+  }
+}
