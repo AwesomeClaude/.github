@@ -2,7 +2,9 @@ Analyze {{repository_url}} without cloning or checking out source code. Use `gh 
 
 Include games with or without public source code. Set `source_url` to the original input link. Set `repository_url` to a verified related GitHub source URL, or use `null` or omit it when none is established. Inspect available gameplay, official pages, and screenshots. State evidence gaps without inventing source-code findings.
 
-Read the local game catalog at `{{catalog_readme_path}}` and every game README linked in its Games section. Exclude the target game if it is already listed. Compare the target with every prior game on available evidence of gameplay depth, scope, visual polish, and technical execution. Treat prior scores as calibration points, not proof of quality. Name the most relevant comparators and explain the target's relative position in `rating.reason`. If the catalog is empty or inaccessible, state that limitation and score from the available evidence.
+Determine whether the link describes an actual game. For a non-game or inaccessible link, write only `rejection.json` with `status` set to `not_game` or `inaccessible` and an evidence-based `reason`. For a qualifying game, follow the report instructions below.
+
+Always reanalyze the game, including games already cataloged. Read the local game catalog at `{{catalog_readme_path}}` and every game README linked in its Games section. Inspect likely matches and their adjacent `readme.json` files. Identify the same game from verified repository, playable URL, or explicit project references; do not match solely by title or fork ancestry. Set `catalog_slug` to the existing directory relative to `games/` when matched; otherwise set it to null and let the catalog code choose a new directory. Reuse the matched game's slug even when submitted through a different URL. Exclude the target itself from scoring comparisons. Compare the target with every prior game on available evidence of gameplay depth, scope, visual polish, and technical execution. Treat prior scores as calibration points, not proof of quality. Name the most relevant comparators and explain the target's relative position in `rating.reason`. If the catalog is empty or inaccessible, state that limitation and score from the available evidence.
 
 Open and inspect every screenshot you describe. Put the best inspected gameplay screenshot first in `screenshots`; put menus, title cards, concept art, promotional banners, blank frames, and editor captures later. Score the graphics quality of visible gameplay screenshots from 0 to 100 for visual polish, composition, and scene detail. Reward coherent stylized art as well as realism. Discount non-gameplay images. Distinguish curated reference images from the game's own output. Use `null` for `screenshot_based_score` if no gameplay screenshot can be inspected. Explain the screenshot score relative to relevant catalog games without inferring motion or gameplay feel from still images.
 
@@ -12,10 +14,14 @@ Determine whether the game supports mobile touch controls (including an on-scree
 
 Find a publicly reachable URL where the game can actually be played. Verify that it opens the playable game, not just a repository, screenshot, promotional page, or store listing. Set `play_game_url` to `null` if no playable URL is established.
 
-Write only `readme.json` in the current workspace. Follow this example's shape and replace its values with your findings. Use integer scores from 0 to 100 for every rating, including all three clearly fictional reviews. Do not run catalog scripts or change catalog files.
+Document AI models used to create the game only when explicitly attributed in project sources. Put exact documented names and evidence URLs in `creation_models`; use an empty array when unknown. Distinguish creation models from the model analyzing the game. Preserve labeled links from the existing report and add verified source repository, play, and submission links. Do not invent repository dates or catalog timestamps; the catalog code supplies them.
+
+For a qualifying game, write only `readme.json` in the current workspace. Follow this example's shape and replace its values with your findings. Use integer scores from 0 to 100 for every rating, including all three clearly fictional reviews. Do not run catalog scripts or change catalog files.
 
 ```json
 {
+  "catalog_slug": null,
+  "creation_models": [],
   "source_url": "{{repository_url}}",
   "repository_url": null,
   "title": "Game title",
@@ -35,6 +41,6 @@ Write only `readme.json` in the current workspace. Follow this example's shape a
     {"rating": 60, "text": "Fictional illustrative review two"},
     {"rating": 100, "text": "Fictional illustrative review three"}
   ],
-  "links": ["https://example.com/relevant-page"]
+  "links": [{"label": "Original submission", "url": "{{repository_url}}"}]
 }
 ```

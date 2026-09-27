@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Analyze new GitHub games, then rebuild the game catalog."""
+"""Analyze public game links, refresh reports, and rebuild the catalog."""
 
 import argparse
 import concurrent.futures
@@ -15,6 +15,8 @@ import shutil
 import signal
 import subprocess
 import sys
+import time
+import urllib.request
 from urllib.parse import quote, urlsplit
 
 import test_oc
@@ -86,7 +88,20 @@ def score(value, name, nullable=False):
     return number
 
 
+def catalog_path(slug):
+    if not isinstance(slug, str) or not re.fullmatch(r'[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*', slug):
+        raise ValueError('Invalid catalog slug')
+    if any(part in ('.', '..', 'analysis') for part in slug.split('/')):
+        raise ValueError('Invalid catalog slug')
+    path = GAMES / slug
+    if path.resolve() != path.absolute() or not path.resolve().is_relative_to(GAMES.resolve()):
+        raise ValueError('Catalog path escapes games')
+    return path
+
+
 def report_destination(data):
+    if data.get('catalog_slug'):
+        return catalog_path(data['catalog_slug'])
     if data.get('repository_url'):
         return game_url(data['repository_url'])[1]
     return no_source_destination(data['source_url'])
@@ -148,7 +163,31 @@ def validate(data, expected_url=None):
     play_url = data.get('play_game_url')
     if play_url is not None and not safe_url(play_url):
         raise ValueError('play_game_url must be an HTTP(S) URL or null')
+    data['links'] = labeled_links(data['links'],
+        [{'label': 'Original submission', 'url': source_url},
+         {'label': 'Source repository', 'url': normalized},
+         {'label': 'Play game', 'url': play_url}])
+    models = data.setdefault('creation_models', [])
+    if not isinstance(models, list) or any(not isinstance(m, dict) or
+            not isinstance(m.get('name'), str) or not safe_url(m.get('evidence_url')) for m in models):
+        raise ValueError('creation_models must contain names and evidence URLs')
+    if data.get('catalog_slug'):
+        catalog_path(data['catalog_slug'])
     return data
+
+
+def labeled_links(*groups):
+    links = {}
+    for group in groups:
+        for item in group:
+            item = {'label': 'Related link', 'url': item} if isinstance(item, str) else item
+            if not isinstance(item, dict) or not safe_url(item.get('url')):
+                continue
+            url = item['url']
+            label = str(item.get('label') or 'Related link')
+            if url not in links or links[url]['label'] == 'Related link':
+                links[url] = {'label': label, 'url': url}
+    return list(links.values())
 
 
 def lines_list(items):
@@ -165,6 +204,15 @@ def game_readme(data):
     out = [f'# {title}', '', source_line]
     if data.get('play_game_url'):
         out.append(f"[Play the game]({safe_url(data['play_game_url'])})")
+    if data.get('previous_report_url'):
+        out.append(f"[Previous report]({safe_url(data['previous_report_url'])})")
+    for label, key in [('Repository created', 'repository_created_at'),
+                       ('Added to catalog', 'catalog_added_at'), ('Updated in catalog', 'catalog_updated_at')]:
+        if data.get(key):
+            out.append(f"**{label}:** {markdown(data[key])}")
+    if data.get('creation_models'):
+        out.append('**Built with:** ' + ', '.join(
+            f"[{markdown(m['name'])}]({safe_url(m['evidence_url'])})" for m in data['creation_models']))
     out += ['',
            f"**Overall rating:** {data['rating']['score']}/100. {markdown(data['rating'].get('reason', ''))}", '',
            f"**Screenshot score:** {graphic_text}. " +
@@ -208,7 +256,7 @@ def game_readme(data):
         out.append('')
     if data['links']:
         out += ['## Links', '']
-        out += [f'- [{markdown(link)}]({safe_url(link)})' for link in data['links'] if safe_url(link)]
+        out += [f"- [{markdown(link['label'])}]({safe_url(link['url'])})" for link in data['links']]
         out.append('')
     return '\n'.join(out).rstrip() + '\n'
 
@@ -227,6 +275,8 @@ def log(message):
 def rebuild():
     entries = []
     for path in sorted(GAMES.rglob('readme.json')) if GAMES.exists() else []:
+        if 'analysis' in path.relative_to(GAMES).parts:
+            continue
         try:
             data = validate(json.loads(path.read_text(encoding='utf-8')))
             expected = report_destination(data)
@@ -239,9 +289,9 @@ def rebuild():
     entries.sort(key=lambda item: (-item[1]['rating']['score'], item[1]['title'].casefold(), str(item[0])))
     out = ['# Game catalog', '', 'Browse the rated games. Open each game page for evidence and play instructions.',
            'Browse games with or without public source code in the same ranking and screenshot gallery.', '',
-           'Add games with `./scripts/games.sh <github-game-url> [more-urls...]` or '
+           'Add games with `./scripts/games.sh <game-url> [more-urls...]` or '
            '`./scripts/games.sh --file links.txt`. Rebuild every page and this index with '
-           '`./scripts/games.sh`. Inspect `games/added.jsonl` for dated additions. '
+           '`./scripts/games.sh`. Inspect `games/log.jsonl` for analysis outcomes and provenance. '
            'Inspect `work/game-batches/` for agent logs and rejected reports.', '', '## Games', '']
     for directory, data in entries:
         target = quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/')
@@ -285,77 +335,218 @@ def rebuild():
 def inputs(args):
     values = list(args.links)
     if args.file:
-        values += [line.strip() for line in args.file.read_text(encoding='utf-8').splitlines()
+        values += [line.strip() for line in args.file.read_text().splitlines()
                    if line.strip() and not line.lstrip().startswith('#')]
-    unique = {}
-    for value in values:
-        url, directory = game_url(value)
-        if directory in unique and unique[directory] != url:
-            raise ValueError(f'Two links target the same game location: {directory}')
-        unique[directory] = url
-    return [(url, directory) for directory, url in unique.items()]
+    if any(not safe_url(value) for value in values):
+        raise ValueError('Require public HTTP(S) game links')
+    return list(dict.fromkeys(values))
+
+
+def prompt_for(url, template):
+    return template.replace('{{repository_url}}', url).replace(
+        '{{catalog_readme_path}}', str(ROOT / 'README.md'))
+
+
+def prepare_analysis(links, args, output):
+    WORK.mkdir(exist_ok=True)
+    output.mkdir(parents=True, exist_ok=True)
+    base = test_oc.ensure_server(args, WORK)
+    batch = WORK / 'game-batches' / (str(os.getenv('GITHUB_RUN_ID', time.time_ns())) +
+                                   '-' + os.getenv('GITHUB_RUN_ATTEMPT', '1'))
+    (batch / 'records').mkdir(parents=True)
+    template = args.prompt.read_text()
+    if not template.strip():
+        raise ValueError('Prompt must not be empty')
+    runs = []
+    for index, url in enumerate(links, 1):
+        meta = test_oc.prepare(index, args, batch, base, prompt_for(url, template))
+        result = json.loads((meta / 'result.json').read_text())
+        runs.append({'input_url': url, 'meta': str(meta), 'live_url': result['live_url']})
+    manifest = {'base': base, 'runs': runs}
+    write_atomic(output / 'sessions.json', json.dumps(manifest, indent=2) + '\n')
+    return manifest
+
+
+def redact(text):
+    # Commit diagnostic evidence, never common credential formats or known environment secrets.
+    for key, value in os.environ.items():
+        if len(value) >= 8 and re.search(r'TOKEN|PASSWORD|SECRET|API_KEY', key, re.I):
+            text = text.replace(value, '[REDACTED]')
+    text = re.sub(r'-----BEGIN [^-]*PRIVATE KEY-----.*?-----END [^-]*PRIVATE KEY-----',
+                  '[REDACTED PRIVATE KEY]', text, flags=re.S)
+    text = re.sub(r'(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]+|sk-[A-Za-z0-9_-]{20,})',
+                  '[REDACTED]', text)
+    text = re.sub(r'(?i)(authorization[\"\s:]+(?:bearer|basic)\s+)[^\s\"\\]+', r'\1[REDACTED]', text)
+    return text
+
+
+def repository_created(url):
+    if not url:
+        return None
+    owner, repo = urlsplit(url).path.strip('/').split('/')[:2]
+    request = urllib.request.Request(f'https://api.github.com/repos/{owner}/{repo}',
+                                    headers={'User-Agent': 'Astra-Top-Games'})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.load(response)['created_at']
+
+
+def collect_analysis(run, result, base, args, output):
+    url, meta = run['input_url'], Path(run['meta'])
+    now = datetime.now(timezone.utc).isoformat()
+    item = {'input_url': url, 'status': 'failed', 'reason': '',
+            'analysis': {'analyzed_at': now, 'model': args.model,
+                         'actions_run': os.getenv('ISSUE_CATALOG_RUN_URL'),
+                         'session_id': result['session_id'], 'prompt_sha256': result['prompt_sha256']},
+            'record': result['run']}
+    evidence = output / 'records' / result['run']
+    evidence.mkdir(parents=True, exist_ok=True)
+    for name in ('prompt.txt', 'events.jsonl', 'stderr.log', 'result.json'):
+        if (meta / name).is_file():
+            write_atomic(evidence / name, redact((meta / name).read_text()))
+    try:
+        messages = test_oc.api(base, f"/session/{result['session_id']}/message", result['directory'])
+        write_atomic(evidence / 'messages.json', redact(json.dumps(messages, indent=2)) + '\n')
+    except Exception as exc:
+        write_atomic(evidence / 'export-error.txt', str(exc))
+    try:
+        if result['status'] != 'finished':
+            raise ValueError(f"OpenCode {result['status']}")
+        workspace = Path(result['directory'])
+        if (workspace / 'rejection.json').exists():
+            rejection = json.loads((workspace / 'rejection.json').read_text())
+            raise ValueError(str(rejection.get('reason', 'Not an inspectable game')))
+        data = json.loads((workspace / 'readme.json').read_text())
+        data['source_url'] = url
+        modes = data.get('player_modes', {}).get('modes', [])
+        data.get('player_modes', {})['modes'] = [m.replace('-multiplayer', ' multiplayer') for m in modes]
+        validate(data)
+        slug = data.get('catalog_slug')
+        if slug and not (catalog_path(slug) / 'readme.json').is_file():
+            raise ValueError('Selected existing catalog slug does not exist')
+        data['repository_created_at'] = repository_created(data['repository_url'])
+        data['analysis'] = item['analysis']
+        write_atomic(evidence / 'report.json', json.dumps(data, indent=2) + '\n')
+        item.update(status='analyzed', output=str(report_destination(data).relative_to(ROOT)), title=data['title'])
+    except Exception as exc:
+        item['reason'] = str(exc)[:500]
+    return item
+
+
+def analyze_links(args, output):
+    manifest = json.loads((output / 'sessions.json').read_text())
+    results = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as pool:
+        pending = [(run, pool.submit(test_oc.run_one, Path(run['meta']), manifest['base'], args.timeout))
+                   for run in manifest['runs']]
+        for run, future in pending:
+            results.append(collect_analysis(run, future.result(), manifest['base'], args, output))
+            write_atomic(output / 'outcomes.json', json.dumps(results, indent=2) + '\n')
+    return results
+
+
+def existing_report(data):
+    destination = report_destination(data)
+    if (destination / 'readme.json').exists():
+        return destination
+    # Recheck concrete identity against the latest catalog, including newly merged runs.
+    for path in sorted(GAMES.rglob('readme.json')):
+        if 'analysis' in path.relative_to(GAMES).parts:
+            continue
+        old = json.loads(path.read_text())
+        if data.get('repository_url') and old.get('repository_url') and (
+                game_url(data['repository_url'])[1].as_posix().casefold() ==
+                game_url(old['repository_url'])[1].as_posix().casefold()):
+            return path.parent
+        if data.get('play_game_url') and data['play_game_url'] == old.get('play_game_url'):
+            return path.parent
+        if data['source_url'] == old.get('source_url', old.get('repository_url')):
+            return path.parent
+    return destination
+
+
+def git_value(*args):
+    result = subprocess.run(['git', *args], cwd=ROOT, capture_output=True, text=True, check=True)
+    return result.stdout.strip()
+
+
+def content_only(data):
+    return {k: v for k, v in data.items() if k not in {
+        'analysis', 'catalog_added_at', 'catalog_updated_at', 'previous_report_url', 'catalog_slug'}}
+
+
+def apply_results(artifact, outcomes):
+    run_key = os.getenv('GITHUB_RUN_ID', str(time.time_ns())) + '-' + os.getenv('GITHUB_RUN_ATTEMPT', '1')
+    repo = os.getenv('GITHUB_REPOSITORY', 'agents-dev/Astra-Top-Games')
+    changed = set()
+    for item in outcomes:
+        record = item.get('record')
+        evidence = artifact / 'records' / record if record else None
+        data = None
+        destination = None
+        if item['status'] == 'analyzed':
+            data = validate(json.loads((evidence / 'report.json').read_text()))
+            destination = existing_report(data)
+            old_path = destination / 'readme.json'
+            old = json.loads(old_path.read_text()) if old_path.exists() else None
+            if old:
+                old = validate(old)
+                data['links'] = labeled_links(old['links'], data['links'])
+                # Keep original submission stable; retain new submissions in labeled links.
+                data['source_url'] = old['source_url']
+            data['catalog_slug'] = str(destination.relative_to(GAMES))
+            status = 'added' if old is None else ('unchanged' if content_only(old) == content_only(data) else 'updated')
+            item.update(status=status, output=str(destination.relative_to(ROOT)),
+                        title=data['title'], before=old, report=data)
+            if status != 'unchanged':
+                now = item['analysis']['analyzed_at']
+                first = git_value('log', '--diff-filter=A', '--format=%aI', '--', str(old_path.relative_to(ROOT))).splitlines() if old else []
+                data['catalog_added_at'] = (old.get('catalog_added_at') or (first[-1] if first else now)) if old else now
+                data['catalog_updated_at'] = now
+                if old:
+                    previous = git_value('log', '-1', '--format=%H', '--', str((destination / 'README.md').relative_to(ROOT)))
+                    if previous:
+                        data['previous_report_url'] = f'https://github.com/{repo}/blob/{previous}/{destination.relative_to(ROOT)}/README.md'
+                write_atomic(old_path, json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+                changed.add(str(destination.relative_to(ROOT)))
+            else:
+                item['report'] = old
+        else:
+            for path in GAMES.rglob('readme.json'):
+                if 'analysis' not in path.relative_to(GAMES).parts:
+                    old = json.loads(path.read_text())
+                    urls = [l['url'] for l in labeled_links(old.get('links', []))]
+                    if item['input_url'] in urls + [old.get('source_url'), old.get('repository_url')]:
+                        destination = path.parent
+                        item.update(output=str(destination.relative_to(ROOT)), report=old, title=old['title'])
+                        break
+        logs = (destination or GAMES) / 'analysis' / run_key / (record or 'incomplete')
+        if evidence and evidence.exists():
+            for file in evidence.iterdir():
+                if file.is_file():
+                    write_atomic(logs / file.name, redact(file.read_text()))
+        log_entry = {k: v for k, v in item.items() if k not in ('before', 'report')}
+        log_entry['logs'] = str(logs.relative_to(ROOT)) if evidence else None
+        GAMES.mkdir(exist_ok=True)
+        with (GAMES / 'log.jsonl').open('a') as out:
+            out.write(json.dumps(log_entry, ensure_ascii=False) + '\n')
+    if changed:
+        rebuild()
+    return changed
 
 
 def analyze(items, args):
-    WORK.mkdir(exist_ok=True)
-    batch = WORK / 'game-batches' / (datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ') + f'-{os.getpid()}')
-    batch.mkdir(parents=True)
-    (batch / 'records').mkdir()
-    base = test_oc.ensure_server(args, WORK)
-    prompt_template = args.prompt.read_text(encoding='utf-8')
-    if not prompt_template.strip():
-        raise ValueError('Prompt must not be empty')
-    prepared = []
-    try:
-        for index, (url, directory) in enumerate(items, 1):
-            prompt = prompt_template.replace('{{repository_url}}', url)
-            prompt = prompt.replace('{{catalog_readme_path}}', str(ROOT / 'README.md'))
-            meta = test_oc.prepare(index, args, batch, base, prompt)
-            prepared.append((url, directory, meta))
-        def stop(*_):
-            test_oc.STOP.set()
-        previous = signal.signal(signal.SIGINT, stop)
-        try:
-            with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as pool:
-                futures = [pool.submit(test_oc.run_one, meta, base, args.timeout)
-                           for _, _, meta in prepared]
-                for (url, directory, meta), future in zip(prepared, futures):
-                    result = future.result()
-                    if result['status'] != 'finished':
-                        log(f"Skip {url}: agent {result['status']}; inspect {meta / 'result.json'}")
-                        continue
-                    report = Path(result['directory']) / 'readme.json'
-                    try:
-                        data = validate(json.loads(report.read_text(encoding='utf-8')), url)
-                        directory.mkdir(parents=True, exist_ok=True)
-                        write_atomic(directory / 'readme.json', json.dumps(data, indent=2, ensure_ascii=False) + '\n')
-                        write_atomic(directory / 'README.md', game_readme(data))
-                        record = {'added_at': datetime.now(timezone.utc).isoformat(),
-                                  'source_url': url, 'output': str(directory.relative_to(ROOT)),
-                                  'title': data['title'], 'rating_score': data['rating']['score'],
-                                  'screenshot_based_score': None if data['screenshot_based_score'] is None
-                                  else data['screenshot_based_score']['score'],
-                                  'session_id': result['session_id'], 'model': args.model,
-                                  'prompt_sha256': result['prompt_sha256']}
-                        with (GAMES / 'added.jsonl').open('a', encoding='utf-8') as ledger:
-                            ledger.write(json.dumps(record, ensure_ascii=False) + '\n')
-                        print(f"Added {data['title']}: {directory.relative_to(ROOT)}", flush=True)
-                    except (OSError, ValueError, json.JSONDecodeError) as exc:
-                        log(f'Skip {url}: cannot publish readme.json: {exc}; inspect {report}')
-        finally:
-            signal.signal(signal.SIGINT, previous)
-            test_oc.STOP.clear()
-    except BaseException:
-        for _, _, meta in prepared:
-            result = json.loads((meta / 'result.json').read_text())
-            if result['status'] in ('queued', 'running'):
-                test_oc.abort(base, result)
-        raise
+    output = WORK / ('catalog-' + str(time.time_ns()))
+    prepare_analysis(items, args, output)
+    results = analyze_links(args, output)
+    apply_results(output, results)
+    for item in results:
+        print(f"{item['status'].title()}: {item['input_url']}", flush=True)
+    return not any(item['status'] == 'failed' for item in results)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('links', nargs='*', help='Repository or game-directory GitHub URLs')
+    parser.add_argument('links', nargs='*', help='Public game URLs')
     parser.add_argument('--file', type=Path, help='Read additional URLs, one per line')
     parser.add_argument('--jobs', type=int, default=3, help='Maximum concurrent agents')
     parser.add_argument('--timeout', type=float, default=900, help='Seconds per agent')
@@ -363,7 +554,7 @@ def main():
     parser.add_argument('--model', default=test_oc.MODEL)
     parser.add_argument('--executable', default='opencode')
     parser.add_argument('--server', help='Existing local OpenCode server URL')
-    parser.add_argument('--web-base', help='Existing protected live-session URL base')
+    parser.add_argument('--web-base', help='Existing live-session URL base')
     parser.add_argument('--port', type=int, default=4096)
     args = parser.parse_args()
     if args.jobs < 1 or not 0 < args.timeout < float('inf'):
@@ -376,18 +567,15 @@ def main():
                 fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
             except BlockingIOError:
                 raise RuntimeError('Another game catalog run is active')
-            new = [(url, directory) for url, directory in items if not (directory / 'readme.json').exists()]
-            for url, _ in items:
-                if not any(url == candidate for candidate, _ in new):
-                    print(f'Already added: {url}', flush=True)
-            if new:
+            succeeded = True
+            if items:
                 executable = shutil.which(args.executable)
                 if not executable or not shutil.which('git'):
                     raise RuntimeError('Require opencode and git on PATH')
                 args.executable = str(Path(executable).resolve())
-                analyze(new, args)
+                succeeded = analyze(items, args)
             rebuild()
-        return 0
+        return 0 if succeeded else 1
     except (OSError, ValueError, RuntimeError) as exc:
         log(str(exc))
         return 1

@@ -33,15 +33,19 @@ jobs:
           banner="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$GITHUB_SHA/assets/issue-analysis-banner.png"
           printf '![I’m on it! Analyzing game links — 10–30 minutes.](%s)\n\nI’m on it. Analyzing the links may take 10–30 minutes.\n\n[Follow the Actions run](%s).\n' \
             "$banner" "$log_url" > "$RUNNER_TEMP/issue-started.md"
-          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/issue-started.md"
+          comment_id="$(gh api --method POST "repos/$GITHUB_REPOSITORY/issues/$ISSUE_NUMBER/comments" \
+            -f body="$(cat "$RUNNER_TEMP/issue-started.md")" --jq '.id')"
+          echo "ISSUE_START_COMMENT_ID=$comment_id" >> "$GITHUB_ENV"
+          echo "https://github.com/$GITHUB_REPOSITORY/issues/$ISSUE_NUMBER#issuecomment-$comment_id"
 
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          fetch-depth: 0
 
       - name: Read only links from the issue body
         id: preflight
-        run: python3 scripts/issue_catalog.py --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact" --preflight
+        run: python3 scripts/issue_catalog.py --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact" --phase preflight
 
       - name: Install OpenCode
         if: steps.preflight.outputs.ready == 'true'
@@ -56,11 +60,23 @@ jobs:
           AGENTSWEB_SSH_PUBLIC_KEY: ${{ secrets.AGENTSWEB_SSH_PUBLIC_KEY }}
         run: ./scripts/start-agentsweb-ssh.sh
 
+      - name: Prepare OpenCode sessions and temporary public owner debugging
+        id: prepare
+        if: steps.preflight.outputs.ready == 'true'
+        run: python3 scripts/issue_catalog.py --phase prepare --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact"
+
+      - name: Add temporary session links to the startup comment
+        if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/issue_catalog.py --phase debug-comment --output "$RUNNER_TEMP/issue-artifact"
+
       - name: Analyze game links
         id: analysis
-        if: steps.preflight.outputs.ready == 'true'
+        if: steps.prepare.outcome == 'success'
         timeout-minutes: 275
-        run: python3 scripts/issue_catalog.py --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact"
+        run: python3 scripts/issue_catalog.py --phase analyze --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact"
 
       - name: Publish and auto-merge the catalog PR, then report to the issue
         if: always()
@@ -73,7 +89,7 @@ jobs:
           CATALOG_CHAT_ID: 01a0e059-9f64-7ed0-b30c-314d3ec269ba
         run: |
           gh auth setup-git
-          python3 scripts/publish_issue_catalog.py --artifact "$RUNNER_TEMP/issue-artifact"
+          python3 scripts/issue_catalog.py --phase publish --output "$RUNNER_TEMP/issue-artifact"
 
       - name: Save catalog results
         if: always()
@@ -90,7 +106,7 @@ jobs:
         with:
           name: issue-debug-${{ github.run_id }}
           path: |
-            work/issue-batches
+            work/game-batches
             work/oc-server/server.log
           if-no-files-found: warn
           retention-days: 7
@@ -98,3 +114,9 @@ jobs:
       - name: Keep owner worker for 30 minutes after completion or failure
         if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
         run: sleep 1800
+
+      - name: Expire public OpenCode session links after the hold
+        if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/issue_catalog.py --phase expire --output "$RUNNER_TEMP/issue-artifact"
