@@ -2,6 +2,8 @@
 
 Post the banner and “I’m on it. Analyzing the links may take 10–30 minutes.” as the first job step. Link to the current attempt’s analysis job; use the run URL if job lookup fails. Pin the banner URL to the workflow commit. Keep the issue body unchanged.
 
+Start every submitted game concurrently after preparing its session. Allocate one analysis worker per submitted link. Apply the per-game deadline independently. Budget runner memory and provider capacity for the entire batch. Publish after all analyses finish.
+
 Put every qualifying game in the root catalog and screenshot gallery. Treat `repository_url` as optional; normalize an omitted, null, or empty value to null. Require an original `source_url`; reuse the repository URL for existing repository-only reports. Verify every supplied source repository. Preserve existing game directories and original-link-derived directories. Always reanalyze submitted games. Use one validation and publication path for additions and refreshes.
 
 Fetch the latest default branch before applying report artifacts. Create a catalog PR and request a squash auto-merge with an exact head-commit match. Enable repository auto-merge. Set repository variable `ISSUE_CATALOG_AUTO_MERGE=false` to leave new catalog PRs open. Respect required checks and reviews. Auto-merge completed batches independently of individual submission failures. Keep pipeline errors visible and leave their recovery PRs open. Report merge failures on the issue and fail the publication step. Keep published branches available for the game README links.

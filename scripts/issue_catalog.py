@@ -329,15 +329,14 @@ def main():
     parser.add_argument('--executable', default='opencode')
     parser.add_argument('--model', default=test_oc.MODEL)
     parser.add_argument('--prompt', type=Path, default=games.ROOT / 'prompt.md')
-    parser.add_argument('--jobs', type=int, default=3)
     parser.add_argument('--timeout', type=float, default=900)
     parser.add_argument('--port', type=int, default=4096)
     parser.add_argument('--server')
     parser.add_argument('--web-base')
     parser.add_argument('--phase', choices=['preflight', 'prepare', 'debug-comment', 'analyze', 'publish', 'expire'], required=True)
     args = parser.parse_args()
-    if args.jobs < 1 or args.timeout <= 0:
-        parser.error('jobs and timeout must be positive')
+    if args.timeout <= 0:
+        parser.error('timeout must be positive')
     return {'preflight': preflight, 'prepare': prepare, 'debug-comment': debug_comment,
             'analyze': run, 'publish': publish, 'expire': lambda a: debug_comment(a, expired=True)}[args.phase](args)
 
