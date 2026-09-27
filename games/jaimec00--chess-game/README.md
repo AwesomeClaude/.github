@@ -86,7 +86,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://github.com/jaimec00/chess-game](https://github.com/jaimec00/chess-game)
-- [https://github.com/jaimec00/chess-game/blob/master/README.md](https://github.com/jaimec00/chess-game/blob/master/README.md)
-- [https://github.com/jaimec00/chess-game/blob/master/src/engine/ai.js](https://github.com/jaimec00/chess-game/blob/master/src/engine/ai.js)
-- [https://github.com/jaimec00/chess-game/pull/34](https://github.com/jaimec00/chess-game/pull/34)
+- [Original submission](https://github.com/jaimec00/chess-game)
+- [Related link](https://github.com/jaimec00/chess-game/blob/master/README.md)
+- [Related link](https://github.com/jaimec00/chess-game/blob/master/src/engine/ai.js)
+- [Related link](https://github.com/jaimec00/chess-game/pull/34)

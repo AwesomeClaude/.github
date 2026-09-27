@@ -71,8 +71,8 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://github.com/PeterBlenessy/ashlands](https://github.com/PeterBlenessy/ashlands)
-- [https://github.com/addable-labs/ashlands](https://github.com/addable-labs/ashlands)
-- [https://github.com/addable-labs/ashlands/blob/main/README.md](https://github.com/addable-labs/ashlands/blob/main/README.md)
-- [https://github.com/addable-labs/ashlands/blob/main/EVALUATION.md](https://github.com/addable-labs/ashlands/blob/main/EVALUATION.md)
-- [https://github.com/addable-labs/ashlands/blob/main/ART\_BIBLE.md](https://github.com/addable-labs/ashlands/blob/main/ART_BIBLE.md)
+- [Original submission](https://github.com/PeterBlenessy/ashlands)
+- [Related link](https://github.com/addable-labs/ashlands)
+- [Related link](https://github.com/addable-labs/ashlands/blob/main/README.md)
+- [Related link](https://github.com/addable-labs/ashlands/blob/main/EVALUATION.md)
+- [Related link](https://github.com/addable-labs/ashlands/blob/main/ART_BIBLE.md)

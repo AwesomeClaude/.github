@@ -79,7 +79,8 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://monstercameron.github.io/Neural-Sight/](https://monstercameron.github.io/Neural-Sight/)
-- [https://monstercameron.github.io/Neural-Sight/experiment.html](https://monstercameron.github.io/Neural-Sight/experiment.html)
-- [https://github.com/monstercameron/Neural-Sight/blob/main/README.md](https://github.com/monstercameron/Neural-Sight/blob/main/README.md)
-- [https://superspl.at/](https://superspl.at/)
+- [Related link](https://monstercameron.github.io/Neural-Sight/)
+- [Related link](https://monstercameron.github.io/Neural-Sight/experiment.html)
+- [Related link](https://github.com/monstercameron/Neural-Sight/blob/main/README.md)
+- [Related link](https://superspl.at/)
+- [Original submission](https://github.com/monstercameron/Neural-Sight)

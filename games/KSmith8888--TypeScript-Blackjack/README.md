@@ -71,6 +71,6 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://github.com/KSmith8888/TypeScript-Blackjack](https://github.com/KSmith8888/TypeScript-Blackjack)
-- [https://blackjack-browser-game.pages.dev/](https://blackjack-browser-game.pages.dev/)
-- [https://github.com/KSmith8888/TypeScript-Blackjack/blob/main/README.md](https://github.com/KSmith8888/TypeScript-Blackjack/blob/main/README.md)
+- [Original submission](https://github.com/KSmith8888/TypeScript-Blackjack)
+- [Related link](https://blackjack-browser-game.pages.dev/)
+- [Related link](https://github.com/KSmith8888/TypeScript-Blackjack/blob/main/README.md)

@@ -32,15 +32,15 @@
   "links": [
     {
       "label": "Original submission",
+      "url": "https://play2048.co/"
+    },
+    {
+      "label": "Verified source repository",
       "url": "https://github.com/gabrielecirulli/2048"
     },
     {
-      "label": "Play game",
+      "label": "Verified playable mirror",
       "url": "https://gabrielecirulli.github.io/2048/"
-    },
-    {
-      "label": "Related link",
-      "url": "https://play2048.co"
     },
     {
       "label": "Play Store app",
@@ -49,10 +49,6 @@
     {
       "label": "App Store app",
       "url": "https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805"
-    },
-    {
-      "label": "Original submission",
-      "url": "https://play2048.co/"
     }
   ],
   "mechanics": [
@@ -120,7 +116,7 @@
       "url": "https://github.com/gabrielecirulli/2048"
     }
   ],
-  "source_url": "https://github.com/gabrielecirulli/2048",
+  "source_url": "https://play2048.co/",
   "tags": [
     "puzzle",
     "sliding-tile",
@@ -139,8 +135,5 @@
     "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36291648506/job/108542752064",
     "session_id": "ses_f1f1389f1ffezc4Aq15r5vgcij",
     "prompt_sha256": "3a5228f822d25e5e7544a623058c0f22db272d9b0df26590610d644ec9c5b8b0"
-  },
-  "catalog_added_at": "2026-09-27T01:22:14Z",
-  "catalog_updated_at": "2026-09-27T03:34:34.296548+00:00",
-  "previous_report_url": "https://github.com/agents-dev/Astra-Top-Games/blob/f74936bf945284f98485556c55b8c7b477b69177/games/gabrielecirulli--2048/README.md"
+  }
 }

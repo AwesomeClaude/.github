@@ -71,9 +71,9 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://github.com/PierreHoule/SpaceHo2](https://github.com/PierreHoule/SpaceHo2)
-- [https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/README.md](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/README.md)
-- [https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/model.js](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/model.js)
-- [https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/ai.js](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/ai.js)
-- [https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/data.js](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/data.js)
-- [https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/test/smoke.js](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/test/smoke.js)
+- [Original submission](https://github.com/PierreHoule/SpaceHo2)
+- [Related link](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/README.md)
+- [Related link](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/model.js)
+- [Related link](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/ai.js)
+- [Related link](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/data.js)
+- [Related link](https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/test/smoke.js)

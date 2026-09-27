@@ -70,6 +70,6 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://github.com/markcastle/fliprunner](https://github.com/markcastle/fliprunner)
-- [https://github.com/markcastle/fliprunner/blob/master/README.md](https://github.com/markcastle/fliprunner/blob/master/README.md)
-- [https://github.com/markcastle/fliprunner/blob/master/index.html](https://github.com/markcastle/fliprunner/blob/master/index.html)
+- [Original submission](https://github.com/markcastle/fliprunner)
+- [Related link](https://github.com/markcastle/fliprunner/blob/master/README.md)
+- [Related link](https://github.com/markcastle/fliprunner/blob/master/index.html)

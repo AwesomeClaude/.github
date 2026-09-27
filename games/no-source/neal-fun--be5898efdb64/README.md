@@ -84,8 +84,8 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://neal.fun/infinite-craft/](https://neal.fun/infinite-craft/)
-- [https://en.wikipedia.org/wiki/Infinite\_Craft](https://en.wikipedia.org/wiki/Infinite_Craft)
-- [https://www.ign.com/wikis/infinite-craft/How\_to\_Play\_Infinite\_Craft](https://www.ign.com/wikis/infinite-craft/How_to_Play_Infinite_Craft)
-- [https://dotesports.com/general/news/how-to-play-infinite-craft-from-neal-fun](https://dotesports.com/general/news/how-to-play-infinite-craft-from-neal-fun)
-- [https://play.google.com/store/apps/details?id=fun.neal.infinite.craft&hl=en](https://play.google.com/store/apps/details?id=fun.neal.infinite.craft&hl=en)
+- [Original submission](https://neal.fun/infinite-craft/)
+- [Related link](https://en.wikipedia.org/wiki/Infinite_Craft)
+- [Related link](https://www.ign.com/wikis/infinite-craft/How_to_Play_Infinite_Craft)
+- [Related link](https://dotesports.com/general/news/how-to-play-infinite-craft-from-neal-fun)
+- [Related link](https://play.google.com/store/apps/details?id=fun.neal.infinite.craft&hl=en)

@@ -79,7 +79,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://github.com/cuongluu8/tenable](https://github.com/cuongluu8/tenable)
-- [https://top-10-tension.cuong-luu.workers.dev](https://top-10-tension.cuong-luu.workers.dev)
-- [https://github.com/cuongluu8/tenable/blob/main/README.md](https://github.com/cuongluu8/tenable/blob/main/README.md)
-- [https://github.com/cuongluu8/tenable/blob/main/agents.md](https://github.com/cuongluu8/tenable/blob/main/agents.md)
+- [Original submission](https://github.com/cuongluu8/tenable)
+- [Related link](https://top-10-tension.cuong-luu.workers.dev)
+- [Related link](https://github.com/cuongluu8/tenable/blob/main/README.md)
+- [Related link](https://github.com/cuongluu8/tenable/blob/main/agents.md)

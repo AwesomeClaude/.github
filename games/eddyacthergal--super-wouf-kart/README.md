@@ -82,10 +82,10 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://github.com/eddyacthergal/super-wouf-kart](https://github.com/eddyacthergal/super-wouf-kart)
-- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md)
-- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/track/garden-layout.ts](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/track/garden-layout.ts)
-- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/breeds.ts](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/breeds.ts)
-- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/items/item-rules.ts](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/items/item-rules.ts)
-- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/ai/ai-controller.ts](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/ai/ai-controller.ts)
-- [https://github.com/eddyacthergal/super-wouf-kart/blob/main/docs/superpowers/specs/2026-09-23-wouf-kart-design.md](https://github.com/eddyacthergal/super-wouf-kart/blob/main/docs/superpowers/specs/2026-09-23-wouf-kart-design.md)
+- [Original submission](https://github.com/eddyacthergal/super-wouf-kart)
+- [Related link](https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md)
+- [Related link](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/track/garden-layout.ts)
+- [Related link](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/breeds.ts)
+- [Related link](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/items/item-rules.ts)
+- [Related link](https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/ai/ai-controller.ts)
+- [Related link](https://github.com/eddyacthergal/super-wouf-kart/blob/main/docs/superpowers/specs/2026-09-23-wouf-kart-design.md)

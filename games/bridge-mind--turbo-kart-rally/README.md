@@ -85,6 +85,7 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://bridge-mind.github.io/turbo-kart-rally/](https://bridge-mind.github.io/turbo-kart-rally/)
-- [https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md](https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md)
-- [https://github.com/bridge-mind/turbo-kart-rally/blob/main/ARCHITECTURE.md](https://github.com/bridge-mind/turbo-kart-rally/blob/main/ARCHITECTURE.md)
+- [Related link](https://bridge-mind.github.io/turbo-kart-rally/)
+- [Related link](https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md)
+- [Related link](https://github.com/bridge-mind/turbo-kart-rally/blob/main/ARCHITECTURE.md)
+- [Original submission](https://github.com/bridge-mind/turbo-kart-rally/tree/main)

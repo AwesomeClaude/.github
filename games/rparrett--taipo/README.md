@@ -77,6 +77,6 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://euclidean-whale.itch.io/taipo](https://euclidean-whale.itch.io/taipo)
-- [https://github.com/rparrett/taipo](https://github.com/rparrett/taipo)
-- [https://github.com/rparrett/taipo/blob/main/README.md](https://github.com/rparrett/taipo/blob/main/README.md)
+- [Related link](https://euclidean-whale.itch.io/taipo)
+- [Original submission](https://github.com/rparrett/taipo)
+- [Related link](https://github.com/rparrett/taipo/blob/main/README.md)

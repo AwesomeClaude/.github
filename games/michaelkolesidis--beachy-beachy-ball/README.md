@@ -94,6 +94,6 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://github.com/michaelkolesidis/beachy-beachy-ball](https://github.com/michaelkolesidis/beachy-beachy-ball)
-- [https://beachybeachyball.michaelkolesidis.com](https://beachybeachyball.michaelkolesidis.com)
-- [https://github.com/michaelkolesidis/beachy-beachy-ball/blob/main/README.md](https://github.com/michaelkolesidis/beachy-beachy-ball/blob/main/README.md)
+- [Original submission](https://github.com/michaelkolesidis/beachy-beachy-ball)
+- [Related link](https://beachybeachyball.michaelkolesidis.com)
+- [Related link](https://github.com/michaelkolesidis/beachy-beachy-ball/blob/main/README.md)

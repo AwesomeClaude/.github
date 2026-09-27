@@ -70,11 +70,11 @@ Treat these as illustrative, not real user reviews.
 
 ## Links
 
-- [https://github.com/lortkipa/minecraft-astra](https://github.com/lortkipa/minecraft-astra)
-- [https://github.com/lortkipa/minecraft-astra/blob/main/README.md](https://github.com/lortkipa/minecraft-astra/blob/main/README.md)
-- [https://github.com/lortkipa/minecraft-astra/blob/main/package.json](https://github.com/lortkipa/minecraft-astra/blob/main/package.json)
-- [https://github.com/lortkipa/minecraft-astra/blob/main/src/core.js](https://github.com/lortkipa/minecraft-astra/blob/main/src/core.js)
-- [https://github.com/lortkipa/minecraft-astra/blob/main/src/world.js](https://github.com/lortkipa/minecraft-astra/blob/main/src/world.js)
-- [https://github.com/lortkipa/minecraft-astra/blob/main/src/game.js](https://github.com/lortkipa/minecraft-astra/blob/main/src/game.js)
-- [https://github.com/lortkipa/minecraft-astra/blob/main/src/ui.js](https://github.com/lortkipa/minecraft-astra/blob/main/src/ui.js)
-- [https://endearing-taffy-1374d7.netlify.app/](https://endearing-taffy-1374d7.netlify.app/)
+- [Original submission](https://github.com/lortkipa/minecraft-astra)
+- [Related link](https://github.com/lortkipa/minecraft-astra/blob/main/README.md)
+- [Related link](https://github.com/lortkipa/minecraft-astra/blob/main/package.json)
+- [Related link](https://github.com/lortkipa/minecraft-astra/blob/main/src/core.js)
+- [Related link](https://github.com/lortkipa/minecraft-astra/blob/main/src/world.js)
+- [Related link](https://github.com/lortkipa/minecraft-astra/blob/main/src/game.js)
+- [Related link](https://github.com/lortkipa/minecraft-astra/blob/main/src/ui.js)
+- [Related link](https://endearing-taffy-1374d7.netlify.app/)
