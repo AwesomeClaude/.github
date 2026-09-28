@@ -88,31 +88,19 @@
   "screenshots": [
     {
       "url": "https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/19e49a23f4ce9e41c3d937a73e6a9973cf3b49fd/docs/images/flight.png",
-      "observation": "Inspected 1920x1080 gameplay frame: top-down 3D flight at Rutilicus near New Boston with large faceted teal/white planet, white/teal brick-built Sparrow with engine flames, ring station, scattered asteroids, orbit rings, second ship, mission banners, top Starmap/Spaceport/My ship/Journal/Options/Cloak bar, 24,000 cr plus 75,000 cr loan readout, shield/hull/fuel/power/heat bars, Land/Plot a course/Actions buttons, radar, and WebGL2 Auto-High 16.8 ms 29 bodies telemetry. Clearly the game's own runtime output.",
-      "local_path": "screenshots/795097682ba47d658140230b7de03ab869161480a83f27c5fc028b2b368a24cb.png",
-      "sha256": "795097682ba47d658140230b7de03ab869161480a83f27c5fc028b2b368a24cb",
-      "downloaded_at": "2026-09-28T04:52:14.710268+00:00"
+      "observation": "Inspected 1920x1080 gameplay frame: top-down 3D flight at Rutilicus near New Boston with large faceted teal/white planet, white/teal brick-built Sparrow with engine flames, ring station, scattered asteroids, orbit rings, second ship, mission banners, top Starmap/Spaceport/My ship/Journal/Options/Cloak bar, 24,000 cr plus 75,000 cr loan readout, shield/hull/fuel/power/heat bars, Land/Plot a course/Actions buttons, radar, and WebGL2 Auto-High 16.8 ms 29 bodies telemetry. Clearly the game's own runtime output."
     },
     {
       "url": "https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/19e49a23f4ce9e41c3d937a73e6a9973cf3b49fd/docs/images/webgpu.png",
-      "observation": "Inspected 1440x900 gameplay frame: same planet and station surrounded by a large Quarg Hydra fleet of dark multi-arm ships, AUTOPILOT LANDING APPROACH text, captain's-heading mission panel, full top bar and credits readout, bottom Land/Plot/Actions buttons, left ship stat bars, right scanner showing 12 hostile contacts, WebGPU High 248.1 ms 41 bodies telemetry. Clearly the game's own runtime output showing fleet encounter scale.",
-      "local_path": "screenshots/d21d6277c7e9108cf935904a01feaca38a5fae05741a79763052d85e8e7353f9.png",
-      "sha256": "d21d6277c7e9108cf935904a01feaca38a5fae05741a79763052d85e8e7353f9",
-      "downloaded_at": "2026-09-28T04:52:14.756293+00:00"
+      "observation": "Inspected 1440x900 gameplay frame: same planet and station surrounded by a large Quarg Hydra fleet of dark multi-arm ships, AUTOPILOT LANDING APPROACH text, captain's-heading mission panel, full top bar and credits readout, bottom Land/Plot/Actions buttons, left ship stat bars, right scanner showing 12 hostile contacts, WebGPU High 248.1 ms 41 bodies telemetry. Clearly the game's own runtime output showing fleet encounter scale."
     },
     {
       "url": "https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/19e49a23f4ce9e41c3d937a73e6a9973cf3b49fd/docs/images/touch-landscape.png",
-      "observation": "Inspected 844x390 gameplay frame: touch layout with top icon bar, credits readout, planet and brick ship, mission panel, right-side Sparrow stat bars, bottom on-screen steering/thrust/brake/boost buttons left and fire/boost buttons right, WebGL2 Balanced 54.0 ms 17 bodies telemetry. Clearly the game's own runtime output proving touch controls.",
-      "local_path": "screenshots/861c1e095a315f468951674a947d283771f8f14dfb5e71bc8f92e3f0a951ffd9.png",
-      "sha256": "861c1e095a315f468951674a947d283771f8f14dfb5e71bc8f92e3f0a951ffd9",
-      "downloaded_at": "2026-09-28T04:52:14.797279+00:00"
+      "observation": "Inspected 844x390 gameplay frame: touch layout with top icon bar, credits readout, planet and brick ship, mission panel, right-side Sparrow stat bars, bottom on-screen steering/thrust/brake/boost buttons left and fire/boost buttons right, WebGL2 Balanced 54.0 ms 17 bodies telemetry. Clearly the game's own runtime output proving touch controls."
     },
     {
       "url": "https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/19e49a23f4ce9e41c3d937a73e6a9973cf3b49fd/docs/images/title.png",
-      "observation": "Inspected 1920x1080 title screen: MERIDIAN WAKE masthead with Begin your voyage button, Flight handbook and Options links, large brick-built ship and faceted planet backdrop with asteroids and station. Menu/title card, not active gameplay; discounted for graphics scoring.",
-      "local_path": "screenshots/7b35d3c8831c7b515e4375654511119b6ceb80a9d3566d42efa217e03fc5d4c2.png",
-      "sha256": "7b35d3c8831c7b515e4375654511119b6ceb80a9d3566d42efa217e03fc5d4c2",
-      "downloaded_at": "2026-09-28T04:52:14.851364+00:00"
+      "observation": "Inspected 1920x1080 title screen: MERIDIAN WAKE masthead with Begin your voyage button, Flight handbook and Options links, large brick-built ship and faceted planet backdrop with asteroids and station. Menu/title card, not active gameplay; discounted for graphics scoring."
     }
   ],
   "screenshot_based_score": {
@@ -170,7 +158,7 @@
   "fictional_reviews": [
     {
       "rating": 82,
-      "text": "Fictional review: I ran the first passenger contract from New Boston exactly as the handbook says, and the loop clicked — launch, plot, jump, assisted landing, payday. The brick-built ships give every system real charm."
+      "text": "Fictional review: I ran the first passenger contract from New Boston exactly as the handbook says, and the loop clicked \u2014 launch, plot, jump, assisted landing, payday. The brick-built ships give every system real charm."
     },
     {
       "rating": 64,
@@ -178,7 +166,7 @@
     },
     {
       "rating": 95,
-      "text": "Fictional review: A one-person loan, a tiny Sparrow, and hundreds of star systems of possibility — the Free Worlds story threading through trading, mining, and boarding is the most ambitious browser voyage I have seen this year."
+      "text": "Fictional review: A one-person loan, a tiny Sparrow, and hundreds of star systems of possibility \u2014 the Free Worlds story threading through trading, mining, and boarding is the most ambitious browser voyage I have seen this year."
     }
   ],
   "links": [
@@ -191,15 +179,12 @@
       "url": "https://meridian-wake-g6a.vercel.app"
     }
   ],
-  "repository_created_at": "2026-09-27T04:27:41Z",
+  "repository_created_at": null,
   "analysis": {
     "analyzed_at": "2026-09-28T04:52:12.377953+00:00",
     "model": "opencode/muse-spark-1.3-contributor-free",
     "actions_run": "https://github.com/AwesomeClaude/.github/actions/runs/36379323940/job/108791601935",
     "session_id": "ses_f19a671c9ffey4krr72UVkhYB3",
     "prompt_sha256": "b4178b2e97f1a848b9c2b6b98d6d69c347d1a6f762d7ccb1e79ff1e883935b6c"
-  },
-  "catalog_added_at": "2026-09-27T06:18:25.226515+00:00",
-  "catalog_updated_at": "2026-09-28T04:52:12.377953+00:00",
-  "previous_report_url": "https://github.com/AwesomeClaude/.github/blob/e866255fc5cb8e58c821c089ae8d9381df1f427d/games/michaelcrosato--meridian-wake-g6a/README.md"
+  }
 }
