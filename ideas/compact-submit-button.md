@@ -1,5 +1,7 @@
 # Compact submit button
 
-Replace the wide opaque banner with a compact transparent arcade button. Preserve the cyan/magenta identity, controller icon, legible CTA, and direct issue-form link. Bake rounded corners and glow into the PNG because GitHub README markup cannot provide a custom hover treatment.
+Build the Quantum Arcade button as a compact, self-contained SVG. Preserve the cyan/magenta identity, controller icon, legible CTA, and direct issue-form link. Keep transparent outer corners and restrained glow.
 
-Keep the source PNG larger than its 320-pixel display width for crisp rendering. Generate both README references from one renderer so the organization profile and root catalog stay synchronized.
+Combine slow distant particles, faster foreground sparks, contracting proximity connections, faint Voronoi cells, and a controller-powered ripple. Coordinate the effects instead of stacking unrelated loops. Keep lettering stationary and the central field quiet at the 320-pixel display width.
+
+Choreograph the connections and cell highlights without runtime simulation. Disable motion for reduced-motion preferences. Generate both README references from one renderer so the organization profile and root catalog stay synchronized.

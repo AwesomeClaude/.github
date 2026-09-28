@@ -1,5 +1,9 @@
 # Submit-game button
 
-Generate the compact button in both the root and organization-profile READMEs with `./scripts/games.sh`. Keep the source image at `assets/submit-your-game.png`. Render it at 320 pixels wide, with transparent outer corners and rounded edges. Link it to the prefilled AwesomeClaude issue form. Do not depend on custom README hover styles or scripts; GitHub removes them.
+Edit the self-contained vector artwork at `assets/submit-your-game.svg`. Regenerate both the root and organization-profile READMEs with `./scripts/games.sh`. Render the button at 320 pixels wide. Preserve transparent corners, rounded edges, stationary pixel lettering, and the prefilled AwesomeClaude issue link.
 
-Check both published README views after changing the asset or generator. Confirm the image loads, displays at the intended size, and opens the issue form.
+Coordinate the eight-second energy sequence: charge the controller, expand the ripple, illuminate crystalline edges, and send runners around the border. Drift distant particles slowly and foreground sparks quickly. Contract choreographed node pairs while brightening their cyan connections. Keep the central label dark and readable.
+
+Keep gradients, paths, filters, and CSS animation inside the SVG. Draw lettering as paths to avoid font dependencies. Respect `prefers-reduced-motion` by disabling animation and hiding transient effects. Preserve a complete static appearance. Avoid scripts, external resources, and hover-dependent effects in the README image.
+
+Run the real catalog rebuild after changing the asset or generator. Check both published README views. Confirm the SVG loads at 320 pixels, animates without moving the label, stays legible on light and dark backgrounds, and opens the prefilled issue form. Check reduced-motion rendering. Keep any required login page open for the user.

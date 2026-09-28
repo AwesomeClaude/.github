@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="144" viewBox="0 0 640 144" role="img" aria-labelledby="title desc">
+  <title id="title">Submit your game</title>
+  <desc id="desc">Quantum Arcade: a neon controller powers a layered particle field, cyan connections, crystalline cells, and an expanding energy ripple.</desc>
+  <defs>
+    <linearGradient id="face" x2="1" y2="1"><stop stop-color="#071c35"/><stop offset=".5" stop-color="#080e24"/><stop offset="1" stop-color="#210d34"/></linearGradient>
+    <linearGradient id="neon"><stop stop-color="#36ecff"/><stop offset=".48" stop-color="#5888ff"/><stop offset="1" stop-color="#fa4fff"/></linearGradient>
+    <radialGradient id="reactor"><stop stop-color="#06cde4" stop-opacity=".2"/><stop offset="1" stop-color="#06cde4" stop-opacity="0"/></radialGradient>
+    <radialGradient id="quiet"><stop stop-color="#080e24" stop-opacity=".97"/><stop offset=".7" stop-color="#080e24" stop-opacity=".84"/><stop offset="1" stop-color="#080e24" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-60%" y="-100%" width="220%" height="300%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="2.5"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="inside"><rect x="10" y="10" width="620" height="124" rx="25"/></clipPath>
+    <path id="rim" d="M80 11H604Q629 11 629 36V108Q629 133 604 133H36Q11 133 11 108V36Q11 11 36 11Z"/>
+  </defs>
+  <style>
+    /* Keep the artwork self-contained in GitHub's image context. */
+    .far { animation: drift 24s ease-in-out infinite alternate; }
+    .near { animation: drift 12s ease-in-out infinite alternate-reverse; }
+    .pair { animation: approach 8s ease-in-out infinite; transform-box: fill-box; transform-origin: left center; }
+    .connection { animation: connect 8s ease-in-out infinite; }
+    .spark { animation: spark 8s ease-out infinite; opacity: 0; }
+    .cell-flash { animation: crystal 8s ease-in-out infinite; opacity: 0; }
+    .ripple { transform-origin: 80px 72px; animation: ripple 8s ease-out infinite; opacity: 0; }
+    .echo { animation-delay: .24s; }
+    .charge { animation: charge 8s ease-in-out infinite; }
+    .runner { stroke-dasharray: 90 1450; animation: runner 8s linear infinite; opacity: 0; }
+    .reverse { animation-name: reverse-runner; }
+    @keyframes drift { from { transform: translate(-7px, 3px); } to { transform: translate(10px, -4px); } }
+    @keyframes approach { 0%, 100% { transform: scaleX(1); } 42%, 55% { transform: scaleX(.66); } }
+    @keyframes connect { 0%, 100% { opacity: .08; } 40%, 55% { opacity: .8; } 75% { opacity: .18; } }
+    @keyframes charge { 0%, 22%, 76%, 100% { opacity: .5; } 35%, 43% { opacity: 1; } 58% { opacity: .7; } }
+    @keyframes crystal { 0%, 35%, 70%, 100% { opacity: 0; } 46%, 52% { opacity: .85; } }
+    @keyframes ripple { 0%, 34% { opacity: 0; transform: scale(.5); } 38% { opacity: .7; } 65% { opacity: 0; transform: scale(37, 9); } 100% { opacity: 0; transform: scale(37, 9); } }
+    @keyframes spark { 0%, 55% { opacity: 0; transform: translateX(-24px); } 58% { opacity: .95; } 76%, 100% { opacity: 0; transform: translateX(100px); } }
+    @keyframes runner { 0%, 58% { opacity: 0; stroke-dashoffset: 0; } 62% { opacity: 1; } 84%, 100% { opacity: 0; stroke-dashoffset: -1400; } }
+    @keyframes reverse-runner { 0%, 58% { opacity: 0; stroke-dashoffset: 0; } 62% { opacity: .85; } 84%, 100% { opacity: 0; stroke-dashoffset: 1400; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .spark, .cell-flash, .ripple, .runner { opacity: 0; }
+      .connection { opacity: .35; }
+    }
+  </style>
+  <!-- Preserve transparent corners; leave room for the outer halo. -->
+  <use href="#rim" fill="none" stroke="url(#neon)" stroke-width="2" opacity=".5" filter="url(#glow)"/>
+  <rect x="10" y="10" width="620" height="124" rx="25" fill="url(#face)"/>
+  <g clip-path="url(#inside)">
+    <ellipse cx="80" cy="72" rx="145" ry="110" fill="url(#reactor)"/>
+    <!-- Clip half-plane Voronoi cells to the button's field. -->
+    <polygon points="448.7,144.0 363.3,144.0 386.5,85.1 435.6,76.6 452.4,90.0" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.58s" d="M448.7 144.0L363.3 144.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="363.2,40.1 375.9,54.7 386.5,85.1 363.3,144.0 322.9,144.0 306.2,124.6 311.8,72.8" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="306.2,124.6 322.9,144.0 189.0,144.0 207.5,128.2 298.5,120.5" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="180.1,0.0 217.0,0.0 217.1,2.1 190.0,40.4 185.5,39.9 175.3,28.5" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.25s" d="M180.1 0.0L217.0 0.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="175.3,28.5 185.5,39.9 159.1,58.5 139.9,50.0 133.5,44.1 146.1,26.6" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="245.1,62.7 236.2,67.9 203.8,60.2 190.0,40.4 217.1,2.1" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="35.6,0.0 81.6,0.0 108.6,44.3 107.9,45.8 45.1,67.7" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.09s" d="M35.6 0.0L81.6 0.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="207.5,128.2 189.0,144.0 169.7,144.0 173.9,82.1 203.8,60.2 236.2,67.9" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="81.6,0.0 151.7,0.0 146.1,26.6 133.5,44.1 108.6,44.3" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="133.5,44.1 139.9,50.0 138.0,144.0 123.5,144.0 100.6,88.5 107.9,45.8 108.6,44.3" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.17s" d="M133.5 44.1L139.9 50.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="298.5,120.5 207.5,128.2 236.2,67.9 245.1,62.7 248.5,62.8" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="511.2,0.0 521.2,0.0 556.4,80.6 534.5,100.7 503.6,97.9 496.8,92.3 496.2,88.1 503.1,8.6" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="82.8,144.0 0.0,144.0 0.0,116.8 42.8,77.0 61.2,83.7" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.08s" d="M82.8 144.0L0.0 144.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="503.1,8.6 496.2,88.1 457.6,34.7" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="435.6,76.6 386.5,85.1 375.9,54.7 428.5,16.4 455.1,35.4" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="640.0,66.2 640.0,144.0 588.0,144.0 563.2,80.3" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.78s" d="M640.0 66.2L640.0 144.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="542.7,144.0 477.5,144.0 503.6,97.9 534.5,100.7" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="139.9,50.0 159.1,58.5 173.9,82.1 169.7,144.0 138.0,144.0" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="477.5,144.0 448.7,144.0 452.4,90.0 496.8,92.3 503.6,97.9" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.62s" d="M477.5 144.0L448.7 144.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="217.0,0.0 302.2,0.0 288.2,29.6 248.5,62.8 245.1,62.7 217.1,2.1" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="344.4,0.0 423.9,0.0 428.5,16.4 375.9,54.7 363.2,40.1" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="423.9,0.0 511.2,0.0 503.1,8.6 457.6,34.7 455.1,35.4 428.5,16.4" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.60s" d="M423.9 0.0L511.2 0.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="311.8,72.8 306.2,124.6 298.5,120.5 248.5,62.8 288.2,29.6" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="45.1,67.7 107.9,45.8 100.6,88.5 61.2,83.7 42.8,77.0" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="302.2,0.0 344.4,0.0 363.2,40.1 311.8,72.8 288.2,29.6" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.43s" d="M302.2 0.0L344.4 0.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="588.0,144.0 542.7,144.0 534.5,100.7 556.4,80.6 563.2,80.3" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="521.2,0.0 640.0,0.0 640.0,66.2 563.2,80.3 556.4,80.6" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="0.0,0.0 35.6,0.0 45.1,67.7 42.8,77.0 0.0,116.8" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.02s" d="M0.0 0.0L35.6 0.0" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="123.5,144.0 82.8,144.0 61.2,83.7 100.6,88.5" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="151.7,0.0 180.1,0.0 175.3,28.5 146.1,26.6" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <polygon points="159.1,58.5 185.5,39.9 190.0,40.4 203.8,60.2 173.9,82.1" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <path class="cell-flash" style="animation-delay:0.24s" d="M159.1 58.5L185.5 39.9" fill="none" stroke="#f56fff" stroke-width="1.4"/>
+    <polygon points="457.6,34.7 496.2,88.1 496.8,92.3 452.4,90.0 435.6,76.6 455.1,35.4" fill="none" stroke="#438da8" stroke-width=".8" opacity=".19"/>
+    <g class="far" fill="#7feaff" opacity="0.4">
+      <circle cx="199.3" cy="91.2" r="0.9"/>
+      <circle cx="45.3" cy="40.6" r="0.9"/>
+      <circle cx="431.9" cy="99.2" r="0.9"/>
+      <circle cx="79.0" cy="25.2" r="0.9"/>
+      <circle cx="322.5" cy="88.9" r="0.9"/>
+      <circle cx="27.7" cy="65.2" r="0.9"/>
+      <circle cx="183.4" cy="27.2" r="0.9"/>
+      <circle cx="121.0" cy="48.9" r="0.9"/>
+      <circle cx="299.2" cy="30.1" r="0.9"/>
+      <circle cx="391.4" cy="112.9" r="0.9"/>
+      <circle cx="429.8" cy="25.3" r="0.9"/>
+      <circle cx="408.4" cy="86.5" r="0.9"/>
+      <circle cx="23.3" cy="59.5" r="0.9"/>
+      <circle cx="410.8" cy="120.6" r="0.9"/>
+      <circle cx="577.2" cy="79.5" r="0.9"/>
+      <circle cx="372.5" cy="121.5" r="0.9"/>
+      <circle cx="144.8" cy="73.0" r="0.9"/>
+      <circle cx="55.0" cy="101.7" r="0.9"/>
+      <circle cx="411.5" cy="40.7" r="0.9"/>
+      <circle cx="136.6" cy="74.6" r="0.9"/>
+      <circle cx="470.5" cy="32.7" r="0.9"/>
+      <circle cx="212.7" cy="73.4" r="0.9"/>
+      <circle cx="175.2" cy="113.5" r="0.9"/>
+      <circle cx="454.5" cy="121.2" r="0.9"/>
+      <circle cx="403.9" cy="91.6" r="0.9"/>
+      <circle cx="189.9" cy="72.5" r="0.9"/>
+      <circle cx="276.4" cy="69.7" r="0.9"/>
+      <circle cx="55.6" cy="109.8" r="0.9"/>
+      <circle cx="111.0" cy="67.5" r="0.9"/>
+      <circle cx="577.9" cy="73.4" r="0.9"/>
+      <circle cx="540.8" cy="46.1" r="0.9"/>
+      <circle cx="299.0" cy="59.0" r="0.9"/>
+      <circle cx="213.2" cy="57.9" r="0.9"/>
+      <circle cx="286.0" cy="108.9" r="0.9"/>
+      <circle cx="602.5" cy="28.2" r="0.9"/>
+    </g>
+    <g class="near" fill="#7feaff" opacity="0.65">
+      <circle cx="420.0" cy="75.1" r="1.5"/>
+      <circle cx="266.7" cy="22.4" r="1.5"/>
+      <circle cx="235.8" cy="52.2" r="1.5"/>
+      <circle cx="239.0" cy="82.1" r="1.5"/>
+      <circle cx="239.0" cy="49.9" r="1.5"/>
+      <circle cx="183.1" cy="123.5" r="1.5"/>
+      <circle cx="253.9" cy="123.1" r="1.5"/>
+      <circle cx="117.7" cy="89.7" r="1.5"/>
+      <circle cx="351.8" cy="94.7" r="1.5"/>
+      <circle cx="327.7" cy="112.4" r="1.5"/>
+      <circle cx="371.7" cy="23.0" r="1.5"/>
+      <circle cx="428.9" cy="84.2" r="1.5"/>
+      <circle cx="165.7" cy="96.9" r="1.5"/>
+      <circle cx="521.1" cy="47.9" r="1.5"/>
+      <circle cx="107.3" cy="49.2" r="1.5"/>
+      <circle cx="372.9" cy="66.0" r="1.5"/>
+    </g>
+    <!-- Contract each node pair and brighten its connecting filament together. -->
+    <g transform="translate(27 32)"><g class="pair" style="animation-delay:0s">
+      <path class="connection" style="animation-delay:0s" d="M0 0L64 12" stroke="#5eeaff" stroke-width="1"/>
+      <circle r="2" fill="#91f4ff"/><circle cx="64" cy="12" r="2" fill="#7bdfff"/>
+    </g></g>
+    <g transform="translate(145 28)"><g class="pair" style="animation-delay:-2s">
+      <path class="connection" style="animation-delay:-2s" d="M0 0L78 -9" stroke="#5eeaff" stroke-width="1"/>
+      <circle r="2" fill="#91f4ff"/><circle cx="78" cy="-9" r="2" fill="#7bdfff"/>
+    </g></g>
+    <g transform="translate(285 112)"><g class="pair" style="animation-delay:-1s">
+      <path class="connection" style="animation-delay:-1s" d="M0 0L80 10" stroke="#5eeaff" stroke-width="1"/>
+      <circle r="2" fill="#91f4ff"/><circle cx="80" cy="10" r="2" fill="#7bdfff"/>
+    </g></g>
+    <g transform="translate(449 30)"><g class="pair" style="animation-delay:-3s">
+      <path class="connection" style="animation-delay:-3s" d="M0 0L94 -10" stroke="#5eeaff" stroke-width="1"/>
+      <circle r="2" fill="#91f4ff"/><circle cx="94" cy="-10" r="2" fill="#7bdfff"/>
+    </g></g>
+    <g transform="translate(513 115)"><g class="pair" style="animation-delay:-0.7s">
+      <path class="connection" style="animation-delay:-0.7s" d="M0 0L64 -14" stroke="#5eeaff" stroke-width="1"/>
+      <circle r="2" fill="#91f4ff"/><circle cx="64" cy="-14" r="2" fill="#7bdfff"/>
+    </g></g>
+    <g transform="translate(40 112)"><g class="pair" style="animation-delay:-4s">
+      <path class="connection" style="animation-delay:-4s" d="M0 0L81 -10" stroke="#5eeaff" stroke-width="1"/>
+      <circle r="2" fill="#91f4ff"/><circle cx="81" cy="-10" r="2" fill="#7bdfff"/>
+    </g></g>
+    <g fill="none" stroke="#76eeff">
+      <ellipse class="ripple" cx="80" cy="72" rx="16" ry="13" stroke-width="1.2"/>
+      <ellipse class="ripple echo" cx="80" cy="72" rx="16" ry="13" stroke-width=".5"/>
+    </g>
+    <!-- Keep the call to action still and visually quiet. -->
+    <ellipse cx="365" cy="73" rx="245" ry="48" fill="url(#quiet)"/>
+    <path class="spark" style="animation-delay:0s" d="M112 23h12" stroke="#a4f7ff" stroke-width="1.8" stroke-linecap="round"/>
+    <path class="spark" style="animation-delay:0.4s" d="M230 120h12" stroke="#a4f7ff" stroke-width="1.8" stroke-linecap="round"/>
+    <path class="spark" style="animation-delay:0.65s" d="M404 25h12" stroke="#a4f7ff" stroke-width="1.8" stroke-linecap="round"/>
+    <path class="spark" style="animation-delay:0.9s" d="M495 113h12" stroke="#a4f7ff" stroke-width="1.8" stroke-linecap="round"/>
+    <path class="spark" style="animation-delay:-0.2s" d="M54 96h12" stroke="#a4f7ff" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <use href="#rim" fill="none" stroke="url(#neon)" stroke-width="1.6" opacity=".85"/>
+  <rect x="16" y="16" width="608" height="112" rx="20" fill="none" stroke="url(#neon)" stroke-width=".6" opacity=".25"/>
+  <g fill="none" stroke-width="2.4" filter="url(#glow)">
+    <use href="#rim" class="runner" stroke="#a4faff"/>
+    <use href="#rim" class="runner reverse" stroke="#fc99ff"/>
+  </g>
+  <!-- The reactor/controller remains recognizable even with motion disabled. -->
+  <circle cx="80" cy="72" r="42" fill="#07172e" fill-opacity=".8" stroke="#40cfe8" stroke-opacity=".16"/>
+  <path d="M51 39A43 43 0 0 1 110 42M49 102A43 43 0 0 0 110 102" fill="none" stroke="url(#neon)" stroke-width="1.5" opacity=".65"/>
+  <path d="M62 55H70L75 60H85L90 55H99L107 63L115 87L112 94H104L93 83H68L57 94H49L45 87L53 63Z" fill="#0b1731" stroke="url(#neon)" stroke-width="3" stroke-linejoin="round" filter="url(#glow)"/>
+  <path d="M61 65H67V71H73V77H67V83H61V77H55V71H61Z" fill="#62edff"/>
+  <g class="charge" fill="#f47eff" filter="url(#glow)">
+    <circle cx="96" cy="66" r="3"/><circle cx="103" cy="73" r="3"/><circle cx="89" cy="73" r="3"/><circle cx="96" cy="80" r="3"/>
+  </g>
+  <path d="M76 77h4m3 0h3" stroke="#c7e3ff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Draw original pixel lettering as paths; require no installed or remote font. -->
+  <g fill="#f1f8ff" aria-hidden="true">
+    <path d="M148 56h4.5v4.5h-4.5ZM152.5 56h4.5v4.5h-4.5ZM157 56h4.5v4.5h-4.5ZM161.5 56h4.5v4.5h-4.5ZM166 56h4.5v4.5h-4.5ZM148 60.5h4.5v4.5h-4.5ZM148 65h4.5v4.5h-4.5ZM148 69.5h4.5v4.5h-4.5ZM152.5 69.5h4.5v4.5h-4.5ZM157 69.5h4.5v4.5h-4.5ZM161.5 69.5h4.5v4.5h-4.5ZM166 69.5h4.5v4.5h-4.5ZM166 74h4.5v4.5h-4.5ZM166 78.5h4.5v4.5h-4.5ZM148 83h4.5v4.5h-4.5ZM152.5 83h4.5v4.5h-4.5ZM157 83h4.5v4.5h-4.5ZM161.5 83h4.5v4.5h-4.5ZM166 83h4.5v4.5h-4.5Z"/>
+    <path d="M175 56h4.5v4.5h-4.5ZM193 56h4.5v4.5h-4.5ZM175 60.5h4.5v4.5h-4.5ZM193 60.5h4.5v4.5h-4.5ZM175 65h4.5v4.5h-4.5ZM193 65h4.5v4.5h-4.5ZM175 69.5h4.5v4.5h-4.5ZM193 69.5h4.5v4.5h-4.5ZM175 74h4.5v4.5h-4.5ZM193 74h4.5v4.5h-4.5ZM175 78.5h4.5v4.5h-4.5ZM193 78.5h4.5v4.5h-4.5ZM179.5 83h4.5v4.5h-4.5ZM184 83h4.5v4.5h-4.5ZM188.5 83h4.5v4.5h-4.5Z"/>
+    <path d="M202 56h4.5v4.5h-4.5ZM206.5 56h4.5v4.5h-4.5ZM211 56h4.5v4.5h-4.5ZM215.5 56h4.5v4.5h-4.5ZM202 60.5h4.5v4.5h-4.5ZM220 60.5h4.5v4.5h-4.5ZM202 65h4.5v4.5h-4.5ZM220 65h4.5v4.5h-4.5ZM202 69.5h4.5v4.5h-4.5ZM206.5 69.5h4.5v4.5h-4.5ZM211 69.5h4.5v4.5h-4.5ZM215.5 69.5h4.5v4.5h-4.5ZM202 74h4.5v4.5h-4.5ZM220 74h4.5v4.5h-4.5ZM202 78.5h4.5v4.5h-4.5ZM220 78.5h4.5v4.5h-4.5ZM202 83h4.5v4.5h-4.5ZM206.5 83h4.5v4.5h-4.5ZM211 83h4.5v4.5h-4.5ZM215.5 83h4.5v4.5h-4.5Z"/>
+    <path d="M229 56h4.5v4.5h-4.5ZM247 56h4.5v4.5h-4.5ZM229 60.5h4.5v4.5h-4.5ZM233.5 60.5h4.5v4.5h-4.5ZM242.5 60.5h4.5v4.5h-4.5ZM247 60.5h4.5v4.5h-4.5ZM229 65h4.5v4.5h-4.5ZM238 65h4.5v4.5h-4.5ZM247 65h4.5v4.5h-4.5ZM229 69.5h4.5v4.5h-4.5ZM238 69.5h4.5v4.5h-4.5ZM247 69.5h4.5v4.5h-4.5ZM229 74h4.5v4.5h-4.5ZM247 74h4.5v4.5h-4.5ZM229 78.5h4.5v4.5h-4.5ZM247 78.5h4.5v4.5h-4.5ZM229 83h4.5v4.5h-4.5ZM247 83h4.5v4.5h-4.5Z"/>
+    <path d="M256 56h4.5v4.5h-4.5ZM260.5 56h4.5v4.5h-4.5ZM265 56h4.5v4.5h-4.5ZM260.5 60.5h4.5v4.5h-4.5ZM260.5 65h4.5v4.5h-4.5ZM260.5 69.5h4.5v4.5h-4.5ZM260.5 74h4.5v4.5h-4.5ZM260.5 78.5h4.5v4.5h-4.5ZM256 83h4.5v4.5h-4.5ZM260.5 83h4.5v4.5h-4.5ZM265 83h4.5v4.5h-4.5Z"/>
+    <path d="M274 56h4.5v4.5h-4.5ZM278.5 56h4.5v4.5h-4.5ZM283 56h4.5v4.5h-4.5ZM287.5 56h4.5v4.5h-4.5ZM292 56h4.5v4.5h-4.5ZM283 60.5h4.5v4.5h-4.5ZM283 65h4.5v4.5h-4.5ZM283 69.5h4.5v4.5h-4.5ZM283 74h4.5v4.5h-4.5ZM283 78.5h4.5v4.5h-4.5ZM283 83h4.5v4.5h-4.5Z"/>
+    <path d="M318 56h4.5v4.5h-4.5ZM336 56h4.5v4.5h-4.5ZM318 60.5h4.5v4.5h-4.5ZM336 60.5h4.5v4.5h-4.5ZM322.5 65h4.5v4.5h-4.5ZM331.5 65h4.5v4.5h-4.5ZM327 69.5h4.5v4.5h-4.5ZM327 74h4.5v4.5h-4.5ZM327 78.5h4.5v4.5h-4.5ZM327 83h4.5v4.5h-4.5Z"/>
+    <path d="M349.5 56h4.5v4.5h-4.5ZM354 56h4.5v4.5h-4.5ZM358.5 56h4.5v4.5h-4.5ZM345 60.5h4.5v4.5h-4.5ZM363 60.5h4.5v4.5h-4.5ZM345 65h4.5v4.5h-4.5ZM363 65h4.5v4.5h-4.5ZM345 69.5h4.5v4.5h-4.5ZM363 69.5h4.5v4.5h-4.5ZM345 74h4.5v4.5h-4.5ZM363 74h4.5v4.5h-4.5ZM345 78.5h4.5v4.5h-4.5ZM363 78.5h4.5v4.5h-4.5ZM349.5 83h4.5v4.5h-4.5ZM354 83h4.5v4.5h-4.5ZM358.5 83h4.5v4.5h-4.5Z"/>
+    <path d="M372 56h4.5v4.5h-4.5ZM390 56h4.5v4.5h-4.5ZM372 60.5h4.5v4.5h-4.5ZM390 60.5h4.5v4.5h-4.5ZM372 65h4.5v4.5h-4.5ZM390 65h4.5v4.5h-4.5ZM372 69.5h4.5v4.5h-4.5ZM390 69.5h4.5v4.5h-4.5ZM372 74h4.5v4.5h-4.5ZM390 74h4.5v4.5h-4.5ZM372 78.5h4.5v4.5h-4.5ZM390 78.5h4.5v4.5h-4.5ZM376.5 83h4.5v4.5h-4.5ZM381 83h4.5v4.5h-4.5ZM385.5 83h4.5v4.5h-4.5Z"/>
+    <path d="M399 56h4.5v4.5h-4.5ZM403.5 56h4.5v4.5h-4.5ZM408 56h4.5v4.5h-4.5ZM412.5 56h4.5v4.5h-4.5ZM399 60.5h4.5v4.5h-4.5ZM417 60.5h4.5v4.5h-4.5ZM399 65h4.5v4.5h-4.5ZM417 65h4.5v4.5h-4.5ZM399 69.5h4.5v4.5h-4.5ZM403.5 69.5h4.5v4.5h-4.5ZM408 69.5h4.5v4.5h-4.5ZM412.5 69.5h4.5v4.5h-4.5ZM399 74h4.5v4.5h-4.5ZM408 74h4.5v4.5h-4.5ZM399 78.5h4.5v4.5h-4.5ZM412.5 78.5h4.5v4.5h-4.5ZM399 83h4.5v4.5h-4.5ZM417 83h4.5v4.5h-4.5Z"/>
+    <path d="M447.5 56h4.5v4.5h-4.5ZM452 56h4.5v4.5h-4.5ZM456.5 56h4.5v4.5h-4.5ZM461 56h4.5v4.5h-4.5ZM443 60.5h4.5v4.5h-4.5ZM443 65h4.5v4.5h-4.5ZM443 69.5h4.5v4.5h-4.5ZM452 69.5h4.5v4.5h-4.5ZM456.5 69.5h4.5v4.5h-4.5ZM461 69.5h4.5v4.5h-4.5ZM443 74h4.5v4.5h-4.5ZM461 74h4.5v4.5h-4.5ZM443 78.5h4.5v4.5h-4.5ZM461 78.5h4.5v4.5h-4.5ZM447.5 83h4.5v4.5h-4.5ZM452 83h4.5v4.5h-4.5ZM456.5 83h4.5v4.5h-4.5ZM461 83h4.5v4.5h-4.5Z"/>
+    <path d="M474.5 56h4.5v4.5h-4.5ZM479 56h4.5v4.5h-4.5ZM483.5 56h4.5v4.5h-4.5ZM470 60.5h4.5v4.5h-4.5ZM488 60.5h4.5v4.5h-4.5ZM470 65h4.5v4.5h-4.5ZM488 65h4.5v4.5h-4.5ZM470 69.5h4.5v4.5h-4.5ZM474.5 69.5h4.5v4.5h-4.5ZM479 69.5h4.5v4.5h-4.5ZM483.5 69.5h4.5v4.5h-4.5ZM488 69.5h4.5v4.5h-4.5ZM470 74h4.5v4.5h-4.5ZM488 74h4.5v4.5h-4.5ZM470 78.5h4.5v4.5h-4.5ZM488 78.5h4.5v4.5h-4.5ZM470 83h4.5v4.5h-4.5ZM488 83h4.5v4.5h-4.5Z"/>
+    <path d="M497 56h4.5v4.5h-4.5ZM515 56h4.5v4.5h-4.5ZM497 60.5h4.5v4.5h-4.5ZM501.5 60.5h4.5v4.5h-4.5ZM510.5 60.5h4.5v4.5h-4.5ZM515 60.5h4.5v4.5h-4.5ZM497 65h4.5v4.5h-4.5ZM506 65h4.5v4.5h-4.5ZM515 65h4.5v4.5h-4.5ZM497 69.5h4.5v4.5h-4.5ZM506 69.5h4.5v4.5h-4.5ZM515 69.5h4.5v4.5h-4.5ZM497 74h4.5v4.5h-4.5ZM515 74h4.5v4.5h-4.5ZM497 78.5h4.5v4.5h-4.5ZM515 78.5h4.5v4.5h-4.5ZM497 83h4.5v4.5h-4.5ZM515 83h4.5v4.5h-4.5Z"/>
+    <path d="M524 56h4.5v4.5h-4.5ZM528.5 56h4.5v4.5h-4.5ZM533 56h4.5v4.5h-4.5ZM537.5 56h4.5v4.5h-4.5ZM542 56h4.5v4.5h-4.5ZM524 60.5h4.5v4.5h-4.5ZM524 65h4.5v4.5h-4.5ZM524 69.5h4.5v4.5h-4.5ZM528.5 69.5h4.5v4.5h-4.5ZM533 69.5h4.5v4.5h-4.5ZM537.5 69.5h4.5v4.5h-4.5ZM524 74h4.5v4.5h-4.5ZM524 78.5h4.5v4.5h-4.5ZM524 83h4.5v4.5h-4.5ZM528.5 83h4.5v4.5h-4.5ZM533 83h4.5v4.5h-4.5ZM537.5 83h4.5v4.5h-4.5ZM542 83h4.5v4.5h-4.5Z"/>
+  </g>
+  <path d="M585 72h20m-8-8 8 8-8 8" stroke="#a5eaff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g stroke="url(#neon)" opacity=".55"><path d="M144 39h25m6 0h5M144 105h6m5 0h25M545 39h20M545 105h20"/></g>
+</svg>
