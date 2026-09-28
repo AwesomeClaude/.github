@@ -1,0 +1,194 @@
+{
+  "catalog_slug": null,
+  "controls": {
+    "gamepad": "unknown",
+    "keyboard_mouse": "supported",
+    "mobile_controls": "unknown",
+    "motion_controls": "unknown"
+  },
+  "creation_models": [],
+  "how_to_play": [
+    "Open windborne.html from a local static server so it can fetch island.bin and island_maps.bin from the same folder",
+    "Click Take flight on the Windborne title screen",
+    "Move the mouse to lean and pitch the glider",
+    "Hold left mouse button for jet boost and hold right mouse button to look around",
+    "Scroll to switch first-person or chase view; press C to toggle camera, H for HUD, Esc to pause",
+    "Dive to gather speed, pull up to trade speed for height, and circle in rising air beneath clouds to climb while collecting seeds"
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/Starwaves1/Uplift"
+    }
+  ],
+  "mechanics": [
+    "Mouse-steered hang-glider soaring with bank, pitch, dive-for-speed and pull-up-for-height energy exchange",
+    "Thermal, ridge-lift and coastal soaring over a large hand-designed procedural island",
+    "Jet boost limited by a breath meter plus crash, splash, respawn-at-bookmark and invulnerability handling",
+    "Two flight models: relaxed assisted model and realistic 6-DOF rigid-body model with stalls, spins and wing drops",
+    "Seed collecting with best-seeds persistence and speed, altitude and variometer HUD",
+    "Selectable morning, afternoon and dusk atmosphere with aerial-perspective haze and auto exposure",
+    "First-person and chase cameras with pointer-lock and absolute-fallback mouse modes",
+    "Quality, resolution, sensitivity, invert, units, physics, assists, volume, music and variometer settings",
+    "Generative music tracks with shuffle and skip plus wind, jet, variometer and chime sound synthesis",
+    "Separate Gravity Loom prototype: slingshot comet tether-swinging between worlds with stardust, pulse and hull modes"
+  ],
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": null,
+  "rating": {
+    "reason": "Deep custom tech for a days-old solo repo: WebGL2 CDLOD terrain, atmosphere and volumetric-cloud path, dual relaxed plus 6-DOF flight models, 14MB designed island with Python erosion pipeline, and generative audio. That scope exceeds Turbo Kart Rally (40, single-track kart demo), Beachy Beachy Ball (25, minimal runner) and 2048 (38, flat DOM), and sits near Ashlands (55) and OSRS Tower Defense (52) on ambition, but below moorestech (64, verified multiplayer factory sim with dense HUD gameplay frames). Capped well below AAA because no playable URL was established, no gameplay screenshot could be inspected, the author calls it low-ish effort, and playability, performance and balance are unverified from stills and source snippets alone.",
+    "score": 53
+  },
+  "reconstructed_prompt": "Build a single-file WebGL2 hang-glider soaring game called Windborne over a big hand-designed island with thermals, ridge lift, jet boost on a breath meter, seed collecting, chase and first-person cameras, morning/afternoon/dusk lighting, relaxed and realistic flight models, settings, HUD, and generative music and wind audio.",
+  "repository_url": "https://github.com/Starwaves1/Uplift",
+  "screenshot_based_score": null,
+  "screenshots": [],
+  "source_analysis": [
+    {
+      "finding": "Repository Starwaves1/Uplift is described as Low-ish effort Opus 5.5 flight game with HTML as primary language",
+      "url": "https://github.com/Starwaves1/Uplift"
+    },
+    {
+      "finding": "Repo metadata: 0 stars, 0 forks, default branch main, created 2026-09-27, no homepage, has_pages false, languages HTML/JavaScript/Python/Shell",
+      "url": "https://api.github.com/repos/Starwaves1/Uplift"
+    },
+    {
+      "finding": "CLAUDE.md defines Windborne/Updraft as a single-HTML WebGL2 glider game over a big hand-designed fantasy island, built from wind/ modules by build-wind.sh and served locally because the page fetches island.bin and island_maps.bin",
+      "url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/CLAUDE.md"
+    },
+    {
+      "finding": "Title screen text: Windborne, lean with mouse to bank and carve, dive for speed, pull up for height, circle in rising air beneath clouds, Take flight, Move lean and pitch, Hold left jet boost, Hold right look around, Scroll first person or chase view",
+      "url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/windborne.html"
+    },
+    {
+      "finding": "Input code shows pointer-lock plus absolute mouse steering, left-button jet boost, right-button free look, wheel camera switch, and keyboard C/H/N/Esc handling; no touch, gamepad, or motion handlers found",
+      "url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/main.js"
+    },
+    {
+      "finding": "Flight module implements relaxed lift/drag control-law model and realistic 6-DOF rigid-body model with stalls, spins, breath, crash/splash/respawn and wind sampling",
+      "url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/flight.js"
+    },
+    {
+      "finding": "Core module requests webgl2 context and #version 300 es shaders with shared JS/GLSL noise and terrain functions",
+      "url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/core.js"
+    },
+    {
+      "finding": "Audio module uses AudioContext with wind, jet, variometer, chime buses plus separate generative music module; test builds stay muted via WB_MUTE",
+      "url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/audio.js"
+    },
+    {
+      "finding": "Island generator is Python with numpy, scipy, torch and numba landscape evolution plus finalize/export stages writing island.bin and island_maps.bin",
+      "url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/island/gen_island.py"
+    },
+    {
+      "finding": "build-wind.sh concatenates wind/*.js modules into windborne.html; build.sh concatenates src/*.js into gravity-loom.html",
+      "url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/build-wind.sh"
+    },
+    {
+      "finding": "Gravity Loom is a second pixel-art comet tether game in the same repo with HOLD LEFT catch, LET GO fling, RIGHT CLICK pulse modes",
+      "url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/gravity-loom.html"
+    },
+    {
+      "finding": "No GitHub Pages site and no verified public playable URL; Claude artifact link requires login and returns 403 anonymously",
+      "url": "https://github.com/Starwaves1/Uplift"
+    },
+    {
+      "finding": "No gameplay screenshots, previews, or image assets established in the inspected file listing; graphics could not be scored from stills",
+      "url": "https://github.com/Starwaves1/Uplift"
+    },
+    {
+      "finding": "No existing catalog entry matches Starwaves1/Uplift, Windborne, or Uplift; catalog comparison uses Moorestech 64, Ashlands 55, OSRS Tower Defense 52, Kart Royale 50, Turbo Kart Rally 40, 2048 38, Beachy Beachy Ball 25",
+      "url": "https://github.com/Starwaves1/Uplift"
+    }
+  ],
+  "source_url": "https://github.com/Starwaves1/Uplift",
+  "tags": [
+    "flight-simulator",
+    "glider",
+    "soaring",
+    "exploration",
+    "3d",
+    "webgl",
+    "single-player",
+    "procedural-island",
+    "physics"
+  ],
+  "technologies": [
+    {
+      "category": "language",
+      "evidence_url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/main.js",
+      "name": "JavaScript",
+      "version": null
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/shell.html",
+      "name": "HTML",
+      "version": null
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/island/gen_island.py",
+      "name": "Python",
+      "version": null
+    },
+    {
+      "category": "rendering",
+      "evidence_url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/core.js",
+      "name": "WebGL2",
+      "version": null
+    },
+    {
+      "category": "rendering",
+      "evidence_url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/core.js",
+      "name": "GLSL",
+      "version": null
+    },
+    {
+      "category": "audio",
+      "evidence_url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/audio.js",
+      "name": "Web Audio API",
+      "version": null
+    },
+    {
+      "category": "physics",
+      "evidence_url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/wind/flight.js",
+      "name": "Custom flight physics",
+      "version": null
+    },
+    {
+      "category": "build",
+      "evidence_url": "https://raw.githubusercontent.com/Starwaves1/Uplift/main/build-wind.sh",
+      "name": "Shell",
+      "version": null
+    }
+  ],
+  "title": "Uplift (Windborne)",
+  "fictional_reviews": [
+    {
+      "rating": 82,
+      "text": "Fictional review: I caught my first thermal off the eastern cliffs and just kept circling upward while the sun dropped \u2014 the quietest, most peaceful flying I have felt in a browser game."
+    },
+    {
+      "rating": 64,
+      "text": "Fictional review: Ambitious little soaring sim with real energy-management ideas and a huge island, but without a public build to try I cannot judge landings, balance, or performance."
+    },
+    {
+      "rating": 95,
+      "text": "Fictional review: The dusk ridge run with the generative score swelling underneath felt like the opening of an arthouse flight film. I stayed aloft far longer than I planned."
+    }
+  ],
+  "repository_created_at": null,
+  "analysis": {
+    "analyzed_at": "2026-09-27T06:07:12.390727+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36298848061/job/108562614077",
+    "session_id": "ses_f1e8b8ba3ffeC1PWgbnQiPYoWa",
+    "prompt_sha256": "5a17631e5cd73e43e02e53f84e929390674c254b61853bd950a14cfd8c8704da"
+  }
+}

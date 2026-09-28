@@ -1,0 +1,165 @@
+{
+  "catalog_slug": null,
+  "creation_models": [
+    {
+      "evidence_url": "https://github.com/adamholter/shallow-steel/blob/main/README.md",
+      "name": "GPT-6 Astra"
+    }
+  ],
+  "technologies": [
+    {
+      "category": "engine",
+      "evidence_url": "https://github.com/adamholter/shallow-steel/blob/main/package.json",
+      "name": "Three.js",
+      "version": "0.180.0"
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://api.github.com/repos/adamholter/shallow-steel/languages",
+      "name": "JavaScript",
+      "version": null
+    },
+    {
+      "category": "rendering",
+      "evidence_url": "https://github.com/adamholter/shallow-steel/blob/main/src/main.js",
+      "name": "WebGL",
+      "version": null
+    },
+    {
+      "category": "rendering",
+      "evidence_url": "https://github.com/adamholter/shallow-steel/blob/main/src/hud.js",
+      "name": "Canvas 2D",
+      "version": null
+    },
+    {
+      "category": "audio",
+      "evidence_url": "https://github.com/adamholter/shallow-steel/blob/main/src/audio.js",
+      "name": "Web Audio API",
+      "version": null
+    },
+    {
+      "category": "build",
+      "evidence_url": "https://github.com/adamholter/shallow-steel/blob/main/package.json",
+      "name": "Vite",
+      "version": "7.3.6"
+    }
+  ],
+  "source_url": "https://github.com/adamholter/shallow-steel",
+  "repository_url": "https://github.com/adamholter/shallow-steel",
+  "title": "Shallow Steel",
+  "source_analysis": [
+    {
+      "finding": "Repository is a public game repo named shallow-steel, described as 'Open-source Three.js combat recreation inspired by Troubled Passage', with browser-game/game/threejs topics, JavaScript language, MIT license, 1 commit, 0 stars/forks.",
+      "url": "https://api.github.com/repos/adamholter/shallow-steel"
+    },
+    {
+      "finding": "README defines the game as a playable AI recreation of the Troubled Passage combat gym: oblique following camera, silver knight vs skeleton shield fighters, hat-wearing captain and axe fighter in a shallow-water gym, with three trials of 3, 4 and 5 skeletons and partial healing between trials.",
+      "url": "https://github.com/adamholter/shallow-steel/blob/main/README.md"
+    },
+    {
+      "finding": "README Play section documents keyboard/mouse controls: WASD/arrows move, click/drag directional strikes, J/I/U strikes, RMB/K parry and hold-to-guard, Space/L evade, Q weapon switch, F shield pickup, Escape pause, R restart.",
+      "url": "https://github.com/adamholter/shallow-steel/blob/main/README.md"
+    },
+    {
+      "finding": "README and index.html document touch controls: movement stick plus strike, parry, evade and weapon buttons; QA reports CDP touch-event joystick movement and touch strike/weapon/evade checks passing.",
+      "url": "https://github.com/adamholter/shallow-steel/blob/main/README.md"
+    },
+    {
+      "finding": "Combat model documented with windup/active/recovery timings per weapon, 190 ms timed parry, sustained guard, stamina, ripostes, shield stagger, invulnerable evades, enemy scheduling, collision/knockback, and destructible barrels/crates/jars/tables.",
+      "url": "https://github.com/adamholter/shallow-steel/blob/main/README.md"
+    },
+    {
+      "finding": "Run path is local-only: `npm run dev` then open http://localhost:9411; repo has_pages is false with no deployments, so no publicly reachable playable URL is established.",
+      "url": "https://github.com/adamholter/shallow-steel/blob/main/README.md"
+    },
+    {
+      "finding": "package.json pins Three.js 0.180.0 runtime dependency with Vite 7.3.6 and Playwright dev dependencies; src/main.js creates a THREE.WebGLRenderer with shadows/ACES tone mapping, hud.js draws HUD on Canvas 2D, audio.js synthesizes effects via AudioContext oscillators with no samples.",
+      "url": "https://github.com/adamholter/shallow-steel/blob/main/package.json"
+    },
+    {
+      "finding": "No gameplay screenshots or video files are committed: recursive file tree lists only docs, index.html, package files, scripts/*.mjs and src/*.js with no images; QA-referenced evidence/*.png and demo MP4 are not present in the tree, so no gameplay frame could be inspected.",
+      "url": "https://api.github.com/repos/adamholter/shallow-steel/git/trees/main?recursive=1"
+    },
+    {
+      "finding": "README explicitly attributes creation to GPT-6 Astra for game code, models, animations, materials, textures, effects and sound, and states reference footage is never loaded by the game; no playable browser/macOS build of the original gym was available to the author.",
+      "url": "https://github.com/adamholter/shallow-steel/blob/main/README.md"
+    }
+  ],
+  "screenshots": [],
+  "screenshot_based_score": null,
+  "reconstructed_prompt": "Create a playable browser 3D melee combat gym inspired by the Troubled Passage combat clip: a silver knight with navy cloth and plume fighting skeleton shield fighters, a captain and an axe fighter in shallow turquoise water with barrels, crates, jars, tables and chairs. Implement an oblique following camera, WASD movement, mouse-drag directional greatsword/one-handed strikes, timed parry with riposte, hold guard, stamina, i-frame evade, weapon switching, shield pickup, three trials of 3/4/5 skeletons, destructible props with splash/particle impacts, Canvas HUD with portrait/health/stamina/minimap, touch stick and buttons, synthesized Web Audio effects, and local Vite dev launch.",
+  "controls": {
+    "mobile_controls": "supported",
+    "motion_controls": "unknown",
+    "gamepad": "unknown",
+    "keyboard_mouse": "supported"
+  },
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": null,
+  "how_to_play": [
+    "Launch locally with npm run dev and open http://localhost:9411, then Enter the gym from the menu.",
+    "Move with WASD or arrow keys relative to the camera; drag or click to strike directionally, or use J, I, U for horizontal, descending and thrust attacks.",
+    "Parry with right mouse button or K just before impact, hold to guard, evade with Space or L, switch greatsword and one-handed sword with Q, collect a dropped shield with F.",
+    "Read the skeleton weapon raise and gold cue, riposte after a timed parry, manage stamina, and clear three trials of 3, 4 and 5 skeletons with partial healing between trials."
+  ],
+  "mechanics": [
+    "Directional melee strikes with separate windup, active and recovery phases and greatsword cleave vs faster one-handed attacks",
+    "190 ms timed parry opening a riposte window plus sustained stamina-cost guard",
+    "Stamina-consuming guard and invulnerable directional evade",
+    "Enemy attack scheduling where fast skeleton counters can punish slow greatsword recovery",
+    "Destructible barrels, crates, jars and tables breaking into bouncing debris with knockback transfer",
+    "Collectible dropped shields, three-trial progression with partial between-trial healing, loss/retry/victory/pause flow",
+    "Procedural joint animation, coat/plume motion, hit stops, camera shake, sparks, damage numbers, splash crowns, rings and per-fragment water impacts"
+  ],
+  "tags": [
+    "melee-combat",
+    "action",
+    "3d",
+    "threejs",
+    "browser-game",
+    "procedural-generation",
+    "fantasy",
+    "single-player"
+  ],
+  "rating": {
+    "score": 45,
+    "reason": "Real-time 3D melee gym with a genuinely deep documented combat model (phase timings, directional strikes, timed parry/riposte, guard/stamina, evade i-frames, weapon switch, shield pickup, destructibles, HUD, touch layout) and scripted QA/playthrough evidence. Most relevant comparators, excluding the target: Kart Royale (50, complete polished 3D loop, verified screenshots) ranks above because its visuals and loop are inspectable; HEX DANMAKU (48) and Dead Signal (47) rank just above on verified presentation; THORNMERE (46) and neverquest (45) are peers on systems depth vs polish. Shallow Steel sits at 45: below Ashlands (55, far broader RPG scope) and moorestech (64, catalog top) on scope, and capped by evidence gaps \u2014 no inspectable gameplay screenshot, no public playable URL (localhost only, Pages disabled), ~74KB of game source from a single-day-old 1-commit repo, and source/docs alone cannot prove playability, performance, balance or fun."
+  },
+  "fictional_reviews": [
+    {
+      "rating": 82,
+      "text": "The parry-riposte read finally clicked in trial two and the whole gym felt electric \u2014 weighty cleaves, splashes everywhere, debris bouncing off the water."
+    },
+    {
+      "rating": 58,
+      "text": "Clever combat skeleton with real timing skill, but one arena and three trials run thin fast, and I never got to see it running myself."
+    },
+    {
+      "rating": 45,
+      "text": "Promising study with sharp timing numbers on paper; without a live build or screenshots to judge, it feels like a sparring drill waiting for a game around it."
+    }
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/adamholter/shallow-steel"
+    },
+    {
+      "label": "Reference: Troubled Passage on Steam",
+      "url": "https://store.steampowered.com/app/1796660/Troubled_Passage/"
+    }
+  ],
+  "repository_created_at": null,
+  "analysis": {
+    "analyzed_at": "2026-09-27T06:18:32.338836+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36298848061/job/108562614077",
+    "session_id": "ses_f1e8b88a3ffeDwZ9J9TWaCdWg9",
+    "prompt_sha256": "8f814e7832092772da622770a21a6173faa340310f5971b9238b232789ccd8ef"
+  }
+}

@@ -484,7 +484,7 @@ def collect_analysis(run, result, base, args, output):
 def analyze_links(args, output):
     manifest = json.loads((output / 'sessions.json').read_text())
     results = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=args.jobs) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, len(manifest['runs']))) as pool:
         pending = [(run, pool.submit(test_oc.run_one, Path(run['meta']), manifest['base'], args.timeout))
                    for run in manifest['runs']]
         for run, future in pending:
@@ -603,7 +603,6 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('links', nargs='*', help='Public game URLs')
     parser.add_argument('--file', type=Path, help='Read additional URLs, one per line')
-    parser.add_argument('--jobs', type=int, default=3, help='Maximum concurrent agents')
     parser.add_argument('--timeout', type=float, default=900, help='Seconds per agent')
     parser.add_argument('--prompt', type=Path, default=ROOT / 'prompt.md')
     parser.add_argument('--model', default=test_oc.MODEL)
@@ -612,8 +611,8 @@ def main():
     parser.add_argument('--web-base', help='Existing live-session URL base')
     parser.add_argument('--port', type=int, default=4096)
     args = parser.parse_args()
-    if args.jobs < 1 or not 0 < args.timeout < float('inf'):
-        parser.error('jobs and timeout must be positive and finite')
+    if not 0 < args.timeout < float('inf'):
+        parser.error('timeout must be positive and finite')
     try:
         items = inputs(args)
         WORK.mkdir(exist_ok=True)

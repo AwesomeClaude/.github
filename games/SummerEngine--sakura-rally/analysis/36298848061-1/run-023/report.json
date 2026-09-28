@@ -1,0 +1,204 @@
+{
+  "catalog_slug": null,
+  "controls": {
+    "gamepad": "supported",
+    "keyboard_mouse": "supported",
+    "mobile_controls": "unknown",
+    "motion_controls": "unknown"
+  },
+  "creation_models": [
+    {
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally",
+      "name": "Claude Opus 5.5"
+    },
+    {
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally/blob/main/docs/AUDIO.md",
+      "name": "elevenlabs/music/v2.5"
+    },
+    {
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally/blob/main/docs/AUDIO.md",
+      "name": "fal-ai/elevenlabs/sound-effects/v2"
+    }
+  ],
+  "fictional_reviews": [
+    {
+      "rating": 85,
+      "text": "The spring-to-autumn liaison drive is lovely and the cel shading holds together beautifully at road level."
+    },
+    {
+      "rating": 62,
+      "text": "Handling feels forgiving and the corner signs help, but I wanted real rivals on track and a browser build."
+    },
+    {
+      "rating": 100,
+      "text": "A perfect cozy rally diorama to photograph with the UI hidden."
+    }
+  ],
+  "how_to_play": [
+    "Install Summer Engine or stock Godot 4.7, open the project folder, and press Play (macOS can use Play Sakura Rally.command).",
+    "From the title hub choose Campaign for the connected Seasons Rally, or Time Attack for Time Trial and Free Roam cards.",
+    "Launch with held throttle for launch control at 4600 rpm, then release into first at GO.",
+    "Drive with W/Up throttle, S/Down brake and reverse, A/D steering, Space handbrake, E/Q manual gears, C camera, R reset, Esc/P pause, H horn, F1 hide UI.",
+    "Follow yellow diamond warnings and chevrons, stay off soft roadside dressing where possible, and finish stages to earn medals and records.",
+    "In Campaign, continue past the Hanami finish onto the open liaison road, then start SS2 at the Momiji grid for the final classification."
+  ],
+  "links": [
+    {
+      "label": "Source repository",
+      "url": "https://github.com/SummerEngine/sakura-rally"
+    }
+  ],
+  "mechanics": [
+    "Cel-shaded rally driving with custom raycast car physics, suspension, combined-slip tyres, gearbox, turbo, and arcade crash forgiveness",
+    "Two timed stages plus a 2 km untimed liaison road joined into one world with no loading between legs",
+    "Campaign with results, continue/resume legs, arrival card, and classification against six rivals",
+    "Time Trial with splits, medals, and saved records; Free Roam with open barriers and nearest-road reset",
+    "Two cars with distinct drivetrains plus five liveries switched in a roadside workshop garage",
+    "Soft roadside dressing that breaks with speed cost, billowing checkpoint gates, tumbling spectators, guardrails, and corner warning signs",
+    "Four cameras including slope-aware chase, plus title flyover, garage orbit, and gate/finale cinematics",
+    "Input-and-state replay recording for every drive with an offline review and rendering tool"
+  ],
+  "player_modes": {
+    "human_players": 1,
+    "modes": [
+      "single-player"
+    ]
+  },
+  "play_game_url": null,
+  "rating": {
+    "reason": "Deep indie rally package: two stages plus a connected seasonal open world, campaign, time attack, free roam, garage, replays, custom physics, and synthesized audio with documented verification. Above Turbo Kart Rally (40) and Kart Royale (50) on scope, systems depth, and technical execution, near Ashlands (55) but below moorestech (64) with no web play, no human multiplayer, single-player only, and unverified playability, performance, and balance from stills and docs alone.",
+    "score": 56
+  },
+  "reconstructed_prompt": "Build Sakura Rally, a cel-shaded low-poly Godot rally game through spring and autumn Japan with two stages joined by a drivable seasonal liaison road, custom arcade car physics, two cars and liveries, campaign plus time attack and free roam, soft breakable roadside, spectators, replays, synthesized engine audio and Japanese city-pop music.",
+  "repository_url": "https://github.com/SummerEngine/sakura-rally",
+  "screenshot_based_score": {
+    "reason": "Best inspected frame is a ground-level start-gantry view with coherent anime styling, painted clouds, blossom trees, buildings, and dense branded dressing; aerials show large seasonal worlds with roads, rivers, and forests. Composition and stylization are strong, but frames lack visible car action and HUD, and model-viewer captures are discounted. Below Kart Royale (70) and Turbo Kart Rally (70) on gameplay detail, above OSRS Tower Defense (65) on art coherence, near scumm-game territory; stills alone prove nothing about motion or feel.",
+    "score": 68
+  },
+  "screenshots": [
+    {
+      "observation": "Inspected 1600x900 in-engine view under a pink SAKURA RALLY start gantry: straight tarmac road ahead, branded barriers, pennant string, blossom trees, houses, torii gate, spectators, painted clouds and mountains. No car or HUD visible; game's own runtime output.",
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_tour_00.jpg"
+    },
+    {
+      "observation": "Inspected 1600x900 aerial render of Hanami Pass: spring green valley with winding tarmac, river, bridge, buildings, pink sakura clusters, cedar stands, haze and painted clouds. Top-down world overview, no car or HUD.",
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_aerial.jpg"
+    },
+    {
+      "observation": "Inspected 1600x900 aerial render of Momiji Valley: autumn golden-hour hills with winding road, river, houses, red-orange maples, dark cedars, haze and painted clouds. Top-down world overview, no car or HUD.",
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/momiji_aerial.jpg"
+    },
+    {
+      "observation": "Inspected 1600x900 aerial render of the liaison road: green summer valley with long straight road, river, rocks, cedar and sakura transition zones, haze and painted clouds. Top-down world overview, no car or HUD.",
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/liaison_aerial.jpg"
+    },
+    {
+      "observation": "Inspected 1600x900 model-viewer render of the white/pink Sakura rally car with number 07, gold wheels, roof intake and rear wing on a plain grey background. Vehicle showcase, not active gameplay.",
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/car_godot_front34.png"
+    }
+  ],
+  "source_analysis": [
+    {
+      "finding": "Repository page titles it Sakura Rally as a cel-shaded low-poly rally game for Summer Engine and Godot 4.7 with two maps, custom car physics, and synthesised engine audio, built by Claude Opus 5.5 from one prompt.",
+      "url": "https://github.com/SummerEngine/sakura-rally"
+    },
+    {
+      "finding": "README documents Campaign as one continuous drive with no loading, Time Trial with medals and records, Free Roam with open barriers, two cars and five liveries, settings, replays, and verification results.",
+      "url": "https://github.com/SummerEngine/sakura-rally"
+    },
+    {
+      "finding": "Play section requires opening the project in Summer Engine or stock Godot 4.7 or the macOS command file; no browser play URL is offered.",
+      "url": "https://github.com/SummerEngine/sakura-rally"
+    },
+    {
+      "finding": "Controls table maps throttle, brake/reverse, steering, handbrake, manual gears, camera, reset, pause, horn, and UI-hide to keyboard keys and gamepad inputs; no touch or motion controls are documented.",
+      "url": "https://github.com/SummerEngine/sakura-rally"
+    },
+    {
+      "finding": "project.godot sets Godot 4.7 Forward Plus features, Jolt physics at 120 Hz, 1920x1080 viewport, car/world/prop/trigger layers, and Game/Sound/Replays autoloads.",
+      "url": "https://github.com/SummerEngine/sakura-rally/blob/main/project.godot"
+    },
+    {
+      "finding": "Shared contracts specify GDScript only, Forward+, Jolt, pure-GDScript compatibility with Summer and official Godot builds, plus Python mapgen, Blender car/prop scripts, and synthesized audio tooling.",
+      "url": "https://github.com/SummerEngine/sakura-rally/blob/main/docs/CONTRACTS.md"
+    },
+    {
+      "finding": "Audio doc attributes music to ElevenLabs Music v2.5 via fal and ambience beds to ElevenLabs sound-effects v2 via fal, with prompts, loop baking, and licensing notes; engine, world, UI, stingers, and synthesized voices are procedural.",
+      "url": "https://github.com/SummerEngine/sakura-rally/blob/main/docs/AUDIO.md"
+    },
+    {
+      "finding": "gh api could not be used: gh CLI had no token in this environment and unauthenticated api.github.com calls were rate-limited; evidence comes from fetched GitHub pages and raw files instead, and no source checkout was performed."
+    }
+  ],
+  "source_url": "https://github.com/SummerEngine/sakura-rally",
+  "tags": [
+    "rally",
+    "racing",
+    "single-player",
+    "time-trial",
+    "low-poly",
+    "cel-shaded",
+    "3d",
+    "godot",
+    "desktop"
+  ],
+  "technologies": [
+    {
+      "category": "engine",
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally/blob/main/project.godot",
+      "name": "Godot",
+      "version": "4.7"
+    },
+    {
+      "category": "engine",
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally",
+      "name": "Summer Engine",
+      "version": null
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally/blob/main/docs/CONTRACTS.md",
+      "name": "GDScript",
+      "version": null
+    },
+    {
+      "category": "physics",
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally/blob/main/project.godot",
+      "name": "Jolt Physics",
+      "version": null
+    },
+    {
+      "category": "rendering",
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally/blob/main/project.godot",
+      "name": "Forward Plus",
+      "version": null
+    },
+    {
+      "category": "rendering",
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally",
+      "name": "FSR",
+      "version": null
+    },
+    {
+      "category": "language",
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally",
+      "name": "Python",
+      "version": null
+    },
+    {
+      "category": "build",
+      "evidence_url": "https://github.com/SummerEngine/sakura-rally",
+      "name": "Blender",
+      "version": null
+    }
+  ],
+  "title": "Sakura Rally",
+  "repository_created_at": null,
+  "analysis": {
+    "analyzed_at": "2026-09-27T06:20:52.122005+00:00",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "actions_run": "https://github.com/agents-dev/Astra-Top-Games/actions/runs/36298848061/job/108562614077",
+    "session_id": "ses_f1e8b87d5ffexq5NiQuF9dtJCA",
+    "prompt_sha256": "fe5827f4d7a8d07289d8d6d715b21a26aef9bd811164ebe12a4234311279c3bf"
+  }
+}
