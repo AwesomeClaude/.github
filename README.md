@@ -3,7 +3,7 @@
 Browse the rated games. Open each game page for evidence and play instructions.
 Browse games with or without public source code in the same ranking and screenshot gallery.
 
-[![Submit your game](assets/submit-your-game.png)](https://github.com/AwesomeClaude/.github/issues/new?title=Submit%20your%20game&body=Paste%20one%20game%20URL%20per%20line%20below%3A%0A)
+<a href="https://github.com/AwesomeClaude/.github/issues/new?title=Submit%20your%20game&amp;body=Paste%20one%20game%20URL%20per%20line%20below%3A%0A"><img src="assets/submit-your-game.png" width="320" alt="Submit your game"></a>
 
 Add games with `./scripts/games.sh <game-url> [more-urls...]` or `./scripts/games.sh --file links.txt`. Rebuild every page and this index with `./scripts/games.sh`. Inspect `games/history/` for per-run analysis outcomes and provenance. Inspect `work/game-batches/` for agent logs and rejected reports.
 

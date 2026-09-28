@@ -24,6 +24,7 @@ Copy every live OpenCode session URL printed by `scripts/test-oc.sh` immediately
 
 - Read [Issue catalog publishing](wiki/issue-catalog.md) before changing issue publication.
 - Read [OpenCode batch testing](wiki/oc-batch-testing.md) before changing the batch runner.
+- Read [Submit-game button](wiki/submit-game-button.md) before changing the README call to action.
 
 ## Verification
 
