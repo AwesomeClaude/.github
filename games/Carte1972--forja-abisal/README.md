@@ -30,33 +30,47 @@ Inspected gameplay frames show a coherent retro-3D FPS: full HUD, first-person w
 
 ## Screenshots
 
-![Inspected downloaded copy: first-person view over lava pits with animated orange emissive texture, dark tech hall with cyan/green strip lighting, two blocky sentinel enemies mid-room, grey pistol model bottom-right, crosshair center, bottom HUD showing 12/RESERVA 38, 100% SALUD, helmet icon, 0% BLINDAJE, weapon slots 1-5. Game's own runtime output.](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/nivel_1_canal_de_lava.jpg)
+![Forja Abisal gameplay](screenshots/1196f9d936a5939ecbcc61ae110f215ae532259776c6d67971b59d63879bfd67.jpg)
 
 Inspected downloaded copy: first-person view over lava pits with animated orange emissive texture, dark tech hall with cyan/green strip lighting, two blocky sentinel enemies mid-room, grey pistol model bottom-right, crosshair center, bottom HUD showing 12/RESERVA 38, 100% SALUD, helmet icon, 0% BLINDAJE, weapon slots 1-5. Game's own runtime output.
 
-![Inspected downloaded copy: first-person combat firing the Remachadora with large white-yellow muzzle flash, red directional damage arc around crosshair, tech-pillar enemy target with circuit texture ahead, lava floor both sides, HUD reading 37/RESERVA 58, 70% SALUD, 0% BLINDAJE. Game's own runtime output.](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/combate.jpg)
+[Original screenshot](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/nivel_1_canal_de_lava.jpg)
+
+![Forja Abisal gameplay](screenshots/66b0c0002c1e88fd55fd7cbc8db35a2c00688ad5aa152760d4fec5d663b495b2.jpg)
 
 Inspected downloaded copy: first-person combat firing the Remachadora with large white-yellow muzzle flash, red directional damage arc around crosshair, tech-pillar enemy target with circuit texture ahead, lava floor both sides, HUD reading 37/RESERVA 58, 70% SALUD, 0% BLINDAJE. Game's own runtime output.
 
-![Inspected downloaded copy: large interior foundry hall with cyan-lit panel walls, ceiling lamp glow, small sentinel enemy center-left, staircase right, pistol viewmodel, HUD 12/RESERVA 38 and 100% SALUD. Shows sector geometry, step trim lighting, and scale. Game's own runtime output.](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/nivel_1_fundicion.jpg)
+[Original screenshot](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/combate.jpg)
+
+![Forja Abisal gameplay](screenshots/afa462152b822d601440ee128c0538ddda931b6ca23baace57be29f04bb51d30.jpg)
 
 Inspected downloaded copy: large interior foundry hall with cyan-lit panel walls, ceiling lamp glow, small sentinel enemy center-left, staircase right, pistol viewmodel, HUD 12/RESERVA 38 and 100% SALUD. Shows sector geometry, step trim lighting, and scale. Game's own runtime output.
 
-![Inspected downloaded copy: open-air stone pit at dusk with bridge over acid/void gap, shotgun viewmodel prominent, 'Has recogido: Caja de municion' pickup banner top, lamp post and glowing pickups, HUD 2/RESERVA 14 Escopeta de dispersion. Shows outdoor sky, verticality, and pickup feedback. Game's own runtime output.](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/nivel_2_sima.jpg)
+[Original screenshot](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/nivel_1_fundicion.jpg)
+
+![Forja Abisal gameplay](screenshots/2bcbc97e3a5297e1a3ecad04e4306b98c62a242e8a428f2a6b1f4249fd0ff997.jpg)
 
 Inspected downloaded copy: open-air stone pit at dusk with bridge over acid/void gap, shotgun viewmodel prominent, 'Has recogido: Caja de municion' pickup banner top, lamp post and glowing pickups, HUD 2/RESERVA 14 Escopeta de dispersion. Shows outdoor sky, verticality, and pickup feedback. Game's own runtime output.
 
-![Inspected downloaded copy: dark cavern with wide checkered lava lake, central island tower with cyan circuit/tech textures, HUD 50/RESERVA 58 Remachadora 100% SALUD. Atmospheric but very dark with distant detail loss. Game's own runtime output.](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/nivel_3_lago_de_lava.jpg)
+[Original screenshot](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/nivel_2_sima.jpg)
+
+![Forja Abisal gameplay](screenshots/35bc64602b7eb6460e581017bf587f8643a0371abe0695644b847af9724aa073.jpg)
 
 Inspected downloaded copy: dark cavern with wide checkered lava lake, central island tower with cyan circuit/tech textures, HUD 50/RESERVA 58 Remachadora 100% SALUD. Atmospheric but very dark with distant detail loss. Game's own runtime output.
 
-![Inspected downloaded copy: gameplay overlaid with orange vector automap (rooms, stair hatching, red/blue door lines, key dots, player arrow), FUNDICION CERO label bottom-left, dimmed 3D corridor behind, HUD partially visible. Shows in-game map system, not a separate menu. Game's own runtime output.](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/automapa.jpg)
+[Original screenshot](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/nivel_3_lago_de_lava.jpg)
+
+![Forja Abisal gameplay](screenshots/064c94f2171504124c3d120edb31e38c4c2d96114a941dc2dda84756f6d90c37.jpg)
 
 Inspected downloaded copy: gameplay overlaid with orange vector automap (rooms, stair hatching, red/blue door lines, key dots, player arrow), FUNDICION CERO label bottom-left, dimmed 3D corridor behind, HUD partially visible. Shows in-game map system, not a separate menu. Game's own runtime output.
 
-![Inspected downloaded copy: title screen with large orange FORJA ABISAL lettering, tagline 'Desciende. Abre paso. Sal con vida.', four orange buttons Nueva partida / Elegir nivel / Opciones / Controles on dark gradient background. Menu/title card, discounted as non-gameplay. Game's own UI output.](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/menu_principal.jpg)
+[Original screenshot](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/automapa.jpg)
+
+![Forja Abisal gameplay](screenshots/70f7f68aa05f11def8510aa78c911a008a6509fd2826f42eaa5cb8cf74e3f24a.jpg)
 
 Inspected downloaded copy: title screen with large orange FORJA ABISAL lettering, tagline 'Desciende. Abre paso. Sal con vida.', four orange buttons Nueva partida / Elegir nivel / Opciones / Controles on dark gradient background. Menu/title card, discounted as non-gameplay. Game's own UI output.
+
+[Original screenshot](https://raw.githubusercontent.com/Carte1972/forja-abisal/main/docs/capturas/menu_principal.jpg)
 
 ## Play
 

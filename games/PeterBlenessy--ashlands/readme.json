@@ -97,10 +97,28 @@
     }
   ],
   "links": [
-    "https://github.com/PeterBlenessy/ashlands",
-    "https://github.com/addable-labs/ashlands",
-    "https://github.com/addable-labs/ashlands/blob/main/README.md",
-    "https://github.com/addable-labs/ashlands/blob/main/EVALUATION.md",
-    "https://github.com/addable-labs/ashlands/blob/main/ART_BIBLE.md"
-  ]
+    {
+      "label": "Source repository",
+      "url": "https://github.com/PeterBlenessy/ashlands"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/addable-labs/ashlands"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/addable-labs/ashlands/blob/main/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/addable-labs/ashlands/blob/main/EVALUATION.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/addable-labs/ashlands/blob/main/ART_BIBLE.md"
+    }
+  ],
+  "source_url": "https://github.com/PeterBlenessy/ashlands",
+  "creation_models": [],
+  "technologies": []
 }

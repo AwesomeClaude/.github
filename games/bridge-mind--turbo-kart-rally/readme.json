@@ -30,23 +30,38 @@
   "screenshots": [
     {
       "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/race.jpg",
-      "observation": "Third-person gameplay on asphalt circuit: red player kart chasing two rivals, boost pad chevrons ahead, red-white curbs, TURBO/KART/RALLY billboards, low-poly trees and mountains, HUD with LAP 1/3, timer, 8-place leaderboard, item slot, minimap, 137 km/h speedometer and 7th place."
+      "observation": "Third-person gameplay on asphalt circuit: red player kart chasing two rivals, boost pad chevrons ahead, red-white curbs, TURBO/KART/RALLY billboards, low-poly trees and mountains, HUD with LAP 1/3, timer, 8-place leaderboard, item slot, minimap, 137 km/h speedometer and 7th place.",
+      "local_path": "screenshots/afd51ac75299a5054255a6ede677b6f7aa4bbc4c77c04e0fc76b6a83e5cf52ee.jpg",
+      "sha256": "afd51ac75299a5054255a6ede677b6f7aa4bbc4c77c04e0fc76b6a83e5cf52ee",
+      "downloaded_at": "2026-09-28T04:46:44.522281+00:00"
     },
     {
       "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/items.jpg",
-      "observation": "Gameplay beside grandstand: red kart on grass next to crowded colorful low-poly spectators, checkered start line visible, HUD shows triple-mushroom item x3, LAP 1/3, 8th place at 36 km/h, minimap and leaderboard."
+      "observation": "Gameplay beside grandstand: red kart on grass next to crowded colorful low-poly spectators, checkered start line visible, HUD shows triple-mushroom item x3, LAP 1/3, 8th place at 36 km/h, minimap and leaderboard.",
+      "local_path": "screenshots/91affa5b73af008883e89055134add6791c823cdf920951aa8e60a1e0dad3561.jpg",
+      "sha256": "91affa5b73af008883e89055134add6791c823cdf920951aa8e60a1e0dad3561",
+      "downloaded_at": "2026-09-28T04:46:45.124945+00:00"
     },
     {
       "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/title.jpg",
-      "observation": "Title card overlaying live demo race: large TURBO KART RALLY logo, PRESS ENTER / CLICK TO START prompt, three karts on start straight under gantry, mountains and trees behind; menu/title, not active racing."
+      "observation": "Title card overlaying live demo race: large TURBO KART RALLY logo, PRESS ENTER / CLICK TO START prompt, three karts on start straight under gantry, mountains and trees behind; menu/title, not active racing.",
+      "local_path": "screenshots/c99bab4abf6daa854252f49888e72b2960408296785bea4bb08c49ff5e8038c5.jpg",
+      "sha256": "c99bab4abf6daa854252f49888e72b2960408296785bea4bb08c49ff5e8038c5",
+      "downloaded_at": "2026-09-28T04:46:45.793464+00:00"
     },
     {
       "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/character-select.jpg",
-      "observation": "Character-select menu: 8 racer cards with portraits and SPD/ACC/HDL/WGT bars, Blaze detail panel with class 100cc NORMAL and 3 LAPS selectors, RACE! button and controls footer over blurred track background."
+      "observation": "Character-select menu: 8 racer cards with portraits and SPD/ACC/HDL/WGT bars, Blaze detail panel with class 100cc NORMAL and 3 LAPS selectors, RACE! button and controls footer over blurred track background.",
+      "local_path": "screenshots/951d64600f9d3161fa639a65964f597027cbe5690f9b68ec3123fe807301fdaa.jpg",
+      "sha256": "951d64600f9d3161fa639a65964f597027cbe5690f9b68ec3123fe807301fdaa",
+      "downloaded_at": "2026-09-28T04:46:46.364949+00:00"
     },
     {
       "url": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/results.jpg",
-      "observation": "Results menu: VICTORY! 2 LAP RACE FINAL STANDINGS table 1st-8th with best/total times, Rex YOU first at 1:34.74, RACE AGAIN and MAIN MENU buttons over dimmed track; menu, not gameplay."
+      "observation": "Results menu: VICTORY! 2 LAP RACE FINAL STANDINGS table 1st-8th with best/total times, Rex YOU first at 1:34.74, RACE AGAIN and MAIN MENU buttons over dimmed track; menu, not gameplay.",
+      "local_path": "screenshots/9d567de6261842c162531e30e33c1fa927f3d89d756bb7c02072a2b3f897a84e.jpg",
+      "sha256": "9d567de6261842c162531e30e33c1fa927f3d89d756bb7c02072a2b3f897a84e",
+      "downloaded_at": "2026-09-28T04:46:46.885843+00:00"
     }
   ],
   "screenshot_based_score": {
@@ -104,8 +119,24 @@
     }
   ],
   "links": [
-    "https://bridge-mind.github.io/turbo-kart-rally/",
-    "https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md",
-    "https://github.com/bridge-mind/turbo-kart-rally/blob/main/ARCHITECTURE.md"
-  ]
+    {
+      "label": "Related link",
+      "url": "https://bridge-mind.github.io/turbo-kart-rally/"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/bridge-mind/turbo-kart-rally/blob/main/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/bridge-mind/turbo-kart-rally/blob/main/ARCHITECTURE.md"
+    },
+    {
+      "label": "Source repository",
+      "url": "https://github.com/bridge-mind/turbo-kart-rally/tree/main"
+    }
+  ],
+  "source_url": "https://github.com/bridge-mind/turbo-kart-rally/tree/main",
+  "creation_models": [],
+  "technologies": []
 }

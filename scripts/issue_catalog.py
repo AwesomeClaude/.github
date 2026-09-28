@@ -52,7 +52,8 @@ def issue_links(body):
 def issue_input(path):
     payload = json.loads(path.read_text(encoding='utf-8'))
     issue = payload['issue']
-    owner = issue['user']['login'].casefold() == payload['repository']['owner']['login'].casefold()
+    owner = issue['user']['login'].casefold() == os.getenv(
+        'ISSUE_CATALOG_DEBUG_OWNER', payload['repository']['owner']['login']).casefold()
     links = issue_links(issue.get('body'))
     summary = {'issue_number': issue['number'], 'owner': owner, 'links': links, 'outcomes': []}
     if not links:
@@ -82,26 +83,6 @@ def command(*args, check=True):
     if check and result.returncode:
         raise RuntimeError(f'{args[0]} {args[1]} failed: {result.stderr.strip()[:1000]}')
     return result
-
-
-def merge_pr(repo, pr_url, head, title, body):
-    for attempt in range(3):
-        result = command('gh', 'pr', 'merge', pr_url, '--repo', repo, '--auto', '--squash',
-                         '--match-head-commit', head, '--subject', title, '--body', body,
-                         check=False)
-        state = command('gh', 'pr', 'view', pr_url, '--repo', repo,
-                        '--json', 'state,autoMergeRequest', check=False)
-        if state.returncode == 0:
-            details = json.loads(state.stdout)
-            if details['state'] == 'MERGED':
-                return 'Merged automatically into the default catalog branch.'
-            if details.get('autoMergeRequest'):
-                return 'Auto-merge enabled; waiting for the repository’s merge requirements.'
-        if result.returncode == 0:
-            return 'Merge requested; check the pull request for its current status.'
-        if attempt < 2:
-            time.sleep(5)
-    return f'Automatic merge failed; inspect the pull request. {games.markdown(result.stderr.strip())[:600]}'
 
 
 def outcome(url, status, reason='', **extra):
@@ -219,6 +200,9 @@ def issue_comment(summary, link, run_url, repo, branch, merge_status):
                     value = score_text(item['before'], key) + ' → ' + value
                 scores.append(f'{label} {value}')
             lines.append('**Scores:** ' + ' · '.join(scores))
+            missing = sum(bool(shot.get('download_error')) for shot in report['screenshots'])
+            if missing:
+                lines.append(f'**Screenshots:** {missing} unavailable; retained source URLs and download diagnostics.')
             if report.get('creation_models'):
                 lines.append('**Built with:** ' + ', '.join(
                     f"[{games.markdown(m['name'])}]({games.safe_url(m['evidence_url'])})" for m in report['creation_models']))
@@ -291,19 +275,29 @@ def publish(args):
             command('git', 'push', '--set-upstream', 'origin', branch)
             link = f'[branch](https://github.com/{repo}/tree/{branch})'
             print(f'Published branch: {link}', flush=True)
-            pr = command('gh', 'pr', 'create', '--repo', repo, '--base', base, '--head', branch,
-                         '--title', title, '--body', body, check=False)
-            if pr.returncode:
-                raise RuntimeError('PR creation failed: ' + pr.stderr[:500])
-            pr_url = pr.stdout.strip()
-            link = f'[pull request]({pr_url})'
-            print(f'Published pull request: {pr_url}', flush=True)
             if os.getenv('CATALOG_AUTO_MERGE', 'true').lower() == 'false':
-                merge_status = 'Automatic merge is disabled.'
+                pr = command('gh', 'pr', 'create', '--repo', repo, '--base', base, '--head', branch,
+                             '--title', title, '--body', body, check=False)
+                if pr.returncode:
+                    raise RuntimeError('Manual-mode PR creation failed: ' + pr.stderr[:500])
+                pr_url = pr.stdout.strip()
+                link = f'[pull request]({pr_url})'
+                merge_status = 'Manual merge enabled; left the PR open for review.'
+                print(f'Published pull request: {pr_url}', flush=True)
             elif summary.get('error'):
-                merge_status = 'Left the PR open because the analysis pipeline did not complete.'
+                merge_status = 'Kept the recovery branch because the analysis pipeline did not complete.'
             else:
-                merge_status = merge_pr(repo, pr_url, head, title, body)
+                # The branch has one publication commit on the latest base. Advance main
+                # without force; reject concurrent changes rather than merge stale indexes.
+                command('git', 'fetch', 'origin', base)
+                parent = command('git', 'rev-parse', f'{head}^').stdout.strip()
+                latest = command('git', 'rev-parse', f'origin/{base}').stdout.strip()
+                if latest != parent:
+                    raise RuntimeError('Default branch changed during publication; retained the recovery branch.')
+                command('git', 'push', 'origin', f'{head}:refs/heads/{base}')
+                link = f'[published commit](https://github.com/{repo}/commit/{head})'
+                merge_status = 'Merged the catalog branch directly into the default branch.'
+                print(f'Published directly: {link}', flush=True)
     except Exception as exc:
         summary['error'] = f'Catalog publication failed: {exc}'
     finally:

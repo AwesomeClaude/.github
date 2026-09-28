@@ -30,9 +30,11 @@ Scored only from the inspected first frame of the repo's own gameplay GIF withou
 
 ## Screenshots
 
-![Inspected first frame of the repo's own animated gameplay GIF: tiny dark pixel T-Rex standing at far left on a short horizontal ground line, vast empty white background, no obstacles, score, or night elements visible in this frame. Clearly the game's own runtime output, matching the Chrome offline runner art style.](https://raw.githubusercontent.com/wayou/t-rex-runner/gh-pages/assets/screenshot.gif)
+![T-Rex Runner gameplay](screenshots/208640cabfd1c5ce5f3bd2ae3a667c0dc18ad0e717337ad4af3828603c8a0581.gif)
 
 Inspected first frame of the repo's own animated gameplay GIF: tiny dark pixel T-Rex standing at far left on a short horizontal ground line, vast empty white background, no obstacles, score, or night elements visible in this frame. Clearly the game's own runtime output, matching the Chrome offline runner art style.
+
+[Original screenshot](https://raw.githubusercontent.com/wayou/t-rex-runner/gh-pages/assets/screenshot.gif)
 
 ## Play
 

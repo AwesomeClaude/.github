@@ -23,12 +23,30 @@
     "Expand to high-suitability worlds, mine metal for shipbuilding, obsolete old hulls with new tech, bombard undefended enemy worlds, and eliminate every rival empire."
   ],
   "links": [
-    "https://github.com/PierreHoule/SpaceHo2",
-    "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/README.md",
-    "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/model.js",
-    "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/ai.js",
-    "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/data.js",
-    "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/test/smoke.js"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/PierreHoule/SpaceHo2"
+    },
+    {
+      "label": "Related link",
+      "url": "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/model.js"
+    },
+    {
+      "label": "Related link",
+      "url": "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/ai.js"
+    },
+    {
+      "label": "Related link",
+      "url": "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/js/data.js"
+    },
+    {
+      "label": "Related link",
+      "url": "https://raw.githubusercontent.com/PierreHoule/SpaceHo2/main/test/smoke.js"
+    }
   ],
   "mechanics": [
     "Turn-based 4X loop (explore, expand, exploit, exterminate) on a 30-star seeded galaxy, you plus 3 AI empires, elimination victory",
@@ -109,5 +127,8 @@
     "fog-of-war",
     "single-file"
   ],
-  "title": "SpaceHo2"
+  "title": "SpaceHo2",
+  "source_url": "https://github.com/PierreHoule/SpaceHo2",
+  "creation_models": [],
+  "technologies": []
 }

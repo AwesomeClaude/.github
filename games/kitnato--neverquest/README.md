@@ -27,25 +27,35 @@ Visible gameplay frames show a clean, coherent monochrome dashboard UI (health/s
 
 ## Screenshots
 
-![Inspected full combat frame at Coast of the Screams stage 33: player panel with health 431/463 DODGED, stamina, attack/recovery timers, six-stat grid, Titanium Halberd / Tasset of Destitution / Alchemical Wall gear, Butchery mastery 69/78; monster panel for Blighted Scoundrel 135/696 with attack timer and ailment meters; essence 864/1,444 progress. Densest gameplay UI, clearly the game's own output.](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-4.png)
+![neverquest gameplay](screenshots/f4506a354761f20944c664a3c54b90c74776e9d0a391f13a1c0b85ad0dc97fee.png)
 
 Inspected full combat frame at Coast of the Screams stage 33: player panel with health 431/463 DODGED, stamina, attack/recovery timers, six-stat grid, Titanium Halberd / Tasset of Destitution / Alchemical Wall gear, Butchery mastery 69/78; monster panel for Blighted Scoundrel 135/696 with attack timer and ailment meters; essence 864/1,444 progress. Densest gameplay UI, clearly the game's own output.
 
-![Inspected ranged combat frame in Shrouded Canyon vs Flatulent Myrmidon (1,142/1,170 HP, 1.19s attack): player low-health tooltip 'The meaning of life is that it ends', exhausted stamina, stat grid, Brass Caltrop / Pallium of Cinders gear, essence 2,401 with 8,089/8,940 progress. Same monochrome runtime UI as above; game's own output.](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-3.png)
+[Original screenshot](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-4.png)
+
+![neverquest gameplay](screenshots/b96951c4567ebe796387f0504a1182ecef6ce9431336105ad406cd9a2e471927.png)
 
 Inspected ranged combat frame in Shrouded Canyon vs Flatulent Myrmidon (1,142/1,170 HP, 1.19s attack): player low-health tooltip 'The meaning of life is that it ends', exhausted stamina, stat grid, Brass Caltrop / Pallium of Cinders gear, essence 2,401 with 8,089/8,940 progress. Same monochrome runtime UI as above; game's own output.
 
-![Inspected caravan hub frame: health 90/90 and stamina 20/20 bars, combat stats, Sordid Claymore / Soiled Helm / Weak Stormshield gear; hired Merchant plus crew for hire (Medic 20, Tailor 35, Blacksmith 50 essence, locked stages 15-27). Management UI, game's own output.](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-2.png)
+[Original screenshot](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-3.png)
+
+![neverquest gameplay](screenshots/3402574686cde6ff4f1397858cbfb0be4596d6f76f5c8eae4c4a6b8c5682afb9.png)
 
 Inspected caravan hub frame: health 90/90 and stamina 20/20 bars, combat stats, Sordid Claymore / Soiled Helm / Weak Stormshield gear; hired Merchant plus crew for hire (Medic 20, Tailor 35, Blacksmith 50 essence, locked stages 15-27). Management UI, game's own output.
 
-![Inspected journal overlay in Cellar with 929,811 essence: completion bonuses, Conquests/Routines/Triumphs tabs, 2/103 progress, quest list (Hoarding I/II, None shall pass, Bloodlust tiers) with +1% rewards. Menu/overlay over live stats, not active combat.](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-5.png)
+[Original screenshot](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-2.png)
+
+![neverquest gameplay](screenshots/206a4a44e3f7aad884fba67de7cce494ad990bd8a9e97ad81dedf32e9fa8a3a4.png)
 
 Inspected journal overlay in Cellar with 929,811 essence: completion bonuses, Conquests/Routines/Triumphs tabs, 2/103 progress, quest list (Hoarding I/II, None shall pass, Bloodlust tiers) with +1% rewards. Menu/overlay over live stats, not active combat.
 
-![Inspected sparse start frame: dark header with neverquest v1.0.0 logo, two empty cards ('???' and 'The darkness stirs'), large blank white area. Near-blank initial frame, discounted as non-representative of gameplay depth.](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-1.png)
+[Original screenshot](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-5.png)
+
+![neverquest gameplay](screenshots/ded633bb77be89b804b46a73da6e37d3e418118e72a47f1b56336dc72e42f6e3.png)
 
 Inspected sparse start frame: dark header with neverquest v1.0.0 logo, two empty cards ('???' and 'The darkness stirs'), large blank white area. Near-blank initial frame, discounted as non-representative of gameplay depth.
+
+[Original screenshot](https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-1.png)
 
 ## Play
 

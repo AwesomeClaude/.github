@@ -27,13 +27,17 @@ Only the Club Run frame counts as gameplay: clean dark card UI with lives dots, 
 
 ## Screenshots
 
-![Inspected 1364x896 gameplay frame of Club Run: dark navy page with New game back link, Question 1 of 1, five coral lives dots, green Who is this banner, central card showing a badge career chain from Genk to Chelsea with two small LOAN satellites then down to Napoli, Man City and Wolfsburg with directional arrows, This may not show their full career note, Hint pill button, Type your guess text input, and Give up link. Game's own runtime output, not concept art.](https://raw.githubusercontent.com/cuongluu8/tenable/main/kdb-club-badges-screenshot.jpg)
+![Top-10 Tension gameplay](screenshots/944746e1dc65526e80814dca6072a9994c624daabcc0b11dd6aa99aca033da8e.jpg)
 
 Inspected 1364x896 gameplay frame of Club Run: dark navy page with New game back link, Question 1 of 1, five coral lives dots, green Who is this banner, central card showing a badge career chain from Genk to Chelsea with two small LOAN satellites then down to Napoli, Man City and Wolfsburg with directional arrows, This may not show their full career note, Hint pill button, Type your guess text input, and Give up link. Game's own runtime output, not concept art.
 
-![Inspected 1200x630 promotional title card: dark background with glowing green circular 10-plus-football badge mark above Top-10 Tension wordmark in green gradient and Top 10 football trivia subtitle. Static share banner, no gameplay, HUD, or interactive elements; discounted for graphics scoring.](https://raw.githubusercontent.com/cuongluu8/tenable/main/public/og-image.png)
+[Original screenshot](https://raw.githubusercontent.com/cuongluu8/tenable/main/kdb-club-badges-screenshot.jpg)
+
+![Top-10 Tension gameplay](screenshots/d4f96e6c2840203b43240a3eb3611248ca7e0e7f701fff82096d72656fdab7c3.png)
 
 Inspected 1200x630 promotional title card: dark background with glowing green circular 10-plus-football badge mark above Top-10 Tension wordmark in green gradient and Top 10 football trivia subtitle. Static share banner, no gameplay, HUD, or interactive elements; discounted for graphics scoring.
+
+[Original screenshot](https://raw.githubusercontent.com/cuongluu8/tenable/main/public/og-image.png)
 
 ## Play
 

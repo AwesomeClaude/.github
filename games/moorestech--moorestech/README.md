@@ -30,21 +30,29 @@ All four inspected frames are the game's own runtime output with coherent anime-
 
 ## Screenshots
 
-![Inspected downloaded copy: top-down 3D factory yard with conveyors carrying ore piles, brick furnaces with fire, white pipes, anime protagonist in pink/white outfit center, and 9-slot hotbar with item counts at bottom. Densest gameplay UI and clearest factory-building evidence; game's own runtime output.](https://moores.tech/assets/game-screenshot-1-DJ3aSHbO.webp)
+![moorestech gameplay](screenshots/b8ef860054cc365de1862d2ddd95dc2a5d06428c2a96fb8b637e3dfad0ae3086.webp)
 
 Inspected downloaded copy: top-down 3D factory yard with conveyors carrying ore piles, brick furnaces with fire, white pipes, anime protagonist in pink/white outfit center, and 9-slot hotbar with item counts at bottom. Densest gameplay UI and clearest factory-building evidence; game's own runtime output.
 
-![Inspected downloaded copy: desert factory with Metal Processing Equipment panel, inventory grid with gears/ingots and counts, conveyors carrying metal rolls, anime character from behind, bottom hotbar. Full machine/inventory UI; game's own runtime output.](https://moores.tech/assets/game-screenshot-2-Bdgb5b21.webp)
+[Original screenshot](https://moores.tech/assets/game-screenshot-1-DJ3aSHbO.webp)
+
+![moorestech gameplay](screenshots/01066e91e44aabedf2d9a16d7405003a2f2c9637dbd1cca25de1829c063f2f88.webp)
 
 Inspected downloaded copy: desert factory with Metal Processing Equipment panel, inventory grid with gears/ingots and counts, conveyors carrying metal rolls, anime character from behind, bottom hotbar. Full machine/inventory UI; game's own runtime output.
 
-![Inspected downloaded copy: grassy meadow with translucent striped building-placement ghost, anime character placing a structure, waterfall/rocks/trees behind, bottom hotbar. Shows build-preview gameplay state; game's own runtime output.](https://moores.tech/assets/game-feature-tutorial-BuGQjo7s.webp)
+[Original screenshot](https://moores.tech/assets/game-screenshot-2-Bdgb5b21.webp)
+
+![moorestech gameplay](screenshots/7e81d2b6d80f8cc4d72a7c0834e9c43b2c5b3e8b661f7b8ad1921399a923359f.webp)
 
 Inspected downloaded copy: grassy meadow with translucent striped building-placement ghost, anime character placing a structure, waterfall/rocks/trees behind, bottom hotbar. Shows build-preview gameplay state; game's own runtime output.
 
-![Inspected downloaded copy: anime character running across a vast green open world with cliffs, forests, lake and snow-capped mountains, hotbar visible at bottom. Shows exploration scale; game's own runtime output.](https://moores.tech/assets/game-feature-openworld-DViLb0zE.webp)
+[Original screenshot](https://moores.tech/assets/game-feature-tutorial-BuGQjo7s.webp)
+
+![moorestech gameplay](screenshots/44ba7c90a1d3a42ac038edd7135a0bea30470c95dfb105a9f7bd9a4bb7a04022.webp)
 
 Inspected downloaded copy: anime character running across a vast green open world with cliffs, forests, lake and snow-capped mountains, hotbar visible at bottom. Shows exploration scale; game's own runtime output.
+
+[Original screenshot](https://moores.tech/assets/game-feature-openworld-DViLb0zE.webp)
 
 ## Play
 

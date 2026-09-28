@@ -80,7 +80,10 @@
   "screenshots": [
     {
       "observation": "Inspected downloaded copy of the YouTube demo thumbnail (480x360): third-person chase view behind a pizza-delivery bike on a multi-lane cel-shaded city avenue, yellow taxi directly ahead, blue car at left, brick buildings both sides; HUD shows TIEMPO 60, PUNTOS 71858, combo banner BUUUM! +1000 and A UN PELO +250, progress bar, 150 km/h speedometer, and on-screen touch controls (left floating joystick, GAS / FRENO / CABALLITO buttons) plus pause button. Clearly the game's own runtime output.",
-      "url": "https://img.youtube.com/vi/Ds_wtQz6IG0/hqdefault.jpg"
+      "url": "https://img.youtube.com/vi/Ds_wtQz6IG0/hqdefault.jpg",
+      "local_path": "screenshots/2575aff96cb4f08a9bdb2c2bf72976873bb81a705130addd8a06f5a1fbab3f52.jpg",
+      "sha256": "2575aff96cb4f08a9bdb2c2bf72976873bb81a705130addd8a06f5a1fbab3f52",
+      "downloaded_at": "2026-09-28T04:46:47.964131+00:00"
     }
   ],
   "source_analysis": [

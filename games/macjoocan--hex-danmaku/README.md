@@ -30,17 +30,23 @@ Both gameplay frames are the game's own output: coherent cute-chibi fantasy styl
 
 ## Screenshots
 
-![Inspected downloaded copy of fantasy-game-slash-mobile.png: vertical mobile gameplay frame of STAGE 06 boss versus dragon. Mint hex board with teal reachable tiles and pink/hatched danger telegraphs, chibi sword hero with slash arc, detailed dragon boss, small red bullet dots, PHASE 1 banner, turn/score/combo HUD, next-spawn trays, and three skill cards (time rewind, rune slash, frost magic) with Q/E/A/D/Z/X/SPC/R hints. Clearly the game's own runtime output.](https://raw.githubusercontent.com/macjoocan/hex-danmaku/main/art-review/fantasy-game-slash-mobile.png)
+![HEX DANMAKU gameplay](screenshots/569ac51b527fd0e1d3ce3a060d1a003b5068f202dc6270b2b91b8a31b4433f23.png)
 
 Inspected downloaded copy of fantasy-game-slash-mobile.png: vertical mobile gameplay frame of STAGE 06 boss versus dragon. Mint hex board with teal reachable tiles and pink/hatched danger telegraphs, chibi sword hero with slash arc, detailed dragon boss, small red bullet dots, PHASE 1 banner, turn/score/combo HUD, next-spawn trays, and three skill cards (time rewind, rune slash, frost magic) with Q/E/A/D/Z/X/SPC/R hints. Clearly the game's own runtime output.
 
-![Inspected downloaded copy of hud-stage.png: dark-fantasy STAGE 01 gameplay frame with Lv.1 hero portrait, 6/6 HP and EXP bars, next-bullet trays, forest-backed hex board with teal move range around the hero and one purple enemy, and three bottom skill buttons with coin costs. Clearly the game's own runtime output in an alternate HUD skin.](https://raw.githubusercontent.com/macjoocan/hex-danmaku/main/art-review/hud-stage.png)
+[Original screenshot](https://raw.githubusercontent.com/macjoocan/hex-danmaku/main/art-review/fantasy-game-slash-mobile.png)
+
+![HEX DANMAKU gameplay](screenshots/5b14d372d6682c428a6bde1977fa8f338ba0b15c71a86960e798ca2c44df811c.png)
 
 Inspected downloaded copy of hud-stage.png: dark-fantasy STAGE 01 gameplay frame with Lv.1 hero portrait, 6/6 HP and EXP bars, next-bullet trays, forest-backed hex board with teal move range around the hero and one purple enemy, and three bottom skill buttons with coin costs. Clearly the game's own runtime output in an alternate HUD skin.
 
-![Inspected downloaded copy of fantasy-menu-desktop.png: desktop title/menu screen with HEX DANMAKU logo, floating-island key art, chibi hero and dragon, and mode cards for stages, endless, daily challenge, and preparation. Menu/title art, not active gameplay; discounted for graphics scoring.](https://raw.githubusercontent.com/macjoocan/hex-danmaku/main/art-review/fantasy-menu-desktop.png)
+[Original screenshot](https://raw.githubusercontent.com/macjoocan/hex-danmaku/main/art-review/hud-stage.png)
+
+![HEX DANMAKU gameplay](screenshots/0eac42a2bdb31c66d19b5ed8935485023c33bc19658ebe5516fffe3a9d9de4c1.png)
 
 Inspected downloaded copy of fantasy-menu-desktop.png: desktop title/menu screen with HEX DANMAKU logo, floating-island key art, chibi hero and dragon, and mode cards for stages, endless, daily challenge, and preparation. Menu/title art, not active gameplay; discounted for graphics scoring.
+
+[Original screenshot](https://raw.githubusercontent.com/macjoocan/hex-danmaku/main/art-review/fantasy-menu-desktop.png)
 
 ## Play
 

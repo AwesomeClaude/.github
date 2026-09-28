@@ -27,13 +27,17 @@ The inspected English-mode gameplay frame shows coherent readable pixel art (win
 
 ## Screenshots
 
-![Inspected 1438x954 gameplay frame (English mode): top-down pixel-art TD board with winding gray road, red-roofed towers, skeleton/crab/snake enemies marching the dashed path, BOSS vending machine and station house decor, HUD with 20 yen coin and 0.0 timer, side action-panel prompts (engineer, solar, taut) with enemy labels (gigantic, papal, incomplete, asinine, mourner, hoglet), green range ring around a selected tower, and bottom typing buffer '\> engi'. Clearly the game's own runtime output.](https://img.itch.zone/aW1hZ2UvOTg5MTU0LzU2NjU2MDAucG5n/original/MnHlHT.png)
+![Taipo gameplay](screenshots/61a2cfb11e537bf4a70ef54b5b709945ccceb45d1029f99054d94fefa1518407.png)
 
 Inspected 1438x954 gameplay frame (English mode): top-down pixel-art TD board with winding gray road, red-roofed towers, skeleton/crab/snake enemies marching the dashed path, BOSS vending machine and station house decor, HUD with 20 yen coin and 0.0 timer, side action-panel prompts (engineer, solar, taut) with enemy labels (gigantic, papal, incomplete, asinine, mourner, hoglet), green range ring around a selected tower, and bottom typing buffer '\> engi'. Clearly the game's own runtime output.
 
-![Inspected 1440x960 menu overlay frame: same pixel map dimmed behind a centered word-list select modal with Kana, Kana + N5, Kana + N5 + Yamanote, and English buttons. Menu/title selection, not active gameplay; discounted for graphics scoring.](https://img.itch.zone/aW1hZ2UvOTg5MTU0LzU2NjU2MTcucG5n/original/MPZWHj.png)
+[Original screenshot](https://img.itch.zone/aW1hZ2UvOTg5MTU0LzU2NjU2MDAucG5n/original/MnHlHT.png)
+
+![Taipo gameplay](screenshots/2718288d3e7b55560216f56427860f3da2e1edfbf073d78f1cf2a48d9665c169.png)
 
 Inspected 1440x960 menu overlay frame: same pixel map dimmed behind a centered word-list select modal with Kana, Kana + N5, Kana + N5 + Yamanote, and English buttons. Menu/title selection, not active gameplay; discounted for graphics scoring.
+
+[Original screenshot](https://img.itch.zone/aW1hZ2UvOTg5MTU0LzU2NjU2MTcucG5n/original/MPZWHj.png)
 
 ## Play
 

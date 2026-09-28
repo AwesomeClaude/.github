@@ -30,25 +30,35 @@ Four inspected desktop frames plus one phone frame show coherent chibi pixel art
 
 ## Screenshots
 
-![Inspected 800x600 gameplay frame on the temple map: chibi green tank mobile on carved stone temple terrain with vines and statues, parallax pyramids and sun, full HUD with player health bars, turn timer 17, wind dial, YOUR TURN banner, bottom bar with angle gauge, S1/S2/SS shot buttons, power bar, item slots (DUAL, TELE, BAND, BUNGE, PWR), SKIP and FIRE buttons. Debug seed panel at left. Clearly the game's own runtime output.](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/temple_desktop.png)
+![GunBros gameplay](screenshots/9c2b7da8d78a0e52613f5c85f058f6d0ca410cc39a72ce310fc0718feac84fb7.png)
 
 Inspected 800x600 gameplay frame on the temple map: chibi green tank mobile on carved stone temple terrain with vines and statues, parallax pyramids and sun, full HUD with player health bars, turn timer 17, wind dial, YOUR TURN banner, bottom bar with angle gauge, S1/S2/SS shot buttons, power bar, item slots (DUAL, TELE, BAND, BUNGE, PWR), SKIP and FIRE buttons. Debug seed panel at left. Clearly the game's own runtime output.
 
-![Inspected 800x600 gameplay frame on rolling hills: same tank on grassy hill with exposed dirt cross-section, fossil bones, pine trees, mountain backdrop, identical full HUD (timer 18, wind 6 @ 10). Coherent pixel-art style, game's own output.](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/hills_desktop.png)
+[Original screenshot](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/temple_desktop.png)
+
+![GunBros gameplay](screenshots/3bc31afa4b1ef1f82dcb99463510c8d4f6bc8b75f96f17d6e379d653959478a2.png)
 
 Inspected 800x600 gameplay frame on rolling hills: same tank on grassy hill with exposed dirt cross-section, fossil bones, pine trees, mountain backdrop, identical full HUD (timer 18, wind 6 @ 10). Coherent pixel-art style, game's own output.
 
-![Inspected 800x600 gameplay frame in the crystal cave: purple cavern with stalactites, glowing crystals, wooden scaffolding and mine cart, same HUD (timer 17, wind 17 @ 159). Distinct palette proving multiple hand-built map themes.](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/cave_desktop.png)
+[Original screenshot](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/hills_desktop.png)
+
+![GunBros gameplay](screenshots/8fa96a94aa17f94cbcddb2d9f31a2b59daee43696cb363c5a4b5f63e5ee5f4b5.png)
 
 Inspected 800x600 gameplay frame in the crystal cave: purple cavern with stalactites, glowing crystals, wooden scaffolding and mine cart, same HUD (timer 17, wind 17 @ 159). Distinct palette proving multiple hand-built map themes.
 
-![Inspected 800x600 gameplay frame in the volcanic forge: dark red foundry with lava flows, volcano, furnaces and village silhouettes, same HUD (timer 18, wind 14 @ 31). Fourth distinct biome, game's own output.](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/forge_desktop.png)
+[Original screenshot](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/cave_desktop.png)
+
+![GunBros gameplay](screenshots/f8a0333ce8f3647225c85ae5afc413fe174a95a22b1577150c73390287ae562c.png)
 
 Inspected 800x600 gameplay frame in the volcanic forge: dark red foundry with lava flows, volcano, furnaces and village silhouettes, same HUD (timer 18, wind 14 @ 31). Fourth distinct biome, game's own output.
 
-![Inspected 800x370 phone-layout gameplay frame in the cave: compressed touch HUD with large FIRE/SKIP keys, angle pad arrows, move arrows, item row and shell selector, confirming the touch-screen control scheme. Game's own output, alternate layout rather than the primary desktop view.](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/cave_phone.png)
+[Original screenshot](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/forge_desktop.png)
+
+![GunBros gameplay](screenshots/ce8de8b2e8fed9026d42b795acdd0e0653825ae24ec763a5d2a31bb7eda1efdc.png)
 
 Inspected 800x370 phone-layout gameplay frame in the cave: compressed touch HUD with large FIRE/SKIP keys, angle pad arrows, move arrows, item row and shell selector, confirming the touch-screen control scheme. Game's own output, alternate layout rather than the primary desktop view.
+
+[Original screenshot](https://raw.githubusercontent.com/skelzer/gunbros-public/main/docs/ui/maps/cave_phone.png)
 
 ## Play
 

@@ -30,29 +30,41 @@ Four inspected 3D frames (Next Word Machine, station, corridor, token goggles) s
 
 ## Screenshots
 
-![Inspected 1440x900 frame: diver from behind facing a 5-tube Next Word Machine; balls piling in tubes labeled same 13%, admira(l) 5%, (b)ottom 3%, rate 3%; wall placard reads 'The captain looked at the \_\_' with real-odds sampling note; glowing lesson console at right; WASD/E/F hint bar and Map/Graphics buttons visible. Densest gameplay evidence, game's own runtime output.](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/next-word-machine.png)
+![Deep Dive gameplay](screenshots/f52e6b90dee9f31f00757d20b3a8c080fa235eb52fc1250f4a10c7da80e60f31.png)
 
 Inspected 1440x900 frame: diver from behind facing a 5-tube Next Word Machine; balls piling in tubes labeled same 13%, admira(l) 5%, (b)ottom 3%, rate 3%; wall placard reads 'The captain looked at the \_\_' with real-odds sampling note; glowing lesson console at right; WASD/E/F hint bar and Map/Graphics buttons visible. Densest gameplay evidence, game's own runtime output.
 
-![Inspected 1440x900 frame: third-person diver in orange suit with gold helmet on sand facing DEEP DIVE STATION entrance; Welcome diver signboard, Station Map board, beach balls, kelp, light rays; DIVER'S LICENSE 1-5 tracker top-right, WASD/Shift/drag/E/F hint bar bottom-left. Game's own runtime output.](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/station.png)
+[Original screenshot](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/next-word-machine.png)
+
+![Deep Dive gameplay](screenshots/5b4875305f7b82455a92b75a4f3509d7730a4967129a9ede8f1f0238188d4b5d.png)
 
 Inspected 1440x900 frame: third-person diver in orange suit with gold helmet on sand facing DEEP DIVE STATION entrance; Welcome diver signboard, Station Map board, beach balls, kelp, light rays; DIVER'S LICENSE 1-5 tracker top-right, WASD/Shift/drag/E/F hint bar bottom-left. Game's own runtime output.
 
-![Inspected 1440x900 frame: diver centered in white-tiled corridor with blue runner rug, pastel lab doors both sides, hanging signs for Lab 1 Token Reef, Lab 2 Guessing Machine, Lab 3 Backpack, Lab 4 Robot Chef; license tracker and controls hint bar visible. Game's own runtime output.](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/corridor.png)
+[Original screenshot](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/station.png)
+
+![Deep Dive gameplay](screenshots/312a5b2a7faed8fe646e877cdc7ba3a6a150f4a39d61e404a0fc4136c5c6ecac.png)
 
 Inspected 1440x900 frame: diver centered in white-tiled corridor with blue runner rug, pastel lab doors both sides, hanging signs for Lab 1 Token Reef, Lab 2 Guessing Machine, Lab 3 Backpack, Lab 4 Robot Chef; license tracker and controls hint bar visible. Game's own runtime output.
 
-![Inspected 1280x800 frame: same corridor with Token goggles on; banner reads every sign is split into tokens; door signs repainted as colored chunks (Fact/Check/Lagoon, Tool/box); Token goggles active button plus Map/Graphics buttons. Shows live tokenizer overlay in 3D, game's own runtime output.](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/goggles.png)
+[Original screenshot](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/corridor.png)
+
+![Deep Dive gameplay](screenshots/8dc9cd2397a50e27def747f0c221c6c60991570bebbd2970e4db0cf868733be2.png)
 
 Inspected 1280x800 frame: same corridor with Token goggles on; banner reads every sign is split into tokens; door signs repainted as colored chunks (Fact/Check/Lagoon, Tool/box); Token goggles active button plus Map/Graphics buttons. Shows live tokenizer overlay in 3D, game's own runtime output.
 
-![Inspected 1280x800 lesson UI: Lab 1 Token Reef card showing real split of 'strawberry' into st/302, raw/1618, berry/19772 token chips after a correct guess of 3, with counting-letters explanation and Next button. Game's own 2D lesson output, not 3D gameplay.](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/token-reef.png)
+[Original screenshot](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/goggles.png)
+
+![Deep Dive gameplay](screenshots/d9d7ec0b67839e1d90d898cbffbf20b7a81c35cf47fefccc2a4099559e423f5c.png)
 
 Inspected 1280x800 lesson UI: Lab 1 Token Reef card showing real split of 'strawberry' into st/302, raw/1618, berry/19772 token chips after a correct guess of 3, with counting-letters explanation and Next button. Game's own 2D lesson output, not 3D gameplay.
 
-![Inspected 1280x800 menu UI: Deep Dive Station Map list with Labs 1-5 plus Diver's License progress (Labs done 2 of 5), Done/Not yet states, Bonus labs section, Walk the 3D station button. Menu screen, not gameplay.](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/map-mode.png)
+[Original screenshot](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/token-reef.png)
+
+![Deep Dive gameplay](screenshots/7d4709b88107b485bb98a191afcb1dcd32d5c088148c8ba6dbc68bcd7c326289.png)
 
 Inspected 1280x800 menu UI: Deep Dive Station Map list with Labs 1-5 plus Diver's License progress (Labs done 2 of 5), Done/Not yet states, Bonus labs section, Walk the 3D station button. Menu screen, not gameplay.
+
+[Original screenshot](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/docs/map-mode.png)
 
 ## Play
 

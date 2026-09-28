@@ -30,13 +30,17 @@ Judged only from stills without inferring motion. Best gameplay frame shows the 
 
 ## Screenshots
 
-![Inspected downloaded 720x900 gameplay frame: active round 1 Regnbagen with six glossy brick rows in white, red, yellow, blue, magenta, and green inside a metallic arena with blue LED joints, top HUD POANG 0000000, REKORD 0000000, RUNDA 01, center RUNDA 1 banner, small red L and cyan D falling capsules, glowing white ball above a metallic paddle with red caps, faint lives icons bottom-left, hex-grid starfield background. Clearly the game's own runtime output.](https://raw.githubusercontent.com/Jack-c3l2w/arkanoid-neon/main/screenshots/gameplay.png)
+![Arkanoid Neon gameplay](screenshots/5557412da1b1fa80f6f8bbe21ee36b75226b4aebf69f26269269249482e60689.png)
 
 Inspected downloaded 720x900 gameplay frame: active round 1 Regnbagen with six glossy brick rows in white, red, yellow, blue, magenta, and green inside a metallic arena with blue LED joints, top HUD POANG 0000000, REKORD 0000000, RUNDA 01, center RUNDA 1 banner, small red L and cyan D falling capsules, glowing white ball above a metallic paddle with red caps, faint lives icons bottom-left, hex-grid starfield background. Clearly the game's own runtime output.
 
-![Inspected downloaded 720x900 title frame: ARKANOID NEON EDITION logo with blue-pink glow over dimmed brick wall, KAPSLAR legend showing all seven capsule icons, controls list for mouse, click, pause, sound, and footer credit to Claude Opus 5.5. Main menu overlay, not active gameplay; discounted for graphics scoring.](https://raw.githubusercontent.com/Jack-c3l2w/arkanoid-neon/main/screenshots/title.png)
+[Original screenshot](https://raw.githubusercontent.com/Jack-c3l2w/arkanoid-neon/main/screenshots/gameplay.png)
+
+![Arkanoid Neon gameplay](screenshots/2fa3090ecae79b98c5e2bf517a3d69e19c3c781c6b79e6026cabbd8c15a04d9d.png)
 
 Inspected downloaded 720x900 title frame: ARKANOID NEON EDITION logo with blue-pink glow over dimmed brick wall, KAPSLAR legend showing all seven capsule icons, controls list for mouse, click, pause, sound, and footer credit to Claude Opus 5.5. Main menu overlay, not active gameplay; discounted for graphics scoring.
+
+[Original screenshot](https://raw.githubusercontent.com/Jack-c3l2w/arkanoid-neon/main/screenshots/title.png)
 
 ## Play
 

@@ -25,13 +25,34 @@
     "Finish 3 laps to see the results screen; use /course?autopilot=1 for an AI demo, ?debug=1 for console event logs, ?touch=1 to force touch controls."
   ],
   "links": [
-    "https://github.com/eddyacthergal/super-wouf-kart",
-    "https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md",
-    "https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/track/garden-layout.ts",
-    "https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/breeds.ts",
-    "https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/items/item-rules.ts",
-    "https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/ai/ai-controller.ts",
-    "https://github.com/eddyacthergal/super-wouf-kart/blob/main/docs/superpowers/specs/2026-09-23-wouf-kart-design.md"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/eddyacthergal/super-wouf-kart"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/eddyacthergal/super-wouf-kart/blob/main/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/track/garden-layout.ts"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/dogs/breeds.ts"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/items/item-rules.ts"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/eddyacthergal/super-wouf-kart/blob/main/src/game/ai/ai-controller.ts"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/eddyacthergal/super-wouf-kart/blob/main/docs/superpowers/specs/2026-09-23-wouf-kart-design.md"
+    }
   ],
   "mechanics": [
     "Single 911 m garden circuit (Catmull-Rom spline): kennel hairpin, chicane, big lawn curve, valley U-turn, 3 item-box rows",
@@ -133,5 +154,8 @@
     "dogs",
     "french"
   ],
-  "title": "Wouf Kart"
+  "title": "Wouf Kart",
+  "source_url": "https://github.com/eddyacthergal/super-wouf-kart",
+  "creation_models": [],
+  "technologies": []
 }

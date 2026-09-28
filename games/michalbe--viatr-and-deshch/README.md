@@ -30,33 +30,47 @@ All seven inspected frames are the game's own runtime output with coherent low-p
 
 ## Screenshots
 
-![Inspected: top-down 3D RTS village with longhouse-style Grod and Khatas, seven Vietra dancers with white wind-mote particle rings, stone Rain Shrine with rain cloud and splashes and kneeling Zhercas, red/blue clan colours, full HUD (Wind 8441 +7/s, Rain 9087 +2/s, supply 17/34, 2:10 clock, Objective 4/9 Train 3 Streletz, minimap with fog). Densest gameplay evidence; game's own runtime output from the previous art pass.](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/01_village_dance.png)
+![Wind & Rain gameplay](screenshots/813efb0e7a242eff8b0de2c099615744cf638de4a4c83b8aed84c0cc41ad32a6.png)
 
 Inspected: top-down 3D RTS village with longhouse-style Grod and Khatas, seven Vietra dancers with white wind-mote particle rings, stone Rain Shrine with rain cloud and splashes and kneeling Zhercas, red/blue clan colours, full HUD (Wind 8441 +7/s, Rain 9087 +2/s, supply 17/34, 2:10 clock, Objective 4/9 Train 3 Streletz, minimap with fog). Densest gameplay evidence; game's own runtime output from the previous art pass.
 
-![Inspected: rival village with blue-banner Grod, blue-clad dancing Vietras, archers, Vitez with shield, Deer Rider cavalry, and active Rain Shrine with rain FX; minimap shows red/blue territories. Shows enemy-clan readability and village scale; game's own runtime output, previous art pass.](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/07_rival_village.png)
+[Original screenshot](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/01_village_dance.png)
+
+![Wind & Rain gameplay](screenshots/9a0f43bb61499e42f854f4763c9ed6d6141b6ab2eccf2a61c4ef5c2c09f10b5e.png)
 
 Inspected: rival village with blue-banner Grod, blue-clad dancing Vietras, archers, Vitez with shield, Deer Rider cavalry, and active Rain Shrine with rain FX; minimap shows red/blue territories. Shows enemy-clan readability and village scale; game's own runtime output, previous art pass.
 
-![Inspected: close view of stone Rain Shrine with pool, rain streaks and dark cloud, three Zhercas with drums/vessels performing the rite, nearby Streletz and Vitez guards; HUD Objective 4/9. Clearest ritual-economy evidence; game's own runtime output, previous art pass.](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/02_rain_rite.png)
+[Original screenshot](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/07_rival_village.png)
+
+![Wind & Rain gameplay](screenshots/274747795b41d5151915eaa46aac6b94b61d62a9438fd117e2b87fdeaea097b8.png)
 
 Inspected: close view of stone Rain Shrine with pool, rain streaks and dark cloud, three Zhercas with drums/vessels performing the rite, nearby Streletz and Vitez guards; HUD Objective 4/9. Clearest ritual-economy evidence; game's own runtime output, previous art pass.
 
-![Inspected: forest skirmish with red archers drawing bows, brown Bear grappling a Deer Rider, blue enemy squad on hill, 'Your settlement is under attack!' banner, Objective 9/9 Destroy the rival Grod, minimap with river and dots. Shows combat, cavalry and beasts; game's own runtime output, previous art pass.](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/03_battle.png)
+[Original screenshot](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/02_rain_rite.png)
+
+![Wind & Rain gameplay](screenshots/eb6e485f5e9e76b63fe9eef1e9ffb73155041ee4fd50d20c2153450602671052.png)
 
 Inspected: forest skirmish with red archers drawing bows, brown Bear grappling a Deer Rider, blue enemy squad on hill, 'Your settlement is under attack!' banner, Objective 9/9 Destroy the rival Grod, minimap with river and dots. Shows combat, cavalry and beasts; game's own runtime output, previous art pass.
 
-![Inspected: aftermath frame with Deer Rider standing over fallen archer and Bear, three red archers advancing through pines and rocks; attack banner and 9/9 objective persist. Sparse combat scene; game's own runtime output, previous art pass.](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/04_battle_late.png)
+[Original screenshot](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/03_battle.png)
+
+![Wind & Rain gameplay](screenshots/12206ab13077d2625f1e8424cd7dfad8e5301dd079b3fdd0481e3c8c25049408.png)
 
 Inspected: aftermath frame with Deer Rider standing over fallen archer and Bear, three red archers advancing through pines and rocks; attack banner and 9/9 objective persist. Sparse combat scene; game's own runtime output, previous art pass.
 
-![Inspected: tall antlered wooden Forest Spirit guardian standing in a central clearing ringed by pines; attack banner and 9/9 objective visible. Shows neutral-creature scale; game's own runtime output, previous art pass.](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/05_spirit_clearing.png)
+[Original screenshot](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/04_battle_late.png)
+
+![Wind & Rain gameplay](screenshots/9ed2f51404edb644c1e9bbd43eeb1085c087f301d6162ac731b028e1c5c6e568.png)
 
 Inspected: tall antlered wooden Forest Spirit guardian standing in a central clearing ringed by pines; attack banner and 9/9 objective visible. Shows neutral-creature scale; game's own runtime output, previous art pass.
 
-![Inspected: stone idol landmark on a hill clearing surrounded by pines and carved posts; no units or combat, decorative landmark only. Least gameplay-dense frame, ranked last; game's own runtime output, previous art pass.](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/06_idol.png)
+[Original screenshot](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/05_spirit_clearing.png)
+
+![Wind & Rain gameplay](screenshots/38a965ec68dcae199faad6fc00e665bd942a76b2ce134ee7d1005eb95e130baa.png)
 
 Inspected: stone idol landmark on a hill clearing surrounded by pines and carved posts; no units or combat, decorative landmark only. Least gameplay-dense frame, ranked last; game's own runtime output, previous art pass.
+
+[Original screenshot](https://raw.githubusercontent.com/michalbe/viatr-and-deshch/main/_critic/06_idol.png)
 
 ## Play
 

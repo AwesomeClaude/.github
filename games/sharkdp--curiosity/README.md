@@ -27,9 +27,11 @@ No inspectable gameplay screenshot.
 
 ## Screenshots
 
-![Inspected 709x120 PNG: striped art-deco style CURIOSITY wordmark logo on white, letter Y partly faded. Title branding asset, not gameplay; no game scene, HUD, character, or level content visible.](https://raw.githubusercontent.com/sharkdp/curiosity/master/assets/curiosity.png)
+![curiositY gameplay](screenshots/9b0f5075e327fcec8864100334e4763a71a059ed35d689808e1fc795cc183a35.png)
 
 Inspected 709x120 PNG: striped art-deco style CURIOSITY wordmark logo on white, letter Y partly faded. Title branding asset, not gameplay; no game scene, HUD, character, or level content visible.
+
+[Original screenshot](https://raw.githubusercontent.com/sharkdp/curiosity/master/assets/curiosity.png)
 
 ## Play
 

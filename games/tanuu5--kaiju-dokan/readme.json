@@ -104,15 +104,24 @@
   "screenshots": [
     {
       "observation": "Inspected 1280x720 gameplay frame: third-person view of dark kaiju silhouette stomping through a dense sunset city of lit-window blocks, manga impact text and +1,470 score popup, full HUD (Dokagon HP/energy bars, 3:36 timer, 4% destruction vs 40% goal, score 17,753, 14 toppled buildings, 26 combo x3.5, minimap, WASD/gamepad control hints). Clearly the game's own runtime output; densest gameplay evidence.",
-      "url": "https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/gameplay.jpg"
+      "url": "https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/gameplay.jpg",
+      "local_path": "screenshots/819d6707e0d41ce373891a8680f18527697a94ed7d0d7e2a00d62bbd42ee5fcf.jpg",
+      "sha256": "819d6707e0d41ce373891a8680f18527697a94ed7d0d7e2a00d62bbd42ee5fcf",
+      "downloaded_at": "2026-09-28T04:46:53.834380+00:00"
     },
     {
       "observation": "Inspected 1280x720 gameplay close-up: kaiju firing a bright magma breath beam into city blocks with flying debris cubes, dust, glowing dorsal plates, sunset skyline and lit windows behind, score popups (+849/+1,440/+200). No HUD visible but clearly the game's own runtime output; shows breath attack and destruction effects.",
-      "url": "https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/breath.jpg"
+      "url": "https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/breath.jpg",
+      "local_path": "screenshots/f1bedb1770a21bd477a793d990dbfae9c179992e5c8fd09a1965c9011bb14764.jpg",
+      "sha256": "f1bedb1770a21bd477a793d990dbfae9c179992e5c8fd09a1965c9011bb14764",
+      "downloaded_at": "2026-09-28T04:46:54.751339+00:00"
     },
     {
       "observation": "Inspected 1280x720 title card: KAIJU DOKAN! logo and Stage 1 bayside-city text over the same sunset procedural city, orange game-start button, mission text (40% destruction goal, defense-force warning) and control summary. Menu/title presentation of the game's own output, discounted as non-gameplay.",
-      "url": "https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/title.jpg"
+      "url": "https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/title.jpg",
+      "local_path": "screenshots/2184597523c108288298fd14a7748e2bc97bda5c6634946a2c9667072077eebb.jpg",
+      "sha256": "2184597523c108288298fd14a7748e2bc97bda5c6634946a2c9667072077eebb",
+      "downloaded_at": "2026-09-28T04:46:55.324293+00:00"
     }
   ],
   "screenshot_based_score": {

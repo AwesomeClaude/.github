@@ -28,11 +28,26 @@
     "Use the trash or broom control to clear the canvas without deleting discoveries; use Reset only to wipe all discoveries."
   ],
   "links": [
-    "https://neal.fun/infinite-craft/",
-    "https://en.wikipedia.org/wiki/Infinite_Craft",
-    "https://www.ign.com/wikis/infinite-craft/How_to_Play_Infinite_Craft",
-    "https://dotesports.com/general/news/how-to-play-infinite-craft-from-neal-fun",
-    "https://play.google.com/store/apps/details?id=fun.neal.infinite.craft&hl=en"
+    {
+      "label": "Original submission",
+      "url": "https://neal.fun/infinite-craft/"
+    },
+    {
+      "label": "Related link",
+      "url": "https://en.wikipedia.org/wiki/Infinite_Craft"
+    },
+    {
+      "label": "Related link",
+      "url": "https://www.ign.com/wikis/infinite-craft/How_to_Play_Infinite_Craft"
+    },
+    {
+      "label": "Related link",
+      "url": "https://dotesports.com/general/news/how-to-play-infinite-craft-from-neal-fun"
+    },
+    {
+      "label": "Related link",
+      "url": "https://play.google.com/store/apps/details?id=fun.neal.infinite.craft&hl=en"
+    }
   ],
   "mechanics": [
     "Drag-and-drop combination of any two discovered elements on an infinite canvas workspace",
@@ -64,7 +79,10 @@
   "screenshots": [
     {
       "observation": "Inspected 457x218 gameplay frame: white infinite canvas covered with small pill nodes such as Peter Griffin, Mickey Mouse, Sea Unicorn, Head-first, Ghost, Aquarium, Red Dragon, Mountain Range and Donald Trump linked by thin grey lines; right sidebar lists Discoveries with emoji rows and search/sort controls; top bars show NEAL.FUN and Infinite Craft logos. Clearly the game's own runtime output, not concept art.",
-      "url": "https://upload.wikimedia.org/wikipedia/en/a/aa/Gameplay_screenshot_of_Infinite_Craft%2C_2024.png"
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/aa/Gameplay_screenshot_of_Infinite_Craft%2C_2024.png",
+      "local_path": "screenshots/e252bea3a1a3daa487abe7a07572d0689b502d631a8879d2867c9aaf6cc64730.png",
+      "sha256": "e252bea3a1a3daa487abe7a07572d0689b502d631a8879d2867c9aaf6cc64730",
+      "downloaded_at": "2026-09-28T04:46:51.178414+00:00"
     }
   ],
   "source_analysis": [
@@ -121,5 +139,7 @@
     "endless",
     "experimental"
   ],
-  "title": "Infinite Craft"
+  "title": "Infinite Craft",
+  "creation_models": [],
+  "technologies": []
 }

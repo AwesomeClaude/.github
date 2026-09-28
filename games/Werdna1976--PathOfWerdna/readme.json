@@ -67,7 +67,10 @@
   "screenshots": [
     {
       "url": "https://raw.githubusercontent.com/Werdna1976/PathOfWerdna/main/tests/screenshot_m1.png",
-      "observation": "Inspected 1600x900 runtime frame: dark isometric stone floor with mottled texture, capsule hero with red facing marker centered, two torch pillars casting warm orange pools and long shadows, primitive box/crate and wall blocks; no HUD, enemies, items, or UI visible; the game's own output per capture_screenshot flow, explicitly placeholder meshes."
+      "observation": "Inspected 1600x900 runtime frame: dark isometric stone floor with mottled texture, capsule hero with red facing marker centered, two torch pillars casting warm orange pools and long shadows, primitive box/crate and wall blocks; no HUD, enemies, items, or UI visible; the game's own output per capture_screenshot flow, explicitly placeholder meshes.",
+      "local_path": "screenshots/1931467b0f9a6ae63d83751df9d2043e2070e28b0dd92b1d4150de7989e5eeda.png",
+      "sha256": "1931467b0f9a6ae63d83751df9d2043e2070e28b0dd92b1d4150de7989e5eeda",
+      "downloaded_at": "2026-09-28T04:46:43.146964+00:00"
     }
   ],
   "screenshot_based_score": {

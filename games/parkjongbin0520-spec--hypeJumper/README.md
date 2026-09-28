@@ -30,9 +30,11 @@ No inspectable gameplay screenshot.
 
 ## Screenshots
 
-![Inspected 545x340 PNG: crude level-design sketch, not runtime gameplay output. White background with chunky black block terrain steps, two small flat orange platforms joined by a double-headed orange arrow, and a thin orange vertical line at the right edge. No player, enemies, HUD, lighting, or rendered game scene; documents intended moving-platform spacing rather than the shipped visual presentation.](https://raw.githubusercontent.com/parkjongbin0520-spec/hypeJumper/main/exampleMap.png)
+![hypeJumper gameplay](screenshots/ead54caa4f7709614a0741d719fbdd16edf89d717219645ffa1440862093605f.png)
 
 Inspected 545x340 PNG: crude level-design sketch, not runtime gameplay output. White background with chunky black block terrain steps, two small flat orange platforms joined by a double-headed orange arrow, and a thin orange vertical line at the right edge. No player, enemies, HUD, lighting, or rendered game scene; documents intended moving-platform spacing rather than the shipped visual presentation.
+
+[Original screenshot](https://raw.githubusercontent.com/parkjongbin0520-spec/hypeJumper/main/exampleMap.png)
 
 ## Play
 

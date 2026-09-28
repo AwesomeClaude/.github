@@ -30,17 +30,23 @@ Board frame shows a dense coherent top-down 2D scene: textured grass with trees,
 
 ## Screenshots
 
-![Inspected 1600x900 gameplay frame: active boss wave ('Brutus 20407/21559', 'Wave 60 BOSS, 36 left') on a grass board with winding dirt road, OSRS-authentic towers and enemies, red damage numbers, green HP bars, tower hotbar mid-bottom and full HUD (speed, gold 3,902, lives 20, wave controls). Clearly the game's own runtime output; sharpest and most detailed frame.](https://raw.githubusercontent.com/hamilton-junior/osrs-tower-defense/main/docs/screenshots/board.png)
+![OSRS Tower Defense gameplay](screenshots/b0bea442fdee6f5c8ff72a89438505c0937e0caf8f5395d4b92c59f664e97521.png)
 
 Inspected 1600x900 gameplay frame: active boss wave ('Brutus 20407/21559', 'Wave 60 BOSS, 36 left') on a grass board with winding dirt road, OSRS-authentic towers and enemies, red damage numbers, green HP bars, tower hotbar mid-bottom and full HUD (speed, gold 3,902, lives 20, wave controls). Clearly the game's own runtime output; sharpest and most detailed frame.
 
-![Inspected 1600x900 game-UI frame: Collection Log modal (Monsters tab, 52/61 found, sprite grid with kill counts) over a desert-region board with winding road and bottom HUD. Real game UI, but a modal overlay rather than active combat; ranked after the pure gameplay frame.](https://raw.githubusercontent.com/hamilton-junior/osrs-tower-defense/main/docs/screenshots/collection-log.png)
+[Original screenshot](https://raw.githubusercontent.com/hamilton-junior/osrs-tower-defense/main/docs/screenshots/board.png)
+
+![OSRS Tower Defense gameplay](screenshots/5f73cc2f478c324dfdd268aa4665530a96fc5fce1be8db15508d38929320d228.png)
 
 Inspected 1600x900 game-UI frame: Collection Log modal (Monsters tab, 52/61 found, sprite grid with kill counts) over a desert-region board with winding road and bottom HUD. Real game UI, but a modal overlay rather than active combat; ranked after the pure gameplay frame.
 
-![Inspected 1600x900 menu frame: mode and difficulty picker (Classic vs Roguelite cards, Normal through NG+ Grandmaster tiers, Confirm button, 'Work in progress' note) over a torch-lit lobby. Menu/title selection, not active gameplay; discounted for graphics scoring.](https://raw.githubusercontent.com/hamilton-junior/osrs-tower-defense/main/docs/screenshots/start.png)
+[Original screenshot](https://raw.githubusercontent.com/hamilton-junior/osrs-tower-defense/main/docs/screenshots/collection-log.png)
+
+![OSRS Tower Defense gameplay](screenshots/1a9be8971bc9aa4a29ff06beeb01d8ba880fda8dad906b5549790fd0c5c5cefb.png)
 
 Inspected 1600x900 menu frame: mode and difficulty picker (Classic vs Roguelite cards, Normal through NG+ Grandmaster tiers, Confirm button, 'Work in progress' note) over a torch-lit lobby. Menu/title selection, not active gameplay; discounted for graphics scoring.
+
+[Original screenshot](https://raw.githubusercontent.com/hamilton-junior/osrs-tower-defense/main/docs/screenshots/start.png)
 
 ## Play
 

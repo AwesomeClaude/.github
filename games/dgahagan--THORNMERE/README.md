@@ -27,37 +27,53 @@ Visible gameplay frames show a coherent deliberate 1985 style: chunky 320x240 in
 
 ## Screenshots
 
-![Inspected gameplay combat frame: large Fen Rat pixel portrait (grey-brown fur, red eyes, fangs) in the animated portrait window labeled FEN RAT, orders panel Round 1 for Hroth vs 4 Fen Rats and 2 Mirefangs, Attack/Defend/Cast/Use/Advance/Run buttons, six-person roster (Blade/Blade/Warden/Skald/Hexen/Lorist) with AC/HP/SP, event log with torch text. Game's own runtime output, sharpest portrait detail.](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/combat.png)
+![THORNMERE — The Founding Song gameplay](screenshots/c52325b264cb982ef232f1332d942ce7f15de07ff6396ba1feb7bf1401799733.png)
 
 Inspected gameplay combat frame: large Fen Rat pixel portrait (grey-brown fur, red eyes, fangs) in the animated portrait window labeled FEN RAT, orders panel Round 1 for Hroth vs 4 Fen Rats and 2 Mirefangs, Attack/Defend/Cast/Use/Advance/Run buttons, six-person roster (Blade/Blade/Warden/Skald/Hexen/Lorist) with AC/HP/SP, event log with torch text. Game's own runtime output, sharpest portrait detail.
 
-![Inspected torchlit dungeon gameplay: textured brown-block corridor receding into darkness with palette ramp shading, corner automap overlay inset top-right, status line The Sunken Undercroft - Drowned Cellars, roster and Forward/Turn/About-face/Search/Cast/Song/Use/Torch/Look buttons. Game's own output showing light-radius mechanic.](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/dungeon-corridor.png)
+[Original screenshot](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/combat.png)
+
+![THORNMERE — The Founding Song gameplay](screenshots/29c021fa8ed0e75a97b1fadc5f6e07e04178d94afbd709cba0103fb8c162223e.png)
 
 Inspected torchlit dungeon gameplay: textured brown-block corridor receding into darkness with palette ramp shading, corner automap overlay inset top-right, status line The Sunken Undercroft - Drowned Cellars, roster and Forward/Turn/About-face/Search/Cast/Song/Use/Torch/Look buttons. Game's own output showing light-radius mechanic.
 
-![Inspected daylit town street gameplay: half-timbered facades left, cobbled street with brown/grey tiles hazing toward a dithered blue sky horizon, corner map inset, Bellward plaque, same roster and command bar. Game's own output showing daylight view distance.](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/town-street.png)
+[Original screenshot](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/dungeon-corridor.png)
+
+![THORNMERE — The Founding Song gameplay](screenshots/d8168fcc774b7daae6341820d805698c6c5bb2748bd760a1e37aabfdd14ca995.png)
 
 Inspected daylit town street gameplay: half-timbered facades left, cobbled street with brown/grey tiles hazing toward a dithered blue sky horizon, corner map inset, Bellward plaque, same roster and command bar. Game's own output showing daylight view distance.
 
-![Inspected street gameplay facing a stone building with a boot signboard over the door (Greta's Provisioner), symmetrical facade with blue windows, cobbled foreground, Bellward plaque, roster and command bar. Game's own output showing navigation-by-signboard.](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/signboard.png)
+[Original screenshot](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/town-street.png)
+
+![THORNMERE — The Founding Song gameplay](screenshots/843c70f45a1c17b150240a00fc18f684da0cb0aa8f05078f80519cb3de65e787.png)
 
 Inspected street gameplay facing a stone building with a boot signboard over the door (Greta's Provisioner), symmetrical facade with blue windows, cobbled foreground, Bellward plaque, roster and command bar. Game's own output showing navigation-by-signboard.
 
-![Inspected Adventurers' Hall interior frame: dim torchlit tavern-hall pixel scene with fireplace, counter, and figures in the viewport, roster panel listing the six-party muster, event log with ledger/gold entries. Game's own output; interior vignette rather than maze traversal.](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/adventurers-hall.png)
+[Original screenshot](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/signboard.png)
+
+![THORNMERE — The Founding Song gameplay](screenshots/8b8c91ec1b1e526959f65278ed0857404eb63c2acb44682830917a31d364114f.png)
 
 Inspected Adventurers' Hall interior frame: dim torchlit tavern-hall pixel scene with fireplace, counter, and figures in the viewport, roster panel listing the six-party muster, event log with ledger/gold entries. Game's own output; interior vignette rather than maze traversal.
 
-![Inspected close-up riddle-door frame: flat grey stone face filling the viewport with a gold pixel mouth/eye motif, log reading a graven door bars the way and a carved mouth waits in the stone. Game's own output but a single flat special frame, less scene detail than maze/street views.](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/riddle-door.png)
+[Original screenshot](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/adventurers-hall.png)
+
+![THORNMERE — The Founding Song gameplay](screenshots/202b62114c508d4a901858e6a4d3c549d4e828c2f48d34d41e8d6da753c84a19.png)
 
 Inspected close-up riddle-door frame: flat grey stone face filling the viewport with a gold pixel mouth/eye motif, log reading a graven door bars the way and a carved mouth waits in the stone. Game's own output but a single flat special frame, less scene detail than maze/street views.
 
-![Inspected full-screen parchment automap of Thornmere: white street grid with colored room blocks (yellow, green, red, purple) and gold position marker on grey, THORNMERE header. Utility overlay over the live game, not a 3D/pixel scene; discounted for graphics scoring.](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/automap.png)
+[Original screenshot](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/riddle-door.png)
+
+![THORNMERE — The Founding Song gameplay](screenshots/b68ed5e2464959c1931fa3dc6658248f4bea176dd1c6efd0e14c3d1b19ebf39d.png)
 
 Inspected full-screen parchment automap of Thornmere: white street grid with colored room blocks (yellow, green, red, purple) and gold position marker on grey, THORNMERE header. Utility overlay over the live game, not a 3D/pixel scene; discounted for graphics scoring.
 
-![Inspected title card: night silhouette of a walled town on a fen (tower, houses, red sunset band, green reeds, moon) with THORNMERE - THE FOUNDRING SONG wordmark, New game/Options/Continue menu at right, thorn-vine chrome frame. Menu/title, not active gameplay; discounted.](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/title.png)
+[Original screenshot](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/automap.png)
+
+![THORNMERE — The Founding Song gameplay](screenshots/847d2704c8ce20675b5eb9648b0030e2f8ae6bda70a9132e879598e46f72d6af.png)
 
 Inspected title card: night silhouette of a walled town on a fen (tower, houses, red sunset band, green reeds, moon) with THORNMERE - THE FOUNDRING SONG wordmark, New game/Options/Continue menu at right, thorn-vine chrome frame. Menu/title, not active gameplay; discounted.
+
+[Original screenshot](https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/title.png)
 
 ## Play
 

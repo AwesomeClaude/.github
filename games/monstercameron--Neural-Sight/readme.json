@@ -38,15 +38,24 @@
   "screenshots": [
     {
       "url": "https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/nelson-ghost-town.jpg",
-      "observation": "First-person in-engine view in desert ghost town: weathered timber water tower with HAMM'S sign, rusted vintage tanker truck and orange car, rocky hills, deep blue sky; gloved hands hold an AK-style rifle low-ready at bottom right; sharp captured sunlight, rust and wood detail with mild splat softness on foliage edges."
+      "observation": "First-person in-engine view in desert ghost town: weathered timber water tower with HAMM'S sign, rusted vintage tanker truck and orange car, rocky hills, deep blue sky; gloved hands hold an AK-style rifle low-ready at bottom right; sharp captured sunlight, rust and wood detail with mild splat softness on foliage edges.",
+      "local_path": "screenshots/bdd3d154fe30f769313718c65cc04f0315dd090ac4d6e4f11455f9cdb0578c32.jpg",
+      "sha256": "bdd3d154fe30f769313718c65cc04f0315dd090ac4d6e4f11455f9cdb0578c32",
+      "downloaded_at": "2026-09-28T04:46:51.483794+00:00"
     },
     {
       "url": "https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/fort-clatsop.jpg",
-      "observation": "First-person in-engine view outside modern wood visitor building with double glass doors, brick path, black mat, lush ferns and tall evergreens; same gloved hands and AK-style rifle low-ready; soft overcast captured light, clean architectural lines but flatter composition."
+      "observation": "First-person in-engine view outside modern wood visitor building with double glass doors, brick path, black mat, lush ferns and tall evergreens; same gloved hands and AK-style rifle low-ready; soft overcast captured light, clean architectural lines but flatter composition.",
+      "local_path": "screenshots/dbfdc734b75610a538f2670fb35fd89fe47d5a6cf5c8a3c40e2f98500672687c.jpg",
+      "sha256": "dbfdc734b75610a538f2670fb35fd89fe47d5a6cf5c8a3c40e2f98500672687c",
+      "downloaded_at": "2026-09-28T04:46:52.096543+00:00"
     },
     {
       "url": "https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/san-juan.jpg",
-      "observation": "First-person in-engine view in narrow alley: weathered turquoise plaster wall with glass-block window, beige wall with drainpipe, stone pavers and yellow curb; same gloved hands and AK-style rifle low-ready; strong surface weathering detail but tight framing with less depth than the desert scene."
+      "observation": "First-person in-engine view in narrow alley: weathered turquoise plaster wall with glass-block window, beige wall with drainpipe, stone pavers and yellow curb; same gloved hands and AK-style rifle low-ready; strong surface weathering detail but tight framing with less depth than the desert scene.",
+      "local_path": "screenshots/d3aee3dd3cea75bb0d1a9c5de5a1658c2202f498cbcec32aaf3e19be2f5fb4b8.jpg",
+      "sha256": "d3aee3dd3cea75bb0d1a9c5de5a1658c2202f498cbcec32aaf3e19be2f5fb4b8",
+      "downloaded_at": "2026-09-28T04:46:52.575531+00:00"
     }
   ],
   "screenshot_based_score": {
@@ -104,9 +113,28 @@
     }
   ],
   "links": [
-    "https://monstercameron.github.io/Neural-Sight/",
-    "https://monstercameron.github.io/Neural-Sight/experiment.html",
-    "https://github.com/monstercameron/Neural-Sight/blob/main/README.md",
-    "https://superspl.at/"
-  ]
+    {
+      "label": "Related link",
+      "url": "https://monstercameron.github.io/Neural-Sight/"
+    },
+    {
+      "label": "Related link",
+      "url": "https://monstercameron.github.io/Neural-Sight/experiment.html"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/monstercameron/Neural-Sight/blob/main/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://superspl.at/"
+    },
+    {
+      "label": "Source repository",
+      "url": "https://github.com/monstercameron/Neural-Sight"
+    }
+  ],
+  "source_url": "https://github.com/monstercameron/Neural-Sight",
+  "creation_models": [],
+  "technologies": []
 }

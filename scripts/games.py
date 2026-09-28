@@ -20,6 +20,7 @@ import urllib.request
 from urllib.parse import quote, urlsplit
 
 import test_oc
+import screenshots
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -223,7 +224,7 @@ def display_date(value):
         return markdown(value)
 
 
-def game_readme(data):
+def game_readme(data, directory):
     title = markdown(data['title'])
     url = safe_url(data['repository_url'])
     graphic = data['screenshot_based_score']
@@ -256,8 +257,13 @@ def game_readme(data):
     if data['screenshots']:
         out += ['## Screenshots', '']
         for shot in data['screenshots']:
-            out += [f"![{markdown(shot.get('observation', title))}]({safe_url(shot['url'])})", '',
-                    markdown(shot.get('observation', '')), '']
+            local = screenshots.local_path(directory, shot)
+            if local:
+                out += [f"![{markdown(data['title'])} gameplay]({local})", '']
+            else:
+                out += ['Screenshot unavailable; inspect the original source.', '']
+            out += [markdown(shot.get('observation', '')), '',
+                    f"[Original screenshot]({safe_url(shot['url'])})", '']
     for heading, key in [('Play', 'how_to_play'), ('Mechanics', 'mechanics'), ('Tags', 'tags')]:
         items = lines_list(data[key])
         if items:
@@ -331,7 +337,8 @@ def catalog_readme(entries, link_prefix=''):
     if not entries:
         out.append('No valid games yet.')
     gallery = [(directory, data) for directory, data in entries
-               if data['screenshot_based_score'] is not None and data['screenshots']]
+               if data['screenshot_based_score'] is not None
+               and any(screenshots.local_path(directory, shot) for shot in data['screenshots'])]
     gallery.sort(key=lambda item: (-item[1]['screenshot_based_score']['score'],
                                   item[1]['title'].casefold(), str(item[0])))
     out += ['', '## Screenshot gallery', '']
@@ -341,11 +348,11 @@ def catalog_readme(entries, link_prefix=''):
             row = gallery[index:index + 3]
             out.append('<tr>')
             for directory, data in row:
-                shot = data['screenshots'][0]
+                shot = next(shot for shot in data['screenshots'] if screenshots.local_path(directory, shot))
                 target = html.escape(link_prefix + quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/'), quote=True)
-                screenshot = html.escape(safe_url(shot['url']), quote=True)
+                screenshot = html.escape(link_prefix + quote(str(directory.relative_to(ROOT) / shot['local_path']), safe='/'), quote=True)
                 title = html.escape(data['title'], quote=True)
-                observation = html.escape(str(shot.get('observation', data['title'])).replace('\n', ' '), quote=True)
+                observation = html.escape(data['title'] + ' gameplay', quote=True)
                 screenshot_score = data['screenshot_based_score']['score'] / 10
                 out.append(
                     f'<td align="center" width="33%"><a href="{target}">'
@@ -360,7 +367,7 @@ def catalog_readme(entries, link_prefix=''):
     return '\n'.join(out).rstrip() + '\n'
 
 
-def rebuild():
+def rebuild(retry_screenshots=False):
     entries = []
     for path in sorted(GAMES.rglob('readme.json')) if GAMES.exists() else []:
         if 'analysis' in path.relative_to(GAMES).parts:
@@ -370,10 +377,16 @@ def rebuild():
             expected = report_destination(data)
             if path.parent != expected:
                 raise ValueError(f'Report belongs at {expected}')
-            write_atomic(path.with_name('README.md'), game_readme(data))
             entries.append((path.parent, data))
         except (OSError, ValueError, json.JSONDecodeError) as exc:
             log(f'Skip {path}: {exc}')
+    def archive_entry(entry):
+        directory, data = entry
+        screenshots.archive(directory, data, retry=retry_screenshots)
+        write_atomic(directory / 'readme.json', json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+        write_atomic(directory / 'README.md', game_readme(data, directory))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+        list(pool.map(archive_entry, entries))
     entries.sort(key=lambda item: (-item[1]['rating']['score'], item[1]['title'].casefold(), str(item[0])))
     write_atomic(ROOT / 'README.md', catalog_readme(entries))
     write_atomic(ROOT / 'profile' / 'README.md', catalog_readme(entries, '../'))
@@ -524,6 +537,9 @@ def git_value(*args):
 
 
 def content_only(data):
+    data = dict(data)
+    data['screenshots'] = [{k: v for k, v in shot.items() if k not in {
+        'local_path', 'sha256', 'downloaded_at', 'download_error', 'archive_url'}} for shot in data['screenshots']]
     return {k: v for k, v in data.items() if k not in {
         'analysis', 'catalog_added_at', 'catalog_updated_at', 'previous_report_url', 'catalog_slug'}}
 
@@ -553,6 +569,17 @@ def apply_results(artifact, outcomes):
                 data['links'] = labeled_links(old['links'], data['links'])
                 # Keep original submission stable; retain new submissions in labeled links.
                 data['source_url'] = old['source_url']
+            # Reuse durable snapshots across report refreshes, not model-provided paths.
+            previous_shots = {shot['url']: shot for shot in old['screenshots']} if old else {}
+            for shot in data['screenshots']:
+                for key in ('local_path', 'sha256', 'downloaded_at', 'download_error', 'archive_url'):
+                    shot.pop(key, None)
+                previous = previous_shots.get(shot['url'])
+                if previous and screenshots.local_path(destination, previous):
+                    for key in ('local_path', 'sha256', 'downloaded_at', 'archive_url'):
+                        if key in previous:
+                            shot[key] = previous[key]
+            screenshots.archive(destination, data, retry=True)
             data['catalog_slug'] = str(destination.relative_to(GAMES))
             status = 'added' if old is None else ('unchanged' if content_only(old) == content_only(data) else 'updated')
             item.update(status=status, output=str(destination.relative_to(ROOT)),
@@ -569,6 +596,10 @@ def apply_results(artifact, outcomes):
                 write_atomic(old_path, json.dumps(data, indent=2, ensure_ascii=False) + '\n')
                 changed.add(str(destination.relative_to(ROOT)))
             else:
+                if old['screenshots'] != data['screenshots']:
+                    old['screenshots'] = data['screenshots']
+                    write_atomic(old_path, json.dumps(old, indent=2, ensure_ascii=False) + '\n')
+                    changed.add(str(destination.relative_to(ROOT)))
                 item['report'] = old
         else:
             for path in GAMES.rglob('readme.json'):
@@ -607,6 +638,7 @@ def analyze(items, args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('links', nargs='*', help='Public game URLs')
+    parser.add_argument('--retry-screenshots', action='store_true', help='Retry unavailable screenshot sources')
     parser.add_argument('--file', type=Path, help='Read additional URLs, one per line')
     parser.add_argument('--timeout', type=float, default=900, help='Seconds per agent')
     parser.add_argument('--prompt', type=Path, default=ROOT / 'prompt.md')
@@ -633,7 +665,7 @@ def main():
                     raise RuntimeError('Require opencode and git on PATH')
                 args.executable = str(Path(executable).resolve())
                 succeeded = analyze(items, args)
-            rebuild()
+            rebuild(retry_screenshots=args.retry_screenshots)
         return 0 if succeeded else 1
     except (OSError, ValueError, RuntimeError) as exc:
         log(str(exc))

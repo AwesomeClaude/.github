@@ -23,10 +23,22 @@
     "Try remote play: create a session code, have friends join on their own devices, race first-correct-guess per question or season with lobby, timed hints, chat/activity pane, mid-game joining and Play again."
   ],
   "links": [
-    "https://github.com/cuongluu8/tenable",
-    "https://top-10-tension.cuong-luu.workers.dev",
-    "https://github.com/cuongluu8/tenable/blob/main/README.md",
-    "https://github.com/cuongluu8/tenable/blob/main/agents.md"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/cuongluu8/tenable"
+    },
+    {
+      "label": "Related link",
+      "url": "https://top-10-tension.cuong-luu.workers.dev"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/cuongluu8/tenable/blob/main/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/cuongluu8/tenable/blob/main/agents.md"
+    }
   ],
   "mechanics": [
     "Daily Top 10 guessing in Classic (unlimited guesses) and Tension (5 lives) modes with streaks and per-device progress",
@@ -52,11 +64,17 @@
   "screenshots": [
     {
       "observation": "Inspected 1364x896 gameplay frame of Club Run: dark navy page with New game back link, Question 1 of 1, five coral lives dots, green Who is this banner, central card showing a badge career chain from Genk to Chelsea with two small LOAN satellites then down to Napoli, Man City and Wolfsburg with directional arrows, This may not show their full career note, Hint pill button, Type your guess text input, and Give up link. Game's own runtime output, not concept art.",
-      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/kdb-club-badges-screenshot.jpg"
+      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/kdb-club-badges-screenshot.jpg",
+      "local_path": "screenshots/944746e1dc65526e80814dca6072a9994c624daabcc0b11dd6aa99aca033da8e.jpg",
+      "sha256": "944746e1dc65526e80814dca6072a9994c624daabcc0b11dd6aa99aca033da8e",
+      "downloaded_at": "2026-09-28T04:46:45.577948+00:00"
     },
     {
       "observation": "Inspected 1200x630 promotional title card: dark background with glowing green circular 10-plus-football badge mark above Top-10 Tension wordmark in green gradient and Top 10 football trivia subtitle. Static share banner, no gameplay, HUD, or interactive elements; discounted for graphics scoring.",
-      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/public/og-image.png"
+      "url": "https://raw.githubusercontent.com/cuongluu8/tenable/main/public/og-image.png",
+      "local_path": "screenshots/d4f96e6c2840203b43240a3eb3611248ca7e0e7f701fff82096d72656fdab7c3.png",
+      "sha256": "d4f96e6c2840203b43240a3eb3611248ca7e0e7f701fff82096d72656fdab7c3",
+      "downloaded_at": "2026-09-28T04:46:46.610780+00:00"
     }
   ],
   "source_analysis": [
@@ -114,5 +132,8 @@
     "cloudflare-workers",
     "2d"
   ],
-  "title": "Top-10 Tension"
+  "title": "Top-10 Tension",
+  "source_url": "https://github.com/cuongluu8/tenable",
+  "creation_models": [],
+  "technologies": []
 }

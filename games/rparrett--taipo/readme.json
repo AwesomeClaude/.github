@@ -22,9 +22,18 @@
     "Hold the winding road against timed waves of skeletons, crabs, snakes and bosses; do not let enemies reach the goal, and use taunt to force the next wave early."
   ],
   "links": [
-    "https://euclidean-whale.itch.io/taipo",
-    "https://github.com/rparrett/taipo",
-    "https://github.com/rparrett/taipo/blob/main/README.md"
+    {
+      "label": "Related link",
+      "url": "https://euclidean-whale.itch.io/taipo"
+    },
+    {
+      "label": "Source repository",
+      "url": "https://github.com/rparrett/taipo"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/rparrett/taipo/blob/main/README.md"
+    }
   ],
   "mechanics": [
     "Typing-only control: every action (build, upgrade, sell, select, earn yen, help mode) is triggered by typing a prompt and pressing Enter",
@@ -50,11 +59,17 @@
   "screenshots": [
     {
       "observation": "Inspected 1438x954 gameplay frame (English mode): top-down pixel-art TD board with winding gray road, red-roofed towers, skeleton/crab/snake enemies marching the dashed path, BOSS vending machine and station house decor, HUD with 20 yen coin and 0.0 timer, side action-panel prompts (engineer, solar, taut) with enemy labels (gigantic, papal, incomplete, asinine, mourner, hoglet), green range ring around a selected tower, and bottom typing buffer '> engi'. Clearly the game's own runtime output.",
-      "url": "https://img.itch.zone/aW1hZ2UvOTg5MTU0LzU2NjU2MDAucG5n/original/MnHlHT.png"
+      "url": "https://img.itch.zone/aW1hZ2UvOTg5MTU0LzU2NjU2MDAucG5n/original/MnHlHT.png",
+      "local_path": "screenshots/61a2cfb11e537bf4a70ef54b5b709945ccceb45d1029f99054d94fefa1518407.png",
+      "sha256": "61a2cfb11e537bf4a70ef54b5b709945ccceb45d1029f99054d94fefa1518407",
+      "downloaded_at": "2026-09-28T04:46:52.868177+00:00"
     },
     {
       "observation": "Inspected 1440x960 menu overlay frame: same pixel map dimmed behind a centered word-list select modal with Kana, Kana + N5, Kana + N5 + Yamanote, and English buttons. Menu/title selection, not active gameplay; discounted for graphics scoring.",
-      "url": "https://img.itch.zone/aW1hZ2UvOTg5MTU0LzU2NjU2MTcucG5n/original/MPZWHj.png"
+      "url": "https://img.itch.zone/aW1hZ2UvOTg5MTU0LzU2NjU2MTcucG5n/original/MPZWHj.png",
+      "local_path": "screenshots/2718288d3e7b55560216f56427860f3da2e1edfbf073d78f1cf2a48d9665c169.png",
+      "sha256": "2718288d3e7b55560216f56427860f3da2e1edfbf073d78f1cf2a48d9665c169",
+      "downloaded_at": "2026-09-28T04:46:53.278585+00:00"
     }
   ],
   "source_analysis": [
@@ -111,5 +126,8 @@
     "browser-game",
     "singleplayer"
   ],
-  "title": "Taipo"
+  "title": "Taipo",
+  "source_url": "https://github.com/rparrett/taipo",
+  "creation_models": [],
+  "technologies": []
 }

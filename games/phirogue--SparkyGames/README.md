@@ -30,13 +30,17 @@ Battle frame shows coherent storybook UI with a detailed painted enemy portrait,
 
 ## Screenshots
 
-![Inspected 506x899 PNG battle reference: portrait storybook page with dashed stitching; top environment card 'The Rooftops, Dusk' plus rules card; framed painterly vole portrait beside enemy plate 'The Vole' with thread-of-life and intent 'Next: Hold Very Still - 0 damage'; dimmed board behind a centered 'The Vole: dealt with. Continue' modal; fanned Ferocity energy card, skill tray with Scratch/Pounce and paw pips, and End Turn / Concentrate x2 / Slip Away buttons. Game's own runtime output, partly obscured by the victory modal.](https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/battle.png)
+![The Nine Lives of Ash gameplay](screenshots/5e7b9bd77bde0876ed7d43f90ec2c11668f56e2144041372fa3e7cd9b857ec51.png)
 
 Inspected 506x899 PNG battle reference: portrait storybook page with dashed stitching; top environment card 'The Rooftops, Dusk' plus rules card; framed painterly vole portrait beside enemy plate 'The Vole' with thread-of-life and intent 'Next: Hold Very Still - 0 damage'; dimmed board behind a centered 'The Vole: dealt with. Continue' modal; fanned Ferocity energy card, skill tray with Scratch/Pounce and paw pips, and End Turn / Concentrate x2 / Slip Away buttons. Game's own runtime output, partly obscured by the victory modal.
 
-![Inspected 506x899 PNG title reference: black full-bleed page with large ornate storybook lettering 'The Nine Lives of Ashcat', black cat silhouette with rust-red scarf curled around a yarn-ball pendant, small top-left menu icon, and 'tap to begin' caption. Title/menu card, not active gameplay; game's own art output.](https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/02_title.png)
+[Original screenshot](https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/battle.png)
+
+![The Nine Lives of Ash gameplay](screenshots/2c2204f795e231033dc0b0423f109ac6d840991ee44760dcadb8e74787d28801.png)
 
 Inspected 506x899 PNG title reference: black full-bleed page with large ornate storybook lettering 'The Nine Lives of Ashcat', black cat silhouette with rust-red scarf curled around a yarn-ball pendant, small top-left menu icon, and 'tap to begin' caption. Title/menu card, not active gameplay; game's own art output.
+
+[Original screenshot](https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/02_title.png)
 
 ## Play
 

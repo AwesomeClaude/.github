@@ -22,9 +22,18 @@
     "Optional URL params: ?demo for spectator mode, ?auto to auto-advance battles/shop/attributes, ?speed=4 for animation speed, ?seed=123 for a fixed campaign."
   ],
   "links": [
-    "https://github.com/Ninaji/Frosty-Tatics",
-    "https://ninaji.github.io/Frosty-Tatics/",
-    "https://github.com/Ninaji/Frosty-Tatics/blob/main/README.md"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/Ninaji/Frosty-Tatics"
+    },
+    {
+      "label": "Related link",
+      "url": "https://ninaji.github.io/Frosty-Tatics/"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/Ninaji/Frosty-Tatics/blob/main/README.md"
+    }
   ],
   "mechanics": [
     "Isometric turn-based grid tactics: click-to-move, weapon attacks, attacks of opportunity, elevated-terrain +2 hit bonus, hazards (lava, poison, thorns)",
@@ -97,5 +106,8 @@
     "single-player",
     "bilingual"
   ],
-  "title": "Frosty Tactics — A Lamina Runica · The Runic Blade"
+  "title": "Frosty Tactics — A Lamina Runica · The Runic Blade",
+  "source_url": "https://github.com/Ninaji/Frosty-Tatics",
+  "creation_models": [],
+  "technologies": []
 }

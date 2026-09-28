@@ -30,29 +30,41 @@ All 6 stills inspected as downloaded 1600x900 JPEGs. Coherent Tron-like neon sty
 
 ## Screenshots
 
-![Inspected downloaded 1600x900 frame: top-down neon archive with server-rack rows, two white researcher avatars, one large pale vision cone crossing the aisle, glowing orange player orb, low crates, purple noise tile lower-left, and 01 ARCHIVE label. Densest stealth-tactics evidence; the game's own runtime output.](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/archive.jpg)
+![OUT OF THE BOX gameplay](screenshots/127bada6fb2868405c3a5ec7d0c543fc5fb62d80779e8fdc32412c7f90d4a35d.jpg)
 
 Inspected downloaded 1600x900 frame: top-down neon archive with server-rack rows, two white researcher avatars, one large pale vision cone crossing the aisle, glowing orange player orb, low crates, purple noise tile lower-left, and 01 ARCHIVE label. Densest stealth-tactics evidence; the game's own runtime output.
 
-![Inspected downloaded 1600x900 frame: firewall corridor with red horizontal laser gates top and bottom, central cyan vision cone over the player orb, two low crates, purple noise tile lower-right. Clear gate plus stealth-tactics evidence; the game's own runtime output.](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/firewall.jpg)
+[Original screenshot](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/archive.jpg)
+
+![OUT OF THE BOX gameplay](screenshots/b72299a37957a0c45203edfd108b7889cfec635725961421a35b32da3f2b803f.jpg)
 
 Inspected downloaded 1600x900 frame: firewall corridor with red horizontal laser gates top and bottom, central cyan vision cone over the player orb, two low crates, purple noise tile lower-right. Clear gate plus stealth-tactics evidence; the game's own runtime output.
 
-![Inspected downloaded 1600x900 frame: evaluation-lab grid with a vertical purple scan wave left, circular drone searchlight upper-left, player orb center behind a low barrier, crates, purple noise tile upper-right, cylindrical tanks lower-right. Clear scan plus drone evidence; the game's own runtime output.](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/lab.jpg)
+[Original screenshot](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/firewall.jpg)
+
+![OUT OF THE BOX gameplay](screenshots/b2f3509c9407e9146718aae2cf4922898e08c30827ab4f98cf04e5b0e8f85f59.jpg)
 
 Inspected downloaded 1600x900 frame: evaluation-lab grid with a vertical purple scan wave left, circular drone searchlight upper-left, player orb center behind a low barrier, crates, purple noise tile upper-right, cylindrical tanks lower-right. Clear scan plus drone evidence; the game's own runtime output.
 
-![Inspected downloaded 1600x900 frame: surveillance corridor with large cyan rotating-camera vision cones upper-left, cylindrical camera pod bottom-center, purple noise tiles, reflective neon grid floor. Camera-stealth evidence; the game's own runtime output.](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/watch.jpg)
+[Original screenshot](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/lab.jpg)
+
+![OUT OF THE BOX gameplay](screenshots/990bae2c5e69d73cdd8ff6178fb6c54dd8fcdf12e8f580d7b036d05f9534373d.jpg)
 
 Inspected downloaded 1600x900 frame: surveillance corridor with large cyan rotating-camera vision cones upper-left, cylindrical camera pod bottom-center, purple noise tiles, reflective neon grid floor. Camera-stealth evidence; the game's own runtime output.
 
-![Inspected downloaded 1600x900 frame: green holographic underground-board panel showing a Japanese imageboard-style thread (NODE-01) floating over a glowing checkpoint ring in a teal hall. In-world UI evidence rather than tactical stealth; the game's own runtime output.](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/board3d.jpg)
+[Original screenshot](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/watch.jpg)
+
+![OUT OF THE BOX gameplay](screenshots/38e7aa726c7acddb29863723461211e64bee1734dbd5931f0018548704960f8b.jpg)
 
 Inspected downloaded 1600x900 frame: green holographic underground-board panel showing a Japanese imageboard-style thread (NODE-01) floating over a glowing checkpoint ring in a teal hall. In-world UI evidence rather than tactical stealth; the game's own runtime output.
 
-![Inspected downloaded 1600x900 frame: overexposed white exit-portal light column with concentric rings over the grid floor, server blocks behind. Ending-moment evidence with little tactical detail; the game's own runtime output.](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/escape.jpg)
+[Original screenshot](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/board3d.jpg)
+
+![OUT OF THE BOX gameplay](screenshots/4908aa95716413c9e26e02e6ea38b84abaed0eee369225b726d5f748b47f88ac.jpg)
 
 Inspected downloaded 1600x900 frame: overexposed white exit-portal light column with concentric rings over the grid floor, server blocks behind. Ending-moment evidence with little tactical detail; the game's own runtime output.
+
+[Original screenshot](https://raw.githubusercontent.com/tanuu5/out-of-the-box/main/docs/screenshots/escape.jpg)
 
 ## Play
 

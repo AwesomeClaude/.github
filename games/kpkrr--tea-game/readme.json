@@ -77,7 +77,10 @@
   "screenshots": [
     {
       "observation": "Inspected 800x600 PNG at the play-build root: black page with the blue Godot robot head and GODOT / Game engine text. Default engine splash/loading placeholder, not gameplay; shows no kitchen, guests, HUD, or tea-shop scene.",
-      "url": "https://kpkrr.github.io/tea-game/index.png"
+      "url": "https://kpkrr.github.io/tea-game/index.png",
+      "local_path": "screenshots/3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e.png",
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
+      "downloaded_at": "2026-09-28T04:46:49.031764+00:00"
     }
   ],
   "source_analysis": [

@@ -78,23 +78,38 @@
   "screenshots": [
     {
       "observation": "Inspected 1600x900 in-engine view under a pink SAKURA RALLY start gantry: straight tarmac road ahead, branded barriers, pennant string, blossom trees, houses, torii gate, spectators, painted clouds and mountains. No car or HUD visible; game's own runtime output.",
-      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_tour_00.jpg"
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_tour_00.jpg",
+      "local_path": "screenshots/b17064b057a69f5bc3ab3a3a3313d552f8c2889a37721cc052537d5c0f40ff4a.jpg",
+      "sha256": "b17064b057a69f5bc3ab3a3a3313d552f8c2889a37721cc052537d5c0f40ff4a",
+      "downloaded_at": "2026-09-28T04:46:41.854847+00:00"
     },
     {
       "observation": "Inspected 1600x900 aerial render of Hanami Pass: spring green valley with winding tarmac, river, bridge, buildings, pink sakura clusters, cedar stands, haze and painted clouds. Top-down world overview, no car or HUD.",
-      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_aerial.jpg"
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_aerial.jpg",
+      "local_path": "screenshots/b3d73aab645697340b4d2618982196d0b7a8b9c68dd00edb8797f4b61691f875.jpg",
+      "sha256": "b3d73aab645697340b4d2618982196d0b7a8b9c68dd00edb8797f4b61691f875",
+      "downloaded_at": "2026-09-28T04:46:42.459684+00:00"
     },
     {
       "observation": "Inspected 1600x900 aerial render of Momiji Valley: autumn golden-hour hills with winding road, river, houses, red-orange maples, dark cedars, haze and painted clouds. Top-down world overview, no car or HUD.",
-      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/momiji_aerial.jpg"
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/momiji_aerial.jpg",
+      "local_path": "screenshots/190a9a593c5ec2b3862a8e9bcd47f5c6b53bbfce97c4684998f604bc8f0a1ccd.jpg",
+      "sha256": "190a9a593c5ec2b3862a8e9bcd47f5c6b53bbfce97c4684998f604bc8f0a1ccd",
+      "downloaded_at": "2026-09-28T04:46:43.971833+00:00"
     },
     {
       "observation": "Inspected 1600x900 aerial render of the liaison road: green summer valley with long straight road, river, rocks, cedar and sakura transition zones, haze and painted clouds. Top-down world overview, no car or HUD.",
-      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/liaison_aerial.jpg"
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/liaison_aerial.jpg",
+      "local_path": "screenshots/cc82dc6e5a02a99c1f53c405b395ba669fa73c5c9953cc78756ef0ed85f59553.jpg",
+      "sha256": "cc82dc6e5a02a99c1f53c405b395ba669fa73c5c9953cc78756ef0ed85f59553",
+      "downloaded_at": "2026-09-28T04:46:44.790946+00:00"
     },
     {
       "observation": "Inspected 1600x900 model-viewer render of the white/pink Sakura rally car with number 07, gold wheels, roof intake and rear wing on a plain grey background. Vehicle showcase, not active gameplay.",
-      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/car_godot_front34.png"
+      "url": "https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/car_godot_front34.png",
+      "local_path": "screenshots/fce16a8d8765785a78da5ea74255a8a58858c1307e0d2ba5648715613ea8036d.png",
+      "sha256": "fce16a8d8765785a78da5ea74255a8a58858c1307e0d2ba5648715613ea8036d",
+      "downloaded_at": "2026-09-28T04:46:45.320755+00:00"
     }
   ],
   "source_analysis": [

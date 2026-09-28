@@ -30,17 +30,23 @@ Two inspected gameplay frames show coherent stylized sunset-city 3D with dense l
 
 ## Screenshots
 
-![Inspected 1280x720 gameplay frame: third-person view of dark kaiju silhouette stomping through a dense sunset city of lit-window blocks, manga impact text and +1,470 score popup, full HUD (Dokagon HP/energy bars, 3:36 timer, 4% destruction vs 40% goal, score 17,753, 14 toppled buildings, 26 combo x3.5, minimap, WASD/gamepad control hints). Clearly the game's own runtime output; densest gameplay evidence.](https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/gameplay.jpg)
+![怪獣ドカン！ KAIJU DOKAN! gameplay](screenshots/819d6707e0d41ce373891a8680f18527697a94ed7d0d7e2a00d62bbd42ee5fcf.jpg)
 
 Inspected 1280x720 gameplay frame: third-person view of dark kaiju silhouette stomping through a dense sunset city of lit-window blocks, manga impact text and +1,470 score popup, full HUD (Dokagon HP/energy bars, 3:36 timer, 4% destruction vs 40% goal, score 17,753, 14 toppled buildings, 26 combo x3.5, minimap, WASD/gamepad control hints). Clearly the game's own runtime output; densest gameplay evidence.
 
-![Inspected 1280x720 gameplay close-up: kaiju firing a bright magma breath beam into city blocks with flying debris cubes, dust, glowing dorsal plates, sunset skyline and lit windows behind, score popups (+849/+1,440/+200). No HUD visible but clearly the game's own runtime output; shows breath attack and destruction effects.](https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/breath.jpg)
+[Original screenshot](https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/gameplay.jpg)
+
+![怪獣ドカン！ KAIJU DOKAN! gameplay](screenshots/f1bedb1770a21bd477a793d990dbfae9c179992e5c8fd09a1965c9011bb14764.jpg)
 
 Inspected 1280x720 gameplay close-up: kaiju firing a bright magma breath beam into city blocks with flying debris cubes, dust, glowing dorsal plates, sunset skyline and lit windows behind, score popups (+849/+1,440/+200). No HUD visible but clearly the game's own runtime output; shows breath attack and destruction effects.
 
-![Inspected 1280x720 title card: KAIJU DOKAN! logo and Stage 1 bayside-city text over the same sunset procedural city, orange game-start button, mission text (40% destruction goal, defense-force warning) and control summary. Menu/title presentation of the game's own output, discounted as non-gameplay.](https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/title.jpg)
+[Original screenshot](https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/breath.jpg)
+
+![怪獣ドカン！ KAIJU DOKAN! gameplay](screenshots/2184597523c108288298fd14a7748e2bc97bda5c6634946a2c9667072077eebb.jpg)
 
 Inspected 1280x720 title card: KAIJU DOKAN! logo and Stage 1 bayside-city text over the same sunset procedural city, orange game-start button, mission text (40% destruction goal, defense-force warning) and control summary. Menu/title presentation of the game's own output, discounted as non-gameplay.
+
+[Original screenshot](https://raw.githubusercontent.com/tanuu5/kaiju-dokan/main/docs/images/title.jpg)
 
 ## Play
 

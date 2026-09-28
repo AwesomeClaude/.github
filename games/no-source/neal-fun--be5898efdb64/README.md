@@ -29,9 +29,11 @@ One inspected gameplay frame only; judged from stills without inferring motion. 
 
 ## Screenshots
 
-![Inspected 457x218 gameplay frame: white infinite canvas covered with small pill nodes such as Peter Griffin, Mickey Mouse, Sea Unicorn, Head-first, Ghost, Aquarium, Red Dragon, Mountain Range and Donald Trump linked by thin grey lines; right sidebar lists Discoveries with emoji rows and search/sort controls; top bars show NEAL.FUN and Infinite Craft logos. Clearly the game's own runtime output, not concept art.](https://upload.wikimedia.org/wikipedia/en/a/aa/Gameplay_screenshot_of_Infinite_Craft%2C_2024.png)
+![Infinite Craft gameplay](screenshots/e252bea3a1a3daa487abe7a07572d0689b502d631a8879d2867c9aaf6cc64730.png)
 
 Inspected 457x218 gameplay frame: white infinite canvas covered with small pill nodes such as Peter Griffin, Mickey Mouse, Sea Unicorn, Head-first, Ghost, Aquarium, Red Dragon, Mountain Range and Donald Trump linked by thin grey lines; right sidebar lists Discoveries with emoji rows and search/sort controls; top bars show NEAL.FUN and Infinite Craft logos. Clearly the game's own runtime output, not concept art.
+
+[Original screenshot](https://upload.wikimedia.org/wikipedia/en/a/aa/Gameplay_screenshot_of_Infinite_Craft%2C_2024.png)
 
 ## Play
 

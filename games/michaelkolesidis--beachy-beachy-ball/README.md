@@ -27,29 +27,41 @@ Judged only from stills without inferring motion. Best gameplay frames show a co
 
 ## Screenshots
 
-![Inspected gameplay frame: close chase view of red/white/blue beach ball with soft shadow centered on flat yellow-orange track under solid cyan sky, red spinner bar obstacle ahead in distance, minimal HUD with BEACHY BEACHY BALL logo top-left, sound/menu icons top-right, MODE TOUR bottom-left, TIME 0.00 bottom-right. Game's own runtime output, sharpest ball detail of all frames.](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_003.png)
+![Beachy Beachy Ball! gameplay](screenshots/66d54a005da64444643d13516b944f7e3e96083cb4fc6d82a038fbb02e7d5a55.png)
 
 Inspected gameplay frame: close chase view of red/white/blue beach ball with soft shadow centered on flat yellow-orange track under solid cyan sky, red spinner bar obstacle ahead in distance, minimal HUD with BEACHY BEACHY BALL logo top-left, sound/menu icons top-right, MODE TOUR bottom-left, TIME 0.00 bottom-right. Game's own runtime output, sharpest ball detail of all frames.
 
-![Inspected gameplay frame: higher chase view of smaller beach ball mid-track approaching coral sliding-bar obstacle, gold star visible at far end of orange runway under cyan sky, long soft shadows, same TOUR HUD with TIME 3.89. Shows more level depth but smaller ball detail. Game's own runtime output.](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_004.png)
+[Original screenshot](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_003.png)
+
+![Beachy Beachy Ball! gameplay](screenshots/c7978e1160b4d7e2bd40e454414b3b29e1cba2b72c706fec0b82a22edf2eb74f.png)
 
 Inspected gameplay frame: higher chase view of smaller beach ball mid-track approaching coral sliding-bar obstacle, gold star visible at far end of orange runway under cyan sky, long soft shadows, same TOUR HUD with TIME 3.89. Shows more level depth but smaller ball detail. Game's own runtime output.
 
-![Inspected end-screen frame: giant low-poly gold star fills background with FINISHED! and PLAY AGAIN plus replay icon over beach ball on orange track, TOUR HUD TIME 10.06. Overlay on gameplay scene, not active rolling.](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_005.png)
+[Original screenshot](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_004.png)
+
+![Beachy Beachy Ball! gameplay](screenshots/2881e6540223b665c3a85e0334394f1fde76edbff185653988c2c5ace523dbaa.png)
 
 Inspected end-screen frame: giant low-poly gold star fills background with FINISHED! and PLAY AGAIN plus replay icon over beach ball on orange track, TOUR HUD TIME 10.06. Overlay on gameplay scene, not active rolling.
 
-![Inspected in-game menu modal: white rounded panel with MENU, MODE RANDOM/TOUR/ADVENTURE and HIGH SCORES, CLEAR DATA, HELP, CREDITS, MAIN MENU, BACK buttons over dimmed track and cyan sky, timer 0.00 behind. Menu overlay, not gameplay.](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_006.png)
+[Original screenshot](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_005.png)
+
+![Beachy Beachy Ball! gameplay](screenshots/db40a4f2be3b24933c7855dfe288681d3c0fbca4bc16259960ca51ab85706160.png)
 
 Inspected in-game menu modal: white rounded panel with MENU, MODE RANDOM/TOUR/ADVENTURE and HIGH SCORES, CLEAR DATA, HELP, CREDITS, MAIN MENU, BACK buttons over dimmed track and cyan sky, timer 0.00 behind. Menu overlay, not gameplay.
 
-![Inspected title card: solid cyan background with beach-ball logo, BEACHY BEACHY BALL! wordmark, white PLAY and SETTINGS pill buttons, copyright footer. Main menu, no gameplay.](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_001.png)
+[Original screenshot](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_006.png)
+
+![Beachy Beachy Ball! gameplay](screenshots/f673d6a452dcee9ab8cbefa2259943258d14c31834144a6ad0f40bd6d435db76.png)
 
 Inspected title card: solid cyan background with beach-ball logo, BEACHY BEACHY BALL! wordmark, white PLAY and SETTINGS pill buttons, copyright footer. Main menu, no gameplay.
 
-![Inspected settings title card: same cyan menu with PLAY button plus MODE (RANDOM/TOUR/ADVENTURE), DIFFICULTY (EASY/MEDIUM/HARD/EVIL), BEACH (COPACABANA/SANTA MONICA) selectors and MORE BEACHES COMING SOON note. Menu, no gameplay.](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_002.png)
+[Original screenshot](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_001.png)
+
+![Beachy Beachy Ball! gameplay](screenshots/cacadeff5759452f03e0b9c36b530c2f9f7e4d51c217392cfccb29e5ba83578e.png)
 
 Inspected settings title card: same cyan menu with PLAY button plus MODE (RANDOM/TOUR/ADVENTURE), DIFFICULTY (EASY/MEDIUM/HARD/EVIL), BEACH (COPACABANA/SANTA MONICA) selectors and MORE BEACHES COMING SOON note. Menu, no gameplay.
+
+[Original screenshot](https://raw.githubusercontent.com/michaelkolesidis/beachy-beachy-ball/main/screenshots/screenshot_002.png)
 
 ## Play
 

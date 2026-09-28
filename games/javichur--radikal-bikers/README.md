@@ -30,9 +30,11 @@ The single inspected 480x360 gameplay still shows coherent cel-shaded city racin
 
 ## Screenshots
 
-![Inspected downloaded copy of the YouTube demo thumbnail (480x360): third-person chase view behind a pizza-delivery bike on a multi-lane cel-shaded city avenue, yellow taxi directly ahead, blue car at left, brick buildings both sides; HUD shows TIEMPO 60, PUNTOS 71858, combo banner BUUUM! +1000 and A UN PELO +250, progress bar, 150 km/h speedometer, and on-screen touch controls (left floating joystick, GAS / FRENO / CABALLITO buttons) plus pause button. Clearly the game's own runtime output.](https://img.youtube.com/vi/Ds_wtQz6IG0/hqdefault.jpg)
+![Radikal Riders gameplay](screenshots/2575aff96cb4f08a9bdb2c2bf72976873bb81a705130addd8a06f5a1fbab3f52.jpg)
 
 Inspected downloaded copy of the YouTube demo thumbnail (480x360): third-person chase view behind a pizza-delivery bike on a multi-lane cel-shaded city avenue, yellow taxi directly ahead, blue car at left, brick buildings both sides; HUD shows TIEMPO 60, PUNTOS 71858, combo banner BUUUM! +1000 and A UN PELO +250, progress bar, 150 km/h speedometer, and on-screen touch controls (left floating joystick, GAS / FRENO / CABALLITO buttons) plus pause button. Clearly the game's own runtime output.
+
+[Original screenshot](https://img.youtube.com/vi/Ds_wtQz6IG0/hqdefault.jpg)
 
 ## Play
 

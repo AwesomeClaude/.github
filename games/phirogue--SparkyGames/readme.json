@@ -102,11 +102,17 @@
   "screenshots": [
     {
       "observation": "Inspected 506x899 PNG battle reference: portrait storybook page with dashed stitching; top environment card 'The Rooftops, Dusk' plus rules card; framed painterly vole portrait beside enemy plate 'The Vole' with thread-of-life and intent 'Next: Hold Very Still - 0 damage'; dimmed board behind a centered 'The Vole: dealt with. Continue' modal; fanned Ferocity energy card, skill tray with Scratch/Pounce and paw pips, and End Turn / Concentrate x2 / Slip Away buttons. Game's own runtime output, partly obscured by the victory modal.",
-      "url": "https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/battle.png"
+      "url": "https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/battle.png",
+      "local_path": "screenshots/5e7b9bd77bde0876ed7d43f90ec2c11668f56e2144041372fa3e7cd9b857ec51.png",
+      "sha256": "5e7b9bd77bde0876ed7d43f90ec2c11668f56e2144041372fa3e7cd9b857ec51",
+      "downloaded_at": "2026-09-28T04:46:52.558603+00:00"
     },
     {
       "observation": "Inspected 506x899 PNG title reference: black full-bleed page with large ornate storybook lettering 'The Nine Lives of Ashcat', black cat silhouette with rust-red scarf curled around a yarn-ball pendant, small top-left menu icon, and 'tap to begin' caption. Title/menu card, not active gameplay; game's own art output.",
-      "url": "https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/02_title.png"
+      "url": "https://raw.githubusercontent.com/phirogue/SparkyGames/main/screenshots/reference/02_title.png",
+      "local_path": "screenshots/2c2204f795e231033dc0b0423f109ac6d840991ee44760dcadb8e74787d28801.png",
+      "sha256": "2c2204f795e231033dc0b0423f109ac6d840991ee44760dcadb8e74787d28801",
+      "downloaded_at": "2026-09-28T04:46:53.202091+00:00"
     }
   ],
   "screenshot_based_score": {

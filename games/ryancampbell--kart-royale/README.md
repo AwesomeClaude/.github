@@ -27,13 +27,17 @@ Both gameplay frames show coherent stylized golden-hour art: banked tarmac with 
 
 ## Screenshots
 
-![Inspected 1920x1080 gameplay frame: chase view behind red kart chasing blue kart on wide sunset tarmac, red-white kerbs, crowd figures and grass left, AMALFI/TURBO signs, cliffs and sea right, HUD with LAP 1/3, 2nd place +0.20 vs KOA, minimap, 0:04.91 timer, item icon, 88 KM/H speedometer. Sharpest and most detailed inspected frame, clearly the game's own runtime output.](https://raw.githubusercontent.com/ryancampbell/kart-royale/main/docs/hero-coast.png)
+![Kart Royale gameplay](screenshots/bb13081983831bfde68439919a0846e7aaca9490f19ce5e887fbab5827524f52.png)
 
 Inspected 1920x1080 gameplay frame: chase view behind red kart chasing blue kart on wide sunset tarmac, red-white kerbs, crowd figures and grass left, AMALFI/TURBO signs, cliffs and sea right, HUD with LAP 1/3, 2nd place +0.20 vs KOA, minimap, 0:04.91 timer, item icon, 88 KM/H speedometer. Sharpest and most detailed inspected frame, clearly the game's own runtime output.
 
-![Inspected 1280x720 gameplay frame: red kart mid-drift on kerb edge emitting orange sparks and smoke, motion blur and speed lines, crowd and hillside left, rival karts ahead, HUD with LAP 1/3, 2nd place -0.84, minimap, 0:10.25 timer, 101 KM/H. Same runtime procedural style as above but softer/blurrier from drift effects. Game's own output, not reference art.](https://raw.githubusercontent.com/ryancampbell/kart-royale/main/docs/hero-drift.png)
+[Original screenshot](https://raw.githubusercontent.com/ryancampbell/kart-royale/main/docs/hero-coast.png)
+
+![Kart Royale gameplay](screenshots/822891104d1d943b8dcdc0fb0a3d0c9d048d41d5a6f5e57ca9913debc4c4e751.png)
 
 Inspected 1280x720 gameplay frame: red kart mid-drift on kerb edge emitting orange sparks and smoke, motion blur and speed lines, crowd and hillside left, rival karts ahead, HUD with LAP 1/3, 2nd place -0.84, minimap, 0:10.25 timer, 101 KM/H. Same runtime procedural style as above but softer/blurrier from drift effects. Game's own output, not reference art.
+
+[Original screenshot](https://raw.githubusercontent.com/ryancampbell/kart-royale/main/docs/hero-drift.png)
 
 ## Play
 

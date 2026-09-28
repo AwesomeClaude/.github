@@ -46,15 +46,24 @@
   "screenshots": [
     {
       "url": "https://raw.githubusercontent.com/jaimec00/chess-game/pr-screenshots/pr-34-play.png",
-      "observation": "Inspected 2800x1800 gameplay frame: starting chess position on flat blue-gray 2D board with rank/file coordinates, cburnett-style white/black pieces with drop shadows, dark glass frame, right info panel with CHESS / PLAYER VS ENGINE, White to move dot, WHITE/BLACK CAPTURES rows, NEW GAME button. Game's own runtime output, sharpest board detail."
+      "observation": "Inspected 2800x1800 gameplay frame: starting chess position on flat blue-gray 2D board with rank/file coordinates, cburnett-style white/black pieces with drop shadows, dark glass frame, right info panel with CHESS / PLAYER VS ENGINE, White to move dot, WHITE/BLACK CAPTURES rows, NEW GAME button. Game's own runtime output, sharpest board detail.",
+      "local_path": "screenshots/8b7d40ab44dddc68d34cf76f9af17a6477e7303c72d977456a893af3ddaea05a.png",
+      "sha256": "8b7d40ab44dddc68d34cf76f9af17a6477e7303c72d977456a893af3ddaea05a",
+      "downloaded_at": "2026-09-28T04:46:48.302306+00:00"
     },
     {
       "url": "https://raw.githubusercontent.com/jaimec00/chess-game/pr-screenshots/pr-34-api.png",
-      "observation": "Inspected 2800x1800 gameplay frame of LLM mode: same starting board left, right stack with PROVIDER Anthropic (Claude), MODEL Haiku 4.5, API KEY input with SAVE, CHAT panel PLAYER VS HAIKU 4.5, White to move, captures rows, NEW GAME. Game's own output; gameplay plus setup/chat chrome."
+      "observation": "Inspected 2800x1800 gameplay frame of LLM mode: same starting board left, right stack with PROVIDER Anthropic (Claude), MODEL Haiku 4.5, API KEY input with SAVE, CHAT panel PLAYER VS HAIKU 4.5, White to move, captures rows, NEW GAME. Game's own output; gameplay plus setup/chat chrome.",
+      "local_path": "screenshots/d203ad406b4e60c6a556be7226b3c10706755744c35d8475d5f18ab1339bbd64.png",
+      "sha256": "d203ad406b4e60c6a556be7226b3c10706755744c35d8475d5f18ab1339bbd64",
+      "downloaded_at": "2026-09-28T04:46:48.981074+00:00"
     },
     {
       "url": "https://raw.githubusercontent.com/jaimec00/chess-game/pr-screenshots/pr-34-landing.png",
-      "observation": "Inspected 2800x1800 title card: near-black background with large outlined CHESS ROT wordmark centered and two glass buttons new game (local) and new game (api). Menu/title only, no board or gameplay; discounted for graphics scoring."
+      "observation": "Inspected 2800x1800 title card: near-black background with large outlined CHESS ROT wordmark centered and two glass buttons new game (local) and new game (api). Menu/title only, no board or gameplay; discounted for graphics scoring.",
+      "local_path": "screenshots/98c4f495bcd8f71cd9bb50096312757e69ea6000c12734cafc5507947c60a548.png",
+      "sha256": "98c4f495bcd8f71cd9bb50096312757e69ea6000c12734cafc5507947c60a548",
+      "downloaded_at": "2026-09-28T04:46:49.764595+00:00"
     }
   ],
   "screenshot_based_score": {
@@ -117,9 +126,24 @@
     }
   ],
   "links": [
-    "https://github.com/jaimec00/chess-game",
-    "https://github.com/jaimec00/chess-game/blob/master/README.md",
-    "https://github.com/jaimec00/chess-game/blob/master/src/engine/ai.js",
-    "https://github.com/jaimec00/chess-game/pull/34"
-  ]
+    {
+      "label": "Source repository",
+      "url": "https://github.com/jaimec00/chess-game"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/jaimec00/chess-game/blob/master/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/jaimec00/chess-game/blob/master/src/engine/ai.js"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/jaimec00/chess-game/pull/34"
+    }
+  ],
+  "source_url": "https://github.com/jaimec00/chess-game",
+  "creation_models": [],
+  "technologies": []
 }

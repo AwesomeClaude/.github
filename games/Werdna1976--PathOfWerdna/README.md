@@ -30,9 +30,11 @@ Single inspected gameplay frame shows coherent dark fog/torch lighting with shad
 
 ## Screenshots
 
-![Inspected 1600x900 runtime frame: dark isometric stone floor with mottled texture, capsule hero with red facing marker centered, two torch pillars casting warm orange pools and long shadows, primitive box/crate and wall blocks; no HUD, enemies, items, or UI visible; the game's own output per capture\_screenshot flow, explicitly placeholder meshes.](https://raw.githubusercontent.com/Werdna1976/PathOfWerdna/main/tests/screenshot_m1.png)
+![Path of Werdna gameplay](screenshots/1931467b0f9a6ae63d83751df9d2043e2070e28b0dd92b1d4150de7989e5eeda.png)
 
 Inspected 1600x900 runtime frame: dark isometric stone floor with mottled texture, capsule hero with red facing marker centered, two torch pillars casting warm orange pools and long shadows, primitive box/crate and wall blocks; no HUD, enemies, items, or UI visible; the game's own output per capture\_screenshot flow, explicitly placeholder meshes.
+
+[Original screenshot](https://raw.githubusercontent.com/Werdna1976/PathOfWerdna/main/tests/screenshot_m1.png)
 
 ## Play
 

@@ -21,9 +21,18 @@
     "Open Settings to change deck count (1-8, default 4), dealer soft-17 behavior, split-ace rules, surrender/insurance/side-bet toggles, draw speed, sound volume, and auto-reset."
   ],
   "links": [
-    "https://github.com/KSmith8888/TypeScript-Blackjack",
-    "https://blackjack-browser-game.pages.dev/",
-    "https://github.com/KSmith8888/TypeScript-Blackjack/blob/main/README.md"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/KSmith8888/TypeScript-Blackjack"
+    },
+    {
+      "label": "Related link",
+      "url": "https://blackjack-browser-game.pages.dev/"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/KSmith8888/TypeScript-Blackjack/blob/main/README.md"
+    }
   ],
   "mechanics": [
     "Full blackjack round loop: bet, four-card deal with hidden hole card, hit/stay/double/split/surrender, dealer reveal and draw, payout or push",
@@ -50,7 +59,10 @@
   "screenshots": [
     {
       "observation": "Inspected gameplay frame of the live table UI: flat green felt with orange border, top bar with Rules and Settings buttons and a Cards remaining: 196 shoe meter, dealer row showing 4 of Spades plus a face-down red-pattern card scored as ??, player row showing Jack of Diamonds plus 8 of Spades scored as Player: 18, bottom bar with Current bank $100 and High score 110, red Place your bet ($5/$10/$25/$50), Side Bets, Surrender, and Choose your move (Hit/Stay/Double/Split) buttons. The game's own DOM output, not concept art.",
-      "url": "https://raw.githubusercontent.com/KSmith8888/TypeScript-Blackjack/main/public/blackjack-readme-screenshot.png"
+      "url": "https://raw.githubusercontent.com/KSmith8888/TypeScript-Blackjack/main/public/blackjack-readme-screenshot.png",
+      "local_path": "screenshots/5f1d1057eb5aefcd34e0197dc489c3e811a20c0d2f79b9d336494ce7c99d262b.png",
+      "sha256": "5f1d1057eb5aefcd34e0197dc489c3e811a20c0d2f79b9d336494ce7c99d262b",
+      "downloaded_at": "2026-09-28T04:46:41.285551+00:00"
     }
   ],
   "source_analysis": [
@@ -102,5 +114,8 @@
     "single-player",
     "side-bets"
   ],
-  "title": "TypeScript-Blackjack"
+  "title": "TypeScript-Blackjack",
+  "source_url": "https://github.com/KSmith8888/TypeScript-Blackjack",
+  "creation_models": [],
+  "technologies": []
 }

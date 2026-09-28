@@ -22,9 +22,18 @@
     "Death rebirths you a stage lower keeping items and power level but losing unspent essence — scavenge your corpse; retire later for a fresh start with mighty perks toward the true ending."
   ],
   "links": [
-    "https://github.com/kitnato/neverquest",
-    "https://kitnato.github.io/neverquest/",
-    "https://github.com/kitnato/neverquest/blob/main/source/data/manual.md"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/kitnato/neverquest"
+    },
+    {
+      "label": "Related link",
+      "url": "https://kitnato.github.io/neverquest/"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/kitnato/neverquest/blob/main/source/data/manual.md"
+    }
   ],
   "mechanics": [
     "Automatic attack-rate combat with retreat/disengage, recovery lockout, stamina exhaustion and dodge/block/parry mitigation",
@@ -50,23 +59,38 @@
   "screenshots": [
     {
       "observation": "Inspected full combat frame at Coast of the Screams stage 33: player panel with health 431/463 DODGED, stamina, attack/recovery timers, six-stat grid, Titanium Halberd / Tasset of Destitution / Alchemical Wall gear, Butchery mastery 69/78; monster panel for Blighted Scoundrel 135/696 with attack timer and ailment meters; essence 864/1,444 progress. Densest gameplay UI, clearly the game's own output.",
-      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-4.png"
+      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-4.png",
+      "local_path": "screenshots/f4506a354761f20944c664a3c54b90c74776e9d0a391f13a1c0b85ad0dc97fee.png",
+      "sha256": "f4506a354761f20944c664a3c54b90c74776e9d0a391f13a1c0b85ad0dc97fee",
+      "downloaded_at": "2026-09-28T04:46:48.496105+00:00"
     },
     {
       "observation": "Inspected ranged combat frame in Shrouded Canyon vs Flatulent Myrmidon (1,142/1,170 HP, 1.19s attack): player low-health tooltip 'The meaning of life is that it ends', exhausted stamina, stat grid, Brass Caltrop / Pallium of Cinders gear, essence 2,401 with 8,089/8,940 progress. Same monochrome runtime UI as above; game's own output.",
-      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-3.png"
+      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-3.png",
+      "local_path": "screenshots/b96951c4567ebe796387f0504a1182ecef6ce9431336105ad406cd9a2e471927.png",
+      "sha256": "b96951c4567ebe796387f0504a1182ecef6ce9431336105ad406cd9a2e471927",
+      "downloaded_at": "2026-09-28T04:46:49.352392+00:00"
     },
     {
       "observation": "Inspected caravan hub frame: health 90/90 and stamina 20/20 bars, combat stats, Sordid Claymore / Soiled Helm / Weak Stormshield gear; hired Merchant plus crew for hire (Medic 20, Tailor 35, Blacksmith 50 essence, locked stages 15-27). Management UI, game's own output.",
-      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-2.png"
+      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-2.png",
+      "local_path": "screenshots/3402574686cde6ff4f1397858cbfb0be4596d6f76f5c8eae4c4a6b8c5682afb9.png",
+      "sha256": "3402574686cde6ff4f1397858cbfb0be4596d6f76f5c8eae4c4a6b8c5682afb9",
+      "downloaded_at": "2026-09-28T04:46:49.865241+00:00"
     },
     {
       "observation": "Inspected journal overlay in Cellar with 929,811 essence: completion bonuses, Conquests/Routines/Triumphs tabs, 2/103 progress, quest list (Hoarding I/II, None shall pass, Bloodlust tiers) with +1% rewards. Menu/overlay over live stats, not active combat.",
-      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-5.png"
+      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-5.png",
+      "local_path": "screenshots/206a4a44e3f7aad884fba67de7cce494ad990bd8a9e97ad81dedf32e9fa8a3a4.png",
+      "sha256": "206a4a44e3f7aad884fba67de7cce494ad990bd8a9e97ad81dedf32e9fa8a3a4",
+      "downloaded_at": "2026-09-28T04:46:50.380369+00:00"
     },
     {
       "observation": "Inspected sparse start frame: dark header with neverquest v1.0.0 logo, two empty cards ('???' and 'The darkness stirs'), large blank white area. Near-blank initial frame, discounted as non-representative of gameplay depth.",
-      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-1.png"
+      "url": "https://raw.githubusercontent.com/kitnato/neverquest/main/public/nq-screenshot-1.png",
+      "local_path": "screenshots/ded633bb77be89b804b46a73da6e37d3e418118e72a47f1b56336dc72e42f6e3.png",
+      "sha256": "ded633bb77be89b804b46a73da6e37d3e418118e72a47f1b56336dc72e42f6e3",
+      "downloaded_at": "2026-09-28T04:46:50.821972+00:00"
     }
   ],
   "source_analysis": [
@@ -114,5 +138,8 @@
     "react",
     "typescript"
   ],
-  "title": "neverquest"
+  "title": "neverquest",
+  "source_url": "https://github.com/kitnato/neverquest",
+  "creation_models": [],
+  "technologies": []
 }

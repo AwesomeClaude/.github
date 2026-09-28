@@ -27,25 +27,35 @@ Visible gameplay shows coherent colorful low-poly stylization, readable karts/tr
 
 ## Screenshots
 
-![Third-person gameplay on asphalt circuit: red player kart chasing two rivals, boost pad chevrons ahead, red-white curbs, TURBO/KART/RALLY billboards, low-poly trees and mountains, HUD with LAP 1/3, timer, 8-place leaderboard, item slot, minimap, 137 km/h speedometer and 7th place.](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/race.jpg)
+![Turbo Kart Rally gameplay](screenshots/afd51ac75299a5054255a6ede677b6f7aa4bbc4c77c04e0fc76b6a83e5cf52ee.jpg)
 
 Third-person gameplay on asphalt circuit: red player kart chasing two rivals, boost pad chevrons ahead, red-white curbs, TURBO/KART/RALLY billboards, low-poly trees and mountains, HUD with LAP 1/3, timer, 8-place leaderboard, item slot, minimap, 137 km/h speedometer and 7th place.
 
-![Gameplay beside grandstand: red kart on grass next to crowded colorful low-poly spectators, checkered start line visible, HUD shows triple-mushroom item x3, LAP 1/3, 8th place at 36 km/h, minimap and leaderboard.](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/items.jpg)
+[Original screenshot](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/race.jpg)
+
+![Turbo Kart Rally gameplay](screenshots/91affa5b73af008883e89055134add6791c823cdf920951aa8e60a1e0dad3561.jpg)
 
 Gameplay beside grandstand: red kart on grass next to crowded colorful low-poly spectators, checkered start line visible, HUD shows triple-mushroom item x3, LAP 1/3, 8th place at 36 km/h, minimap and leaderboard.
 
-![Title card overlaying live demo race: large TURBO KART RALLY logo, PRESS ENTER / CLICK TO START prompt, three karts on start straight under gantry, mountains and trees behind; menu/title, not active racing.](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/title.jpg)
+[Original screenshot](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/items.jpg)
+
+![Turbo Kart Rally gameplay](screenshots/c99bab4abf6daa854252f49888e72b2960408296785bea4bb08c49ff5e8038c5.jpg)
 
 Title card overlaying live demo race: large TURBO KART RALLY logo, PRESS ENTER / CLICK TO START prompt, three karts on start straight under gantry, mountains and trees behind; menu/title, not active racing.
 
-![Character-select menu: 8 racer cards with portraits and SPD/ACC/HDL/WGT bars, Blaze detail panel with class 100cc NORMAL and 3 LAPS selectors, RACE! button and controls footer over blurred track background.](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/character-select.jpg)
+[Original screenshot](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/title.jpg)
+
+![Turbo Kart Rally gameplay](screenshots/951d64600f9d3161fa639a65964f597027cbe5690f9b68ec3123fe807301fdaa.jpg)
 
 Character-select menu: 8 racer cards with portraits and SPD/ACC/HDL/WGT bars, Blaze detail panel with class 100cc NORMAL and 3 LAPS selectors, RACE! button and controls footer over blurred track background.
 
-![Results menu: VICTORY! 2 LAP RACE FINAL STANDINGS table 1st-8th with best/total times, Rex YOU first at 1:34.74, RACE AGAIN and MAIN MENU buttons over dimmed track; menu, not gameplay.](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/results.jpg)
+[Original screenshot](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/character-select.jpg)
+
+![Turbo Kart Rally gameplay](screenshots/9d567de6261842c162531e30e33c1fa927f3d89d756bb7c02072a2b3f897a84e.jpg)
 
 Results menu: VICTORY! 2 LAP RACE FINAL STANDINGS table 1st-8th with best/total times, Rex YOU first at 1:34.74, RACE AGAIN and MAIN MENU buttons over dimmed track; menu, not gameplay.
+
+[Original screenshot](https://raw.githubusercontent.com/bridge-mind/turbo-kart-rally/main/docs/screenshots/results.jpg)
 
 ## Play
 

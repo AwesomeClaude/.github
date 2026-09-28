@@ -30,9 +30,11 @@ No inspectable gameplay screenshot.
 
 ## Screenshots
 
-![Inspected 800x600 PNG at the play-build root: black page with the blue Godot robot head and GODOT / Game engine text. Default engine splash/loading placeholder, not gameplay; shows no kitchen, guests, HUD, or tea-shop scene.](https://kpkrr.github.io/tea-game/index.png)
+![Tea Rush — Kitchen Core gameplay](screenshots/3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e.png)
 
 Inspected 800x600 PNG at the play-build root: black page with the blue Godot robot head and GODOT / Game engine text. Default engine splash/loading placeholder, not gameplay; shows no kitchen, guests, HUD, or tea-shop scene.
+
+[Original screenshot](https://kpkrr.github.io/tea-game/index.png)
 
 ## Play
 

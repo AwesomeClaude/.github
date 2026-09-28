@@ -24,14 +24,38 @@
     "Survive the day-night cycle (a full day lasts about 15 minutes), build shelter and torches before night creatures spawn, and manage health and hunger to avoid the death screen."
   ],
   "links": [
-    "https://github.com/lortkipa/minecraft-astra",
-    "https://github.com/lortkipa/minecraft-astra/blob/main/README.md",
-    "https://github.com/lortkipa/minecraft-astra/blob/main/package.json",
-    "https://github.com/lortkipa/minecraft-astra/blob/main/src/core.js",
-    "https://github.com/lortkipa/minecraft-astra/blob/main/src/world.js",
-    "https://github.com/lortkipa/minecraft-astra/blob/main/src/game.js",
-    "https://github.com/lortkipa/minecraft-astra/blob/main/src/ui.js",
-    "https://endearing-taffy-1374d7.netlify.app/"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/lortkipa/minecraft-astra"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/lortkipa/minecraft-astra/blob/main/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/lortkipa/minecraft-astra/blob/main/package.json"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/lortkipa/minecraft-astra/blob/main/src/core.js"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/lortkipa/minecraft-astra/blob/main/src/world.js"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/lortkipa/minecraft-astra/blob/main/src/game.js"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/lortkipa/minecraft-astra/blob/main/src/ui.js"
+    },
+    {
+      "label": "Related link",
+      "url": "https://endearing-taffy-1374d7.netlify.app/"
+    }
   ],
   "mechanics": [
     "First-person voxel survival in a 192x192x72 procedurally generated world with hills, river, trees, water, and day-night cycle",
@@ -107,5 +131,8 @@
     "procedural-generation",
     "single-player"
   ],
-  "title": "Wilderness"
+  "title": "Wilderness",
+  "source_url": "https://github.com/lortkipa/minecraft-astra",
+  "creation_models": [],
+  "technologies": []
 }

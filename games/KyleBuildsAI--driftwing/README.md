@@ -30,13 +30,17 @@ Both inspected frames are the game's own runtime output with coherent flat-shade
 
 ## Screenshots
 
-![Inspected downloaded copy of docs/screenshot.jpg (1600x900): chase view directly behind a white low-poly glider with orange wingtip marks flying between jagged dark snow peaks at golden hour; warm orange-pink gradient sky, bright sun disc with radial god-ray streaks upper right, soft clouds, flat-shaded white/grey terrain with long shadows. No HUD visible (auto-hide). Clearly the game's own runtime output.](https://raw.githubusercontent.com/KyleBuildsAI/driftwing/main/docs/screenshot.jpg)
+![DRIFTWING gameplay](screenshots/19e1980fbc01b3b82335a13685bfa95fa3591374bc20653598f703d4508c43e8.jpg)
 
 Inspected downloaded copy of docs/screenshot.jpg (1600x900): chase view directly behind a white low-poly glider with orange wingtip marks flying between jagged dark snow peaks at golden hour; warm orange-pink gradient sky, bright sun disc with radial god-ray streaks upper right, soft clouds, flat-shaded white/grey terrain with long shadows. No HUD visible (auto-hide). Clearly the game's own runtime output.
 
-![Inspected downloaded copy of docs/screenshot-night.jpg (1600x900): same white glider from behind over dark low-poly snow spires at night under vivid green aurora curtains, scattered stars and soft clouds; red left and green right wingtip lights visible, cool blue-grey flat-shaded terrain. No HUD visible. Clearly the game's own runtime output, companion night/aurora showcase to the day shot.](https://raw.githubusercontent.com/KyleBuildsAI/driftwing/main/docs/screenshot-night.jpg)
+[Original screenshot](https://raw.githubusercontent.com/KyleBuildsAI/driftwing/main/docs/screenshot.jpg)
+
+![DRIFTWING gameplay](screenshots/8565ac163e2b4542b8688df0e47758b63a1ec090736904b8669f0870c4853d3d.jpg)
 
 Inspected downloaded copy of docs/screenshot-night.jpg (1600x900): same white glider from behind over dark low-poly snow spires at night under vivid green aurora curtains, scattered stars and soft clouds; red left and green right wingtip lights visible, cool blue-grey flat-shaded terrain. No HUD visible. Clearly the game's own runtime output, companion night/aurora showcase to the day shot.
+
+[Original screenshot](https://raw.githubusercontent.com/KyleBuildsAI/driftwing/main/docs/screenshot-night.jpg)
 
 ## Play
 

@@ -30,21 +30,29 @@ Best gameplay frame (flight.png) is the game's own output: faceted low-poly plan
 
 ## Screenshots
 
-![Inspected 1920x1080 gameplay frame: top-down 3D flight at Rutilicus near New Boston with large faceted teal/white planet, white/teal brick-built Sparrow with engine flames, ring station, scattered asteroids, orbit rings, second ship, mission banners, top Starmap/Spaceport/My ship/Journal/Options/Cloak bar, 24,000 cr plus 75,000 cr loan readout, shield/hull/fuel/power/heat bars, Land/Plot a course/Actions buttons, radar, and WebGL2 Auto-High 16.8 ms 29 bodies telemetry. Clearly the game's own runtime output.](https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/main/docs/images/flight.png)
+![Meridian Wake gameplay](screenshots/795097682ba47d658140230b7de03ab869161480a83f27c5fc028b2b368a24cb.png)
 
 Inspected 1920x1080 gameplay frame: top-down 3D flight at Rutilicus near New Boston with large faceted teal/white planet, white/teal brick-built Sparrow with engine flames, ring station, scattered asteroids, orbit rings, second ship, mission banners, top Starmap/Spaceport/My ship/Journal/Options/Cloak bar, 24,000 cr plus 75,000 cr loan readout, shield/hull/fuel/power/heat bars, Land/Plot a course/Actions buttons, radar, and WebGL2 Auto-High 16.8 ms 29 bodies telemetry. Clearly the game's own runtime output.
 
-![Inspected 1440x900 gameplay frame: same planet and station surrounded by a large Quarg Hydra fleet of dark multi-arm ships, AUTOPILOT LANDING APPROACH text, captain's-heading mission panel, full top bar and credits readout, bottom Land/Plot/Actions buttons, left ship stat bars, right scanner showing 12 hostile contacts, WebGPU High 248.1 ms 41 bodies telemetry. Clearly the game's own runtime output showing fleet encounter scale.](https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/main/docs/images/webgpu.png)
+[Original screenshot](https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/main/docs/images/flight.png)
+
+![Meridian Wake gameplay](screenshots/d21d6277c7e9108cf935904a01feaca38a5fae05741a79763052d85e8e7353f9.png)
 
 Inspected 1440x900 gameplay frame: same planet and station surrounded by a large Quarg Hydra fleet of dark multi-arm ships, AUTOPILOT LANDING APPROACH text, captain's-heading mission panel, full top bar and credits readout, bottom Land/Plot/Actions buttons, left ship stat bars, right scanner showing 12 hostile contacts, WebGPU High 248.1 ms 41 bodies telemetry. Clearly the game's own runtime output showing fleet encounter scale.
 
-![Inspected 844x390 gameplay frame: portrait-orientation touch layout with top icon bar, credits readout, planet and brick ship, mission panel, right-side Sparrow stat bars, bottom on-screen steering/thrust/brake/boost buttons left and fire/boost buttons right, WebGL2 Balanced 54.0 ms 17 bodies telemetry. Clearly the game's own runtime output proving touch controls.](https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/main/docs/images/touch-landscape.png)
+[Original screenshot](https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/main/docs/images/webgpu.png)
+
+![Meridian Wake gameplay](screenshots/861c1e095a315f468951674a947d283771f8f14dfb5e71bc8f92e3f0a951ffd9.png)
 
 Inspected 844x390 gameplay frame: portrait-orientation touch layout with top icon bar, credits readout, planet and brick ship, mission panel, right-side Sparrow stat bars, bottom on-screen steering/thrust/brake/boost buttons left and fire/boost buttons right, WebGL2 Balanced 54.0 ms 17 bodies telemetry. Clearly the game's own runtime output proving touch controls.
 
-![Inspected 1920x1080 title screen: MERIDIAN WAKE masthead with tagline, Begin your voyage button, Flight handbook and Options links, large brick-built ship and faceted planet backdrop with asteroids and station. Menu/title card, not active gameplay; discounted for graphics scoring.](https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/main/docs/images/title.png)
+[Original screenshot](https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/main/docs/images/touch-landscape.png)
+
+![Meridian Wake gameplay](screenshots/7b35d3c8831c7b515e4375654511119b6ceb80a9d3566d42efa217e03fc5d4c2.png)
 
 Inspected 1920x1080 title screen: MERIDIAN WAKE masthead with tagline, Begin your voyage button, Flight handbook and Options links, large brick-built ship and faceted planet backdrop with asteroids and station. Menu/title card, not active gameplay; discounted for graphics scoring.
+
+[Original screenshot](https://raw.githubusercontent.com/michaelcrosato/meridian-wake-g6a/main/docs/images/title.png)
 
 ## Play
 

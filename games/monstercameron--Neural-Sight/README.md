@@ -27,17 +27,23 @@ All three are the game's own output (not concept art) per README. Environments s
 
 ## Screenshots
 
-![First-person in-engine view in desert ghost town: weathered timber water tower with HAMM'S sign, rusted vintage tanker truck and orange car, rocky hills, deep blue sky; gloved hands hold an AK-style rifle low-ready at bottom right; sharp captured sunlight, rust and wood detail with mild splat softness on foliage edges.](https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/nelson-ghost-town.jpg)
+![Neural Sight gameplay](screenshots/bdd3d154fe30f769313718c65cc04f0315dd090ac4d6e4f11455f9cdb0578c32.jpg)
 
 First-person in-engine view in desert ghost town: weathered timber water tower with HAMM'S sign, rusted vintage tanker truck and orange car, rocky hills, deep blue sky; gloved hands hold an AK-style rifle low-ready at bottom right; sharp captured sunlight, rust and wood detail with mild splat softness on foliage edges.
 
-![First-person in-engine view outside modern wood visitor building with double glass doors, brick path, black mat, lush ferns and tall evergreens; same gloved hands and AK-style rifle low-ready; soft overcast captured light, clean architectural lines but flatter composition.](https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/fort-clatsop.jpg)
+[Original screenshot](https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/nelson-ghost-town.jpg)
+
+![Neural Sight gameplay](screenshots/dbfdc734b75610a538f2670fb35fd89fe47d5a6cf5c8a3c40e2f98500672687c.jpg)
 
 First-person in-engine view outside modern wood visitor building with double glass doors, brick path, black mat, lush ferns and tall evergreens; same gloved hands and AK-style rifle low-ready; soft overcast captured light, clean architectural lines but flatter composition.
 
-![First-person in-engine view in narrow alley: weathered turquoise plaster wall with glass-block window, beige wall with drainpipe, stone pavers and yellow curb; same gloved hands and AK-style rifle low-ready; strong surface weathering detail but tight framing with less depth than the desert scene.](https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/san-juan.jpg)
+[Original screenshot](https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/fort-clatsop.jpg)
+
+![Neural Sight gameplay](screenshots/d3aee3dd3cea75bb0d1a9c5de5a1658c2202f498cbcec32aaf3e19be2f5fb4b8.jpg)
 
 First-person in-engine view in narrow alley: weathered turquoise plaster wall with glass-block window, beige wall with drainpipe, stone pavers and yellow curb; same gloved hands and AK-style rifle low-ready; strong surface weathering detail but tight framing with less depth than the desert scene.
+
+[Original screenshot](https://raw.githubusercontent.com/monstercameron/Neural-Sight/main/docs/images/san-juan.jpg)
 
 ## Play
 

@@ -30,17 +30,23 @@ Best frame is the game's own HD-2D runtime output with coherent pixel art, dynam
 
 ## Screenshots
 
-![Inspected downloaded copy: active late-night combat at LV 21 with 100/100 HP bar, 9-ability kit row, 0:16 UNTIL DAWN night bar, score 89,807, 38 CHAIN X2 meter, golden projectile swarms, damage numbers 30 and +30, moth enemies, trees and cobblestone path, XP bar and DASH indicator. The game's own runtime output; densest gameplay evidence, put first.](https://raw.githubusercontent.com/mogita/emberwake/main/docs/gameplay.jpg)
+![Emberwake gameplay](screenshots/25638c155a6402e967b94943fe3760eefb32cbcd900442ee1389d5cff1640853.jpg)
 
 Inspected downloaded copy: active late-night combat at LV 21 with 100/100 HP bar, 9-ability kit row, 0:16 UNTIL DAWN night bar, score 89,807, 38 CHAIN X2 meter, golden projectile swarms, damage numbers 30 and +30, moth enemies, trees and cobblestone path, XP bar and DASH indicator. The game's own runtime output; densest gameplay evidence, put first.
 
-![Inspected downloaded copy: THE FLAME GROWS blessing draft at LV 15 with three cards (Bright Lantern NEW, Lodestone, Quick Wick) with star ranks and descriptions, 1 2 3 or click hint, over dimmed live combat background with LV/HP/night/score/chain HUD. The game's own runtime output; menu-over-gameplay overlay, put second.](https://raw.githubusercontent.com/mogita/emberwake/main/docs/levelup.jpg)
+[Original screenshot](https://raw.githubusercontent.com/mogita/emberwake/main/docs/gameplay.jpg)
+
+![Emberwake gameplay](screenshots/05f741ca136373828367d79c8da9229add573a8f5383c51fc258a67595f89a02.jpg)
 
 Inspected downloaded copy: THE FLAME GROWS blessing draft at LV 15 with three cards (Bright Lantern NEW, Lodestone, Quick Wick) with star ranks and descriptions, 1 2 3 or click hint, over dimmed live combat background with LV/HP/night/score/chain HUD. The game's own runtime output; menu-over-gameplay overlay, put second.
 
-![Inspected downloaded copy: EMBERWAKE pixel title logo with lantern icon over dark cobblestone courtyard at night, lit brazier with radius ring right, ember pickups, BEST 106,598 counter, WASD/SPACE control hints. Title/menu card over game scene, not active combat; discounted for graphics scoring, put last.](https://raw.githubusercontent.com/mogita/emberwake/main/docs/title.jpg)
+[Original screenshot](https://raw.githubusercontent.com/mogita/emberwake/main/docs/levelup.jpg)
+
+![Emberwake gameplay](screenshots/1f45924c91f188ec5f9bcfcafee39e6248914043c4ada6180d4a9940cd7f37a0.jpg)
 
 Inspected downloaded copy: EMBERWAKE pixel title logo with lantern icon over dark cobblestone courtyard at night, lit brazier with radius ring right, ember pickups, BEST 106,598 counter, WASD/SPACE control hints. Title/menu card over game scene, not active combat; discounted for graphics scoring, put last.
+
+[Original screenshot](https://raw.githubusercontent.com/mogita/emberwake/main/docs/title.jpg)
 
 ## Play
 

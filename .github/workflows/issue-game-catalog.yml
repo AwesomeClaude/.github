@@ -14,6 +14,8 @@ jobs:
   analyze-and-publish:
     runs-on: ubuntu-latest
     timeout-minutes: 350
+    env:
+      ISSUE_CATALOG_DEBUG_OWNER: ${{ vars.ISSUE_CATALOG_DEBUG_OWNER || github.repository_owner }}
     permissions:
       actions: read
       contents: write
@@ -42,6 +44,9 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+
+      - name: Install screenshot decoder
+        run: python3 -m pip install -r scripts/requirements-catalog.txt
 
       - name: Read only links from the issue body
         id: preflight
@@ -78,7 +83,7 @@ jobs:
         timeout-minutes: 275
         run: python3 scripts/issue_catalog.py --phase analyze --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact"
 
-      - name: Publish and auto-merge the catalog PR, then report to the issue
+      - name: Publish the catalog in automatic or manual mode, then report to the issue
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
@@ -86,7 +91,7 @@ jobs:
           CATALOG_BASE_BRANCH: ${{ github.event.repository.default_branch }}
           CATALOG_AUTO_MERGE: ${{ vars.ISSUE_CATALOG_AUTO_MERGE || 'true' }}
           ANALYSIS_SUCCEEDED: ${{ steps.analysis.outcome == 'success' }}
-          CATALOG_CHAT_ID: 01a0e059-9f64-7ed0-b30c-314d3ec269ba
+          CATALOG_CHAT_ID: 01a0e598-1559-7e51-af14-ad6dffe79363
         run: |
           gh auth setup-git
           python3 scripts/issue_catalog.py --phase publish --output "$RUNNER_TEMP/issue-artifact"

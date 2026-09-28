@@ -30,25 +30,35 @@ Best inspected frame is a ground-level start-gantry view with coherent anime sty
 
 ## Screenshots
 
-![Inspected 1600x900 in-engine view under a pink SAKURA RALLY start gantry: straight tarmac road ahead, branded barriers, pennant string, blossom trees, houses, torii gate, spectators, painted clouds and mountains. No car or HUD visible; game's own runtime output.](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_tour_00.jpg)
+![Sakura Rally gameplay](screenshots/b17064b057a69f5bc3ab3a3a3313d552f8c2889a37721cc052537d5c0f40ff4a.jpg)
 
 Inspected 1600x900 in-engine view under a pink SAKURA RALLY start gantry: straight tarmac road ahead, branded barriers, pennant string, blossom trees, houses, torii gate, spectators, painted clouds and mountains. No car or HUD visible; game's own runtime output.
 
-![Inspected 1600x900 aerial render of Hanami Pass: spring green valley with winding tarmac, river, bridge, buildings, pink sakura clusters, cedar stands, haze and painted clouds. Top-down world overview, no car or HUD.](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_aerial.jpg)
+[Original screenshot](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_tour_00.jpg)
+
+![Sakura Rally gameplay](screenshots/b3d73aab645697340b4d2618982196d0b7a8b9c68dd00edb8797f4b61691f875.jpg)
 
 Inspected 1600x900 aerial render of Hanami Pass: spring green valley with winding tarmac, river, bridge, buildings, pink sakura clusters, cedar stands, haze and painted clouds. Top-down world overview, no car or HUD.
 
-![Inspected 1600x900 aerial render of Momiji Valley: autumn golden-hour hills with winding road, river, houses, red-orange maples, dark cedars, haze and painted clouds. Top-down world overview, no car or HUD.](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/momiji_aerial.jpg)
+[Original screenshot](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/hanami_aerial.jpg)
+
+![Sakura Rally gameplay](screenshots/190a9a593c5ec2b3862a8e9bcd47f5c6b53bbfce97c4684998f604bc8f0a1ccd.jpg)
 
 Inspected 1600x900 aerial render of Momiji Valley: autumn golden-hour hills with winding road, river, houses, red-orange maples, dark cedars, haze and painted clouds. Top-down world overview, no car or HUD.
 
-![Inspected 1600x900 aerial render of the liaison road: green summer valley with long straight road, river, rocks, cedar and sakura transition zones, haze and painted clouds. Top-down world overview, no car or HUD.](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/liaison_aerial.jpg)
+[Original screenshot](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/momiji_aerial.jpg)
+
+![Sakura Rally gameplay](screenshots/cc82dc6e5a02a99c1f53c405b395ba669fa73c5c9953cc78756ef0ed85f59553.jpg)
 
 Inspected 1600x900 aerial render of the liaison road: green summer valley with long straight road, river, rocks, cedar and sakura transition zones, haze and painted clouds. Top-down world overview, no car or HUD.
 
-![Inspected 1600x900 model-viewer render of the white/pink Sakura rally car with number 07, gold wheels, roof intake and rear wing on a plain grey background. Vehicle showcase, not active gameplay.](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/car_godot_front34.png)
+[Original screenshot](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/liaison_aerial.jpg)
+
+![Sakura Rally gameplay](screenshots/fce16a8d8765785a78da5ea74255a8a58858c1307e0d2ba5648715613ea8036d.png)
 
 Inspected 1600x900 model-viewer render of the white/pink Sakura rally car with number 07, gold wheels, roof intake and rear wing on a plain grey background. Vehicle showcase, not active gameplay.
+
+[Original screenshot](https://raw.githubusercontent.com/SummerEngine/sakura-rally/main/docs/renders/car_godot_front34.png)
 
 ## Play
 

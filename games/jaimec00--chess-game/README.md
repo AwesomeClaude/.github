@@ -27,17 +27,23 @@ Best gameplay frame shows a clean coherent flat 2D board: sharp cburnett SVGs, a
 
 ## Screenshots
 
-![Inspected 2800x1800 gameplay frame: starting chess position on flat blue-gray 2D board with rank/file coordinates, cburnett-style white/black pieces with drop shadows, dark glass frame, right info panel with CHESS / PLAYER VS ENGINE, White to move dot, WHITE/BLACK CAPTURES rows, NEW GAME button. Game's own runtime output, sharpest board detail.](https://raw.githubusercontent.com/jaimec00/chess-game/pr-screenshots/pr-34-play.png)
+![chess rot gameplay](screenshots/8b7d40ab44dddc68d34cf76f9af17a6477e7303c72d977456a893af3ddaea05a.png)
 
 Inspected 2800x1800 gameplay frame: starting chess position on flat blue-gray 2D board with rank/file coordinates, cburnett-style white/black pieces with drop shadows, dark glass frame, right info panel with CHESS / PLAYER VS ENGINE, White to move dot, WHITE/BLACK CAPTURES rows, NEW GAME button. Game's own runtime output, sharpest board detail.
 
-![Inspected 2800x1800 gameplay frame of LLM mode: same starting board left, right stack with PROVIDER Anthropic (Claude), MODEL Haiku 4.5, API KEY input with SAVE, CHAT panel PLAYER VS HAIKU 4.5, White to move, captures rows, NEW GAME. Game's own output; gameplay plus setup/chat chrome.](https://raw.githubusercontent.com/jaimec00/chess-game/pr-screenshots/pr-34-api.png)
+[Original screenshot](https://raw.githubusercontent.com/jaimec00/chess-game/pr-screenshots/pr-34-play.png)
+
+![chess rot gameplay](screenshots/d203ad406b4e60c6a556be7226b3c10706755744c35d8475d5f18ab1339bbd64.png)
 
 Inspected 2800x1800 gameplay frame of LLM mode: same starting board left, right stack with PROVIDER Anthropic (Claude), MODEL Haiku 4.5, API KEY input with SAVE, CHAT panel PLAYER VS HAIKU 4.5, White to move, captures rows, NEW GAME. Game's own output; gameplay plus setup/chat chrome.
 
-![Inspected 2800x1800 title card: near-black background with large outlined CHESS ROT wordmark centered and two glass buttons new game (local) and new game (api). Menu/title only, no board or gameplay; discounted for graphics scoring.](https://raw.githubusercontent.com/jaimec00/chess-game/pr-screenshots/pr-34-landing.png)
+[Original screenshot](https://raw.githubusercontent.com/jaimec00/chess-game/pr-screenshots/pr-34-api.png)
+
+![chess rot gameplay](screenshots/98c4f495bcd8f71cd9bb50096312757e69ea6000c12734cafc5507947c60a548.png)
 
 Inspected 2800x1800 title card: near-black background with large outlined CHESS ROT wordmark centered and two glass buttons new game (local) and new game (api). Menu/title only, no board or gameplay; discounted for graphics scoring.
+
+[Original screenshot](https://raw.githubusercontent.com/jaimec00/chess-game/pr-screenshots/pr-34-landing.png)
 
 ## Play
 

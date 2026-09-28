@@ -24,9 +24,18 @@
     "Keep moving on collapsing wood and faster ice bridges, carry speed onto ice since grip is near zero, and earn 1 star for finishing, 2 for 55% of coins, 3 for 80% of coins plus all gems."
   ],
   "links": [
-    "https://github.com/markcastle/fliprunner",
-    "https://github.com/markcastle/fliprunner/blob/master/README.md",
-    "https://github.com/markcastle/fliprunner/blob/master/index.html"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/markcastle/fliprunner"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/markcastle/fliprunner/blob/master/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/markcastle/fliprunner/blob/master/index.html"
+    }
   ],
   "mechanics": [
     "2D rigid-body car with two spring-damper wheel contacts on a heightfield, fixed 1/240s substep physics",
@@ -102,5 +111,8 @@
     "time-trial",
     "collectathon"
   ],
-  "title": "Flip Runner Racing"
+  "title": "Flip Runner Racing",
+  "source_url": "https://github.com/markcastle/fliprunner",
+  "creation_models": [],
+  "technologies": []
 }

@@ -30,17 +30,23 @@ No inspectable gameplay screenshot.
 
 ## Screenshots
 
-![Inspected empty gameplay arena background (2560x1536 WebP): left brick wall with 4 glowing pizza ovens, white marble divider, wooden floor with red velvet ropes marking 3 lanes. Clean coherent cartoon style but no chef, customers, HUD, or effects visible - background plate only, not a full gameplay frame.](https://pizza-chef-assets.pages.dev/backgrounds/pizza-shop-background.webp)
+![Pizza Chef gameplay](screenshots/04107d611838d30c710bd7ad7560b84f5dc0cfbd0fc5eb03186f73af307b207d.webp)
 
 Inspected empty gameplay arena background (2560x1536 WebP): left brick wall with 4 glowing pizza ovens, white marble divider, wooden floor with red velvet ropes marking 3 lanes. Clean coherent cartoon style but no chef, customers, HUD, or effects visible - background plate only, not a full gameplay frame.
 
-![Inspected 1219x765 How to Play menu card: Move chef up/down, Heat pizza in oven and take it out, Serve pizza to customers, with power-up icons (hot honey, sundae, beer, star, doge, nyan cat) and customer faces. Menu/instruction art, not live gameplay; discounted for graphics scoring.](https://pizza-chef-assets.pages.dev/ui/controls.png)
+[Original screenshot](https://pizza-chef-assets.pages.dev/backgrounds/pizza-shop-background.webp)
+
+![Pizza Chef gameplay](screenshots/f4f394a79a6481333c0d6f82b6afd865b60f870b62146832fe27139c192234c5.png)
 
 Inspected 1219x765 How to Play menu card: Move chef up/down, Heat pizza in oven and take it out, Serve pizza to customers, with power-up icons (hot honey, sundae, beer, star, doge, nyan cat) and customer faces. Menu/instruction art, not live gameplay; discounted for graphics scoring.
 
-![Inspected 630x630 promotional icon: flat chef emoji with mustache and white hat on solid red background. Title/icon art only, no gameplay scene; discounted for graphics scoring.](https://raw.githubusercontent.com/PizzaDAO/pizza-chef/main/public/og-image.png)
+[Original screenshot](https://pizza-chef-assets.pages.dev/ui/controls.png)
+
+![Pizza Chef gameplay](screenshots/414a6cc845d664fbb1bbabfd03c2bdba19716514cb4cb10a12caeb202adf9c82.png)
 
 Inspected 630x630 promotional icon: flat chef emoji with mustache and white hat on solid red background. Title/icon art only, no gameplay scene; discounted for graphics scoring.
+
+[Original screenshot](https://raw.githubusercontent.com/PizzaDAO/pizza-chef/main/public/og-image.png)
 
 ## Play
 

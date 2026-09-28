@@ -68,15 +68,24 @@
   "screenshots": [
     {
       "observation": "Inspected 1920px gameplay frame: moonlit pixel-art dock with stone arch, lamps, ship, moonlit water, wooden planks, Guybrush-style actor center, gold debug marker right, bottom verb bar with highlighted 'Look at', 'Use', and hint text 'Click a verb, click an object, click floor to walk. [D] overlay [E] edit walkbox [B] sprite browser'. Clearly the game's own runtime output; sharpest and most detailed frame.",
-      "url": "https://raw.githubusercontent.com/binRick/scumm-game/main/docs/screenshot.png"
+      "url": "https://raw.githubusercontent.com/binRick/scumm-game/main/docs/screenshot.png",
+      "local_path": "screenshots/c38f898c5c2da016e18d3a570df9c805b643ed926a3b90c22af4be4316d9c735.png",
+      "sha256": "c38f898c5c2da016e18d3a570df9c805b643ed926a3b90c22af4be4316d9c735",
+      "downloaded_at": "2026-09-28T04:46:43.808801+00:00"
     },
     {
       "observation": "Inspected background asset games/monkey1/bg.png: same moonlit dock pixel art without actor, verb bar, or markers. Backdrop image only, not a full gameplay capture; confirms the art source for the gameplay frame.",
-      "url": "https://raw.githubusercontent.com/binRick/scumm-game/main/games/monkey1/bg.png"
+      "url": "https://raw.githubusercontent.com/binRick/scumm-game/main/games/monkey1/bg.png",
+      "local_path": "screenshots/c340fbeca06e35ba1d74b45bb55ad9002f99eef74e5320bb61e1330454c2e66d.png",
+      "sha256": "c340fbeca06e35ba1d74b45bb55ad9002f99eef74e5320bb61e1330454c2e66d",
+      "downloaded_at": "2026-09-28T04:46:44.467984+00:00"
     },
     {
       "observation": "Inspected background asset games/dumb-and-dumber/bg.png: flat daytime pixel-art mansion with red limo, red-carpet steps, uniformed figures, garlands, and snow. No actor, verb bar, or HUD visible; backdrop asset for the second world, not active gameplay.",
-      "url": "https://raw.githubusercontent.com/binRick/scumm-game/main/games/dumb-and-dumber/bg.png"
+      "url": "https://raw.githubusercontent.com/binRick/scumm-game/main/games/dumb-and-dumber/bg.png",
+      "local_path": "screenshots/a5a56170094d28fe24d033334a7424944b87f82aadd869deb6bec1f18938ef7d.png",
+      "sha256": "a5a56170094d28fe24d033334a7424944b87f82aadd869deb6bec1f18938ef7d",
+      "downloaded_at": "2026-09-28T04:46:45.590155+00:00"
     }
   ],
   "source_analysis": [

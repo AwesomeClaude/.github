@@ -30,9 +30,11 @@ The single inspected frame is the game's own runtime output with coherent styliz
 
 ## Screenshots
 
-![Inspected downloaded copy of docs/layers.png: six full-body figures side by side on a dark chamber background with hazard-stripe floor, showing skin, muscle, circulatory, organs, skeleton and nervous layers in flat vector style; the game's own runtime output, no HUD or monitor visible in this frame.](https://raw.githubusercontent.com/Efkrdnz/opus-test-game/claude/affectionate-fermat-tluz0w/docs/layers.png)
+![HOMUNCULUS gameplay](screenshots/2d2c6537953a472f5184f64c6470b9325dfac3f8ad0f0db2268ac02bb75f24f4.png)
 
 Inspected downloaded copy of docs/layers.png: six full-body figures side by side on a dark chamber background with hazard-stripe floor, showing skin, muscle, circulatory, organs, skeleton and nervous layers in flat vector style; the game's own runtime output, no HUD or monitor visible in this frame.
+
+[Original screenshot](https://raw.githubusercontent.com/Efkrdnz/opus-test-game/claude/affectionate-fermat-tluz0w/docs/layers.png)
 
 ## Play
 

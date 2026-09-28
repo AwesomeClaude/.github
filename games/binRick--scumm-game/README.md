@@ -30,17 +30,23 @@ Best frame shows a coherent, polished pixel-art night dock: huge dithered moon, 
 
 ## Screenshots
 
-![Inspected 1920px gameplay frame: moonlit pixel-art dock with stone arch, lamps, ship, moonlit water, wooden planks, Guybrush-style actor center, gold debug marker right, bottom verb bar with highlighted 'Look at', 'Use', and hint text 'Click a verb, click an object, click floor to walk. \[D\] overlay \[E\] edit walkbox \[B\] sprite browser'. Clearly the game's own runtime output; sharpest and most detailed frame.](https://raw.githubusercontent.com/binRick/scumm-game/main/docs/screenshot.png)
+![scumm-game gameplay](screenshots/c38f898c5c2da016e18d3a570df9c805b643ed926a3b90c22af4be4316d9c735.png)
 
 Inspected 1920px gameplay frame: moonlit pixel-art dock with stone arch, lamps, ship, moonlit water, wooden planks, Guybrush-style actor center, gold debug marker right, bottom verb bar with highlighted 'Look at', 'Use', and hint text 'Click a verb, click an object, click floor to walk. \[D\] overlay \[E\] edit walkbox \[B\] sprite browser'. Clearly the game's own runtime output; sharpest and most detailed frame.
 
-![Inspected background asset games/monkey1/bg.png: same moonlit dock pixel art without actor, verb bar, or markers. Backdrop image only, not a full gameplay capture; confirms the art source for the gameplay frame.](https://raw.githubusercontent.com/binRick/scumm-game/main/games/monkey1/bg.png)
+[Original screenshot](https://raw.githubusercontent.com/binRick/scumm-game/main/docs/screenshot.png)
+
+![scumm-game gameplay](screenshots/c340fbeca06e35ba1d74b45bb55ad9002f99eef74e5320bb61e1330454c2e66d.png)
 
 Inspected background asset games/monkey1/bg.png: same moonlit dock pixel art without actor, verb bar, or markers. Backdrop image only, not a full gameplay capture; confirms the art source for the gameplay frame.
 
-![Inspected background asset games/dumb-and-dumber/bg.png: flat daytime pixel-art mansion with red limo, red-carpet steps, uniformed figures, garlands, and snow. No actor, verb bar, or HUD visible; backdrop asset for the second world, not active gameplay.](https://raw.githubusercontent.com/binRick/scumm-game/main/games/dumb-and-dumber/bg.png)
+[Original screenshot](https://raw.githubusercontent.com/binRick/scumm-game/main/games/monkey1/bg.png)
+
+![scumm-game gameplay](screenshots/a5a56170094d28fe24d033334a7424944b87f82aadd869deb6bec1f18938ef7d.png)
 
 Inspected background asset games/dumb-and-dumber/bg.png: flat daytime pixel-art mansion with red limo, red-carpet steps, uniformed figures, garlands, and snow. No actor, verb bar, or HUD visible; backdrop asset for the second world, not active gameplay.
+
+[Original screenshot](https://raw.githubusercontent.com/binRick/scumm-game/main/games/dumb-and-dumber/bg.png)
 
 ## Play
 

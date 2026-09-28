@@ -22,8 +22,14 @@
     "If stuck, note the author added hints to some levels over time (e.g. levels 13 and 15); there is no in-game hint button."
   ],
   "links": [
-    "https://github.com/sharkdp/curiosity",
-    "https://shark.fish/curiosity"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/sharkdp/curiosity"
+    },
+    {
+      "label": "Related link",
+      "url": "https://shark.fish/curiosity"
+    }
   ],
   "mechanics": [
     "URL-guessing navigation: progress by replacing filenames in the address bar across 15 numbered level folders",
@@ -47,7 +53,10 @@
   "screenshots": [
     {
       "observation": "Inspected 709x120 PNG: striped art-deco style CURIOSITY wordmark logo on white, letter Y partly faded. Title branding asset, not gameplay; no game scene, HUD, character, or level content visible.",
-      "url": "https://raw.githubusercontent.com/sharkdp/curiosity/master/assets/curiosity.png"
+      "url": "https://raw.githubusercontent.com/sharkdp/curiosity/master/assets/curiosity.png",
+      "local_path": "screenshots/9b0f5075e327fcec8864100334e4763a71a059ed35d689808e1fc795cc183a35.png",
+      "sha256": "9b0f5075e327fcec8864100334e4763a71a059ed35d689808e1fc795cc183a35",
+      "downloaded_at": "2026-09-28T04:46:53.362734+00:00"
     }
   ],
   "source_analysis": [
@@ -118,5 +127,8 @@
     "single-player",
     "static-site"
   ],
-  "title": "curiositY"
+  "title": "curiositY",
+  "source_url": "https://github.com/sharkdp/curiosity",
+  "creation_models": [],
+  "technologies": []
 }

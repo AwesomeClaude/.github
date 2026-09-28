@@ -30,7 +30,7 @@
   ],
   "links": [
     {
-      "label": "Original submission",
+      "label": "Source repository",
       "url": "https://github.com/wayou/t-rex-runner"
     },
     {
@@ -67,7 +67,10 @@
   "screenshots": [
     {
       "observation": "Inspected first frame of the repo's own animated gameplay GIF: tiny dark pixel T-Rex standing at far left on a short horizontal ground line, vast empty white background, no obstacles, score, or night elements visible in this frame. Clearly the game's own runtime output, matching the Chrome offline runner art style.",
-      "url": "https://raw.githubusercontent.com/wayou/t-rex-runner/gh-pages/assets/screenshot.gif"
+      "url": "https://raw.githubusercontent.com/wayou/t-rex-runner/gh-pages/assets/screenshot.gif",
+      "local_path": "screenshots/208640cabfd1c5ce5f3bd2ae3a667c0dc18ad0e717337ad4af3828603c8a0581.gif",
+      "sha256": "208640cabfd1c5ce5f3bd2ae3a667c0dc18ad0e717337ad4af3828603c8a0581",
+      "downloaded_at": "2026-09-28T04:46:55.815243+00:00"
     }
   ],
   "source_analysis": [
@@ -128,5 +131,6 @@
     "prompt_sha256": "0b0d3cab5988492f329b26f0a8e520af49c3fb98efa19eaf9b97c0730f8c0e2d"
   },
   "catalog_added_at": "2026-09-27T03:35:32.755095+00:00",
-  "catalog_updated_at": "2026-09-27T03:35:32.755095+00:00"
+  "catalog_updated_at": "2026-09-27T03:35:32.755095+00:00",
+  "technologies": []
 }

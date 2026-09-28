@@ -135,9 +135,24 @@
     }
   ],
   "links": [
-    "https://github.com/B-Blarr/Arena-Game",
-    "https://github.com/B-Blarr/Arena-Game/blob/main/README.md",
-    "https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/package.json",
-    "https://github.com/B-Blarr/Arena-Game/tree/main/src/systems"
-  ]
+    {
+      "label": "Source repository",
+      "url": "https://github.com/B-Blarr/Arena-Game"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/B-Blarr/Arena-Game/blob/main/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://raw.githubusercontent.com/B-Blarr/Arena-Game/main/package.json"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/B-Blarr/Arena-Game/tree/main/src/systems"
+    }
+  ],
+  "source_url": "https://github.com/B-Blarr/Arena-Game",
+  "creation_models": [],
+  "technologies": []
 }

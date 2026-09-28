@@ -30,33 +30,47 @@ All seven inspected frames are the game's own runtime output with a coherent dar
 
 ## Screenshots
 
-![Inspected Night 30 Eclipse frame: golden Beacon spire erupting with light at center, two thick pink prism-lance beams crossing the field, tesla arcs, burning sunfire blasts, ghost/wraith/spider shadows with HP bars streaming along dashed pink paths, stone walls and towers with glowing range rings, full HUD (Beacon 2265/3600, 380 aether, NIGHT 30/30, Shadows 65, wave preview panel, 10-slot build bar with costs, Nova 27s and maxed Beacon buttons). Densest and most dramatic gameplay evidence; the game's own output.](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/hero.jpg)
+![LUMENRIFT gameplay](screenshots/70e1b525397725388603b2d0b319c80678524a755610eabb43936c683b439cba.jpg)
 
 Inspected Night 30 Eclipse frame: golden Beacon spire erupting with light at center, two thick pink prism-lance beams crossing the field, tesla arcs, burning sunfire blasts, ghost/wraith/spider shadows with HP bars streaming along dashed pink paths, stone walls and towers with glowing range rings, full HUD (Beacon 2265/3600, 380 aether, NIGHT 30/30, Shadows 65, wave preview panel, 10-slot build bar with costs, Nova 27s and maxed Beacon buttons). Densest and most dramatic gameplay evidence; the game's own output.
 
-![Inspected Night 29 frame: fully ascended golden Beacon on a runed dais, prism beams, sunfire explosions, chain lightning, frost effects across a dense fortress of crossbows, crystals, tesla coils and spike traps; HUD shows 3600/3600 Beacon, 1879 aether, wave preview (x39 shades), NOVA Ready. Rich lighting bloom and complete build bar; the game's own output.](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/late-game.jpg)
+[Original screenshot](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/hero.jpg)
+
+![LUMENRIFT gameplay](screenshots/f9343a5d837a2434cfc90c5105607e0e5c62527a956eb18e3f39e717ced78f7d.jpg)
 
 Inspected Night 29 frame: fully ascended golden Beacon on a runed dais, prism beams, sunfire explosions, chain lightning, frost effects across a dense fortress of crossbows, crystals, tesla coils and spike traps; HUD shows 3600/3600 Beacon, 1879 aether, wave preview (x39 shades), NOVA Ready. Rich lighting bloom and complete build bar; the game's own output.
 
-![Inspected zoomed-out Eclipse frame: compact fortress around the Beacon with prism beams firing, purple rift spirals at map edges, long dotted enemy trails winding in from three rifts, NIGHT WYRM boss banner with red HP bar, Shadows 71 counter, full build bar and Nova/Beacon panel. Shows map scale, rift layout, and boss UI; the game's own output.](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/wyrm.jpg)
+[Original screenshot](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/late-game.jpg)
+
+![LUMENRIFT gameplay](screenshots/ad11d011f671f5708e907e8e5f837b6b561d399a1a54e8ac554261e9ba2721d4.jpg)
 
 Inspected zoomed-out Eclipse frame: compact fortress around the Beacon with prism beams firing, purple rift spirals at map edges, long dotted enemy trails winding in from three rifts, NIGHT WYRM boss banner with red HP bar, Shadows 71 counter, full build bar and Nova/Beacon panel. Shows map scale, rift layout, and boss UI; the game's own output.
 
-![Inspected Night 21 frame: single pink prism beam burning a shade near a thornfield with +5 bounty text, purple ghost row marching the dashed path bottom-left, selected crystal with range ring, Beacon at 2212/2800, locked tier-5 slot (Lv 5), NOVA Ready. Clearest view of beam, traps, selection ring, and economy HUD; the game's own output.](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/prism.jpg)
+[Original screenshot](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/wyrm.jpg)
+
+![LUMENRIFT gameplay](screenshots/0ad332c42d0bec9a33bf814a8bc284f66a877d57f61bd0f15b4f0e05fe5a6620.jpg)
 
 Inspected Night 21 frame: single pink prism beam burning a shade near a thornfield with +5 bounty text, purple ghost row marching the dashed path bottom-left, selected crystal with range ring, Beacon at 2212/2800, locked tier-5 slot (Lv 5), NOVA Ready. Clearest view of beam, traps, selection ring, and economy HUD; the game's own output.
 
-![Inspected Night 22 frame: spider-like skitters crossing spike traps under a prism beam and arcing green homing missiles, +3 bounty text, dashed enemy path, Beacon dais edge right, locked tier-5 slot, NOVA Ready. Shows trap/missile combat and bounty feedback; the game's own output.](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/swarm.jpg)
+[Original screenshot](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/prism.jpg)
+
+![LUMENRIFT gameplay](screenshots/fd8ba1328ec5071a2f06c692143c5ef60e5c2d5d659592187ef67c346bc0f4b1.jpg)
 
 Inspected Night 22 frame: spider-like skitters crossing spike traps under a prism beam and arcing green homing missiles, +3 bounty text, dashed enemy path, Beacon dais edge right, locked tier-5 slot, NOVA Ready. Shows trap/missile combat and bounty feedback; the game's own output.
 
-![Inspected Night 18 build-phase frame: 'Night 17 survived +208 aether' toast, 'Call night +30' countdown button at 21s, pink dashed path trails winding from purple rifts to the central Beacon, crystal vein highlights with range rings, coming-wave preview (x33 shades), locked upper tiers. Best evidence of the mazing/path-preview system; the game's own output.](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/overview.jpg)
+[Original screenshot](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/swarm.jpg)
+
+![LUMENRIFT gameplay](screenshots/0425fd1060632ab54e5798c6a319bbb884d6524b8a871c4b611557ecd53da873.jpg)
 
 Inspected Night 18 build-phase frame: 'Night 17 survived +208 aether' toast, 'Call night +30' countdown button at 21s, pink dashed path trails winding from purple rifts to the central Beacon, crystal vein highlights with range rings, coming-wave preview (x33 shades), locked upper tiers. Best evidence of the mazing/path-preview system; the game's own output.
 
-![Inspected Night 23 frame: three open rifts with dotted trails converging on the Beacon fortress, tesla and crystal towers firing green bolts, mixed wave preview (x47 skitters), Shadows 26, 1310 aether. Shows multi-rift pressure and mid-game fortification; the game's own output.](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/maze.jpg)
+[Original screenshot](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/overview.jpg)
+
+![LUMENRIFT gameplay](screenshots/2c5593c5687e64aed9df0abf9538db10eeadffb4d564a02ddc1daedb155a3028.jpg)
 
 Inspected Night 23 frame: three open rifts with dotted trails converging on the Beacon fortress, tesla and crystal towers firing green bolts, mixed wave preview (x47 skitters), Shadows 26, 1310 aether. Shows multi-rift pressure and mid-game fortification; the game's own output.
+
+[Original screenshot](https://raw.githubusercontent.com/WhiteBlackGoose/Lumenrift/main/docs/img/maze.jpg)
 
 ## Play
 

@@ -27,9 +27,11 @@ The single inspected gameplay frame is the game's own output and is clean and re
 
 ## Screenshots
 
-![Inspected gameplay frame of the live table UI: flat green felt with orange border, top bar with Rules and Settings buttons and a Cards remaining: 196 shoe meter, dealer row showing 4 of Spades plus a face-down red-pattern card scored as ??, player row showing Jack of Diamonds plus 8 of Spades scored as Player: 18, bottom bar with Current bank $100 and High score 110, red Place your bet ($5/$10/$25/$50), Side Bets, Surrender, and Choose your move (Hit/Stay/Double/Split) buttons. The game's own DOM output, not concept art.](https://raw.githubusercontent.com/KSmith8888/TypeScript-Blackjack/main/public/blackjack-readme-screenshot.png)
+![TypeScript-Blackjack gameplay](screenshots/5f1d1057eb5aefcd34e0197dc489c3e811a20c0d2f79b9d336494ce7c99d262b.png)
 
 Inspected gameplay frame of the live table UI: flat green felt with orange border, top bar with Rules and Settings buttons and a Cards remaining: 196 shoe meter, dealer row showing 4 of Spades plus a face-down red-pattern card scored as ??, player row showing Jack of Diamonds plus 8 of Spades scored as Player: 18, bottom bar with Current bank $100 and High score 110, red Place your bet ($5/$10/$25/$50), Side Bets, Surrender, and Choose your move (Hit/Stay/Double/Split) buttons. The game's own DOM output, not concept art.
+
+[Original screenshot](https://raw.githubusercontent.com/KSmith8888/TypeScript-Blackjack/main/public/blackjack-readme-screenshot.png)
 
 ## Play
 

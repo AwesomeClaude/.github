@@ -30,29 +30,41 @@ Inspected gameplay frames show coherent night-pixel-art styling: parallax SF sky
 
 ## Screenshots
 
-![Inspected 1920x1080 PNG: Anthropic HQ boss arena with three chat-bubble Hydra heads on segmented necks, CONTEXT ROT body, boss HP bar, CONTEXT OVERFLOW meter, 'Context Full! HOLD M, say refactor (or press 3)' tip, Furby-like office creatures, player with laptop, star counter 61. Densest gameplay frame with full boss systems and HUD; the game's own runtime output.](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/10-boss-context-overflow.png)
+![Survive Coders gameplay](screenshots/1765cce4134a2376e14b2b86745896831b0362229b66928e6c75107b9d18765d.png)
 
 Inspected 1920x1080 PNG: Anthropic HQ boss arena with three chat-bubble Hydra heads on segmented necks, CONTEXT ROT body, boss HP bar, CONTEXT OVERFLOW meter, 'Context Full! HOLD M, say refactor (or press 3)' tip, Furby-like office creatures, player with laptop, star counter 61. Densest gameplay frame with full boss systems and HUD; the game's own runtime output.
 
-![Inspected 1920x1080 PNG: player riding a glowing red Powell St cable car over a pit labeled 404, Golden Gate Bridge and Transamerica-style skyline behind, star arcs, Keyboard Goblin and blob enemies, '+1 star' pickup text, full power-bar HUD. Clearly the game's own runtime output.](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/07-cable-car-ride.png)
+[Original screenshot](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/10-boss-context-overflow.png)
+
+![Survive Coders gameplay](screenshots/39de221a38cc48937e506bd21be767bbce24e5172ca45bd65a92b89a76bc48f9.png)
 
 Inspected 1920x1080 PNG: player riding a glowing red Powell St cable car over a pit labeled 404, Golden Gate Bridge and Transamerica-style skyline behind, star arcs, Keyboard Goblin and blob enemies, '+1 star' pickup text, full power-bar HUD. Clearly the game's own runtime output.
 
-![Inspected 1920x1080 PNG: night street combat with Painted-Ladies-style houses, Sutro Tower, player firing prompt bolts at a blue Bad Prompt Blob, star pickups, health and star HUD, 'SPACE fires prompts' tip and power bar. The game's own runtime output.](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/05-street-combat.png)
+[Original screenshot](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/07-cable-car-ride.png)
+
+![Survive Coders gameplay](screenshots/dd2c5ea8909579e4131b87c4317e86194f8a501a4cd1f12e3faf3bcd85478eb5.png)
 
 Inspected 1920x1080 PNG: night street combat with Painted-Ladies-style houses, Sutro Tower, player firing prompt bolts at a blue Bad Prompt Blob, star pickups, health and star HUD, 'SPACE fires prompts' tip and power bar. The game's own runtime output.
 
-![Inspected 1920x1080 PNG: MAX token-stream sequence with '136 tokens' budget meter, scattered character projectiles, CUDA OOM text, Twin Peaks / GPU signage and 404 pit. The game's own runtime output.](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/06-max-token-stream.png)
+[Original screenshot](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/05-street-combat.png)
+
+![Survive Coders gameplay](screenshots/0913d0a23aba2ace35cc99664063cef06125c9060f08ee3519aa2f41b6fe0a58.png)
 
 Inspected 1920x1080 PNG: MAX token-stream sequence with '136 tokens' budget meter, scattered character projectiles, CUDA OOM text, Twin Peaks / GPU signage and 404 pit. The game's own runtime output.
 
-![Inspected 1688x780 PNG: phone landscape run with touch D-pad bottom-left, fire and jump buttons bottom-right, tappable ship-it/rollback/refactor bar plus talk slot, pause button and star badge. Confirms on-screen touch controls; the game's own runtime output.](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/13-phone-level.png)
+[Original screenshot](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/06-max-token-stream.png)
+
+![Survive Coders gameplay](screenshots/badbcd6f973b4e8570557f75ea65968c4fa230bca7caa74ac4262b2ed5153665.png)
 
 Inspected 1688x780 PNG: phone landscape run with touch D-pad bottom-left, fire and jump buttons bottom-right, tappable ship-it/rollback/refactor bar plus talk slot, pause button and star badge. Confirms on-screen touch controls; the game's own runtime output.
 
-![Inspected 1920x1080 PNG: terminal-style title screen with SURVIVE CODERS masthead, pixel vibe coder and floating laptop key art, keyboard/voice control list and 'Press ENTER to start'. Menu/title card, discounted as non-gameplay.](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/01-title.png)
+[Original screenshot](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/13-phone-level.png)
+
+![Survive Coders gameplay](screenshots/b5691779238ce91b69f1564b2c361a81ca4a2e2ca4cdde4cc7f618b37265a409.png)
 
 Inspected 1920x1080 PNG: terminal-style title screen with SURVIVE CODERS masthead, pixel vibe coder and floating laptop key art, keyboard/voice control list and 'Press ENTER to start'. Menu/title card, discounted as non-gameplay.
+
+[Original screenshot](https://raw.githubusercontent.com/travisstephenfraser/survive-coders/master/docs/screenshots/01-title.png)
 
 ## Play
 

@@ -58,23 +58,28 @@
   "screenshots": [
     {
       "observation": "Inspected 640x360 gameplay frame: top-down street with red Meridian car, green pager banner NICE WHEELS. YOU STOLE A MERIDIAN., pink kill feed ALICE WASTED HOSTESS, scoreboard ALICE versus HOSTESS with 3-star wanted diamonds, cash $30, 1300 PTS, red health bar, PISTOL x56, and MERIDIAN 4 KM/H readout. The game's own runtime output.",
-      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/mp_listen_driving.png"
+      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/mp_listen_driving.png",
+      "download_error": "Image source returned HTTP 404"
     },
     {
       "observation": "Inspected 640x360 gameplay frame: top-down street and sidewalk with YOU WASTED BOB. +1000 PTS banner, large 2X COMBO +200 overlay, ALICE JOINED and ALICE WASTED BOB kill feed, ALICE versus BOB scoreboard, $45 cash, blue wanted diamonds, red health bar, and PISTOL x55. The game's own runtime output.",
-      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/mp_shooter_wasted_them.png"
+      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/mp_shooter_wasted_them.png",
+      "download_error": "Image source returned HTTP 404"
     },
     {
       "observation": "Inspected 640x360 gameplay frame: top-down city street with large red FLATLINED overlay reading WASTED BY ALICE. DROPPED $0, BOB JOINED and ALICE kill feed at left, $0 cash, dark health bar, and PISTOL x60. The game's own runtime output.",
-      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/mp_target_wasted.png"
+      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/mp_target_wasted.png",
+      "download_error": "Image source returned HTTP 404"
     },
     {
       "observation": "Inspected 960x540 gameplay frame: high top-down view of brown rooftops with vents, grey road with yellow dashes, tiny pedestrian on sidewalk, dark buildings, green WELCOME TO OXCITY pager banner, $0 cash, faint wanted diamonds, red health bar, and PISTOL x60. The game's own runtime output.",
-      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/vsm_ghost_shadow_patched.png"
+      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/vsm_ghost_shadow_patched.png",
+      "download_error": "Image source returned HTTP 404"
     },
     {
       "observation": "Inspected 960x540 menu frame: OXCITY title over an aerial low-poly city backdrop with MULTIPLAYER heading, NAME field ALICE, HOST field 192.168.1.20:7777, and yellow JOIN, HOST, and BACK buttons. Menu UI, not active gameplay; placed last.",
-      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/mp_menu.png"
+      "url": "https://raw.githubusercontent.com/exdal/opus5.5-test/claude/ecstatic-brahmagupta-6ik44r/docs/screenshots/mp_menu.png",
+      "download_error": "Image source returned HTTP 404"
     }
   ],
   "source_analysis": [

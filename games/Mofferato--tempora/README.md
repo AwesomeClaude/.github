@@ -30,21 +30,29 @@ Best frame (screenshot.png) is the game's own runtime output: coherent dark UI w
 
 ## Screenshots
 
-![Inspected 1280x800 gameplay frame: ancient Egypt life view for Tiye of Buto, age 32, with left character card (avatar, home, status, Chief Blacksmith, five stat bars, deben wealth 1,049), era timeline ribbon on top, tab bar, and dense year-by-year life log for 418-419 BC with family events and green/red stat-change chips; orange Age +1 bar at bottom. Game's own runtime output.](https://raw.githubusercontent.com/Mofferato/tempora/main/assets/screenshot.png)
+![Tempora gameplay](screenshots/62a6f1c3341ed2174500684334bcceedc544dcbca86245985f737091d15db669.png)
 
 Inspected 1280x800 gameplay frame: ancient Egypt life view for Tiye of Buto, age 32, with left character card (avatar, home, status, Chief Blacksmith, five stat bars, deben wealth 1,049), era timeline ribbon on top, tab bar, and dense year-by-year life log for 418-419 BC with family events and green/red stat-change chips; orange Age +1 bar at bottom. Game's own runtime output.
 
-![Inspected 1280x800 gameplay frame: World tab showing settlement panel for a village near Memphis with settlement level, living-cost and wage multipliers, best-jobs note, and move buttons for Memphis and Thebes; same character card and Age bar. Game's own runtime output.](https://raw.githubusercontent.com/Mofferato/tempora/main/assets/world.png)
+[Original screenshot](https://raw.githubusercontent.com/Mofferato/tempora/main/assets/screenshot.png)
+
+![Tempora gameplay](screenshots/63f830a973c18c9fc0e1f8a6254afa5e8763ea6fe08b9b24cd05759f8b735feb.png)
 
 Inspected 1280x800 gameplay frame: World tab showing settlement panel for a village near Memphis with settlement level, living-cost and wage multipliers, best-jobs note, and move buttons for Memphis and Thebes; same character card and Age bar. Game's own runtime output.
 
-![Inspected 1280x800 gameplay frame: character profile modal for Tiye of Buto with Overview/Stats/Personality/Life/Family/Achievements tabs and rows for age, birth, sex, nationality, class, education, occupation, relationship, children, wealth, personality and appearance. Game's own runtime output, partly overlaying the life log.](https://raw.githubusercontent.com/Mofferato/tempora/main/assets/profile.png)
+[Original screenshot](https://raw.githubusercontent.com/Mofferato/tempora/main/assets/world.png)
+
+![Tempora gameplay](screenshots/aad41edbcdaabc5e5eabd5ca4325e3443e6bb188b59ad493519cde92ea77aff7.png)
 
 Inspected 1280x800 gameplay frame: character profile modal for Tiye of Buto with Overview/Stats/Personality/Life/Family/Achievements tabs and rows for age, birth, sex, nationality, class, education, occupation, relationship, children, wealth, personality and appearance. Game's own runtime output, partly overlaying the life log.
 
-![Inspected 780x1688 mobile frame: responsive phone layout of the same character card with stacked stat bars, wealth readout, and tab strip plus Age +1 button at bottom. Confirms small-screen layout; discounted toward graphics score as a layout variant rather than new scene detail.](https://raw.githubusercontent.com/Mofferato/tempora/main/assets/mobile.png)
+[Original screenshot](https://raw.githubusercontent.com/Mofferato/tempora/main/assets/profile.png)
+
+![Tempora gameplay](screenshots/b6526aa002670e00e26e4fbecd5f176545c394b4dbaaa7670c5064c424063017.png)
 
 Inspected 780x1688 mobile frame: responsive phone layout of the same character card with stacked stat bars, wealth readout, and tab strip plus Age +1 button at bottom. Confirms small-screen layout; discounted toward graphics score as a layout variant rather than new scene detail.
+
+[Original screenshot](https://raw.githubusercontent.com/Mofferato/tempora/main/assets/mobile.png)
 
 ## Play
 

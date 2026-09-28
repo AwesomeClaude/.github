@@ -113,5 +113,6 @@
     "prompt_sha256": "3a894228e5b1239ecdc0c998b21d6cd9a9278dea7fb91cfff3317b62fc4d0300"
   },
   "catalog_added_at": "2026-09-27T03:51:07.716371+00:00",
-  "catalog_updated_at": "2026-09-27T03:51:07.716371+00:00"
+  "catalog_updated_at": "2026-09-27T03:51:07.716371+00:00",
+  "technologies": []
 }

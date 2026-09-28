@@ -30,13 +30,17 @@ First image is the game's own full-board output: clean cream board, readable col
 
 ## Screenshots
 
-![Inspected downloaded 584x728 PNG of the game's own runtime output: cream page with 2048 masthead, tagline 'Join the numbers and get to the 2048 tile!', score box 12328, full 4x4 board with flat orange/gold numbered tiles (32, 8, 4, 2, 16, highlighted gold 2048 tile) and a 'You win!' overlay across the grid. Flat minimal DOM-tile design; repo author notes the frame is staged.](https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png)
+![2048 gameplay](screenshots/2ea0f7b8349639636fdb6ffac8bb1e48f37e8beda89bab25843e0637c9f4495b.png)
 
 Inspected downloaded 584x728 PNG of the game's own runtime output: cream page with 2048 masthead, tagline 'Join the numbers and get to the 2048 tile!', score box 12328, full 4x4 board with flat orange/gold numbered tiles (32, 8, 4, 2, 16, highlighted gold 2048 tile) and a 'You win!' overlay across the grid. Flat minimal DOM-tile design; repo author notes the frame is staged.
 
-![Inspected downloaded 1200x630 JPEG promotional crop from play2048.co: angled close-up of beveled tiles showing 8, 64, 4, glowing 256, 2, 16, 32 with soft shadows on a taupe tray. Only a partial board is visible with no score, masthead, or full grid; curated reference imagery rather than a full gameplay frame.](https://play2048.co/ogImage.jpg)
+[Original screenshot](https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png)
+
+![2048 gameplay](screenshots/bd9f3bef2985fc2ecbc88541cf9b8d696a12cae07b85511a853e0322fa4cba72.jpg)
 
 Inspected downloaded 1200x630 JPEG promotional crop from play2048.co: angled close-up of beveled tiles showing 8, 64, 4, glowing 256, 2, 16, 32 with soft shadows on a taupe tray. Only a partial board is visible with no score, masthead, or full grid; curated reference imagery rather than a full gameplay frame.
+
+[Original screenshot](https://play2048.co/ogImage.jpg)
 
 ## Play
 

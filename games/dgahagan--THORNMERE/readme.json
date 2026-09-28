@@ -26,10 +26,22 @@
     "Class-change casters toward Riddlemaster (Hexen/Lorist to tier 5, Stormcaller, tier 6 in two schools) to open the Needle top floor, then perform the Founding Song at the bell tower to win."
   ],
   "links": [
-    "https://github.com/dgahagan/THORNMERE",
-    "https://dgahagan.github.io/THORNMERE/",
-    "https://github.com/dgahagan/THORNMERE/blob/main/README.md",
-    "https://github.com/dgahagan/THORNMERE/blob/main/docs/art-pipeline.md"
+    {
+      "label": "Source repository",
+      "url": "https://github.com/dgahagan/THORNMERE"
+    },
+    {
+      "label": "Related link",
+      "url": "https://dgahagan.github.io/THORNMERE/"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/dgahagan/THORNMERE/blob/main/README.md"
+    },
+    {
+      "label": "Related link",
+      "url": "https://github.com/dgahagan/THORNMERE/blob/main/docs/art-pipeline.md"
+    }
   ],
   "mechanics": [
     "Six-character party creation with ST/IQ/DX/CN/LK races, AC counting down from 10, and class prime stats",
@@ -58,35 +70,59 @@
   "screenshots": [
     {
       "observation": "Inspected gameplay combat frame: large Fen Rat pixel portrait (grey-brown fur, red eyes, fangs) in the animated portrait window labeled FEN RAT, orders panel Round 1 for Hroth vs 4 Fen Rats and 2 Mirefangs, Attack/Defend/Cast/Use/Advance/Run buttons, six-person roster (Blade/Blade/Warden/Skald/Hexen/Lorist) with AC/HP/SP, event log with torch text. Game's own runtime output, sharpest portrait detail.",
-      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/combat.png"
+      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/combat.png",
+      "local_path": "screenshots/c52325b264cb982ef232f1332d942ce7f15de07ff6396ba1feb7bf1401799733.png",
+      "sha256": "c52325b264cb982ef232f1332d942ce7f15de07ff6396ba1feb7bf1401799733",
+      "downloaded_at": "2026-09-28T04:46:46.318275+00:00"
     },
     {
       "observation": "Inspected torchlit dungeon gameplay: textured brown-block corridor receding into darkness with palette ramp shading, corner automap overlay inset top-right, status line The Sunken Undercroft - Drowned Cellars, roster and Forward/Turn/About-face/Search/Cast/Song/Use/Torch/Look buttons. Game's own output showing light-radius mechanic.",
-      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/dungeon-corridor.png"
+      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/dungeon-corridor.png",
+      "local_path": "screenshots/29c021fa8ed0e75a97b1fadc5f6e07e04178d94afbd709cba0103fb8c162223e.png",
+      "sha256": "29c021fa8ed0e75a97b1fadc5f6e07e04178d94afbd709cba0103fb8c162223e",
+      "downloaded_at": "2026-09-28T04:46:46.893464+00:00"
     },
     {
       "observation": "Inspected daylit town street gameplay: half-timbered facades left, cobbled street with brown/grey tiles hazing toward a dithered blue sky horizon, corner map inset, Bellward plaque, same roster and command bar. Game's own output showing daylight view distance.",
-      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/town-street.png"
+      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/town-street.png",
+      "local_path": "screenshots/d8168fcc774b7daae6341820d805698c6c5bb2748bd760a1e37aabfdd14ca995.png",
+      "sha256": "d8168fcc774b7daae6341820d805698c6c5bb2748bd760a1e37aabfdd14ca995",
+      "downloaded_at": "2026-09-28T04:46:47.422922+00:00"
     },
     {
       "observation": "Inspected street gameplay facing a stone building with a boot signboard over the door (Greta's Provisioner), symmetrical facade with blue windows, cobbled foreground, Bellward plaque, roster and command bar. Game's own output showing navigation-by-signboard.",
-      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/signboard.png"
+      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/signboard.png",
+      "local_path": "screenshots/843c70f45a1c17b150240a00fc18f684da0cb0aa8f05078f80519cb3de65e787.png",
+      "sha256": "843c70f45a1c17b150240a00fc18f684da0cb0aa8f05078f80519cb3de65e787",
+      "downloaded_at": "2026-09-28T04:46:47.991498+00:00"
     },
     {
       "observation": "Inspected Adventurers' Hall interior frame: dim torchlit tavern-hall pixel scene with fireplace, counter, and figures in the viewport, roster panel listing the six-party muster, event log with ledger/gold entries. Game's own output; interior vignette rather than maze traversal.",
-      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/adventurers-hall.png"
+      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/adventurers-hall.png",
+      "local_path": "screenshots/8b8c91ec1b1e526959f65278ed0857404eb63c2acb44682830917a31d364114f.png",
+      "sha256": "8b8c91ec1b1e526959f65278ed0857404eb63c2acb44682830917a31d364114f",
+      "downloaded_at": "2026-09-28T04:46:48.483548+00:00"
     },
     {
       "observation": "Inspected close-up riddle-door frame: flat grey stone face filling the viewport with a gold pixel mouth/eye motif, log reading a graven door bars the way and a carved mouth waits in the stone. Game's own output but a single flat special frame, less scene detail than maze/street views.",
-      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/riddle-door.png"
+      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/riddle-door.png",
+      "local_path": "screenshots/202b62114c508d4a901858e6a4d3c549d4e828c2f48d34d41e8d6da753c84a19.png",
+      "sha256": "202b62114c508d4a901858e6a4d3c549d4e828c2f48d34d41e8d6da753c84a19",
+      "downloaded_at": "2026-09-28T04:46:49.079740+00:00"
     },
     {
       "observation": "Inspected full-screen parchment automap of Thornmere: white street grid with colored room blocks (yellow, green, red, purple) and gold position marker on grey, THORNMERE header. Utility overlay over the live game, not a 3D/pixel scene; discounted for graphics scoring.",
-      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/automap.png"
+      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/automap.png",
+      "local_path": "screenshots/b68ed5e2464959c1931fa3dc6658248f4bea176dd1c6efd0e14c3d1b19ebf39d.png",
+      "sha256": "b68ed5e2464959c1931fa3dc6658248f4bea176dd1c6efd0e14c3d1b19ebf39d",
+      "downloaded_at": "2026-09-28T04:46:49.694074+00:00"
     },
     {
       "observation": "Inspected title card: night silhouette of a walled town on a fen (tower, houses, red sunset band, green reeds, moon) with THORNMERE - THE FOUNDRING SONG wordmark, New game/Options/Continue menu at right, thorn-vine chrome frame. Menu/title, not active gameplay; discounted.",
-      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/title.png"
+      "url": "https://raw.githubusercontent.com/dgahagan/THORNMERE/main/docs/screenshots/title.png",
+      "local_path": "screenshots/847d2704c8ce20675b5eb9648b0030e2f8ae6bda70a9132e879598e46f72d6af.png",
+      "sha256": "847d2704c8ce20675b5eb9648b0030e2f8ae6bda70a9132e879598e46f72d6af",
+      "downloaded_at": "2026-09-28T04:46:50.362563+00:00"
     }
   ],
   "source_analysis": [
@@ -145,5 +181,8 @@
     "chiptune",
     "ai-assisted"
   ],
-  "title": "THORNMERE — The Founding Song"
+  "title": "THORNMERE — The Founding Song",
+  "source_url": "https://github.com/dgahagan/THORNMERE",
+  "creation_models": [],
+  "technologies": []
 }
