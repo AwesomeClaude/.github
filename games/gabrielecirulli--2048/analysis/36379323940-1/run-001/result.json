@@ -1,0 +1,11 @@
+{
+  "run": "run-001",
+  "directory": "/home/runner/work/.github/.github/work/game-batches/36379323940-1/run-001",
+  "status": "finished",
+  "session_id": "ses_f19a672eeffesNfgk1YGsvCz1M",
+  "live_url": "https://jennifer-prefer-connection-calculator.trycloudflare.com/L2hvbWUvcnVubmVyL3dvcmsvLmdpdGh1Yi8uZ2l0aHViL3dvcmsvZ2FtZS1iYXRjaGVzLzM2Mzc5MzIzOTQwLTEvcnVuLTAwMQ/session/ses_f19a672eeffesNfgk1YGsvCz1M",
+  "prompt_sha256": "9614123173ca6c9a5d3067e10b85d33369469c1783afd7e88dc53074a4e5870b",
+  "cli_pid": 2701,
+  "exit_code": 0,
+  "elapsed_seconds": 82.99
+}
