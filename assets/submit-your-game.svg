@@ -32,11 +32,6 @@
     @keyframes spark { 0%, 55% { opacity: 0; transform: translateX(-24px); } 58% { opacity: .95; } 76%, 100% { opacity: 0; transform: translateX(100px); } }
     @keyframes runner { 0%, 58% { opacity: 0; stroke-dashoffset: 0; } 62% { opacity: 1; } 84%, 100% { opacity: 0; stroke-dashoffset: -1400; } }
     @keyframes reverse-runner { 0%, 58% { opacity: 0; stroke-dashoffset: 0; } 62% { opacity: .85; } 84%, 100% { opacity: 0; stroke-dashoffset: 1400; } }
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; }
-      .spark, .cell-flash, .ripple, .runner { opacity: 0; }
-      .connection { opacity: .35; }
-    }
   </style>
   <!-- Preserve transparent corners; leave room for the outer halo. -->
   <use href="#rim" fill="none" stroke="url(#neon)" stroke-width="2" opacity=".5" filter="url(#glow)"/>
