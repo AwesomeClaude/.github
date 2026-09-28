@@ -54,7 +54,7 @@ jobs:
           echo "$HOME/.local/node_modules/.bin" >> "$GITHUB_PATH"
 
       - name: Start owner-only SSH debugging
-        if: steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
+        if: steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == (vars.ISSUE_CATALOG_DEBUG_OWNER || github.repository_owner)
         continue-on-error: true
         env:
           AGENTSWEB_SSH_PUBLIC_KEY: ${{ secrets.AGENTSWEB_SSH_PUBLIC_KEY }}
@@ -66,7 +66,7 @@ jobs:
         run: python3 scripts/issue_catalog.py --phase prepare --event "$GITHUB_EVENT_PATH" --output "$RUNNER_TEMP/issue-artifact"
 
       - name: Add temporary session links to the startup comment
-        if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
+        if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == (vars.ISSUE_CATALOG_DEBUG_OWNER || github.repository_owner)
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
@@ -112,11 +112,11 @@ jobs:
           retention-days: 7
 
       - name: Keep owner worker for 30 minutes after completion or failure
-        if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
+        if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == (vars.ISSUE_CATALOG_DEBUG_OWNER || github.repository_owner)
         run: sleep 1800
 
       - name: Expire public OpenCode session links after the hold
-        if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == github.repository_owner
+        if: always() && steps.preflight.outputs.ready == 'true' && github.event.issue.user.login == (vars.ISSUE_CATALOG_DEBUG_OWNER || github.repository_owner)
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 scripts/issue_catalog.py --phase expire --output "$RUNNER_TEMP/issue-artifact"

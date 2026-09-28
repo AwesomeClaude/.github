@@ -88,7 +88,7 @@ Extract the Chrome offline error-page T-Rex runner into a standalone dependency-
 - The live GitHub Pages build opens the playable game page ('Press Space to start' with offline sprites) and returned HTTP 200, verifying it is a playable URL and not just a repo or promo page. ([source](https://wayou.github.io/t-rex-runner/))
 - index.js binds keyboard (KEYDOWN/KEYUP with JUMP and RESTART keycodes), mouse (MOUSEDOWN/MOUSEUP with left-click-on-canvas restart), and touch (full-screen touch-controller div, TOUCHSTART/TOUCHEND, IS\_TOUCH\_ENABLED/IS\_MOBILE handling); jump is triggered by JUMP keys or TOUCHSTART. ([source](https://github.com/wayou/t-rex-runner/blob/gh-pages/index.js))
 - index.js contains zero matches for multiplayer, socket/websocket, peer, second player, gamepad, joystick, gyroscope, accelerometer, or device-orientation/motion terms, supporting a single-player, keyboard/mouse/touch-only reading; no AI creation models are attributed anywhere in the project sources (a 2014 Chromium extraction). ([source](https://github.com/wayou/t-rex-runner/blob/gh-pages/index.js))
-- No catalog game matched this project: the local catalog index and all 20 linked game READMEs were read, and a search for t-rex/trex/wayou across games/ found no prior entry, so no existing slug is reused. ([source](https://github.com/agents-dev/Astra-Top-Games))
+- No catalog game matched this project: the local catalog index and all 20 linked game READMEs were read, and a search for t-rex/trex/wayou across games/ found no prior entry, so no existing slug is reused. ([source](https://github.com/AwesomeClaude/.github))
 
 ## Fictional reviews
 

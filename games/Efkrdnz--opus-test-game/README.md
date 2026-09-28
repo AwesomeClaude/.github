@@ -103,7 +103,7 @@ Build a self-contained browser sandbox game called HOMUNCULUS, an alchemy and cl
 - package.json names the project homunculus-lab 1.0.0, type module, zero npm dependencies, scripts for serve/build/test, and engines node \>=18. ([source](https://raw.githubusercontent.com/Efkrdnz/opus-test-game/claude/affectionate-fermat-tluz0w/package.json))
 - Repository tree contains index.html, css, js/data, js/sim, js/render, js/ui, scripts, tests and a 561004-byte dist/homunculus.html self-contained build; no hosted playable URL, releases or deployments verified. ([source](https://api.github.com/repos/Efkrdnz/opus-test-game/contents/dist?ref=claude/affectionate-fermat-tluz0w))
 - audio.js implements optional monitor sounds via AudioContext with pulse-oximeter pitch tied to SpO2, flatline tone and lab effects, evidencing Web Audio usage. ([source](https://raw.githubusercontent.com/Efkrdnz/opus-test-game/claude/affectionate-fermat-tluz0w/js/ui/audio.js))
-- No verified catalog match: no existing game directory or report references Efkrdnz or opus-test-game; scoring calibrated against moorestech (64), OSRS Tower Defense (52), Kart Royale (50), The Nine Lives of Ash (47), THORNMERE (46) and neverquest (45). ([source](https://github.com/agents-dev/Astra-Top-Games))
+- No verified catalog match: no existing game directory or report references Efkrdnz or opus-test-game; scoring calibrated against moorestech (64), OSRS Tower Defense (52), Kart Royale (50), The Nine Lives of Ash (47), THORNMERE (46) and neverquest (45). ([source](https://github.com/AwesomeClaude/.github))
 
 ## Fictional reviews
 

@@ -1,6 +1,6 @@
 # moorestech
 
-[View source](https://github.com/moorestech/moorestech) · [Previous report](https://github.com/agents-dev/Astra-Top-Games/blob/6834fee43bf7e21225ca0ef6906590661443ff6f/games/moorestech--moorestech/README.md)
+[View source](https://github.com/moorestech/moorestech) · [Previous report](https://github.com/AwesomeClaude/.github/blob/6834fee43bf7e21225ca0ef6906590661443ff6f/games/moorestech--moorestech/README.md)
 
 | Overall rating | Screenshot score |
 | :---: | :---: |

@@ -3,7 +3,7 @@ set -euo pipefail
 
 test -n "${AGENTSWEB_SSH_PUBLIC_KEY:-}"
 ssh_dir="${RUNNER_TEMP}/agentsweb-ssh"
-name="astra-top-games-${GITHUB_RUN_ID}-issue-ssh"
+name="awesome-claude-${GITHUB_RUN_ID}-issue-ssh"
 install -d -m 700 "$ssh_dir" "$HOME/.ssh"
 printf '%s\n' "$AGENTSWEB_SSH_PUBLIC_KEY" > "$HOME/.ssh/authorized_keys"
 chmod 600 "$HOME/.ssh/authorized_keys"

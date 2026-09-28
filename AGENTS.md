@@ -1,4 +1,4 @@
-# Astra-Top-Games instructions
+# AwesomeClaude instructions
 
 ## AgentsWeb runner testing
 

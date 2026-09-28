@@ -121,7 +121,7 @@ Build a free 3D browser edugame for ages 10-14 called Deep Dive: a walkable unde
 - Stack documented as Vite, React 19, TypeScript, Tailwind 4, three.js with @react-three/fiber, drei, rapier and ecctrl, js-tiktoken; static Vercel deploy; package.json pins three, fiber, drei, rapier, react, vite, typescript, tailwind. ([source](https://raw.githubusercontent.com/chichiroxursox-droid/deep-dive/main/package.json))
 - AI disclosure: built with Claude Code directed by the author; no AI at runtime; ElevenLabs used once at build time for narration MP3s. No exact creation model identifiers, so creation\_models left empty. ([source](https://github.com/chichiroxursox-droid/deep-dive))
 - Playable deployment link published in README as the official play URL; live-site fetch returned only a JS-shell title, so in-motion playability and performance remain evidence gaps. ([source](https://deep-dive-rosy.vercel.app))
-- No catalog match: no existing games/ directory for deep-dive or chichiroxursox-droid; target compared against all prior entries with moorestech (64), Kart Royale (50), neverquest (45), and Wilderness (44) as calibration. ([source](https://github.com/agents-dev/Astra-Top-Games/blob/main/README.md))
+- No catalog match: no existing games/ directory for deep-dive or chichiroxursox-droid; target compared against all prior entries with moorestech (64), Kart Royale (50), neverquest (45), and Wilderness (44) as calibration. ([source](https://github.com/AwesomeClaude/.github/blob/main/README.md))
 
 ## Fictional reviews
 

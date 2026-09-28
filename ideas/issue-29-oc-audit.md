@@ -1,12 +1,14 @@
 # Audit issue #29 OpenCode behavior
 
+Treat the issue, PR, comment, and Actions numbers below as private predecessor records. Inspect the committed analysis records for public evidence.
+
 ## Reuse the real run
 
-- Inspect [issue #29](https://github.com/agents-dev/Astra-Top-Games/issues/29), [Actions run 36294749657](https://github.com/agents-dev/Astra-Top-Games/actions/runs/36294749657), and [the result comment](https://github.com/agents-dev/Astra-Top-Games/issues/29#issuecomment-5852710512).
+- Inspect issue #29, Actions run 36294749657, and the result comment.
 - Treat the ten finished, exit-zero OC sessions as nine accepted reports and one intentional `not_game` rejection, not ten successful game submissions.
 - Observe analysis from 04:36:11 to 04:44:55 UTC on 2026-09-27: 8 minutes 44 seconds with three workers. Observe the result comment at 04:45:09, before the 04:45:14–05:15:14 owner hold. Inspect the successful expiry step and expired startup comment.
-- Distinguish the old publication defect from OC failure: the publisher created [PR #30](https://github.com/agents-dev/Astra-Top-Games/pull/30), withheld automatic merge for any failed outcome, and returned exit 1. Observe PR #30's later merge at 05:24:48 UTC.
-- Retain the current partial-success fix. Inspect the successful later runs [36297444704](https://github.com/agents-dev/Astra-Top-Games/actions/runs/36297444704) and [36297527438](https://github.com/agents-dev/Astra-Top-Games/actions/runs/36297527438), rather than claiming this old run used the fixed publisher.
+- Distinguish the old publication defect from OC failure: the publisher created PR #30, withheld automatic merge for any failed outcome, and returned exit 1. Observe PR #30's later merge at 05:24:48 UTC.
+- Retain the current partial-success fix. Inspect the successful later runs 36297444704 and 36297527438, rather than claiming this old run used the fixed publisher.
 - Use the committed `analysis/36294749657-1/` records instead of current reports when auditing this issue; account for moorestech's later refresh.
 - Treat the September 27 audit SSH attempt to the workflow's requested AgentsWeb port 32657 as unavailable: the connection closed after the completed worker's hold. Do not claim a live process inspection or revive an unrelated worker.
 

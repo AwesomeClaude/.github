@@ -111,7 +111,7 @@ Build Radikal Riders, a browser arcade tribute to Radikal Bikers: 3D cel-shaded 
 - Built 26 Sept 2026 with the GitHub Copilot for iPhone app and the Claude Opus 5.5 model. ([source](https://github.com/javichur/radikal-bikers/blob/main/README.md))
 - Tech: three ^0.186.1 dependency with toon-material Three.js renderer, TypeScript strict, Vite build with base './', Vitest unit tests with coverage thresholds, Playwright e2e on desktop plus emulated iPhone, ESLint + Prettier; simulation in sim/ and core/ is DOM/Three.js-free and deterministic at 1/60s fixed step with seeded PRNG. ([source](https://github.com/javichur/radikal-bikers/blob/main/package.json))
 - Demo video thumbnail provides the only inspected gameplay still; repo file tree contains no gameplay PNG/JPG screenshots, only PWA icons under public/icons/. ([source](https://youtu.be/Ds_wtQz6IG0))
-- No existing catalog entry matches javichur/radikal-bikers or Radikal Riders; the catalog's closest racing comparators are Kart Royale (50/100, screenshots 70), Turbo Kart Rally (40/100, screenshots 70) and moorestech (64/100, screenshots 76). ([source](https://github.com/agents-dev/Astra-Top-Games/blob/main/README.md))
+- No existing catalog entry matches javichur/radikal-bikers or Radikal Riders; the catalog's closest racing comparators are Kart Royale (50/100, screenshots 70), Turbo Kart Rally (40/100, screenshots 70) and moorestech (64/100, screenshots 76). ([source](https://github.com/AwesomeClaude/.github/blob/main/README.md))
 
 ## Fictional reviews
 

@@ -315,21 +315,7 @@ def log(message):
     print(message, file=sys.stderr, flush=True)
 
 
-def rebuild():
-    entries = []
-    for path in sorted(GAMES.rglob('readme.json')) if GAMES.exists() else []:
-        if 'analysis' in path.relative_to(GAMES).parts:
-            continue
-        try:
-            data = validate(json.loads(path.read_text(encoding='utf-8')))
-            expected = report_destination(data)
-            if path.parent != expected:
-                raise ValueError(f'Report belongs at {expected}')
-            write_atomic(path.with_name('README.md'), game_readme(data))
-            entries.append((path.parent, data))
-        except (OSError, ValueError, json.JSONDecodeError) as exc:
-            log(f'Skip {path}: {exc}')
-    entries.sort(key=lambda item: (-item[1]['rating']['score'], item[1]['title'].casefold(), str(item[0])))
+def catalog_readme(entries, link_prefix=''):
     out = ['# Game catalog', '', 'Browse the rated games. Open each game page for evidence and play instructions.',
            'Browse games with or without public source code in the same ranking and screenshot gallery.', '',
            'Add games with `./scripts/games.sh <game-url> [more-urls...]` or '
@@ -337,7 +323,7 @@ def rebuild():
            '`./scripts/games.sh`. Inspect `games/history/` for per-run analysis outcomes and provenance. '
            'Inspect `work/game-batches/` for agent logs and rejected reports.', '', '## Games', '']
     for directory, data in entries:
-        target = quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/')
+        target = link_prefix + quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/')
         graphic = data['screenshot_based_score']
         graphic_text = 'not scored' if graphic is None else f"{graphic['score']}/100"
         source_text = '' if data['repository_url'] else '; no verified source repository'
@@ -356,7 +342,7 @@ def rebuild():
             out.append('<tr>')
             for directory, data in row:
                 shot = data['screenshots'][0]
-                target = html.escape(quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/'), quote=True)
+                target = html.escape(link_prefix + quote(str(directory.relative_to(ROOT) / 'README.md'), safe='/'), quote=True)
                 screenshot = html.escape(safe_url(shot['url']), quote=True)
                 title = html.escape(data['title'], quote=True)
                 observation = html.escape(str(shot.get('observation', data['title'])).replace('\n', ' '), quote=True)
@@ -371,8 +357,27 @@ def rebuild():
         out.extend(['</table>', ''])
     else:
         out.append('No scored screenshots yet.')
-    write_atomic(ROOT / 'README.md', '\n'.join(out).rstrip() + '\n')
-    print(f'Rebuilt {len(entries)} game pages and the root README.', flush=True)
+    return '\n'.join(out).rstrip() + '\n'
+
+
+def rebuild():
+    entries = []
+    for path in sorted(GAMES.rglob('readme.json')) if GAMES.exists() else []:
+        if 'analysis' in path.relative_to(GAMES).parts:
+            continue
+        try:
+            data = validate(json.loads(path.read_text(encoding='utf-8')))
+            expected = report_destination(data)
+            if path.parent != expected:
+                raise ValueError(f'Report belongs at {expected}')
+            write_atomic(path.with_name('README.md'), game_readme(data))
+            entries.append((path.parent, data))
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            log(f'Skip {path}: {exc}')
+    entries.sort(key=lambda item: (-item[1]['rating']['score'], item[1]['title'].casefold(), str(item[0])))
+    write_atomic(ROOT / 'README.md', catalog_readme(entries))
+    write_atomic(ROOT / 'profile' / 'README.md', catalog_readme(entries, '../'))
+    print(f'Rebuilt {len(entries)} game pages, the root README, and the organization profile.', flush=True)
 
 
 def inputs(args):
@@ -427,7 +432,7 @@ def repository_created(url):
     if not url:
         return None
     owner, repo = urlsplit(url).path.strip('/').split('/')[:2]
-    headers = {'User-Agent': 'Astra-Top-Games'}
+    headers = {'User-Agent': 'AwesomeClaude'}
     if os.getenv('GH_TOKEN'):
         headers['Authorization'] = 'Bearer ' + os.environ['GH_TOKEN']
     request = urllib.request.Request(f'https://api.github.com/repos/{owner}/{repo}', headers=headers)
@@ -525,7 +530,7 @@ def content_only(data):
 
 def apply_results(artifact, outcomes):
     run_key = os.getenv('GITHUB_RUN_ID', str(time.time_ns())) + '-' + os.getenv('GITHUB_RUN_ATTEMPT', '1')
-    repo = os.getenv('GITHUB_REPOSITORY', 'agents-dev/Astra-Top-Games')
+    repo = os.getenv('GITHUB_REPOSITORY', 'AwesomeClaude/.github')
     changed = set()
     history = []
     for item in outcomes:

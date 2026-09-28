@@ -271,7 +271,7 @@ def publish(args):
         command('git', 'fetch', 'origin', base)
         command('git', 'switch', '--detach', f'origin/{base}')
         games.apply_results(args.output, summary['outcomes'])
-        command('git', 'add', '--', 'README.md', 'games')
+        command('git', 'add', '--', 'README.md', 'profile/README.md', 'games')
         if command('git', 'diff', '--cached', '--quiet', check=False).returncode:
             command('git', 'config', 'user.name', 'github-actions[bot]')
             command('git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')

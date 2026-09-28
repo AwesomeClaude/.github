@@ -105,7 +105,7 @@
     },
     {
       "finding": "No catalog game matched this project: the local catalog index and all 20 linked game READMEs were read, and a search for t-rex/trex/wayou across games/ found no prior entry, so no existing slug is reused.",
-      "url": "https://github.com/agents-dev/Astra-Top-Games"
+      "url": "https://github.com/AwesomeClaude/.github"
     }
   ],
   "source_url": "https://github.com/wayou/t-rex-runner",

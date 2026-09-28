@@ -1,6 +1,6 @@
 # 2048
 
-[Play the game](https://play2048.co/) · [View source](https://github.com/gabrielecirulli/2048) · [Previous report](https://github.com/agents-dev/Astra-Top-Games/blob/f74936bf945284f98485556c55b8c7b477b69177/games/gabrielecirulli--2048/README.md)
+[Play the game](https://play2048.co/) · [View source](https://github.com/gabrielecirulli/2048) · [Previous report](https://github.com/AwesomeClaude/.github/blob/f74936bf945284f98485556c55b8c7b477b69177/games/gabrielecirulli--2048/README.md)
 
 | Overall rating | Screenshot score |
 | :---: | :---: |

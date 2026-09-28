@@ -1,6 +1,6 @@
 # UnityPuzzle
 
-[View source](https://github.com/MahoHayashi/UnityPuzzle) · [Previous report](https://github.com/agents-dev/Astra-Top-Games/blob/796938a221f7bc9b20f657c7cbf9cdb31cd783fe/games/MahoHayashi--UnityPuzzle/README.md)
+[View source](https://github.com/MahoHayashi/UnityPuzzle) · [Previous report](https://github.com/AwesomeClaude/.github/blob/796938a221f7bc9b20f657c7cbf9cdb31cd783fe/games/MahoHayashi--UnityPuzzle/README.md)
 
 | Overall rating | Screenshot score |
 | :---: | :---: |

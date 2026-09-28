@@ -103,7 +103,7 @@ Build a fast-paced 2D arcade pizza-shop game in React + TypeScript + Vite with 4
 - Mobile touch controls implemented: dedicated MobileGameControls with on-screen up/down, serve-pizza and oven buttons, tap above/below chef to move, tap chef for oven, tap right side to serve; viewport locked with touch-action manipulation and touchstart skip handlers ([source](https://github.com/PizzaDAO/pizza-chef/blob/main/src/components/MobileGameControls.tsx))
 - Single-player design: one chefLane, single score/bank/lives state, global leaderboard via Supabase, no multiplayer, co-op or versus code; all opponents are AI customer variants (normal, critic, badLuckBrian, scumbagSteve, healthInspector, deliveryDriver, pizzaMafia, alien) ([source](https://github.com/PizzaDAO/pizza-chef/blob/main/src/types/game.ts))
 - No gamepad, accelerometer or gyroscope support found in components, hooks, or constants; only keyboard, mouse-clickable buttons and touch controls are evidenced ([source](https://github.com/PizzaDAO/pizza-chef/blob/main/src/App.tsx))
-- Scanned local catalog index and all game directories for pizza/chef matches; no existing pizza-chef entry found, so no slug reuse ([source](https://github.com/agents-dev/Astra-Top-Games/blob/main/README.md))
+- Scanned local catalog index and all game directories for pizza/chef matches; no existing pizza-chef entry found, so no slug reuse ([source](https://github.com/AwesomeClaude/.github/blob/main/README.md))
 
 ## Fictional reviews
 

@@ -13,7 +13,7 @@ jobs:
     timeout-minutes: 310
     env:
       SSH_DIR: ${{ github.workspace }}/.agentsweb-ssh
-      SSH_NAME: astra-top-games-${{ github.run_id }}-ssh
+      SSH_NAME: awesome-claude-${{ github.run_id }}-ssh
     steps:
       - name: Install SSH server and tunnel client
         shell: bash
